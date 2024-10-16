@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>projects.knit</title>
+
+<script src="site_libs/header-attrs-2.21/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-6.2.1/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.2.1/css/v4-shims.min.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Home</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="research.html">Research</a>
+</li>
+<li>
+  <a href="projects.html">Projects</a>
+</li>
+<li>
+  <a href="software.html">Software</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://scholar.google.com/citations?user=5OrlhE8AAAAJ&amp;hl=en&amp;oi=ao">
+    <span class="fa fa-google"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://www.linkedin.com/in/art%C3%BCr-manukyan-a2071890/">
+    <span class="fa fa-linkedin"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://github.com/Artur-man">
+    <span class="fa fa-github"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://twitter.com/ArturMa75503143">
+    <span class="fa fa-twitter"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+
+</div>
+
+
+<p><br></p>
+<div id="computational-rna-biology" class="section level1">
+<h1>Computational RNA Biology</h1>
+<div id="wastewater-metagenomics" class="section level2">
+<h2>Wastewater Metagenomics</h2>
+<p style="text-align: justify">
+Emanuel Wyler, Markus Landthaler and I are developing computational
+pipelines for analyzing and monitoring wastewater data across Berlin and
+other environmental sites. See <strong>Wastewater pipeline</strong> <a
+href="https://github.com/LandthalerLab/wastewater_virome">here</a>.
+</p>
+<p style="text-align: justify">
+We are trying to understand the taxonomic complexity of these
+comprehensive pools of organisms and RNA where we are aiming to discover
+new sequences (such as new variants of CRISPR-Cas proteins) within the
+wastewater to be used as novel substances for developing novel
+biotechnologies.
+</p>
+<p><strong>Preprint</strong>: <a
+href="https://www.biorxiv.org/content/10.1101/2022.12.16.520800v1">Comprehensive
+profiling of wastewater viromes by genomic sequencing</a></p>
+<p><br></p>
+<tr>
+<td>
+<img width="60%" height="60%" src="image/wastewater1.png" class="center">
+</td>
+<td>
+<img width="35%" height="35%" src="image/wastewater2.png" class="center">
+</td>
+</tr>
+<p><br></p>
+</div>
+<div id="codon-bias-of-mrna" class="section level2">
+<h2>Codon Bias of mRNA</h2>
+<p style="text-align: justify">
+Markus Landthaler and I are investigating the Codon usage bias of mRNA
+associated with Endoplasmic Reticulum (ER). Specifically, we are
+interested in certain sites of mRNA that interacts with HDLBP, a
+RNA-binding protein that regulates the translation of mRNA around ER.
+Currently, we are investigating the codon usage of mRNA that are
+interacting with HDLBP, specifically pairs of codons that are abundantly
+used by these binding sites as well as their precise locations. See
+<strong>CodonUtil package</strong> <a href="software.html">here</a>.
+</p>
+<p><strong>Reference</strong>: <a
+href="https://github.com/LandthalerLab/CodonUtil">HDLBP binds
+ER-targeted mRNAs by multivalent interactions to promote protein
+synthesis of transmembrane and secreted proteins</a></p>
+<p><br></p>
+<tr>
+<td>
+<img width="45%" height="45%" src="image/codon1.png" class="center">
+</td>
+<td>
+<img width="50%" height="50%" src="image/codon2.png" class="center">
+</td>
+</tr>
+<p><br></p>
+</div>
+</div>
+<div id="single-cell-analysis" class="section level1">
+<h1>Single Cell Analysis</h1>
+<div id="multiomic-brain-atlas" class="section level2">
+<h2>Multiomic Brain Atlas</h2>
+<p style="text-align: justify">
+This single cell brain atlas provides access to processed and analyzed
+data of human and mouse single cell (scRNA-Seq and scATAC-Seq) from
+large single cell multiomics studies conducted in Allen Institute for
+Brain Science as well as samples from additional projects such as
+FANTOM5 for CAGE-Seq. This integrative project has been conducted in
+collaboration with <a
+href="Sena-Esteves%20Lab">https://www.umassmed.edu/gtc/about/faculty-publications/miguel-sena-esteves/</a>
+and <a href="Bioinformatics%20Core"></a> at UMass Chan Medical School.
+</p>
+<p style="text-align: justify">
+In collaboration with Sena-Esteves Lab and Bioinformatics Core at UMass
+Chan Medical School, this website hosts a browser for interactively
+visualizing transcriptional profiles of mouse brain cell types, and two
+publicly accessible custom track hubs (for human and mouse) within UCSC
+genome browsers.
+</p>
+<p><strong>Website</strong>: <a
+href="https://neocortex.dolphinnext.com/">https://neocortex.dolphinnext.com/</a></p>
+<p><strong>Single Cell Data (Cellxgene)</strong>: <a
+href="https://neocortex.dolphinnext.com/cellxgenebrowser.html">https://neocortex.dolphinnext.com/cellxgenebrowser.html</a></p>
+<p><br></p>
+<tr>
+<td>
+<img width="40%" height="40%" src="image/brain1.png" class="center">
+</td>
+<td>
+<img width="55%" height="55%" src="image/brain2.png" class="center">
+</td>
+</tr>
+<p><br></p>
+</div>
+<div id="vitiligo-atlas" class="section level2">
+<h2>Vitiligo Atlas</h2>
+<p style="text-align: justify">
+In collaboration with Garber Lab and Bioinformatics Core at UMass Chan
+Medical School, we provided access to the data we used in our recent
+publication (<a
+href="https://www.science.org/doi/10.1126/scitranslmed.abd8995">Gellatly
+et. al 2021</a>) where we sought to identify cellular communications
+that show disruption in lesions or in non-lesional skins of individuals
+suffering from Vitiligo, an autoimmune skin disease characterized by the
+targeted destruction of melanocytes by T cells.
+</p>
+<p style="text-align: justify">
+The data provided was obtained using our in-house <a
+href="https://dx.doi.org/10.1016%2Fj.cell.2015.04.044">inDrop system</a>
+to generate single cell RNA-Seq profiles on affected and unaffected skin
+from vitiligo patients, as well as healthy controls. The data was
+analyzed using an end-to-end scRNA data analysis package called <a
+href="https://github.com/garber-lab/SignallingSingleCell">SignallingSingleCell</a>.
+</p>
+<p style="text-align: justify">
+All raw sequencing data was processed by the scRNA-Seq inDrop pipeline
+developed within the interactive pipeline manager DolphinNext (<a
+href="https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-020-6714-x">Yukselen
+et. al 2020</a>).
+</p>
+<p><strong>Website</strong>: <a
+href="https://vitiligo.dolphinnext.com/">https://vitiligo.dolphinnext.com/</a></p>
+<p><strong>Single Cell Data (Cellxgene)</strong>: <a
+href="https://vitiligo.dolphinnext.com/browse.html">https://vitiligo.dolphinnext.com/browse.html</a></p>
+<p><br></p>
+<tr>
+<td>
+<img width="45%" height="45%" src="image/Vitiligo1.png" class="center">
+</td>
+<td>
+<img width="45%" height="45%" src="image/Vitiligo2.png" class="center">
+</td>
+</tr>
+<p><br></p>
+<!-- # Stevens-Johnsons Syndrome (SJS) -->
+<!-- In high throughput sequencing era, genetic information is complex, chaotic and often incomprehensible. To this end, Bioinformatics has evolved to analyze and summarize massive sequencing data sets, and data scientific methods have been developed to investigate biological systems and cellular dynamics by using these large volumes of processed omics data.  -->
+<!-- Across many projects, I have designed software platforms to generate information from such large sets of data in order to find similarities across countless datasets and to build network models to interrogate databases against each other to help biological scientists to build hypothesis. -->
+<!-- Currently, we are developing additinal software tools to analyze spatial transcriptomics datasets and to infer spatial information of cellular systems.  -->
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3,h4",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

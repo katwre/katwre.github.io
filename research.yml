@@ -1,0 +1,74 @@
+- category: Bioinformatics
+  vignettes:
+  
+    - title: Spatial Transcriptomics
+      name: spatial
+      summary: |
+        Algorithms and platforms for spatial transcriptomics analysis
+      image: spatial.png
+      link: https://bioinformatics.mdc-berlin.de/VoltRon     
+      
+    - title: Biological Knowledge Graphs
+      name: knowledgegraph
+      summary: |
+        Large biological networks for knowledge discovery
+      image: knowledgegraph.png
+      link: amarettohub.html
+      
+    - title: Transcriptional and Genomic Profiling
+      name: transprofiling
+      summary: |
+        Comparative profiling of large omics databases
+      image: profiling.png
+      link: profiling.html
+
+- category: Statistical Learning and Computing
+  vignettes:
+    - title: Proximity Graphs
+      name: proxgraph
+      summary: |
+        Graphical Models to build statistical learning algorithms
+      image: pcd.png
+      link: http://webhome.auburn.edu/~ezc0066/PCDwebpage/PCDWebpage.html
+    - title: Factor Analysis
+      name: factanal
+      summary: |
+        Software tools for visualizing factor analysis models
+      image: dandefa.png
+      link: factoranalysis.html
+      
+- category: Single Cell Analysis
+  vignettes:
+    - title: Multiomic Brain Atlas
+      name: brainatlas
+      summary: |
+        Graphical Models to build statistical learning algorithms
+      image: pcd.png
+    - title: Vitiligo Atlas
+      name: vitiligo
+      summary: |
+        Graphical Models to build statistical learning algorithms
+      image: pcd.png
+    - title: Stevens-Johnsons Syndrome (SJS)
+      name: sjs
+      summary: |
+        Graphical Models to build statistical learning algorithms
+      image: pcd.png
+      
+- category: Software Tools
+  vignettes:
+    - title: TransOmicProfiler
+      name: transprofiler
+      summary: |
+        Graphical Models to build statistical learning algorithms
+      image: pcd.png
+    - title: PCDSL
+      name: vitiligo
+      summary: |
+        Graphical Models to build statistical learning algorithms
+      image: pcd.png
+    - title: DandEFA
+      name: sjs
+      summary: |
+        Graphical Models to build statistical learning algorithms
+      image: pcd.png

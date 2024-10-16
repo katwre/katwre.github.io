@@ -1,0 +1,54 @@
+output_dir: "."
+template:
+  params:
+      bootswatch: flatly
+      ganalytics: UA-82807227-1
+  docsearch:
+      api_key: ead918d7fe8467a2fd38e97f5bbe3ecb
+      index_name: artur
+navbar:
+  title: "Home"
+  left:
+    - text: "Research"
+      href: research.html
+      # menu:
+      #   - text: Introductory Vignettes
+      #   - text: "Transcriptional and Genomic Profiling"
+      #     href: profiling.html
+      #   - text: "Biological Knowledge Graphs"
+      #     href: knowledgegraphs.html
+      #   - text: "Spatial Transcriptomics"
+      #     href: spatial.html
+      #   - text: -------
+      #   - text: Statistical Learning and Computing
+      #   - text: "Factor Analysis"
+      #     href: factoranalysis.html
+      #   - text: "Proximity Graphs"
+      #     href: pcd.html
+    - text: "Projects"
+      href: projects.html
+      # menu:
+      #   - text: "Mouse Brain Atlas"
+      #     href: transomicprofiler.html
+      #   - text: "Vitiligo Atlas"
+      #     href: transomicprofiler.html
+      #   - text: "Stevens-Johnson Syndrome (SJS)"
+      #     href: transomicprofiler.html
+    - text: "Software"
+      href: software.html
+      # menu:
+      #   - text: "TransOmicProfiler"
+      #     href: transomicprofiler.html
+      #   - text: "PCDSL"
+      #     href: transomicprofiler.html
+      #   - text: "DandEFA"
+      #     href: transomicprofiler.html
+  right:
+    - icon: fa-google
+      href: https://scholar.google.com/citations?user=5OrlhE8AAAAJ&hl=en&oi=ao
+    - icon: fa-linkedin
+      href: https://www.linkedin.com/in/art%C3%BCr-manukyan-a2071890/
+    - icon: fa-github
+      href: https://github.com/Artur-man
+    - icon: fa-twitter
+      href: https://twitter.com/ArturMa75503143

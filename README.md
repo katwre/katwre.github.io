@@ -1,3 +1,3 @@
 # Personal Website
 
-https://artur-man.github.io/
+https://katwre.github.io/

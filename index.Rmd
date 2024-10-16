@@ -12,70 +12,63 @@ img {
   display: inline;
   margin: 0 auto;
   height: auto;
-  width=100%
-  <!-- width: auto; -->
+  width: 100%; /* Fixed the width declaration */
 }
-<!-- .image_td { -->
-<!--   text-align:center; -->
-<!--   width:27%;  -->
-<!--   height: 70%; -->
-<!--   border-radius: 50%; -->
-<!--   overflow: hidden; -->
-<!--   position: relative; -->
-<!-- } -->
+
 .button {
-  <!-- display: flex; -->
-  display:inline-block
-  height: 100%
-  <!-- width: 15% -->
-  padding: 1;
+  display: inline-block;
+  padding: 5px; /* Adjusted padding for better spacing */
   border: none;
   outline: none;
   border-radius: 5px;
-  overflow: hidden;
-  sans-serif;
   cursor: pointer;
-  transition: all 160ms ease-in;
-  background: "#FFFFFF";
+  background: #FFFFFF;
+  transition: transform 160ms ease-in;
 }
+
 .button:active {
-  transform: scale(.80)
+  transform: scale(0.8);
 }
+
 .button__icon {
-  color: black;
+  color: black; /* Set the icon color to black */
   font-size: 2.7em;
-  height: 100%;
-  width: 100%;
 }
+
 </style>
 
 <br><br><br><br><br><br>
 
-<div style = "width:27%; text-align: center; float: left; position:relative;">
+<div style="width:27%; text-align: center; float: left; position: relative;">
   <br>
   <img src="image/katwre.png">
   <br>
+  <!-- Google Scholar Button -->
   <a href="https://scholar.google.com/citations?user=5OrlhE8AAAAJ&hl=en&oi=ao">
-    <button class = "button" style = "background: #FFFFFF;">
-      <span class= "button__icon"> <ion-icon name="logo-google"></ion-icon> </span>
+    <button class="button">
+      <span class="button__icon"><ion-icon name="logo-google"></ion-icon></span>
     </button>
   </a>
+  <!-- LinkedIn Button -->
   <a href="https://www.linkedin.com/in/art%C3%BCr-manukyan-a2071890/">
-    <button class = "button" style = "background: #FFFFFF;">
-      <span class= "button__icon"> <ion-icon name="logo-linkedin"></ion-icon> </span>
+    <button class="button">
+      <span class="button__icon"><ion-icon name="logo-linkedin"></ion-icon></span>
     </button>
   </a>
+  <!-- GitHub Button -->
   <a href="https://github.com/katwre">
-    <button class = "button" style = "background: #FFFFFF;">
-      <span class= "button__icon"> <ion-icon name="logo-github"></ion-icon> </span>
+    <button class="button">
+      <span class="button__icon"><ion-icon name="logo-github"></ion-icon></span>
     </button>
   </a>
+  <!-- Twitter Button -->
   <a href="https://twitter.com/katwre">
-    <button class = "button" style = "background: #FFFFFF;">
-      <span class= "button__icon"> <ion-icon name="logo-twitter"></ion-icon> </span>
+    <button class="button">
+      <span class="button__icon"><ion-icon name="logo-twitter"></ion-icon></span>
     </button>
   </a>
 </div>
+
 <div style="width:73%; vertical-align: text-top; padding-left: 10%; float: left;">
   <h3>Katarzyna Wreczycka, PhD</h3>
   <br>
@@ -83,13 +76,13 @@ img {
     I am a trained bioinformatician living in Berlin.
   </p>
   <p style="text-align: justify">
-    Check out my <a href="research.html"> Research</a> and <a href="freelance.html"> Freelance projects</a> ! I'm interested in machine
+    Check out my <a href="research.html"> research</a> projects and <a href="freelance.html"> freelance</a>! I'm interested in machine
 learning for genomic <strong>data analysis</strong>, gene regulation, regulatory networks, and <strong>disease (epi)genomics</strong>.
   </p>
-  <p style="text-align: justify"> 
-    I have conducted some number of <a href="bioinformatics.html"> bioinformatics</a>, <a href="datascience.html">data science<\a> projects and developed several <a href="software.html"> Software </a> packages.
+  <p style="text-align: justify">
+    I have conducted some number of <a href="projects.html"> bioinformatics, and data science</a> projects and developed several <a href="software.html"> Software </a> packages.
   </p>
-  <br>
+ <br>
   <p> <strong>Consultancy for pharmaceutical companies, start-ups and consultancy companies</strong> | Freelance in Bioinformatics and Data Science | February 2023 - Present </p>
   <p> <strong>MDC BIMSB, Bioinformatics and Omics Data Science Platform</strong> | PhD student | September 2015 - November 2021 </p>
   <p> <strong>Institute of Computer Science, Polish Academy of Sciences & MDC BIMSB</strong> | Visiting Predoctoral Researcher | 2015 </p>

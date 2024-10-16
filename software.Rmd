@@ -10,40 +10,82 @@ output:
 
 <br>
 
-# Computational Biology Tools 
+# Open source software
 
 ### Genomation
 
+<br>
+  <img src="image/genomation.png" width="100" height="110">
+<br>
+
 <p style="text-align: justify">
-Genomation is a Bioc R package that provides collection og functions for simplfiying common tasks in genomic feature/interval analysis. It provides functions for reading BED and GFF files as GRanges objects, summarizing genomic features over predefined windows so users can make average enrichment of features over defined regions or produce heatmaps. It can also annotate given regions with other genomic features such as exons,introns and promoters.
+Genomation is a Bioc R package that provides collection of functions for simplfiying common tasks in genomic feature/interval analysis. It provides functions for reading BED and GFF files as GRanges objects, summarizing genomic features over predefined windows so users can make average enrichment of features over defined regions or produce heatmaps. It can also annotate given regions with other genomic features such as exons,introns and promoters.
 </p>
 
-**People**: [Altuna Akaling](hhttps://www.mdc-berlin.de/bioinformatics) and [Vedran Franke](https://www.mdc-berlin.de/bioinformatics) and others
+**People**: [Altuna Akaling](hhttps://www.mdc-berlin.de/bioinformatics), [Vedran Franke](https://www.mdc-berlin.de/bioinformatics) and others
 
 **GitHub**:
 [https://github.com/BIMSBbioinfo/genomation](https://github.com/BIMSBbioinfo/genomation)
 
-<br>
+**Publication**:
+[Akalin A, Franke V, Vlahovicek K, Mason C, Schubeler D (2014). “genomation: a toolkit to summarize, annotate and visualize genomic intervals.” Bioinformatics](https://academic.oup.com/bioinformatics/article/31/7/1127/181034)
+</br>
 
 ### MethylKit
 
+<br>
+  <img src="image/methylKit.png" width="100" height="110">
+<br>
+
 <p style="text-align: justify">
 methylKit is a Bioc R package for DNA methylation analysis and annotation from high-throughput bisulfite sequencing. The package is designed to deal with sequencing data from RRBS and its variants, but also target-capture methods such as Agilent SureSelect methyl-seq. In addition, methylKit can deal with base-pair resolution data for 5hmC obtained from Tab-seq or oxBS-seq. It can also handle whole-genome bisulfite sequencing data if proper input format is provided.</p>
+</p>
 
-**People**: [Altuna Akalin](https://www.mdc-berlin.de/bioinformatics) and [Alex Blume](https://www.mdc-berlin.de/bioinformatics) and others
+**People**: [Altuna Akalin](https://www.mdc-berlin.de/bioinformatics), [Alex Blume](https://www.mdc-berlin.de/bioinformatics) and others
 
 **GitHub**:
 [https://github.com/al2na/methylKit](https://github.com/al2na/methylKit)
 
+**Publication**:
+[Akalin A, Kormaksson M, Li S, Garrett-Bakelman FE, Figueroa ME, Melnick A, Mason CE (2012). “methylKit: a comprehensive R package for the analysis of genome-wide DNA methylation profiles.” Genome Biology, 13(10), R87.](https://genomebiology.biomedcentral.com/articles/10.1186/gb-2012-13-10-r87)
+
+
 <br>
 
+
+### PiGx - Reproducible pipelines in genomics using GNU Guix
+
+<br>
+  <img src="image/pigx.png" width="100" height="110">
+<br>
+
+<p style="text-align: justify">
+PiGx is a collection of genomics pipelines implemented in snakemake, Python and R. All pipelines are easily configured with a simple sample sheet and a descriptive settings file. The result is a set of comprehensive, interactive HTML reports with interesting findings about your samples.
+</p>
+
+**People**: [Altuna Akalin](https://www.mdc-berlin.de/bioinformatics), [Ricoardo Wurmus](https://www.mdc-berlin.de/bioinformatics) and others
+
+**GitHub**:
+[http://bioinformatics.mdc-berlin.de/pigx/](http://bioinformatics.mdc-berlin.de/pigx/)
+
+**Publication**:
+[Wurmus R, Uyar B, Osberg B, Franke V, Gosdschan A, Wreczycka K, Ronen J, Akalin A. PiGx: Reproducible genomics analysis pipelines with GNU Guix. Gigascience 2018](https://academic.oup.com/gigascience/article/7/12/giy123/5114263)
+
+
+<br>
+
+
 ### MotifActivity
+
+<br>
+  <img src="image/motifActivity.png" width="100" height="110">
+<br>
 
 <p style="text-align: justify">
 The motifActivity R package predicts key transcription factors (TFs) driving gene expression or epigenetic marks changes across the input samples, and the activity profiles of TFs. As input is uses a set of gene expression (e.g. RNA-seq) or epigenetic marks (such as from BS-seq, ChIP-seq, ATAC-seq etc.) across samples, and a set of DNA motifs.
 </p>
 
-**People**: [Katarzyna Wreczycka](hhttps://www.mdc-berlin.de/bioinformatics)
+**People**: [Katarzyna Wreczycka](hhttps://www.mdc-berlin.de/bioinformatics) under the supervision of [Altuna Akalin](https://www.mdc-berlin.de/bioinformatics)
 
 **GitHub**:
 [https://github.com/katwre/motifActivity](https://github.com/katwre/motifActivity)
@@ -51,22 +93,26 @@ The motifActivity R package predicts key transcription factors (TFs) driving gen
 <br>
 
 
-# Customized enhancements and additional functionalities for existing tool
+# Customized enhancements for existing tools for clients
 
 ### IGV web application
 
-Enhancements of an interactive tool for the visual exploration of genomic data called [IGV web application](https://igv.org/app/) included:
-- visualization of publicly-available and in-house data and dynamic adding new
+Enhancements of an interactive tool for the visual exploration of genomic data called [IGV web application](https://igv.org/app/) ([original source code](https://github.com/igvteam/igv-webapp)) implemented in Javascript and Python included:
+
+* visualization of publicly-available and in-house data and dynamic adding new
 in-house data to the IGV application
-- added and highlight regions of interest, such as genetic variants to the main window
-- new visualization options for RefSeq and GENCODE gene
-annotations: collapse all genes transcripts, extend isoforms of a gene of interest, and added a button to control the width of window panes so that the contents ﬁt
-- added display links to databases from which data originates
-- implemented a command line application that automatically takes snapshots
+* added and highlight regions of interest, such as genetic variants to the main window
+* new visualization options for RefSeq and GENCODE gene
+annotations:
+    + collapse all genes transcripts
+    + extend isoforms of a gene of interest
+    + added a button to control the width of window panes so that the contents ﬁt
+* added display links to databases from which data originates
+* implemented a command line application that automatically takes snapshots
 and session of regions/genes and tracks of interest
 
 
 <br>
-  <img src="image/igv1.png">
+  <img src="image/igv1.png" width="600" height="300">
   <img src="image/igv2.png">
  <br>

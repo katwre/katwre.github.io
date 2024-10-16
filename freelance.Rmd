@@ -1,0 +1,38 @@
+---
+title: ""
+output:
+  html_document:
+    df_print: kable
+    toc: true
+    toc_float : yes
+    toc_depth : 4
+---
+
+
+```{=html}
+<style>
+.two-column-htmltable {
+  width: 66.666%;
+}
+.one-column-htmltable {
+  width: 33.333%;
+}
+</style>
+```
+
+
+<br>
+
+
+# Freelance
+
+I have been freelancing as a bioinformatician and data scientist since 2023. Some of my high profile clients include:
+
+<br>
+  <img src="image/clients.png" width="350" height="100">
+<br>
+
+
+```{r results='asis', echo=FALSE, warning=FALSE, message = FALSE}
+make_vignette_card_section(vdat = vdat, cat = 2)
+```

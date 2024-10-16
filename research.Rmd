@@ -99,40 +99,18 @@ vdat <- read_yaml(file = "research.yml")
 </style>
 ```
 
-<!-- Although I am currently interested in computational omics data analysis and building bioinformatics analysis platforms, I have also done some research on statistical learning and statistical software development for some time. -->
 
 <br>
 
 # Omics Data Analysis
 
-<!-- <p style="text-align: justify"> In high throughput sequencing era, genetic information is complex, chaotic and often incomprehensible. To this end, Bioinformatics has evolved to analyze and summarize massive sequencing data sets, and data scientific methods have been developed to investigate biological systems and cellular dynamics by using these large volumes of processed omics data. </p> -->
 
-<p style="text-align: justify"> 
-I have designed software platforms and tools to process and analyze large sets of sequencing data in order to find similarities across diverse omics datasets and to build network models to interrogate databases against each other to help biological scientists to build hypothesis. 
-</p>
+# Statistical Analysis
 
-<p style="text-align: justify"> Currently, we are developing additional software tools to analyze spatial transcriptomics datasets and to infer spatial information of cellular systems. </p>
 
-<br>
 
-```{r results='asis', echo=FALSE, warning=FALSE, message = FALSE}
-make_vignette_card_section(vdat = vdat, cat = 1)
-```
 
-<br>
 
-# Statistical Learning/Computing
 
-<p style="text-align: justify"> 
-Computing is an essential part of statistical analysis where building appealing models of data as well as visualizing such data is crucial. A large portion of my work before I moved into computational biology which included building and designing data structures for capturing essential information from the data to either summarize or visualize complex information. 
-</p>
 
-<p style="text-align: justify"> 
-We have built graph models to capture essential information from data for the purpose of statistical learning, and we have also designed software tools to visualize and help analyzing such data (i.e. Dandelion Plot). 
-</p>
 
-<br>
-
-```{r results='asis', echo=FALSE, warning=FALSE, message = FALSE}
-make_vignette_card_section(vdat = vdat, cat = 2)
-```

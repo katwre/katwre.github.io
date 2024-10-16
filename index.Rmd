@@ -1,5 +1,5 @@
 ---
-title: 'Katarzyna Wreczycka, PhD'
+title: ''
 output:
   html_document:
     df_print: kable
@@ -77,20 +77,20 @@ img {
   </a>
 </div>
 <div style="width:73%; vertical-align: text-top; padding-left: 10%; float: left;">
-  <h3>Artür Manukyan, PhD</h3>
+  <h3>Katarzyna Wreczycka, PhD</h3>
   <br>
   <p style="text-align: justify">
-    I am a trained statistician, computational scientist and bioinformatician living in Berlin. 
+    I am a trained bioinformatician living in Berlin.
   </p>
   <p style="text-align: justify">
     Check out my <a href="research.html"> Research</a> and <a href="freelance.html"> Freelance projects</a> ! I'm interested in machine
 learning for genomic <strong>data analysis</strong>, gene regulation, regulatory networks, and <strong>disease (epi)genomics</strong>.
   </p>
   <p style="text-align: justify"> 
-    I have conducted some number of <a href="projects.html"> Bioinformatics Projects</a>, and developed several <a href="software.html"> Software </a> packages.
+    I have conducted some number of <a href="bioinformatics.html"> bioinformatics</a>, <a href="datascience.html">data science<\a> projects and developed several <a href="software.html"> Software </a> packages.
   </p>
   <br>
-  <p> <strong>Pharmaceutical Companies, start-ups and consultancy companies</strong> | Freelance in Bioinformatics and Data Science | February 2023 - Present </p>
+  <p> <strong>Consultancy for pharmaceutical companies, start-ups and consultancy companies</strong> | Freelance in Bioinformatics and Data Science | February 2023 - Present </p>
   <p> <strong>MDC BIMSB, Bioinformatics and Omics Data Science Platform</strong> | PhD student | September 2015 - November 2021 </p>
   <p> <strong>Institute of Computer Science, Polish Academy of Sciences & MDC BIMSB</strong> | Visiting Predoctoral Researcher | 2015 </p>
 </div>

@@ -73,7 +73,7 @@ img {
   <h3>Katarzyna Wreczycka, PhD</h3>
   <br>
   <p style="text-align: justify">
-    Berlin-based bioinformatician and data scientist with 7+ years of biomedical research, and machine learning. This is my personal website.
+    I am a trained bioinformatician and data scientist living in Berlin. This is my personal website.
   </p>
   <p style="text-align: justify">
     Check out my <a href="research.html"> research</a> projects and <a href="freelance.html"> freelance</a>! I'm interested in machine

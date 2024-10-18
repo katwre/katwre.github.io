@@ -8,15 +8,83 @@ output:
     toc_depth : 4
 ---
 
-# ChIP-seq phantom peaks
+# Genomics and Epigenomics
+
+## ChIP-seq phantom peaks
 
 
-# DNA methylation biomarkers derived from cell-free DNA
+[Chromatin immunoprecipitation followed by sequencing (ChIP-seq)](https://doi.org/10.1038/nmeth.f.247) is a widely-used technique to map where
+DNA-binding proteins attach to the genome. Big projects and databases like ENCODE and modENCODE have used this method
+to identify binding sites for hundreds of proteins across different species. With all the data collected,
+ it’s clear that some parts of the genome have unsually high frequency of protein-DNA interactions.
+ These areas, known as high-occupancy target (HOT) regions, have been found in multiple species.
+<br>
+<p style="text-align:center;">
+  <img src="image/HOTregions0.png" height="500px" width="500">
+ </p>
+<br>
+<br>
+<br>
+
+[ChIP-seq phantom peaks](https://pmc.ncbi.nlm.nih.gov/articles/PMC4538825/) or as we called them
+[High-occupancy target (HOT) regions](https://academic.oup.com/nar/article/47/11/5735/5494779) are parts of the genome that have an unusual amount of
+transcription factor binding sites. These regions show up in various species and are thought to be biologically important because of the
+high concentration of transcription factor binding. They also overlap with housekeeping gene promoters, and the related genes are
+consistently expressed across many cell types. Despite these interesting features, HOT regions are mainly defined using ChIP-seq
+experiments and don't show the typical motifs for the transcription factors believed to bind there.
+<br>
+<br>
+
+For us, the plausible explanations for motifless binding are a combination of 1) interaction of transcriptions factors (TFs) where only a handful
+of them are actually binding to DNA 2) existence of weak binding sites where TFs bind to non-canonical motifs in a weak manner
+3) regions with high-affinity for chromatin immunoprecipitation called ‘hyper-ChIPable’ regions.
+<br>
+<p style="text-align:center;">
+  <img src="image/HOTregions01.png">
+ </p>
 
 
-# DNA methylation landscape of neuroblastoma
+
+Upon observing common low-level sequence features of HOT regions across species, we investigated whether potential technical biases in ChIP-seq could at least partially explain false positive signals on HOT regions.
+14 out of 22 publicly available ChIP-seq experiments with knock-out of the genes that
+encodes target proteins show enrichment even though the chipped protein shouldn't be
+present in the analysed sample. Such false positive signal is the highest on HOT regions.
+<br>
+<br>
+<br>
+  <img src="image/HOTregions1.png">
+<br>
+<br>
+<br>
+
+The observed ChIP signal arises from a combination of different signal sources.
+The signal in a ChIP experiment originates from an antibody binding to the intended target protein (blue),
+and nonspecific antibody binding—either to the non-target proteins (orange) or directly to polynucleotide structures,
+such as R-loops (red). The error (orange + red) is not proportional to the signal from the targeted protein, rather,
+it depends on sequence properties, antibody properties and expression characteristics of individual genomic regions.
+The combination of different noise profiles result in a subset of ChIP-seq peaks being false positives.
+
+<br>
+  <img src="image/HOTregions2.png" >
+<br>
+
+<br>
+<br>
+
+For more details check out our:
+
+* <strong>Publication</strong>: [Wreczycka et al, Nucleic Acids Research, Volume 47, Issue 11, 20 June 2019, Pages 5735–5745](https://doi.org/10.1093/nar/gkz460)
+* <strong>Poster</strong>: <a href="hotregions.html">link</a>
+
+<br>
+<br>
+<br>
+
+## DNA methylation biomarkers derived from cell-free DNA
 
 
+## DNA methylation landscape of neuroblastoma
 
 
+# Visualisations of genomic biomarkers, therapies and clinical trials
 

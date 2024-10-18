@@ -95,7 +95,7 @@ The motifActivity R package predicts key transcription factors (TFs) driving gen
 
 # Customized enhancements for existing tools for clients
 
-### IGV web application
+## IGV web application
 
 Enhancements of an interactive tool for the visual exploration of genomic data called [IGV web application](https://igv.org/app/) ([original source code](https://github.com/igvteam/igv-webapp)) implemented in Javascript and Python included:
 
@@ -116,3 +116,97 @@ and session of regions/genes and tracks of interest
   <img src="image/igv1.png" width="600" height="300">
   <img src="image/igv2.png">
  <br>
+
+
+# Toy projects
+<br>
+
+## Protein folding in the HP model
+<br>
+Implementation of the simulated annealing and replica exchange Monte Carlo algorithms for protein folding in the HP model in Python (2.7.6) and using NumPy library (1.8.0).
+<br><br>
+Hydrophobic-polar protein folding (HP) model is used in the study of the general principles of protein folding. The idea of the HP model is based on the observation that a key role in the process of folding has the hydrophobic effect - tendency of hydrophobic amino acids to aggregate and 'hide' from the water molecules. Amino acids are over the alphabet {H,P}, where H is hydrophobic and P polar amino acid and they are located on the square lattice.
+<br><br>
+Metropolis–Hastings algorithm is a Markov chain Monte Carlo (MCMC) method that allows sampling the set of possible configurations of protein, according to any probability distribution (here the Boltzmann distribution). The algorithm generates a Markov chain in which each state x^{t+1} depends only on the previous state x^t. The algorithm uses a proposal density Q(x'; x^t ), which depends on the current state x^t, to generate a new proposed sample x'. This proposal is "accepted" as the next value (x^{t+1}=x') if \alpha drawn from U(0,1) satisfies.
+<br>
+<br>
+<div style="text-align: center;">
+  <img src="image/HPmodel.png" width="200" height="200">
+ </div>
+ <div style="text-align: center;">
+ The lattice protein hydrophobic-polar (HP) model, showing the global energy.
+ </div>
+<br>
+
+
+**GitHub**:
+[https://github.com/katwre/bioinformatics-projects/tree/master/Molecular_Dynamics](https://github.com/katwre/bioinformatics-projects/tree/master/Molecular_Dynamics)
+
+<br><br>
+
+## Genome assmebly - De Bruijn Graph implementation with Eulerian walk-finder
+
+Modern short-read assembly algorithms construct a de Bruijn graph by representing all k-mer prefixes and suffixes as nodes and then drawing edges that represent k-mers having a particular prefix and suffix [1]. Eulerian walk allows to reconstruct the DNA sequence from its fragments (k-mers) [2].
+<br>
+[1] Phillip E C Compeau, Pavel A Pevzner and Glenn Tesler (2011). How to apply de Bruijn graphs to genome assembly. Nature Biotechnology 29, 987–991
+<br>
+[2] Pavel A. Pevzner, Haixu Tang and Michael S. Waterman (2001). An Eulerian path approach to DNA fragment assembly. Proc Natl Acad Sci U S A., 98(17): 9748–9753
+
+<br>
+<div style="text-align: center;">
+  <img src="image/debrujin.png">
+ </div>
+<br>
+
+
+**GitHub**:
+[https://github.com/katwre/bioinformatics-projects/tree/master/genome_assembly](https://github.com/katwre/bioinformatics-projects/tree/master/genome_assembly)
+
+<br><br>
+
+## Sudoku
+
+Sudoku implemented in Javascript and JQuery.
+<br>
+<div style="text-align: center;">
+  <img src="image/sudoku.png" width="400" height="300">
+ </div>
+<br>
+
+**GitHub**:
+[https://github.com/katwre/sudoku](https://github.com/katwre/sudoku)
+
+<br><br>
+
+## Minesweeper
+
+Minesweeper implemented in JAVA using SWING and AWT graphics libraries.
+<br>
+<div style="text-align: center;">
+  <img src="image/minesweeper.png" width="300" height="400">
+ </div>
+<br>
+
+**GitHub**:
+[https://github.com/katwre/Minesweeper](https://github.com/katwre/Minesweeper)
+<br><br>
+
+<br><br>
+
+## Django-based web-services
+
+<br>
+A django based server for Multiple Sequence Alignment (MSA) visualization
+<br>
+**GitHub**:
+[https://github.com/freesci/MSA-vis-project](https://github.com/freesci/MSA-vis-project)
+
+<br>
+
+Phone application with django 1.5.1, manifesto app, localStorage:
+<br>
+**GitHub**:
+[https://github.com/katwre/phone_application](https://github.com/katwre/phone_application)
+
+<br><br>
+

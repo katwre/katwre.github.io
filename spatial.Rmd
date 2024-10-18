@@ -33,3 +33,6 @@ output:
 
 # References
 
+  <embed src="image/Poster_HOTregions_for_CRGBIMSBjointPhDretreat.pdf" type="application/pdf"   height="700px" width="500">
+<img src = "image/Poster_HOTregions_for_CRGBIMSBjointPhDretreat.pdf" alt="My Happy SVG"/>
+

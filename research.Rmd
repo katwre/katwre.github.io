@@ -104,6 +104,7 @@ vdat <- read_yaml(file = "research.yml")
 
 # Omics Data Analysis
 
+I have designed software platforms and tools to process and analyze large sets of sequencing data in order to find similarities across diverse omics datasets and to build network models to interrogate databases against each other to help biological scientists to build hypothesis.
 
 # Statistical Analysis
 

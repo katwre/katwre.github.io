@@ -22,7 +22,7 @@ output:
 Genomation is a Bioc R package that provides collection of functions for simplfiying common tasks in genomic feature/interval analysis. It provides functions for reading BED and GFF files as GRanges objects, summarizing genomic features over predefined windows so users can make average enrichment of features over defined regions or produce heatmaps. It can also annotate given regions with other genomic features such as exons,introns and promoters.
 </p>
 
-**People**: [Altuna Akaling](hhttps://www.mdc-berlin.de/bioinformatics), [Vedran Franke](https://www.mdc-berlin.de/bioinformatics) and others
+**People**: [Altuna Akalin](hhttps://www.mdc-berlin.de/bioinformatics), [Vedran Franke](https://www.mdc-berlin.de/bioinformatics) and others
 
 **GitHub**:
 [https://github.com/BIMSBbioinfo/genomation](https://github.com/BIMSBbioinfo/genomation)

@@ -76,11 +76,8 @@ img {
     I am a trained bioinformatician and data scientist living in Berlin. This is my personal website.
   </p>
   <p style="text-align: justify">
-    Check out my <a href="research.html"> research</a> projects and <a href="freelance.html"> freelance</a>! I'm interested in machine
+    Check out my <a href="projects.html"> bioinformatics, and data science projects</a>, <a href="software.html"> software </a> packages and <a href="freelance.html"> freelance</a>! I'm interested in machine
 learning for genomic <strong>data analysis</strong>, gene regulation, regulatory networks, and <strong>disease (epi)genomics</strong>.
-  </p>
-  <p style="text-align: justify">
-    I have conducted some number of <a href="projects.html"> bioinformatics, and data science</a> projects and developed several <a href="software.html"> Software </a> packages.
   </p>
  <br>
   <p> <strong>Consultancy for pharmaceutical companies, start-ups and consultancy companies</strong> | Freelance in Bioinformatics and Data Science | February 2023 - Present </p>

@@ -44,13 +44,13 @@ img {
   <img src="image/katwre.png">
   <br>
   <!-- Google Scholar Button -->
-  <a href="https://scholar.google.com/citations?user=5OrlhE8AAAAJ&hl=en&oi=ao">
+  <a href="https://scholar.google.com/citations?user=wQUP28oAAAAJ&hl=en">
     <button class="button">
       <span class="button__icon"><ion-icon name="logo-google"></ion-icon></span>
     </button>
   </a>
   <!-- LinkedIn Button -->
-  <a href="https://www.linkedin.com/in/art%C3%BCr-manukyan-a2071890/">
+  <a href="https://www.linkedin.com/in/katwre/">
     <button class="button">
       <span class="button__icon"><ion-icon name="logo-linkedin"></ion-icon></span>
     </button>

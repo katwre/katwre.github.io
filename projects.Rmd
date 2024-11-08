@@ -20,7 +20,7 @@ to identify binding sites for hundreds of proteins across different species. Wit
  These areas, known as high-occupancy target (HOT) regions, have been found in multiple species.
 <br>
 <p style="text-align:center;">
-  <img src="image/HOTregions0.png" height="500px" width="500">
+  <img src="image/HOTregions0.png" height="400px" width="400">
  </p>
 <br>
 <br>
@@ -40,7 +40,7 @@ of them are actually binding to DNA 2) existence of weak binding sites where TFs
 3) regions with high-affinity for chromatin immunoprecipitation called ‘hyper-ChIPable’ regions.
 <br>
 <p style="text-align:center;">
-  <img src="image/HOTregions01.png">
+  <img src="image/HOTregions01.png" height="400px" width="600">
  </p>
 
 
@@ -65,7 +65,7 @@ it depends on sequence properties, antibody properties and expression characteri
 The combination of different noise profiles result in a subset of ChIP-seq peaks being false positives.
 
 <br>
-  <img src="image/HOTregions2.png" >
+  <img src="image/HOTregions2.png" height="300px" width="700px">
 <br>
 
 <br>
@@ -82,13 +82,111 @@ For more details check out our:
 
 ## DNA methylation biomarkers derived from cell-free DNA
 
+<br>
 
-## DNA methylation landscape of neuroblastoma
+I have a strong interest in DNA methylation analysis of cell-free DNA,
+which I have applied in two projects focused on acute coronary syndrome (using blood cfDNA) and neuroblastoma (using urine cfDNA and solid tumor samples)
 
+
+Cell-free DNA signatures are quickly becoming the target of choice for non-invasive screening, diagnosis,
+treatment and monitoring of human tumors. DNA methylation changes occur early in tumorigenesis and are widespread, making cfDNA methylation an attractive cancer biomarker.
+
+
+<p style="text-align:center;">
+  <img src="image/cfDNA_review.jpg" width="400" height="250" >
+   </p>
+ Mutations, methylation, DNA integrity, microsatellite alterations and viral DNA can be detected in cell-free DNA (cfDNA) in blood.
+Tumour-related cfDNA, which circulates in the blood of cancer patients, is released by tumour cells in different forms and at different levels.
+Figure copied from [Cell-free nucleic acids as biomarkers in cancer patients](https://doi.org/10.1038/nrc3066).
+<br>
+
+We applied computational approached that accurately resolves relative fractions of diverse cell subsets in ccfDNA:
+<br>
+<br>
+  <img src="image/cfDNA_methylation.png" >
+<br>
+Figure adapted from [Newman et al Nature Methods 2015](https://doi.org/10.1038/nmeth.3337).
+
+<br>
+
+
+### DNA methylation biomarkers in acute coronary syndrome (cfDNA in blood)
+
+We proposed circulating cell-free DNA (ccfDNA) as an additional marker for acute coronary syndrome (ACS) since the damaged tissues can release DNA to the bloodstream.
+ We used ccfDNA methylation profiles for differentiating between the ACS types and provided computational tools to repeat similar analysis
+ for other diseases. We leveraged cell type specificity of DNA methylation to deconvolute the ccfDNA cell types of origin and to
+ find methylation-based biomarkers that stratify patients.
+
+ We identified hundreds of methylation markers associated with ACS types and
+ validated them in an independent cohort. Many such markers were associated with genes involved in cardiovascular conditions and inflammation.
+ ccfDNA methylation showed promise as a non-invasive diagnostic for acute coronary events. These methods are not limited to acute events,
+ and may be used for chronic cardiovascular diseases as well.
+
+
+For more details check out our:
+
+* <strong>Publication</strong>: [Rafael R C Cuadrat et al, NAR Genom Bioinform . 2023 Jun 28;5(2)](https://doi.org/10.1093/nargab/lqad061)
+<br>
+<br>
+
+### DNA methylation landscape of neuroblastoma (primary tissues and urine cfDNA)
+
+
+DNA methylation plays diverse roles in cancer, altering normal gene regulation and contributing to disease states.
+Neuroblastoma, an early childhood cancer, arises from aberrant differentiation of neural crest tissues within the
+sympathetic nervous system. Its clinical spectrum ranges from spontaneously regressing tumors to highly aggressive forms.
+Known genetic alterations only partially account for this variability, suggesting an epigenetic role in neuroblastoma pathogenesis.
+
+To investigate the regulatory function of DNA methylation at single-nucleotide resolution and on a genome-wide scale in
+primary neuroblastomas, we collaborated with Prof. Dr. med. Johannes H. Schulte at Charité Hospital in Berlin.
+We analyzed a cohort of samples, incorporating whole-genome bisulfite sequencing (Bisulfite-seq) data alongside
+matching RNA-seq data.
+
+Our analysis confirmed previously identified methylation-based clustering patterns, distinguishing high-risk
+from low-risk tumors and MYCN-amplified from non-MYCN-amplified tumors, as well as MYCN-driven DNA methylation
+deregulation at regulatory elements in MYCN-amplified cases. Additionally, we employed an integrative approach,
+combining Bisulfite-seq, RNA-seq, publicly available ChIP-seq data for tumor-specific H3K27ac marks, and known DNA motifs.
+
+This approach revealed that specific transcription factor networks, deregulated in high-risk neuroblastomas,
+can be modeled based solely on DNA methylation data. Our findings suggest that epigenetic mechanisms contribute
+to neuroblastoma’s regulatory dysfunctions and may serve as valuable targets for further research.
+
+In this study, we aimed to gain a deeper understanding of the DNA methylation landscape in MYCN-amplified and
+non-MYCN-amplified high-risk neuroblastomas at both single-nucleotide and genome-wide levels,
+focusing on associations between DNA methylation aberrations and neuroblastoma-specific transcription
+factor regulatory networks.
+
+We confirmed our findings in solid tissues as described above by analyzing cfDNA derived from urine in
+collaboration with the AG Deubzer lab at Charité Hospital in Berlin.
+
+<br>
+<p style="text-align:center;">
+  <img src="image/neuroblastoma_clustering.png" width="500" height="400" >
+ </p>
+<br>
+Hierarchical clustering of DNA methylation percentage of differentially methylated CpGs between 24 neuroblastoma patients.
+Each column represents a patient and each row represents a CpG. The percentage of DNA methylation is normalized to [0,1] range.
+Each patient has depicted risk group, sequencing batch, age (in days), and estimated gender
+
+
+<br>
+<p style="text-align:center;">
+  <img src="image/neuroblastoma_networks.png" width="400" height="600" >
+  </p>
+<br>
+(A) Regulatory PPI network based on motif activity results using MNA using [ISMARA](https://ismara.unibas.ch/mara/) (in red), and HR_nMNA DMRs (in blue).
+TFs common in both networks are depicted in green. (B) Top 20 Gene Ontology terms (rows) using metascape
+(Zhou et al. 2019) based on TFs from MNA and HR_nMNA networks (columns).
+
+
+
+<br>
 
 # Target nomination
 
-## Visualisations of biomarkers for patients with limited therapy options (clinical trials)
+<br>
+
+## Visualization and statistical analysis of biomarkers in patients with limited treatment options (as part of clinical trials)
 
 We developed a comprehensive set of visualizations, including oncoprints, t
 o effectively highlight and emphasize key biomarkers in high medical need patients.
@@ -98,37 +196,34 @@ The analysis focuses on patients with diseases that have limited treatment optio
 denoted as a high medical need population. The visual representation may categorize patients based on
 disease severity, unmet medical need, or current lack of effective therapies.
 
-<br>
-<p style="text-align:center;">
-  <img src="image/oncoprint_modified.png" width="500" height="400"  >
-   </p>
-<br>
-
-## Statistical analysis of selected biomarkers and patient populations
-
 We performed comprehensive analysis of target nomination in the context of high medical need populations,
 using survival analysis and other statistical emthods to illustrate the clinical significance of the nominated targets (genes).
 
-<br>
-<p style="text-align:center;">
-  <img src="image/survival_analysis.png" width="400" height="400" >
-   </p>
-<br>
 
-## Target nomination using machine learning and deep learning methods
 
-To rank molecules of interest for further investigation, we applied a method known as Positive and Unlabeled (PU) learning.
-In this approach, we have information about which molecules are likely to be of high interest (positive samples),
-but we lack information regarding the other molecules (i.e., no negative samples).
+<figure class="half" style="display:flex">
+    <img src="image/oncoprint_modified.png" width="500" height="400"  >
+    <img src="image/survival_analysis.png" width="400" height="400" >
+</figure>
+<br>
+<figcaption>Example of visualisation and survival analysis of selected biomarkers.</figcaption>
+<br>
 <br>
 
-PU learning is a machine learning setting where the learner only has access to positive examples and unlabeled data.
-The assumption is that the unlabeled data may contain both positive and negative examples. This approach has gained
-increasing attention in the machine learning literature, as such data naturally arises in various applications,
-including medical diagnosis and target nomination. For example, medical records typically list the diseases a
-patient has been diagnosed with, but they rarely include information on diseases the patient does not have.
-However, the absence of a diagnosis does not necessarily imply the absence of a disease. Patients may choose
-not to seek medical care, and many conditions, such as diabetes, often go undiagnosed (Claesen et al. 2015b).
+##  Identifying novel anticancer targets using machine learning and AI methods
+
+To prioritize molecules for further study, we utilized Positive and Unlabeled (PU) learning.
+This method is designed for cases where we know which molecules are likely to be of high
+interest (positive samples) but lack explicit negative examples.
+
+PU learning is a machine learning framework that operates with only positive and unlabeled data,
+assuming that the unlabeled set may contain both positive and negative examples.
+This approach is particularly useful in fields like medical diagnosis and target identification,
+where data often naturally arise in this format. For instance, medical records typically document
+only the conditions a patient has been diagnosed with, not those they do not have. This absence of
+diagnosis does not imply the absence of disease, as many conditions, such as diabetes, often go
+undiagnosed (Claesen et al. 2015b).
+
 <br>
 
 The goal of PU learning is the same as general binary classification: train a classifier that can distinguish between positive and negative examples based on the attributes.
@@ -139,23 +234,19 @@ However, during the learning phase, only some of the positive examples in the tr
    </p>
 <br>
 
-We applied PU classificators for molecules and their features of interest (gene expresion, mutations, available therapies, etc.) using:
+We applied PU classificators for molecules and their features of interest such as gene expresion, gene mutations, available therapies using:
 
 * [Elkan-Noto classifier proposed by Elkan and Noto (2008)](https://cseweb.ucsd.edu/~elkan/posonly.pdf)
 * [Bagging SVM method proposed by Mordelet and Vert (2013)](http://members.cbio.mines-paristech.fr/~jvert/svn/bibli/local/Mordelet2013bagging.pdf)
-* [Pytorch implementation of Dist-PU (2022)](https://arxiv.org/pdf/2212.02801)
 
-Dist-PU utilizes a neural network and approaches the problem through the lens of label distribution estimation,
-aiming to model the probability distribution of both positive and negative labels within the unlabeled data.
-The core idea behind Dist-PU is to learn the label distribution for both classes, enabling it to more effectively
-handle scenarios where the labeled positive examples may not fully represent the entire positive class, as illustrated below:
+
+Additionally, we applied unsupervised approach of using autoencoders (deep learning) in order to find the most predictive features of group of molecules of interest.
 
 <br>
 <p style="text-align:center;">
-  <img src="image/PUlearning_DL.png" >
+  <img src="image/autoencoder_TFs.png" width="900" height="300" >
    </p>
 <br>
-
 
 
 

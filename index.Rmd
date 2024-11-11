@@ -5,68 +5,86 @@ output:
     df_print: kable
 ---
 
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-
 <style>
 img {
   display: inline;
   margin: 0 auto;
   height: auto;
-  width: 100%; /* Fixed the width declaration */
+  width: 100%;
 }
 
-.button {
-  display: inline-block;
-  padding: 5px; /* Adjusted padding for better spacing */
-  border: none;
-  outline: none;
-  border-radius: 5px;
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Space between icons */
+  margin-top: 15px;
+}
+
+.social-buttons img {
+  width: 40px; /* Icon size */
+  height: 40px;
+  transition: transform 0.3s ease;
   cursor: pointer;
-  background: #FFFFFF;
-  transition: transform 160ms ease-in;
 }
 
-.button:active {
-  transform: scale(0.8);
+.social-buttons img:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
 }
-
-.button__icon {
-  color: black; /* Set the icon color to black */
-  font-size: 2.7em;
-}
-
 </style>
 
-<br><br><br><br><br><br>
+ <script>
+        function copyEmail() {
+            // Email address to copy
+            const email = "katwre@gmail.com";
+
+            // Check if the clipboard API is supported
+            if (navigator.clipboard) {
+                // Use the modern clipboard API
+                navigator.clipboard.writeText(email).then(() => {
+                    alert("My email address is copied to your clipboard! katwre@gmail.com");
+                }).catch(err => {
+                    console.error("Failed to copy email: ", err);
+                });
+            } else {
+                // Fallback for older browsers
+                const tempInput = document.createElement("input");
+                tempInput.value = email;
+                document.body.appendChild(tempInput);
+                tempInput.select();
+                document.execCommand("copy");
+                document.body.removeChild(tempInput);
+                alert("Email address copied to clipboard!");
+            }
+        }
+    </script>
+    
+<!--html_preserve-->
 
 <div style="width:27%; text-align: center; float: left; position: relative;">
   <br>
-  <img src="image/katwre.png">
-  <br>
-  <!-- Google Scholar Button -->
-  <a href="https://scholar.google.com/citations?user=wQUP28oAAAAJ&hl=en">
-    <button class="button">
-      <span class="button__icon"><ion-icon name="logo-google"></ion-icon></span>
-    </button>
-  </a>
-  <!-- LinkedIn Button -->
-  <a href="https://www.linkedin.com/in/katwre/">
-    <button class="button">
-      <span class="button__icon"><ion-icon name="logo-linkedin"></ion-icon></span>
-    </button>
-  </a>
-  <!-- GitHub Button -->
-  <a href="https://github.com/katwre">
-    <button class="button">
-      <span class="button__icon"><ion-icon name="logo-github"></ion-icon></span>
-    </button>
-  </a>
-  <!-- Twitter Button -->
-  <a href="https://twitter.com/katwre">
-    <button class="button">
-      <span class="button__icon"><ion-icon name="logo-twitter"></ion-icon></span>
-    </button>
-  </a>
+  <img src="image/katwre.png" alt="Profile Image">
+  <br><br>
+
+  <div class="social-buttons">
+
+  <!-- Email Icon -->
+    <a href="javascript:void(0);" onclick="copyEmail()" aria-label="Copy Email">
+        <img src="image/icons/gmail.svg" alt="Gmail Icon" class="email-icon">
+    </a>
+
+    <a href="https://scholar.google.com/citations?user=wQUP28oAAAAJ&hl=en" target="_blank" aria-label="Google Scholar">
+      <img src="image/icons/googlescholar.svg" alt="Google Scholar Icon">
+    </a>
+    <a href="https://www.linkedin.com/in/katwre" target="_blank" aria-label="LinkedIn">
+      <img src="image/icons/linkedin.svg" alt="LinkedIn Icon">
+    </a>
+    <a href="https://github.com/katwre" target="_blank" aria-label="GitHub">
+      <img src="image/icons/github.svg" alt="GitHub Icon">
+    </a>
+    <a href="https://twitter.com/katwre" target="_blank" aria-label="Twitter">
+      <img src="image/icons/twitter.svg" alt="Twitter Icon">
+    </a>
+  </div>
 </div>
 
 <div style="width:73%; vertical-align: text-top; padding-left: 10%; float: left;">
@@ -76,11 +94,15 @@ img {
     I am a trained bioinformatician and data scientist living in Berlin. This is my personal website.
   </p>
   <p style="text-align: justify">
-    Check out my <a href="projects.html"> bioinformatics, and data science projects</a>, <a href="software.html"> software </a> packages and <a href="freelance.html"> freelance</a>! I'm interested in machine
-learning for genomic <strong>data analysis</strong>, gene regulation, regulatory networks, and <strong>disease (epi)genomics</strong>.
+    Check out my <a href="research.html">research</a> projects and <a href="freelance.html">freelance</a>! I'm interested in machine learning for genomic <strong>data analysis</strong>, gene regulation, regulatory networks, and <strong>disease (epi)genomics</strong>.
   </p>
- <br>
-  <p> <strong>Consultancy for pharmaceutical companies, start-ups and consultancy companies</strong> | Freelance in Bioinformatics and Data Science | February 2023 - Present </p>
-  <p> <strong>MDC BIMSB, Bioinformatics and Omics Data Science Platform</strong> | PhD student | September 2015 - November 2021 </p>
-  <p> <strong>Institute of Computer Science, Polish Academy of Sciences & MDC BIMSB</strong> | Visiting Predoctoral Researcher | 2015 </p>
+  <p style="text-align: justify">
+    I have conducted a number of <a href="projects.html">bioinformatics and data science</a> projects and developed several <a href="software.html">software</a> packages.
+  </p>
+  <br>
+  <p><strong>Consultancy for pharmaceutical companies, start-ups, and consultancy companies</strong> | Freelance in Bioinformatics and Data Science | February 2023 - Present</p>
+  <p><strong>MDC BIMSB - Bioinformatics and Omics Data Science Platform</strong> | PhD student | September 2015 - November 2021</p>
+  <p><strong>Institute of Computer Science, Polish Academy of Sciences & MDC BIMSB</strong> | Visiting Predoctoral Researcher | 2015</p>
 </div>
+
+<!--/html_preserve-->

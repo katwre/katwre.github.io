@@ -41,48 +41,53 @@ img {
   width: 100%;
 }
 </style>
-
 <br><br><br><br><br><br>
 
-<div style = "width:27%; text-align: center; float: left; position:relative;">
+<div style="width:27%; text-align: center; float: left; position: relative;">
   <br>
-  <img src="image/artur.png">      
+  <img src="image/katwre.png">
   <br>
-  <a href="https://scholar.google.com/citations?user=5OrlhE8AAAAJ&hl=en&oi=ao">
-    <button class = "button" style = "background: #FFFFFF;">
-      <span class= "button__icon"> <ion-icon name="logo-google"></ion-icon> </span>
+  <!-- Google Scholar Button -->
+  <a href="https://scholar.google.com/citations?user=wQUP28oAAAAJ&hl=en">
+    <button class="button">
+      <span class="button__icon"><ion-icon name="logo-google"></ion-icon></span>
     </button>
   </a>
-  <a href="https://www.linkedin.com/in/art%C3%BCr-manukyan-a2071890/">
-    <button class = "button" style = "background: #FFFFFF;">
-      <span class= "button__icon"> <ion-icon name="logo-linkedin"></ion-icon> </span>
+  <!-- LinkedIn Button -->
+  <a href="https://www.linkedin.com/in/katwre/">
+    <button class="button">
+      <span class="button__icon"><ion-icon name="logo-linkedin"></ion-icon></span>
     </button>
   </a>
-  <a href="https://github.com/Artur-man">
-    <button class = "button" style = "background: #FFFFFF;">
-      <span class= "button__icon"> <ion-icon name="logo-github"></ion-icon> </span>
+  <!-- GitHub Button -->
+  <a href="https://github.com/katwre">
+    <button class="button">
+      <span class="button__icon"><ion-icon name="logo-github"></ion-icon></span>
     </button>
   </a>
-  <a href="https://twitter.com/ArturMa75503143">
-    <button class = "button" style = "background: #FFFFFF;">
-      <span class= "button__icon"> <ion-icon name="logo-twitter"></ion-icon> </span>
+  <!-- Twitter Button -->
+  <a href="https://twitter.com/katwre">
+    <button class="button">
+      <span class="button__icon"><ion-icon name="logo-twitter"></ion-icon></span>
     </button>
   </a>
 </div>
+
 <div style="width:73%; vertical-align: text-top; padding-left: 10%; float: left;">
-  <h3>Artür Manukyan, PhD</h3>
+  <h3>Katarzyna Wreczycka, PhD</h3>
   <br>
   <p style="text-align: justify">
-    I am a trained statistician, computational scientist and bioinformatician living in Berlin. 
+    I am a trained bioinformatician and data scientist living in Berlin. This is my personal website.
   </p>
   <p style="text-align: justify">
-    Check out my <a href="research.html"> Research</a>! I currently work on developing graph-based learning algorithms and software platforms for <strong> spatial transcriptomics </strong> technologies, and I am also interested in <strong> biological knowledge graphs </strong> as well as other machine learning approaches to analyzing <strong> omic datasets</strong>.
+    Check out my <a href="research.html"> research</a> projects and <a href="freelance.html"> freelance</a>! I'm interested in machine
+learning for genomic <strong>data analysis</strong>, gene regulation, regulatory networks, and <strong>disease (epi)genomics</strong>.
   </p>
-  <p style="text-align: justify"> 
-    I have lead and conducted some number of <a href="projects.html"> Bioinformatics Projects</a>, and developed several <a href="software.html"> Software </a> packages for achieving my research.
+  <p style="text-align: justify">
+    I have conducted some number of <a href="projects.html"> bioinformatics, and data science</a> projects and developed several <a href="software.html"> Software </a> packages.
   </p>
-  <br>
-  <p> <strong>MDC BIMSB </strong> | Postdoctoral Research Fellow | September 2022 - Present </p>
-  <p> <strong>UMass Bioinformatics Core</strong> | Postdoctoral Research Fellow | August 2020 - August 2022 </p>
-  <p> <strong>Broad Institute/BWH </strong> | Postdoctoral Research Fellow | August 2019 - August 2020 </p>
+ <br>
+  <p> <strong>Consultancy for pharmaceutical companies, start-ups and consultancy companies</strong> | Freelance in Bioinformatics and Data Science | February 2023 - Present </p>
+  <p> <strong>MDC BIMSB, Bioinformatics and Omics Data Science Platform</strong> | PhD student | September 2015 - November 2021 </p>
+  <p> <strong>Institute of Computer Science, Polish Academy of Sciences & MDC BIMSB</strong> | Visiting Predoctoral Researcher | 2015 </p>
 </div>

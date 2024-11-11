@@ -104,11 +104,44 @@ vdat <- read_yaml(file = "research.yml")
 
 # Omics Data Analysis
 
-I have designed software platforms and tools to process and analyze large sets of sequencing data in order to find similarities across diverse omics datasets and to build network models to interrogate databases against each other to help biological scientists to build hypothesis.
+I have applied a range of statistical methods and developed software platforms and analytical tools to process and analyze
+large-scale sequencing datasets. These tools facilitate the discovery of patterns and similarities across diverse omics datasets,
+enabling the construction of statistical models that support robust hypothesis generation.
+
+In various <a href="projects.html">projects</a>, I have integrated data from multiple sources, including:
+
+* <strong>Gene expression </strong>data (RNA-seq, scRNA-seq),
+* <strong>DNA methylation </strong>profiles (Bisulfite-seq, RRBS, methylation arrays),
+* <strong>Open chromatin</strong> regions (ATAC-seq),
+* <strong>Transcription factor binding sites</strong> (ChIP-seq),
+* Data from <strong>specialized methods</strong>, such as DRIP-seq and RDIP-seq, to detect DNA-RNA hybrids.
+* Information on therapies. biomarkers and drugs from databases of <strong>clinical trials</strong>
+
 
 # Statistical Analysis
 
+Examples consist of:
 
+* <strong>Multi-task Regression Methods</strong>: These methods are used to simultaneously model multiple related outputs,
+enabling efficient handling of data from various sources. In the context of omics data, multi-task
+regression can capture shared patterns across related datasets, improving predictive accuracy and
+providing insights into interconnected biological processes.
+
+* <strong>Classification Methods</strong>: I employ a variety of classical classification techniques,
+such as logistic regression, decision trees, and support vector machines (SVMs),
+to categorize data based on features derived from omics datasets.
+These methods are essential for distinguishing between different biological states,
+such as healthy vs. diseased samples or cell type classifications. By applying these well-established algorithms,
+I can create predictive models that provide insights into underlying biological processes and
+help identify potential biomarkers. Additionally, I incorporated positive-unlabeled learning when
+working with partially labeled data, allowing for the effective classification of samples in
+scenarios where only a subset has known annotations.
+
+* <strong>Unsupervised Methods</strong>, e.g. Autoencoders: Autoencoders are neural network models that learn compact,
+informative representations of high-dimensional data. In omics analysis, I leverage autoencoders to uncover
+hidden structures and reduce data dimensionality, facilitating the discovery of patterns in transcription
+factor activity and other biological features. These learned embeddings can further be used to cluster data,
+identify relationships, and detect anomalies.
 
 
 

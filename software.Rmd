@@ -113,8 +113,7 @@ and session of regions/genes and tracks of interest
 
 
 <br>
-  <img src="image/igv1.png" width="600" height="300">
-  <img src="image/igv2.png">
+  <img src="image/igv_original.png">
  <br>
 
 

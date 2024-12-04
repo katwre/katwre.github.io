@@ -96,18 +96,33 @@ img {
   </p>
 
  <p style="text-align: justify">
-Check out an overview of <a href="research.html">statistical methods and datasets</a> I have used in various projects and my <a href="freelance.html">freelance</a>  work.
+  
+Check out an overview of <a href="research.html">statistical methods, datasets</a>, and <a href="https://scholar.google.com/citations?user=wQUP28oAAAAJ&hl=en">publications</a> from my various projects, and <a href="freelance.html">freelance</a>  work.
 I'm interested in applying machine learning to genomic <strong>data analysis</strong>, gene regulation, regulatory networks, and <strong>disease (epi)genomics</strong>.
 </p>
 
 <p style="text-align: justify">
-I have completed numerous <a href="projects.html">bioinformatics and data science</a> projects and developed multiple <a href="software.html">software</a>  packages.
+I have completed numerous <a href="projects.html">bioinformatics and data science</a> projects and developed multiple <a href="software.html">software</a> packages.
   </p>
 
   <br>
   <p><strong>Consultancy for pharmaceutical companies, start-ups, and consultancy companies</strong> | Freelance in Bioinformatics and Data Science | February 2023 - Present</p>
   <p><strong>MDC BIMSB - Bioinformatics and Omics Data Science Platform</strong> | PhD student | September 2015 - November 2021</p>
   <p><strong>Institute of Computer Science, Polish Academy of Sciences & MDC BIMSB</strong> | Visiting Predoctoral Researcher | 2015</p>
+
+
+<!--
+<p style="text-align: justify">
+<a href="https://scholar.google.com/citations?user=wQUP28oAAAAJ&hl=en">My publications:</a>
+ </p>
+  <br>
+  <p>Strategies for analyzing bisulfite sequencing data, K Wreczycka, A Gosdschan, D Yusuf, B Grüning, Y Assenov, A Akalin Journal of biotechnology 261, 105-115, 2017</p>
+  <p>PiGx: reproducible genomics analysis pipelines with GNU Guix, R Wurmus, B Uyar, B Osberg, V Franke, A Gosdschan, K Wreczycka, ..., Altuna Akalin, GigaScience 7 (12), giy123, 2018</p>
+  <p>HOT or not: Examining the basis of high-occupancy target regions, Katarzyna Wreczycka, Vedran Franke, ..., Altuna Akalin, Nucleic Acids Research 47 (11), 5735-5745, 2019</p>
+  <p>Cardiovascular disease biomarkers derived from circulating cell-free DNA methylation, RRC Cuadrat, A Kratzer, HG Arnal, AC Rathgeber, K Wreczycka, ..., Altuna Akalin,NAR Genomics and Bioinformatics 5 (2), lqad061, 2023<\p>
+
 </div>
+-->
+
 
 <!--/html_preserve-->

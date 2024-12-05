@@ -186,7 +186,7 @@ TFs common in both networks are depicted in green. (B) Top 20 Gene Ontology term
 
 <br>
 
-## Visualization and statistical analysis of biomarkers in patients with limited treatment options (as part of clinical trials)
+## Visualization and statistical analysis of biomarkers in patients with limited treatment options
 
 We developed a comprehensive set of visualizations, including oncoprints, to effectively highlight and emphasize key biomarkers in high medical need patients.
 These visualizations offer a clear, intuitive understanding of the underlying genomic alterations,

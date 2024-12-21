@@ -104,32 +104,29 @@ vdat <- read_yaml(file = "research.yml")
 
 # Omics Data Analysis
 
-I have applied a range of statistical methods and developed software platforms and analytical tools to process and analyze
-large-scale sequencing datasets. These tools facilitate the discovery of patterns and similarities across diverse omics datasets,
-enabling the construction of statistical models that support robust hypothesis generation.
+I specialize in leveraging advanced statistical methods and developing cutting-edge software tools to process and analyze large-scale sequencing datasets.
+These innovations enable the discovery of meaningful patterns and relationships across diverse omics datasets,
+paving the way for robust hypothesis generation and data-driven insights.
 
-In various <a href="projects.html">projects</a>, I have integrated data from multiple sources, including:
+In my <a href="projects.html">projects</a>, I integrated multi-omics data from a variety of sources, including:
 
 * <strong>Gene expression </strong>data (RNA-seq, scRNA-seq),
 * <strong>DNA methylation </strong>profiles (Bisulfite-seq, RRBS, methylation arrays),
 * <strong>Open chromatin</strong> regions (ATAC-seq),
 * <strong>Transcription factor binding sites</strong> (ChIP-seq),
-* Data from <strong>specialized protocols</strong> and methods, such as DRIP-seq and RDIP-seq, to detect DNA-RNA hybrids.
-* Therapies, drugs and biomarkers from databases of internal and external <strong>clinical trials</strong>
+* Data from <strong>specialized protocols</strong> and methods, such as DRIP-seq and RDIP-seq, for detecting DNA-RNA hybrids
+*  Information on <strong>therapies</strong>, <strong>drugs</strong>, and <strong>biomarkers</strong> from internal and external clinical trial databases
 
+By combining these diverse data types, I created comprehensive models that contribute to understanding complex biological systems.
 
 # Statistical Analysis
 
-Examples consist of:
+I employed a wide range of statistical techniques to extract meaningful insights from complex datasets, including:
 
-* <strong>Survival Analysis</strong>: the Kaplan-Meier Estimator and
-the Cox Proportional Hazards Model
-
-* <strong>Regression Analysis</strong>: incl. linear regression
-
-* <strong>Classification Methods</strong>: incl. logistic regression, elastic net, random forests, and support vector machines (SVMs), positive-unlabelled (PU) learning
-
-* <strong>Unsupervised Methods</strong>, e.g., PCA, MOFA, autoencoders
+* <strong>Survival Analysis</strong>: Utilizing methods such as the Kaplan-Meier Estimator and Cox Proportional Hazards Model to assess time-to-event data and evaluate prognostic factors.
+* <strong>Regression Analysis</strong>: Applying linear regression and other predictive modeling techniques to uncover relationships between variables.
+* <strong>Classification Methods</strong>: Leveraging algorithms such as logistic regression, elastic net, random forests, support vector machines (SVMs), and positive-unlabeled (PU) learning for accurate predictions and classifications.
+* <strong>Unsupervised Methods</strong>: Employing dimensionality reduction and clustering techniques, including hierarchical clustering, PCA, MOFA, and autoencoders, to uncover hidden structures in data.
 
 
 

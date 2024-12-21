@@ -13,64 +13,79 @@ output:
 ## ChIP-seq phantom peaks
 
 
-[Chromatin immunoprecipitation followed by sequencing (ChIP-seq)](https://doi.org/10.1038/nmeth.f.247) is a widely-used technique to map where
-DNA-binding proteins attach to the genome. Big projects and databases like ENCODE and modENCODE have used this method
-to identify binding sites for hundreds of proteins across different species. With all the data collected,
- it’s clear that some parts of the genome have unsually high frequency of protein-DNA interactions.
- These areas, known as high-occupancy target (HOT) regions, have been found in multiple species.
+[Chromatin immunoprecipitation followed by sequencing (ChIP-seq)](https://doi.org/10.1038/nmeth.f.247) is a widely used
+technique to map DNA-binding proteins and their interactions across the genome. Major projects like ENCODE and modENCODE
+have utilized ChIP-seq to identify binding sites for hundreds of proteins across various species.
+
+Through these large-scale studies, researchers have identified certain regions of the genome with an unusually
+high frequency of protein-DNA interactions. Known as high-occupancy target (HOT) regions, these areas have been
+consistently observed across multiple species and are believed to either play a biologically significant role or
+represent technical artifacts of the ChIP-seq protocol.
+
+
+### What Are ChIP-seq Phantom Peaks or HOT Regions?
+
+[HOT regions](https://academic.oup.com/nar/article/47/11/5735/5494779), also referred to as [ChIP-seq phantom peaks](https://pmc.ncbi.nlm.nih.gov/articles/PMC4538825/),
+are genomic areas with an abnormally high number of transcription factor binding sites.
+These regions are enriched in housekeeping gene promoters, and their associated genes are consistently expressed across many cell types.
+
+Despite their intriguing features, HOT regions are primarily defined through ChIP-seq data and often lack the characteristic motifs of
+the transcription factors that seem to bind there. This raises questions about the underlying mechanisms responsible for their formation.
+
 <br>
-<p style="text-align:center;">
-  <img src="image/HOTregions0.png" height="400px" width="400">
- </p>
+<br>
+<br>
+<p style="text-align:center;"> <img src="image/HOTregions0.png" height="400px" width="400"> </p>
 <br>
 <br>
 <br>
 
-[ChIP-seq phantom peaks](https://pmc.ncbi.nlm.nih.gov/articles/PMC4538825/) or as we called them
-[High-occupancy target (HOT) regions](https://academic.oup.com/nar/article/47/11/5735/5494779) are parts of the genome that have an unusual amount of
-transcription factor binding sites. These regions show up in various species and are thought to be biologically important because of the
-high concentration of transcription factor binding. They also overlap with housekeeping gene promoters, and the related genes are
-consistently expressed across many cell types. Despite these interesting features, HOT regions are mainly defined using ChIP-seq
-experiments and don't show the typical motifs for the transcription factors believed to bind there.
-<br>
-<br>
+### Possible Explanations for Motifless Binding in HOT Regions
 
-For us, the plausible explanations for motifless binding are a combination of 1) interaction of transcriptions factors (TFs) where only a handful
-of them are actually binding to DNA 2) existence of weak binding sites where TFs bind to non-canonical motifs in a weak manner
-3) regions with high-affinity for chromatin immunoprecipitation called ‘hyper-ChIPable’ regions.
-<br>
-<p style="text-align:center;">
-  <img src="image/HOTregions01.png" height="400px" width="600">
- </p>
+Several hypotheses might explain the unique nature of these regions:
 
+* <strong>Protein-Protein Interactions</strong>: Only a subset of transcription factors (TFs) directly binds to DNA, while others associate indirectly through interactions with these TFs.
+* <strong>Weak Binding Sites</strong>: Some TFs may bind to non-canonical motifs with low affinity.
+* <strong>Hyper-ChIPable Regions</strong>: These regions may exhibit an inherent high affinity for ChIP due to specific chromatin properties.
 
-
-Upon observing common low-level sequence features of HOT regions across species, we investigated whether potential technical biases in ChIP-seq could at least partially explain false positive signals on HOT regions.
-14 out of 22 publicly available ChIP-seq experiments with knock-out of the genes that
-encodes target proteins show enrichment even though the chipped protein shouldn't be
-present in the analysed sample. Such false positive signal is the highest on HOT regions.
 <br>
 <br>
 <br>
-  <img src="image/HOTregions1.png">
+<p style="text-align:center;"> <img src="image/HOTregions01.png" height="400px" width="600"> </p>
 <br>
 <br>
 <br>
 
-The observed ChIP signal arises from a combination of different signal sources.
-The signal in a ChIP experiment originates from an antibody binding to the intended target protein (blue),
-and nonspecific antibody binding—either to the non-target proteins (orange) or directly to polynucleotide structures,
-such as R-loops (red). The error (orange + red) is not proportional to the signal from the targeted protein, rather,
-it depends on sequence properties, antibody properties and expression characteristics of individual genomic regions.
-The combination of different noise profiles result in a subset of ChIP-seq peaks being false positives.
+### Uncovering Technical Bias in ChIP-seq Data
 
-<br>
-  <img src="image/HOTregions2.png" height="300px" width="700px">
-<br>
+To investigate whether technical biases in ChIP-seq could explain the false-positive signals observed in HOT regions,
+we analyzed 22 publicly available ChIP-seq datasets. Remarkably, 14 of these datasets included knockouts of the target protein’s gene.
+Even in these samples, significant signal enrichment was observed at HOT regions, suggesting that
+these signals are not due to genuine binding of the target protein.
 
 <br>
 <br>
+<br>
+<p style="text-align:center;"> <img src="image/HOTregions1.png"> </p>
+<br>
+<br>
+<br>
 
+
+### The Source of ChIP-seq Signal
+
+
+The signal in ChIP-seq experiments arises from a mix of sources:
+
+* <strong>True signal</strong>: Antibody binding to the target protein (blue).
+* <strong>Nonspecific signal</strong>: Antibody binding to non-target proteins (orange) or directly to polynucleotide structures like R-loops (red).
+
+The proportion of nonspecific signal varies depending on the antibody's properties, the genomic sequence features, and expression characteristics. This variation leads to false-positive peaks in ChIP-seq data, particularly in HOT regions.
+
+<p style="text-align:center;"> <img src="image/HOTregions2.png" height="250px" width="700px"> </p>
+
+<br>
+<br>
 For more details check out our:
 
 * <strong>Publication</strong>: [Wreczycka et al, Nucleic Acids Research, Volume 47, Issue 11, 20 June 2019, Pages 5735–5745](https://doi.org/10.1093/nar/gkz460)
@@ -80,48 +95,60 @@ For more details check out our:
 <br>
 <br>
 
+
+
+
+
+
+
+
 ## DNA methylation biomarkers derived from cell-free DNA
 
 <br>
 
-I have a strong interest in DNA methylation analysis of cell-free DNA,
-which I have applied in two projects focused on acute coronary syndrome (using blood cfDNA) and neuroblastoma (using urine cfDNA and solid tumor samples)
 
+I have a keen interest in analyzing DNA methylation in cell-free DNA (cfDNA),
+a focus I have explored through projects on acute coronary syndrome (using blood cfDNA) and neuroblastoma (using urine cfDNA and solid tumor samples).
 
-Cell-free DNA signatures are quickly becoming the target of choice for non-invasive screening, diagnosis,
-treatment and monitoring of human tumors. DNA methylation changes occur early in tumorigenesis and are widespread, making cfDNA methylation an attractive cancer biomarker.
+[Cell-free DNA (cfDNA)](https://doi.org/10.1038/s41467-024-46435-0) has emerged as a powerful biomarker for non-invasive cancer screening, diagnosis, treatment, and monitoring.
+DNA methylation changes, which occur early in tumorigenesis and are widespread, make [cfDNA methylation](https://doi.org/10.1038/s41586-022-05580-6) an especially attractive target for biomarker discovery.
 
-
-<p style="text-align:center;">
-  <img src="image/cfDNA_review.jpg" width="400" height="250" >
-   </p>
- Mutations, methylation, DNA integrity, microsatellite alterations and viral DNA can be detected in cell-free DNA (cfDNA) in blood.
-Tumour-related cfDNA, which circulates in the blood of cancer patients, is released by tumour cells in different forms and at different levels.
-Figure copied from [Cell-free nucleic acids as biomarkers in cancer patients](https://doi.org/10.1038/nrc3066).
-<br>
-
-We applied computational approached that accurately resolves relative fractions of diverse cell subsets in ccfDNA:
 <br>
 <br>
-  <img src="image/cfDNA_methylation.png" >
 <br>
+<p style="text-align:center;"> <img src="image/cfDNA_review.jpg" width="400" height="250"> </p>
+Figure copied from: [Cell-free nucleic acids as biomarkers in cancer patients](https://doi.org/10.1038/nrc3066).
+<br>
+<br>
+<br>
+
+Mutations, methylation patterns, DNA integrity, microsatellite alterations, and viral DNA can all be detected in cfDNA from blood samples.
+Tumor-derived cfDNA, released by tumor cells, circulates in various forms and levels in the bloodstreams of cancer patients.
+
+
+We have applied computational approaches to accurately deconvolute the relative fractions of diverse cell types contributing to circulating cfDNA (ccfDNA):
+
+<br>
+<br>
+<br>
+<p style="text-align:center;"> <img src="image/cfDNA_methylation.png"> </p>
 Figure adapted from [Newman et al Nature Methods 2015](https://doi.org/10.1038/nmeth.3337).
-
+<br>
+<br>
 <br>
 
 
-### DNA methylation biomarkers in acute coronary syndrome (cfDNA in blood)
+### DNA Methylation Biomarkers in Acute Coronary Syndrome (cfDNA in Blood)
 
-We proposed circulating cell-free DNA (ccfDNA) as an additional marker for acute coronary syndrome (ACS) since the damaged tissues can release DNA to the bloodstream.
- We used ccfDNA methylation profiles for differentiating between the ACS types and provided computational tools to repeat similar analysis
- for other diseases. We leveraged cell type specificity of DNA methylation to deconvolute the ccfDNA cell types of origin and to
- find methylation-based biomarkers that stratify patients.
 
- We identified hundreds of methylation markers associated with ACS types and
- validated them in an independent cohort. Many such markers were associated with genes involved in cardiovascular conditions and inflammation.
- ccfDNA methylation showed promise as a non-invasive diagnostic for acute coronary events. These methods are not limited to acute events,
- and may be used for chronic cardiovascular diseases as well.
+We proposed circulating cfDNA (ccfDNA) methylation as a non-invasive marker for acute coronary syndrome (ACS), as damaged tissues release DNA into the bloodstream.
 
+Our research utilized ccfDNA methylation profiles to:
+
+* Differentiate between ACS subtypes.
+* Leverage the cell type specificity of DNA methylation to deconvolute cfDNA origins and identify methylation-based biomarkers for patient stratification.
+
+We identified hundreds of methylation markers associated with ACS types, many of which were linked to genes involved in cardiovascular conditions and inflammation. These findings were validated in an independent cohort, demonstrating the potential of ccfDNA methylation for diagnosing acute coronary events. Our methods are also applicable to chronic cardiovascular diseases.
 
 For more details check out our:
 
@@ -129,124 +156,109 @@ For more details check out our:
 <br>
 <br>
 
-### DNA methylation landscape of neuroblastoma (primary tissues and urine cfDNA)
+### DNA Methylation Landscape in Neuroblastoma (Primary Tissues and Urine cfDNA)
 
+DNA methylation plays critical roles in cancer by altering gene regulation and contributing to disease states. Neuroblastoma,
+a pediatric cancer arising from neural crest cells, exhibits a wide clinical spectrum, ranging from spontaneously regressing tumors
+to highly aggressive forms. While genetic alterations explain part of this variability, epigenetic factors such as DNA methylation are
+believed to play a key role in neuroblastoma pathogenesis.
 
-DNA methylation plays diverse roles in cancer, altering normal gene regulation and contributing to disease states.
-Neuroblastoma, an early childhood cancer, arises from aberrant differentiation of neural crest tissues within the
-sympathetic nervous system. Its clinical spectrum ranges from spontaneously regressing tumors to highly aggressive forms.
-Known genetic alterations only partially account for this variability, suggesting an epigenetic role in neuroblastoma pathogenesis.
+In collaboration with Prof. Dr. med. Johannes H. Schulte (Charité Hospital, Berlin), we investigated DNA methylation at single-nucleotide
+and genome-wide scales in primary neuroblastoma samples. Using whole-genome bisulfite sequencing (Bisulfite-seq) and RNA-seq data, we:
 
-To investigate the regulatory function of DNA methylation at single-nucleotide resolution and on a genome-wide scale in
-primary neuroblastomas, we collaborated with Prof. Dr. med. Johannes H. Schulte at Charité Hospital in Berlin.
-We analyzed a cohort of samples, incorporating whole-genome bisulfite sequencing (Bisulfite-seq) data alongside
-matching RNA-seq data.
-
-Our analysis confirmed previously identified methylation-based clustering patterns, distinguishing high-risk
-from low-risk tumors and MYCN-amplified from non-MYCN-amplified tumors, as well as MYCN-driven DNA methylation
-deregulation at regulatory elements in MYCN-amplified cases. Additionally, we employed an integrative approach,
-combining Bisulfite-seq, RNA-seq, publicly available ChIP-seq data for tumor-specific H3K27ac marks, and known DNA motifs.
-
-This approach revealed that specific transcription factor networks, deregulated in high-risk neuroblastomas,
-can be modeled based solely on DNA methylation data. Our findings suggest that epigenetic mechanisms contribute
-to neuroblastoma’s regulatory dysfunctions and may serve as valuable targets for further research.
-
-In this study, we aimed to gain a deeper understanding of the DNA methylation landscape in MYCN-amplified and
-non-MYCN-amplified high-risk neuroblastomas at both single-nucleotide and genome-wide levels,
-focusing on associations between DNA methylation aberrations and neuroblastoma-specific transcription
-factor regulatory networks.
-
-We confirmed our findings in solid tissues as described above by analyzing cfDNA derived from urine in
-collaboration with the AG Deubzer lab at Charité Hospital in Berlin.
+* Confirmed methylation-based clustering patterns distinguishing high-risk from low-risk tumors and MYCN-amplified from non-MYCN-amplified tumors.
+* Identified MYCN-driven methylation deregulation in regulatory elements of MYCN-amplified cases.
+* Combined Bisulfite-seq, RNA-seq, tumor-specific H3K27ac ChIP-seq data, and DNA motifs to model transcription factor networks deregulated in high-risk neuroblastomas.
 
 <br>
-<p style="text-align:center;">
-  <img src="image/neuroblastoma_clustering.png" width="500" height="400" >
- </p>
 <br>
-Hierarchical clustering of DNA methylation percentage of differentially methylated CpGs between 24 neuroblastoma patients.
-Each column represents a patient and each row represents a CpG. The percentage of DNA methylation is normalized to [0,1] range.
-Each patient has depicted risk group, sequencing batch, age (in days), and estimated gender
-
-
 <br>
-<p style="text-align:center;">
-  <img src="image/neuroblastoma_networks.png" width="400" height="600" >
-  </p>
+<p style="text-align:center;"> <img src="image/neuroblastoma_clustering.png" width="500" height="400"> </p>
+Figure: Hierarchical clustering of differentially methylated CpGs among 24 neuroblastoma patients. Columns represent patients; rows represent CpGs. DNA methylation percentages are normalized to a [0,1] range. Patient-specific attributes, including risk group, sequencing batch, age, and gender, are indicated.
 <br>
-(A) Regulatory PPI network based on motif activity results using MNA using [ISMARA](https://ismara.unibas.ch/mara/) (in red), and HR_nMNA DMRs (in blue).
-TFs common in both networks are depicted in green. (B) Top 20 Gene Ontology terms (rows) using metascape
-(Zhou et al. 2019) based on TFs from MNA and HR_nMNA networks (columns).
+<br>
+<br>
 
 
+
+Our findings suggest that specific transcription factor networks, disrupted by DNA methylation alterations, contribute to the regulatory dysfunctions underlying high-risk neuroblastoma. These epigenetic features may serve as valuable targets for future research and therapeutic intervention.
+
+We validated these findings in cfDNA derived from urine in collaboration with the AG Deubzer lab (Charité Hospital, Berlin).
 
 <br>
+<br>
+<br>
+<p style="text-align:center;"> <img src="image/neuroblastoma_networks.png" width="400" height="600"> </p>
+Figure: (A) Regulatory protein-protein interaction (PPI) networks based on motif activity results for MYCN-amplified tumors (red) and high-risk, non-MYCN-amplified tumors (blue). Transcription factors common to both networks are shown in green.
+(B) Top 20 Gene Ontology terms from Metascape analysis, highlighting pathways enriched in MYCN-amplified and high-risk neuroblastoma networks.
+<br>
+<br>
+<br>
+
+
 
 # Target nomination
 
 <br>
 
-## Visualization and statistical analysis of biomarkers in patients with limited treatment options
+## Visualization and Statistical Analysis of Biomarkers in Patients with Limited Treatment Options
 
-We developed a comprehensive set of visualizations, including oncoprints, to effectively highlight and emphasize key biomarkers in high medical need patients.
-These visualizations offer a clear, intuitive understanding of the underlying genomic alterations,
-facilitating the identification of potential therapeutic targets.
-The analysis focuses on patients with diseases that have limited treatment options or poor outcomes derived from external databases of clnical trials,
-denoted as a high medical need population. The visual representation may categorize patients based on
-disease severity, unmet medical need, or current lack of effective therapies.
+We developed a comprehensive suite of visualizations, including oncoprints, to effectively highlight and emphasize key biomarkers in patients with high medical needs. These visualizations provide clear, intuitive insights into genomic alterations, aiding in the identification of potential therapeutic targets.
 
-We performed comprehensive analysis of target nomination in the context of high medical need populations,
-using survival analysis and other statistical emthods to illustrate the clinical significance of the nominated targets (genes).
+Our analysis focuses on patients with diseases that have limited treatment options or poor outcomes, sourced from external databases of clinical trials, collectively referred to as the high medical need population. These visual representations categorize patients based on factors such as disease severity, unmet medical need, or the lack of effective therapies.
 
+To support target nomination, we performed an in-depth analysis using survival analysis and other statistical methods to demonstrate the clinical relevance of nominated targets (genes).
 
-
+<br>
+<br>
+<br>
 <figure class="half" style="display:flex">
     <img src="image/oncoprint_modified.png" width="500" height="400"  >
     <img src="image/survival_analysis.png" width="400" height="400" >
 </figure>
 <br>
-<figcaption>Example of visualisation and survival analysis of selected biomarkers.</figcaption>
+<figcaption>Figure: Example of visualization and survival analysis of selected biomarkers.</figcaption>
 <br>
 <br>
-
-##  Identifying novel anticancer targets using machine learning and AI methods
-
-To prioritize molecules for further study, we utilized Positive and Unlabeled (PU) learning.
-This method is designed for cases where we know which molecules are likely to be of high
-interest (positive samples) but lack explicit negative examples.
-
-PU learning is a machine learning framework that operates with only positive and unlabeled data,
-assuming that the unlabeled set may contain both positive and negative examples.
-This approach is particularly useful in fields like medical diagnosis and target identification,
-where data often naturally arise in this format. For instance, medical records typically document
-only the conditions a patient has been diagnosed with, not those they do not have. This absence of
-diagnosis does not imply the absence of disease, as many conditions, such as diabetes, often go
-undiagnosed (Claesen et al. 2015b).
-
 <br>
 
-The goal of PU learning is the same as general binary classification: train a classifier that can distinguish between positive and negative examples based on the attributes.
-However, during the learning phase, only some of the positive examples in the training data are labeled and none of the negative examples are, as illustrated below:
+## Identifying Novel Anticancer Targets Using Machine Learning and AI Methods
+
+To prioritize molecules for further study, we employed Positive and Unlabeled (PU) learning, a machine learning framework tailored for cases where only positive examples are explicitly labeled, and negative examples are unknown.
+
+PU learning is particularly effective in scenarios where data naturally arises in this format, such as medical diagnoses or target identification. For example, medical records often document diagnosed conditions (positive examples) but do not explicitly record the absence of conditions (negative examples). This framework assumes that the unlabeled set may contain both positive and negative examples, allowing for more nuanced classification (Claesen et al. 2015b).
+
+The goal of PU learning is similar to binary classification: train a model to distinguish between positive and negative examples based on attributes. However, during training, only a subset of the positive examples is labeled, and no explicit negative examples are provided. This process is illustrated below:
+
+<br>
+<br>
 <br>
 <p style="text-align:center;">
   <img src="image/PUlearning.png">
-   </p>
+Figure adapted from [a blog post.](https://techblog.ing.pl/blog/podstawy-positive-unlabeled-learning)
+</p>
+<br>
+<br>
 <br>
 
-We applied PU classificators for molecules and their features of interest such as gene expresion, gene mutations, available therapies using:
+We applied PU classifiers to analyze molecules and their features of interest, such as gene expression, gene mutations, and available therapies, using:
 
-* [Elkan-Noto classifier proposed by Elkan and Noto (2008)](https://cseweb.ucsd.edu/~elkan/posonly.pdf)
-* [Bagging SVM method proposed by Mordelet and Vert (2013)](http://members.cbio.mines-paristech.fr/~jvert/svn/bibli/local/Mordelet2013bagging.pdf)
+* [Elkan-Noto classifier (Elkan and Noto, 2008)](https://cseweb.ucsd.edu/~elkan/posonly.pdf)
+* [Bagging SVM method (Mordelet and Vert, 2013)](http://members.cbio.mines-paristech.fr/~jvert/svn/bibli/local/Mordelet2013bagging.pdf)
 
-
-Additionally, we applied unsupervised approach of using autoencoders (deep learning) in order to find the most predictive features of group of molecules of interest.
-
+Additionally, we used an unsupervised approach with autoencoders (in pytorch) to identify the most predictive features within groups of molecules of interest.
+<br>
+<br>
+<br>
 <br>
 <p style="text-align:center;">
-  <img src="image/autoencoder_TFs.png" width="900" height="300" >
-   </p>
+  <img src="image/autoencoder_TFs.png" width="900" height="300">
+ Figure: (A) Schematic representation of an autoencoder. (B) Example visualization of a latent space in 2D using t-SNE.
+</p>
 <br>
-
+<br>
+<br>
+<br>
 
 
 

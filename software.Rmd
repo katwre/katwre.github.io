@@ -209,3 +209,25 @@ Phone application with django 1.5.1, manifesto app, localStorage:
 
 <br><br>
 
+
+## Discover your career match
+
+Find your best career matches based on your personality profile:
+
+* <strong>Website</strong>: <a href="personalities.html">link</a>
+* <strong>GitHub</strong>:
+[https://github.com/katwre/Personalities](https://github.com/katwre/Personalities)
+
+
+<br>
+<div style="text-align: center;">
+  <img src="image/personalities.png" width="700" height="450">
+ </div>
+<br>
+
+
+
+
+
+
+

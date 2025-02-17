@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personality Trait Analysis</title>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js"></script>
+</head>
+<body>
+
+</br></br></br></br>
+
+<!-- How to Use This Tool  -->
+<div style="max-width: 800px; margin: auto; font-family: Arial, sans-serif; line-height: 1.8; padding: 20px; background-color: #f8f9fa; border-radius: 10px;">
+
+    <h2 style="color: #2c3e50; text-align: center;">Introduction to Personality Trait Analysis</h2>
+    <p style="text-align: justify;">
+        Personality traits provide valuable insights into an individual's cognitive and emotional attributes, influencing career choices and professional success. 
+        This tool analyzes five fundamental personality traits.
+    </p>
+    
+        <h3 style="color: #34495e;">Key Personality Traits:</h3>
+    <ul>
+  
+        <li><strong>Agreeableness:</strong> Measures compassion and cooperation.</li>
+        <li><strong>Extraversion:</strong> Indicates sociability and energy levels.</li>
+        <li><strong>Conscientiousness:</strong> Reflects organization and diligence.</li>
+        <li><strong>Openness:</strong> Assesses creativity and curiosity.</li>
+        <li><strong>Neuroticism:</strong> Represents emotional stability.</li>
+  
+    </ul>
+    <p style="text-align: justify;">
+        By analyzing your personality scores, this tool provides insights into your personality distribution and how it compares to different career groups.
+    </p>
+    
+    
+    <h2>How to Use This Tool</h2>
+    <ol>
+        <li><strong>Enter Your Personality Scores:</strong> Fill in your personality trait values in the provided fields.</li>
+        <li><strong>Click "Analyze":</strong> Generate visualizations based on your scores.</li>
+        <li><strong>Interpret the Plots:</strong>
+            <ul>
+                <li>Plot 1: See where your scores fall relative to others.</li>
+                <li>Plot 2: Explore your career match based on personality traits.</li>
+                <li>Plots 3-7: Observe how different aptitudes relate to your personality distribution.</li>
+            </ul>
+        </li>
+    </ol>
+    <h3>Discover Your Career Match</h3>
+    <p>Your best career matches are determined by computing the Euclidean distance between your personality profile and all career groups in the dataset.</p>
+</div>
+
+
+
+<div style="max-width: 800px; margin: auto; font-family: Arial, sans-serif; line-height: 1.6; margin-top: 50px; padding-top: 20px;justify-content: center;">
+    <h3 style="text-align: center;">Type your scores:</h3>
+    
+
+
+    <div style="display: flex; flex-direction: column; align-items: center;">
+        <div style="display: flex; align-items: center; margin-bottom: 5px;">
+            <label style="width: 150px; text-align: right; margin-right: 10px;">Agreeableness:</label>
+            <input type="number" id="score_a" step="0.1" value="9.4">
+        </div>
+
+        <div style="display: flex; align-items: center; margin-bottom: 5px;">
+            <label style="width: 150px; text-align: right; margin-right: 10px;">Extraversion:</label>
+            <input type="number" id="score_e" step="0.1" value="9.6">
+        </div>
+
+        <div style="display: flex; align-items: center; margin-bottom: 5px;">
+            <label style="width: 150px; text-align: right; margin-right: 10px;">Conscientiousness:</label>
+            <input type="number" id="score_c" step="0.1" value="8.8">
+        </div>
+
+        <div style="display: flex; align-items: center; margin-bottom: 5px;">
+            <label style="width: 150px; text-align: right; margin-right: 10px;">Openness:</label>
+            <input type="number" id="score_o" step="0.1" value="9.2">
+        </div>
+
+        <div style="display: flex; align-items: center; margin-bottom: 10px;">
+            <label style="width: 150px; text-align: right; margin-right: 10px;">Neuroticism:</label>
+            <input type="number" id="score_n" step="0.1" value="1.6">
+        </div>
+
+    <button id="calculateButton">Analyze</button>
+
+</div>
+
+</br></br>
+
+
+<!-- Explanation of Plots -->
+<div style="max-width: 800px; margin: auto; font-family: Arial, sans-serif; line-height: 1.8; padding: 20px; border-radius: 10px;">
+    <h2 style="color: #2c3e50; text-align: center;">Explanation of Plots</h2>
+    <h3 style="color: #34495e;">📊 Plot 1: Personality Score Distribution</h3>
+    <p style="text-align: justify;">
+        This plot visualizes the distribution of personality traits across all individuals in the dataset.
+        The <span style="color:blue;"><strong>blue boxes</strong></span> represent the range of scores for each trait, 
+        and the <span style="color:red;"><strong>red markers</strong></span> indicate the median values.
+    </p>
+    <ul>
+        <li>The <span style="color:red;"><strong>red dot</strong></span> highlights your individual score, showing where you stand relative to others.</li>
+    </ul>
+    <h3 style="color: #34495e;">📌 Plot 2: Career Distribution</h3>
+    <p style="text-align: justify;">
+        This visualization reduces the high-dimensional personality trait data into <strong>two principal components (PC1 and PC2)</strong> using PCA.
+    </p>
+    <ul>
+        <li>Each dot represents a different career.</li>
+        <li>The <span style="color:red;"><strong>red dot</strong></span> indicates your position in the PCA space.</li>
+        <li>Careers that are closer to your dot share similar personality trait patterns.</li>
+    </ul>
+    <h3 style="color: #34495e;">🎨 Plots 3-7: PCA Plots Colored by Aptitude Scores</h3>
+    <p style="text-align: justify;">
+        Each of these plots represents the PCA projection, <strong>color-coded by different aptitude scores</strong>, including:
+    </p>
+    <ul style="list-style-type: none; padding-left: 0;">
+        <li>🧮 <strong>Numerical Aptitude:</strong> Mathematical and logical thinking ability.</li>
+        <li>🛠 <strong>Spatial Aptitude:</strong> Ability to visualize and manipulate objects.</li>
+        <li>🔍 <strong>Perceptual Aptitude:</strong> Awareness of patterns and quick decision-making.</li>
+        <li>🧠 <strong>Abstract Reasoning:</strong> Problem-solving skills in novel situations.</li>
+        <li>📖 <strong>Verbal Reasoning:</strong> Understanding and using written/spoken language.</li>
+    </ul>
+</div>
+
+
+<div style="max-width: 800px; margin: auto; font-family: Arial, sans-serif; line-height: 1.6;">
+
+    <h3>Results:</h3>
+    <p id="output">Enter personality scores and click "Analyze".</p>
+
+    <script>
+        let pyodideReady = false;
+        let pyodide;
+
+        async function initializePyodide() {
+            document.getElementById("output").innerText = "Pyodide is still loading... Please wait.";
+            pyodide = await loadPyodide();
+            
+            await pyodide.loadPackage(["numpy", "pandas", "matplotlib", "scipy", "scikit-learn"]);
+            
+            pyodideReady = true;
+            document.getElementById("output").innerText = "Pyodide is ready! Press Analyze! ✅";
+            console.log("Pyodide loaded successfully!");
+        }
+
+        initializePyodide().then(() => {
+            document.getElementById("calculateButton").addEventListener("click", runPython);
+        });
+
+        async function runPython() {
+            if (!pyodideReady) {
+                document.getElementById("output").innerText = "Pyodide is still loading... Please wait.";
+                return;
+            }
+
+            let score_a = parseFloat(document.getElementById("score_a").value) || 1;
+            let score_e = parseFloat(document.getElementById("score_e").value) || 1;
+            let score_c = parseFloat(document.getElementById("score_c").value) || 1;
+            let score_o = parseFloat(document.getElementById("score_o").value) || 1;
+            let score_n = parseFloat(document.getElementById("score_n").value) || 1;
+
+            let csvUrl = "https://raw.githubusercontent.com/katwre/Personalities/main/data/Data_final.csv";
+
+            let pythonCode = `
+import sys
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import matplotlib.gridspec as gridspec
+from io import BytesIO, StringIO
+import base64
+from pyodide.http import open_url
+from sklearn.decomposition import PCA
+from sklearn.preprocessing import StandardScaler 
+from scipy.spatial import KDTree
+
+output = ""
+
+score_a = ${score_a}
+score_e = ${score_e}
+score_c = ${score_c}
+score_o = ${score_o}
+score_n = ${score_n}
+your_career = "YOU"
+
+# Load CSV from GitHub
+csv_url = "${csvUrl}"
+try:
+    csv_data = open_url(csv_url).read()
+    df = pd.read_csv(StringIO(csv_data))
+    #output += f"\\nCSV Loaded Successfully! {len(df)} rows, {len(df.columns)} columns."
+except Exception as e:
+    output += f"\\n Error loading CSV: {str(e)}"
+
+df.rename(columns={"O_score": "Openness", "C_score": "Conscientiousness","E_score": "Extraversion", "A_score": "Agreeableness","N_score": "Neuroticism"}, inplace=True)
+
+# Add user scores
+new_person = {
+    "Openness": score_o,
+    "Conscientiousness": score_c,
+    "Extraversion": score_e,
+    "Agreeableness": score_a,
+    "Neuroticism": score_n,
+    "Career" : your_career
+}
+df = pd.concat([df, pd.DataFrame([new_person])], ignore_index=True)
+
+# Define only relevant score columns
+score_columns = ["Openness", "Conscientiousness", "Extraversion", "Agreeableness", "Neuroticism"]
+box_data = [df[col].dropna().values for col in score_columns]
+
+# Create a single figure
+fig, axes = plt.subplots(2+5, 1, figsize=(10, 35))
+fig.subplots_adjust(hspace=0.5)  # Increase space between plots
+
+# Clear previous figures
+plt.clf()
+
+# Make the second figure bigger
+gs = gridspec.GridSpec(7,1,height_ratios=[1,2,1,1,1,1,1])
+axes = [fig.add_subplot(gs[i]) for i in range(7)]
+
+# ✅ First Boxplot
+axes[0].boxplot(box_data, patch_artist=True, notch=True, vert=False,
+                boxprops=dict(facecolor="blue", alpha=0.7, color="black"),
+                medianprops=dict(color="red"))
+
+axes[0].set_title("Plot 1: Distribution of Personality Scores")
+axes[0].set_yticks(range(1, len(score_columns) + 1))  # Use set_yticks instead of set_xticks
+axes[0].set_yticklabels(score_columns)  # Assign score column labels to the Y-axis
+axes[0].set_xlabel("Personality scores") 
+
+# Plot user's scores as red dots (flipped)
+scatter = None
+for i, score in enumerate(score_columns):
+    y_value = new_person[score]
+    scatter = axes[0].scatter(y_value, i + 1, color="red", marker="o", s=100, alpha=0.9, edgecolors="black", zorder=3)
+
+# Legend
+axes[0].legend([scatter], ["YOU"], loc="upper right")
+
+
+# ✅ Second Plot
+#----- Perform PCA
+# Standardize the data
+features = ["Openness", "Conscientiousness", "Extraversion", "Agreeableness", "Neuroticism"]
+x = df[features].values
+x = StandardScaler().fit_transform(x)
+
+# Perform PCA with 2 components
+pca = PCA(n_components=2)
+principal_components = pca.fit_transform(x)
+principal_df = pd.DataFrame(data=principal_components, columns=['PC1', 'PC2'])
+
+# Get explained variance for PC1 and PC2
+explained_variance = pca.explained_variance_ratio_ * 100  # Convert to percentage
+
+# Add Career column to PCA dataframe
+principal_df["Career"] = df["Career"]
+
+# Build a KDTree to adjust text positions
+kdtree = KDTree(principal_df[['PC1', 'PC2']].values)
+min_distance = 0.2  # Minimum distance between text labels
+
+# Function to find a non-overlapping position for labels
+def get_non_overlapping_position(x, y):
+    new_x, new_y = x, y
+    while len(kdtree.query_ball_point([new_x, new_y], min_distance)) > 1:
+        new_x += np.random.uniform(-0.05, 0.05)  # Random small displacement
+        new_y += np.random.uniform(-0.05, 0.05)
+    return new_x, new_y
+
+# Adjust label positions to prevent overlap
+adjusted_positions = [get_non_overlapping_position(row["PC1"], row["PC2"]) for _, row in principal_df.iterrows()]
+
+# Plot the PCA scatter plot
+axes[1].scatter(principal_df['PC1'], principal_df['PC2'], c='blue', edgecolor='k', s=50, alpha=0.6)
+
+# Add adjusted career labels
+for i, (row, (adj_x, adj_y)) in enumerate(zip(principal_df.iterrows(), adjusted_positions)):
+    axes[1].text(adj_x, adj_y, row[1]["Career"], fontsize=8, alpha=0.7, ha='left')
+
+# Highlight "NEW_PERSON" Career as a red dot
+your_points = principal_df[principal_df["Career"] == your_career]
+axes[1].scatter(your_points["PC1"], your_points["PC2"], color="red", edgecolors="black", s=100, label=your_career) 
+axes[1].legend()
+
+# ✅ Correctly call xlabel and ylabel
+axes[1].set_xlabel("Principal Component 1 ("+str(round(explained_variance[0],1))+"%)") 
+axes[1].set_ylabel("Principal Component 2 ("+str(round(explained_variance[1],1))+"%)") 
+axes[1].set_title("Plot 2: PCA Plot with career labels")
+axes[1].grid()
+
+
+# ✅ More plots
+
+# List of numerical columns to color the PCA plot by
+color_columns = ["Numerical Aptitude", "Spatial Aptitude", "Perceptual Aptitude",
+                 "Abstract Reasoning", "Verbal Reasoning"]
+
+# Define alternative color palettes
+color_palette = ["coolwarm", "plasma", "cividis", "magma", "inferno"]
+
+# Standardize the data
+x = df[features].values
+x = StandardScaler().fit_transform(x)
+
+# Add aptitude columns to principal_df for coloring
+for col in color_columns:
+    principal_df[col] = df[col]
+
+# Generate PCA scatter plots with different color palettes, ensuring NaN values are shown in grey
+for i in range(len(color_columns)):
+
+    col = color_columns[i]
+
+    # Identify NaN values
+    nan_mask = principal_df[col].isna()
+
+    # Plot non-NaN points colored by aptitude score
+    scatter = axes[i+2].scatter(principal_df.loc[~nan_mask, 'PC1'], principal_df.loc[~nan_mask, 'PC2'],
+                          c=principal_df.loc[~nan_mask, col], cmap="viridis", edgecolor='k', s=50)
+
+    # Plot NaN points in grey
+    axes[i+2].scatter(principal_df.loc[nan_mask, 'PC1'], principal_df.loc[nan_mask, 'PC2'], color="red", edgecolor='black', s=150, label=your_career)
+
+    # Add color bar and labels
+    fig.colorbar(scatter, ax=axes[i+2], label=col+" score")
+    axes[i+2].set_xlabel("Principal Component 1 ("+str(round(explained_variance[0],1))+"%)") 
+    axes[i+2].set_ylabel("Principal Component 2 ("+str(round(explained_variance[1],1))+"%)") 
+    axes[i+2].set_title(f'Plot {i+3}: PCA Plot with career labels colored by {col}')
+
+    # Add legend if NaN values exist
+    if nan_mask.any():
+        axes[i+2].legend()
+
+    axes[i+2].grid()
+
+# Adjust layout
+plt.tight_layout()
+
+# ✅ Save plot as base64 image
+buf = BytesIO()
+plt.savefig(buf, format="png", bbox_inches='tight')  
+plt.close()  
+buf.seek(0)
+image_base64 = "data:image/png;base64," + base64.b64encode(buf.read()).decode("utf-8")
+
+(output, image_base64)
+            `;
+
+            try {
+                let [result, imageData] = await pyodide.runPythonAsync(pythonCode);
+                document.getElementById("output").innerText = result;
+                
+                // ✅ Show generated plot
+                let imgElement = document.createElement("img");
+                imgElement.src = imageData;
+                imgElement.style = "max-width: 100%;";
+
+                let outputDiv = document.getElementById("output");
+                outputDiv.appendChild(imgElement);
+
+            } catch (error) {
+                document.getElementById("output").innerText = "Error: " + error;
+                console.error("Python Execution Error:", error);
+            }
+        }
+    </script>
+    
+    
+</div>
+
+<br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>
+

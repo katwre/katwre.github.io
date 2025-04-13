@@ -175,6 +175,7 @@ from pyodide.http import open_url
 from sklearn.decomposition import PCA
 from sklearn.preprocessing import StandardScaler 
 from scipy.spatial import KDTree
+from sklearn.cluster import KMeans
 
 output = ""
 
@@ -207,8 +208,31 @@ new_person = {
 }
 df = pd.concat([df, pd.DataFrame([new_person])], ignore_index=True)
 
+
+# ✅ **Compute Career Match using Euclidean Distance**
+feature_cols = ["Openness", "Conscientiousness", "Extraversion", "Agreeableness", "Neuroticism"]
+
+# Extract feature values
+user_vector = np.array([score_o, score_c, score_e, score_a, score_n]).reshape(1, -1)
+career_vectors = df[df["Career"] != your_career][feature_cols].values
+
+# Compute Euclidean Distance
+distances = np.linalg.norm(career_vectors - user_vector, axis=1)
+
+# Create a DataFrame with careers and distances
+career_matches = pd.DataFrame({"Career": df[df["Career"] != your_career]["Career"], "Distance": distances})
+
+# Sort by closest match
+career_matches = career_matches.sort_values(by="Distance").reset_index(drop=True)
+
+# Get the top 5 best-matching careers
+top_careers = career_matches.head(10)
+output += "\\nTop 10 career matches based on your personality:\\n"
+for i, row in top_careers.iterrows():
+    output += f"{i+1}. {row['Career']} (Distance: {row['Distance']:.2f})\\n"
+
 # Define only relevant score columns
-score_columns = ["Openness", "Conscientiousness", "Extraversion", "Agreeableness", "Neuroticism"]
+score_columns = feature_cols
 box_data = [df[col].dropna().values for col in score_columns]
 
 # Create a single figure
@@ -287,11 +311,45 @@ your_points = principal_df[principal_df["Career"] == your_career]
 axes[1].scatter(your_points["PC1"], your_points["PC2"], color="red", edgecolors="black", s=100, label=your_career) 
 axes[1].legend()
 
-# ✅ Correctly call xlabel and ylabel
+# Correctly call xlabel and ylabel
 axes[1].set_xlabel("Principal Component 1 ("+str(round(explained_variance[0],1))+"%)") 
 axes[1].set_ylabel("Principal Component 2 ("+str(round(explained_variance[1],1))+"%)") 
 axes[1].set_title("Plot 2: PCA Plot with career labels")
 axes[1].grid()
+
+
+
+# ✅ 3rd PLot
+
+# Define the number of clusters (adjust based on the dataset)
+num_clusters = 5
+
+# Apply KMeans clustering on PCA components
+kmeans = KMeans(n_clusters=num_clusters, random_state=42, n_init=10)
+principal_df["Cluster"] = kmeans.fit_predict(principal_df[['PC1', 'PC2']])
+
+# Plot PCA with Clustering
+axes[2].scatter(principal_df['PC1'], principal_df['PC2'], c=principal_df['Cluster'], cmap="tab10", edgecolor='k', s=50, alpha=0.6)
+
+# Plot cluster centers
+centroids = kmeans.cluster_centers_
+axes[2].scatter(centroids[:, 0], centroids[:, 1], c='black', marker="X", s=200, label="Cluster Centers")
+
+# Add Career Labels
+for i, row in principal_df.iterrows():
+    axes[2].text(row["PC1"], row["PC2"], row["Career"], fontsize=7, alpha=0.6, ha='left')
+
+# Highlight User in Red
+axes[2].scatter(your_points["PC1"], your_points["PC2"], color="red", edgecolors="black", s=100, label="YOU")
+
+# Set Labels and Title
+axes[2].set_xlabel(f"Principal Component 1 ({round(explained_variance[0], 1)}%)")
+axes[2].set_ylabel(f"Principal Component 2 ({round(explained_variance[1], 1)}%)")
+axes[2].set_title("Plot 3: PCA with Career Clusters")
+axes[2].legend()
+axes[2].grid()
+
+
 
 
 # ✅ More plots
@@ -312,7 +370,7 @@ for col in color_columns:
     principal_df[col] = df[col]
 
 # Generate PCA scatter plots with different color palettes, ensuring NaN values are shown in grey
-for i in range(len(color_columns)):
+for i in range(len(color_columns)+3):
 
     col = color_columns[i]
 
@@ -324,19 +382,19 @@ for i in range(len(color_columns)):
                           c=principal_df.loc[~nan_mask, col], cmap="viridis", edgecolor='k', s=50)
 
     # Plot NaN points in grey
-    axes[i+2].scatter(principal_df.loc[nan_mask, 'PC1'], principal_df.loc[nan_mask, 'PC2'], color="red", edgecolor='black', s=150, label=your_career)
+    axes[i+3].scatter(principal_df.loc[nan_mask, 'PC1'], principal_df.loc[nan_mask, 'PC2'], color="red", edgecolor='black', s=150, label=your_career)
 
     # Add color bar and labels
     fig.colorbar(scatter, ax=axes[i+2], label=col+" score")
-    axes[i+2].set_xlabel("Principal Component 1 ("+str(round(explained_variance[0],1))+"%)") 
-    axes[i+2].set_ylabel("Principal Component 2 ("+str(round(explained_variance[1],1))+"%)") 
-    axes[i+2].set_title(f'Plot {i+3}: PCA Plot with career labels colored by {col}')
+    axes[i+3].set_xlabel("Principal Component 1 ("+str(round(explained_variance[0],1))+"%)") 
+    axes[i+3].set_ylabel("Principal Component 2 ("+str(round(explained_variance[1],1))+"%)") 
+    axes[i+3].set_title(f'Plot {i+3}: PCA Plot with career labels colored by {col}')
 
     # Add legend if NaN values exist
     if nan_mask.any():
-        axes[i+2].legend()
+        axes[i+3].legend()
 
-    axes[i+2].grid()
+    axes[i+3].grid()
 
 # Adjust layout
 plt.tight_layout()

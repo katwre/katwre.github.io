@@ -19,7 +19,7 @@ output:
 <br>
 
 <p style="text-align: justify">
-Genomation is a Bioc R package that provides collection of functions for simplfiying common tasks in genomic feature/interval analysis. It provides functions for reading BED and GFF files as GRanges objects, summarizing genomic features over predefined windows so users can make average enrichment of features over defined regions or produce heatmaps. It can also annotate given regions with other genomic features such as exons,introns and promoters.
+I maintained and developed Genomation - a Bioc R package that provides collection of functions for simplfiying common tasks in genomic feature/interval analysis. It provides functions for reading BED and GFF files as GRanges objects, summarizing genomic features over predefined windows so users can make average enrichment of features over defined regions or produce heatmaps. It can also annotate given regions with other genomic features such as exons,introns and promoters.
 </p>
 
 **People**: [Altuna Akalin](hhttps://www.mdc-berlin.de/bioinformatics), [Vedran Franke](https://www.mdc-berlin.de/bioinformatics) and others
@@ -31,6 +31,7 @@ Genomation is a Bioc R package that provides collection of functions for simplfi
 [Akalin A, Franke V, Vlahovicek K, Mason C, Schubeler D (2014). “genomation: a toolkit to summarize, annotate and visualize genomic intervals.” Bioinformatics](https://academic.oup.com/bioinformatics/article/31/7/1127/181034)
 </br>
 
+
 ### MethylKit
 
 <br>
@@ -38,7 +39,7 @@ Genomation is a Bioc R package that provides collection of functions for simplfi
 <br>
 
 <p style="text-align: justify">
-methylKit is a Bioc R package for DNA methylation analysis and annotation from high-throughput bisulfite sequencing. The package is designed to deal with sequencing data from RRBS and its variants, but also target-capture methods such as Agilent SureSelect methyl-seq. In addition, methylKit can deal with base-pair resolution data for 5hmC obtained from Tab-seq or oxBS-seq. It can also handle whole-genome bisulfite sequencing data if proper input format is provided.</p>
+I contributed to methylKit - a Bioc R package for DNA methylation analysis and annotation from high-throughput bisulfite sequencing. The package is designed to deal with sequencing data from RRBS and its variants, but also target-capture methods such as Agilent SureSelect methyl-seq. In addition, methylKit can deal with base-pair resolution data for 5hmC obtained from Tab-seq or oxBS-seq. It can also handle whole-genome bisulfite sequencing data if proper input format is provided.</p>
 </p>
 
 **People**: [Altuna Akalin](https://www.mdc-berlin.de/bioinformatics), [Alex Blume](https://www.mdc-berlin.de/bioinformatics) and others
@@ -110,11 +111,16 @@ annotations:
 * added display links to databases from which data originates
 * implemented a command line application that automatically takes snapshots
 and session of regions/genes and tracks of interest
-
-
 <br>
-  <img src="image/igv_original.png">
- <br>
+<br>
+
+<div style="text-align: center;">
+<img src="image/igv_original.png">
+</div>
+<div style="text-align: center;">
+Example view from the IGV web app displaying genomic data tracks. 
+</div>
+<br>
 
 
 # Toy projects
@@ -131,10 +137,10 @@ Metropolis–Hastings algorithm is a Markov chain Monte Carlo (MCMC) method that
 <br>
 <div style="text-align: center;">
   <img src="image/HPmodel.png" width="200" height="200">
- </div>
- <div style="text-align: center;">
- The lattice protein hydrophobic-polar (HP) model, showing the global energy.
- </div>
+</div>
+<div style="text-align: center;">
+The lattice protein hydrophobic-polar (HP) model, showing the global energy.
+</div>
 <br>
 
 
@@ -212,7 +218,11 @@ Phone application with django 1.5.1, manifesto app, localStorage:
 
 ## Discover your career match
 
-Find your best career matches based on your personality profile:
+Find your best career matches based on your personality profile based on the [Big Five Aspects Scale](https://en.wikipedia.org/wiki/Big_Five_personality_traits).
+This interactive web tool lets users explore their personality traits and see how their profile aligns 
+with different career paths. This tool uses Python (running directly in your browser via Pyodide without need to precompile) and machine learning techniques like PCA and 
+clustering using sklearn and pandas libraries to generate personalized visualizations and career matches.
+
 
 * <strong>Website</strong>: <a href="personalities.html">link</a>
 * <strong>GitHub</strong>:
@@ -221,8 +231,9 @@ Find your best career matches based on your personality profile:
 
 <br>
 <div style="text-align: center;">
-  <img src="image/personalities.png" width="700" height="450">
- </div>
+  <img src="image/personalities.png" alt="PCA plot of careers based on personality traits" style="max-width: 100%; height: auto; border: 1px solid #ccc; box-shadow: 2px 2px 6px #ddd;">
+  <p style="font-size: 0.9em; color: #666;">Figure: PCA plot showing career matches based on your personality profile.</p>
+</div>
 <br>
 
 

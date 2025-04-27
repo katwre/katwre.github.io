@@ -92,7 +92,7 @@ img {
   <br>
 
   <p style="text-align: justify">
-  I am a trained bioinformatician and data scientist based in Berlin. Welcome to my personal website!
+  I am a trained bioinformatician and data scientist based in Zürich and Gothenburg. Welcome to my personal website!
   </p>
 
  <p style="text-align: justify">

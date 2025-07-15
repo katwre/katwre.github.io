@@ -1,21 +1,21 @@
 {
-  "name": "kootenpv.github.io",
+  "name": "katwre.github.io",
   "version": "1.0.0",
-  "description": "Pascal van Kooten's github.io website.",
+  "description": "Katarzyna Wreczycka's github.io website.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kootenpv/kootenpv.github.io.git"
+    "url": "https://github.com/katwre/katwre.github.io.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/kootenpv/kootenpv.github.io/issues"
+    "url": "https://github.com/katwre/katwre.github.io/issues"
   },
-  "homepage": "https://github.com/kootenpv/kootenpv.github.io",
+  "homepage": "https://github.com/katwre/katwre.github.io",
   "devDependencies": {
     "browser-sync": "^2.11.0",
     "gulp": "^3.9.0",

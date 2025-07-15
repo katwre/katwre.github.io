@@ -15,26 +15,26 @@ p {
 }
 p a {
   /* text-decoration: underline */
-  color: #008AFF;
+  color: #990033;
 }
 h1,h2 {
   font-family: 'Existence-StencilLight', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 500;
-  color: rgb(0, 180, 161);
+  color: #990033;
 }
 
 h3,h4,h5,h6 {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 500;
-  color: rgb(0, 180, 161);
+  color: #990033;
 }
 
 a {
-  color: #008AFF;
+  color: #990033;
 }
 a:hover,
 a:focus {
-  color: #0085a1;
+  color: #990033;
 }
 blockquote {
   color: #808080;
@@ -69,12 +69,12 @@ hr.small {
 ::-moz-selection {
   color: white;
   text-shadow: none;
-  background: #0085a1;
+  background: #990033;
 }
 ::selection {
   color: white;
   text-shadow: none;
-  background: #0085a1;
+  background: #990033;
 }
 img::selection {
   color: white;
@@ -99,7 +99,7 @@ img::-moz-selection {
 
 .navbar-custom {
   /* background: #F5F5F5; */
-  background: rgb(0, 180, 161);
+  background: #C0C0C0;
   border-bottom: 1px solid #EAEAEA;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
@@ -120,7 +120,7 @@ img::-moz-selection {
 .navbar-custom .navbar-brand:focus ,
 .navbar-custom .nav li a:hover,
 .navbar-custom .nav li a:focus {
-  color: #0085a1;
+  color: #990033;
 }
 
 @media only screen and (min-width: 768px) {
@@ -192,7 +192,7 @@ img::-moz-selection {
 footer {
   padding: 30px 0;
   /* background: #F5F5F5; */
-  background: rgb(0, 180, 161);
+  background: #FFFFFF;
   border-top: 1px #EAEAEA solid;
   margin-top: 50px;
   font-size: 14px;
@@ -253,7 +253,7 @@ footer .theme-by {
 .post-preview a:focus,
 .post-preview a:hover {
   text-decoration: none;
-  color: #0085a1;
+  color: #990033;
 }
 
 .post-preview .post-title {
@@ -364,8 +364,8 @@ header.header-post .post-heading .post-subheading {
 .pager li a:hover,
 .pager li a:focus {
   color: #FFF;
-  background: #0085a1;
-  border: 1px solid #0085a1;
+  background: #990033;
+  border: 1px solid #990033;
 }
 
 .pager {
@@ -453,6 +453,6 @@ table#repo-table > tbody > tr {
 
 table#repo-table > tbody > tr > td {
    padding: 1rem;
-   border-bottom: 1px dashed #0085a1;
-   border-top: 1px dashed #0085a1;
+   border-bottom: 1px dashed #990033;
+   border-top: 1px dashed #990033;
 }

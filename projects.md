@@ -408,7 +408,7 @@ ol li a:hover {
 <!--   -->
 
 <!-- Prioritization of therapeutic targets in clinical trials  -->
-<p class="mytext"><strong>4.1 Prioritization of therapeutic targets in clinical trials</strong></p>
+<p class="mytext"><strong>3.1 Prioritization of therapeutic targets in clinical trials</strong></p>
 
 <h3 class="mytext"><strong>Visualization and Statistical Analysis of Biomarkers</strong></h3>
 
@@ -456,7 +456,7 @@ Figure: Autoencoder workflow and latent space visualization using t-SNE.
 
 
 <!-- 5.2 Web app feature development  -->
-<p class="mytext"><strong>4.2 Web app feature development</strong></p>
+<p class="mytext"><strong>3.2 Web app feature development</strong></p>
 
 <p class="mytext">
   I contributed to enhancing the 

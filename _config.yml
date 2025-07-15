@@ -29,7 +29,7 @@ avatar: "/img/avatar-icon.png"
 navbar-links:
   Home: ""
   Projects: "projects"
-  CV: "cv"
+#  CV: "cv"
 #  About Me: "aboutme"
 #  Presentations: "presentations"
 #  PPM: "ppm"

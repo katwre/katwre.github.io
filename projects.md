@@ -176,13 +176,9 @@ ol li a:hover {
   color: #80002a;  /* subtle burgundy or your brand color */
   font-weight: 500; /* medium weight for softer emphasis */
 }
-
-
 </style>
 
-<p class="mytext">
-Here’s a glimpse of my portfolio.
-</p>
+
 
 <div class="toc-wrapper">
 <ol class="toc-list">

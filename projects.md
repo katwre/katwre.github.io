@@ -180,6 +180,14 @@ ol li a:hover {
 
 
 
+
+<!--   -->
+<!-- Research -->
+<!--   -->
+
+<h2 id="research">Projects</h2>
+
+
 <div class="toc-wrapper">
 <ol class="toc-list">
   <li>
@@ -200,13 +208,6 @@ ol li a:hover {
 </ol>
 </div>
 
-
-
-<!--   -->
-<!-- Research -->
-<!--   -->
-
-<h2 id="research">Research</h2>
 
 <!-- Bias detection and interpretation in genomics experiment -->
 <p class="mytext" id="genomics"><strong>Bias interpretation in genomics</strong></p>
@@ -262,7 +263,7 @@ ol li a:hover {
 <!-- cfDNA methylation biomarkers in acute coronary syndrome -->
 <p class="mytext" id="cfDNA"><strong>Liquid biopsy epigenetics in disease</strong></p>
 
-<p class="mytext"><strong>DNA methylation biomarkers in acute coronary syndrome (blood-derived cfDNA)</strong></p>
+<p class="mytext"><strong>1) DNA methylation biomarkers in acute coronary syndrome (blood-derived cfDNA)</strong></p>
 
 <p class="mytext">
   We explored circulating cell-free DNA (<a href="https://doi.org/10.1038/s41571-020-00457-x" target="_blank">cfDNA</a>) methylation 
@@ -296,7 +297,7 @@ ol li a:hover {
 
 
 <!-- DNA methylation in neuroblastoma -->
-<p class="mytext"><strong>DNA methylation profiling in neuroblastoma (solid tissues and urine-derived cfDNA)</strong></p>
+<p class="mytext"><strong>2) DNA methylation profiling in neuroblastoma (solid tissues and urine-derived cfDNA)</strong></p>
 
 <p class="mytext">
   Neuroblastoma is a pediatric cancer ranging from mild to aggressive forms. While genetic changes explain some variability, 
@@ -408,9 +409,9 @@ ol li a:hover {
 <!--   -->
 
 <!-- Prioritization of therapeutic targets in clinical trials  -->
-<p class="mytext"><strong>3.1 Prioritization of therapeutic targets in clinical trials</strong></p>
+<p class="mytext"><strong>Prioritization of therapeutic targets in clinical trials</strong></p>
 
-<h3 class="mytext"><strong>Visualization and Statistical Analysis of Biomarkers</strong></h3>
+<p class="mytext"><span style="color:#505050; font-weight:bold;">Visualization and survival analysis of biomarkers</span></p>
 
 <p class="mytext">
 We developed interactive visualizations, including oncoprints, to highlight key biomarkers in patients with limited treatment options. These visual summaries help uncover genomic alterations and support identifying new therapeutic targets.
@@ -429,7 +430,7 @@ We focused on patients from clinical trial databases facing poor outcomes or lac
 </p>
 
 
-<h3 class="mytext"><strong>Machine learning for target identification</strong></h3>
+<p class="mytext"><span style="color:#505050; font-weight:bold;">Machine learning/AI for target identification</span></p>
 
 <p class="mytext">
 To prioritize therapeutic targets, we applied <a href="https://cseweb.ucsd.edu/~elkan/posonly.pdf" target="_blank">Positive and Unlabeled (PU) learning</a>, ideal for cases where only confirmed targets are known. PU classifiers helped distinguish potential targets using gene expression, mutations, and therapy annotations.

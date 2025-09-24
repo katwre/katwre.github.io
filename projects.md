@@ -1,7 +1,6 @@
 ---
 layout: page
 title: ""
-permalink: /projects/
 ---
 
 <style>
@@ -329,5 +328,270 @@ ol li a:hover {
 
 
 
+<!--   -->
+<!-- Open source software -->
+<!--   -->
 
+<h2 id="opensource">Open source software</h2>
+
+
+<!-- Genomation-->
+
+<div class="software-block mytext">
+  <img src="{{ '/img/genomation.png' | relative_url }}" alt="Genomation logo" class="software-logo">
+  <div class="software-text">
+    <p><em>genomation</em> – a Bioconductor R package designed to simplify genomic feature and interval analysis. It includes functions for reading BED/GFF files as GRanges, summarizing features over regions, creating enrichment plots or heatmaps, and annotating regions with exons, introns, or promoters.</p>
+  </div>
+</div>
+
+
+<p class="mytext" style="font-family: 'Cormorant Garamond', serif;">
+  <a href="https://github.com/BIMSBbioinfo/genomation" target="_blank">https://github.com/BIMSBbioinfo/genomation</a>,
+  developed in the team of Dr. Altuna Akalin at Bioinformatics and Omics Data Science Platform at 
+<a href="https://www.mdc-berlin.de/bioinformatics" target="_blank">MDC BIMSB.</a>
+</p>
+
+
+
+<!-- Pigx -->
+<div class="software-block">
+    <img src="{{ '/img/pigx.png' | relative_url }}" alt="pigx logo" class="software-logo">
+
+  <div class="software-text">
+    <p><em>PiGx</em> – a collection of genomics pipelines implemented using Snakemake, Python, and R. Each pipeline is easily configured with a sample sheet and a simple settings file. PiGx generates comprehensive, interactive HTML reports that summarize key findings from your samples.</p>
+  </div>
+</div>
+
+
+<p class="mytext" style="font-family: 'Cormorant Garamond', serif;">
+  <a href="https://github.com/BIMSBbioinfo/pigx" target="_blank">
+    https://github.com/BIMSBbioinfo/pigx</a>,
+  developed in the team of Dr. Altuna Akalin at Bioinformatics and Omics Data Science Platform at 
+<a href="https://www.mdc-berlin.de/bioinformatics" target="_blank">MDC BIMSB.</a>
+</p>
+
+
+<!-- Motif activity -->
+
+<div class="software-block">
+  <img src="{{ '/img/motifActivity.png' | relative_url }}" alt="motifActivity logo" class="software-logo">
+
+
+  <div class="software-text">
+    <p><em>motifActivity</em> – an R package for identifying key transcription factors (TFs) responsible for changes in gene expression or epigenetic marks across samples. It predicts TF activity profiles using input data from RNA-seq, BS-seq, ChIP-seq, ATAC-seq, and similar methods, combined with a set of DNA motifs.</p>
+  </div>
+</div>
+
+<p class="mytext" style="font-family: 'Cormorant Garamond', serif;">
+  <a href="https://github.com/katwre/motifActivity" target="_blank">
+    https://github.com/katwre/motifActivity</a>,
+  developed in the team of Dr. Altuna Akalin at Bioinformatics and Omics Data Science Platform at 
+<a href="https://www.mdc-berlin.de/bioinformatics" target="_blank">MDC BIMSB.</a>
+
+</p>
+
+
+
+
+
+
+
+
+
+<!--   -->
+<!-- Freelance -->
+<!--   -->
+
+<!-- Prioritization of therapeutic targets in clinical trials  -->
+<p class="mytext"><strong>Prioritization of therapeutic targets in clinical trials</strong></p>
+
+<p class="mytext"><span style="color:#505050; font-weight:bold;">Visualization and survival analysis of biomarkers</span></p>
+
+<p class="mytext">
+We developed interactive visualizations, including oncoprints, to highlight key biomarkers in patients with limited treatment options. These visual summaries help uncover genomic alterations and support identifying new therapeutic targets.
+</p>
+
+<p class="mytext">
+We focused on patients from clinical trial databases facing poor outcomes or lacking effective therapies. Our statistical analyses, including survival analysis, demonstrate the clinical relevance of nominated targets.
+</p>
+
+<p class="mytext" style="text-align:center;">
+  <img src="{{ '/img/oncoprint_modified.png' | relative_url }}" style="max-width:65%;">
+  <img src="{{ '/img/survival_analysis.png' | relative_url }}" style="max-width:65%;">
+</p>
+
+<p class="mytext" style="text-align:center; font-size: 14px; color: #555;">Figure: Example of biomarker visualization and survival analysis.
+</p>
+
+
+<p class="mytext"><span style="color:#505050; font-weight:bold;">Machine learning/AI for target identification</span></p>
+
+<p class="mytext">
+To prioritize therapeutic targets, we applied <a href="https://cseweb.ucsd.edu/~elkan/posonly.pdf" target="_blank">Positive and Unlabeled (PU) learning</a>, ideal for cases where only confirmed targets are known. PU classifiers helped distinguish potential targets using gene expression, mutations, and therapy annotations.
+</p>
+<p class="mytext" style="text-align:center;">
+  <img src="{{ '/img/PUlearning.png' | relative_url }}" style="max-width:100%;">
+</p>
+
+<p class="mytext" style="text-align:center; font-size: 14px; color: #555;">
+Figure: PU learning principle (figure adapted from <a href="https://techblog.ing.pl/blog/podstawy-positive-unlabeled-learning" target="_blank">a blogpost</a>).
+</p>
+
+
+<p class="mytext">
+  Additionally, we used autoencoders (PyTorch) to uncover hidden patterns and prioritize key molecular features in an unsupervised way.
+  </p>
+<p class="mytext" style="text-align:center;">
+  <img src="{{ 'img/autoencoder_TFs.png' | relative_url }}" style="max-width:110%;max-height:90%">
+</p>
+
+
+<p class="mytext" style="text-align:center; font-size: 14px; color: #555;">
+Figure: Autoencoder workflow and latent space visualization using t-SNE.
+</p>
+
+
+
+
+<!-- 5.2 Web app feature development  -->
+<p class="mytext"><strong>3.2 Web app feature development</strong></p>
+
+<p class="mytext">
+  I contributed to enhancing the 
+  <a href="https://igv.org/app/" target="_blank">IGV web application</a>, 
+  an interactive tool for visual exploration of genomic data 
+  (<a href="https://github.com/igvteam/igv-webapp" target="_blank">source code</a>).
+  Built with JavaScript and Python, this tool allows visualization of both public and in-house datasets.
+  </p>
+  
+  <ul class="mytext" style="list-style-type: disc; margin-left: 110px;">
+    <li>Enabled dynamic visualization of new in-house genomic datasets.</li>
+    <li>Added highlighting of genomic regions of interest (e.g., genetic variants).</li>
+    <li>Developed new display options for RefSeq and GENCODE annotations:
+      <ul>
+        <li>Collapse/expand all transcript isoforms.</li>
+        <li>Extend selected gene isoforms for detailed view.</li>
+        <li>Added controls to adjust track widths for optimal display.</li>
+      </ul>
+    </li>
+    <li>Linked visualized tracks to their source databases.</li>
+    <li>Implemented command-line tool for automated snapshots of defined genes or regions.</li>
+  </ul>
+  
+  
+  <div style="text-align: center;">
+      <img src="{{ 'img/igv_original.png' | relative_url }}" style="max-width: 70%; height: auto;">
+
+    <div class="mytext" style="font-size: 14px; color: #555;">
+      Figure: Example IGV web app view showing genomic data tracks.
+    </div>
+  </div>
+
+
+
+
+<!--   -->
+<!-- Side projects -->
+<!--   -->
+
+<h2 id="sideprojects">Side projects</h2>
+
+
+<!-- Protein Folding -->
+<div class="software-block">
+<div class="software-text">
+<p>
+  <em>Protein Folding in the HP Model</em> - implementation of simulated annealing and replica exchange Monte Carlo algorithm for protein folding in the HP model in Python and NumPy. The HP model simplifies protein folding by using hydrophobic (H) and polar (P) amino acids on a square lattice. Metropolis–Hastings algorithm enables sampling protein configurations based on the Boltzmann distribution.
+</p>
+</div>
+</div>
+
+<div style="text-align: center;">
+  <img src="{{ 'img/HPmodel.png' | relative_url }}" width="200" height="200">
+  <p class="mytext" style="text-align: center;font-size: 0.9em; color: #666;">Figure: Lattice HP model showing global energy.</p>
+</div>
+<p class="mytext" style="text-align: center;font-family: 'Cormorant Garamond', serif;">
+<a href="https://github.com/katwre/bioinformatics-projects/tree/master/Molecular_Dynamics" target="_blank">https://github.com/katwre/bioinformatics-projects/tree/master/Molecular_Dynamics</a>
+</p>
+
+<hr>
+
+<!-- Genome Assembly -->
+<div class="software-block">
+  <div class="software-text">
+  <p>
+    <em>Genome Assembly Using de Bruijn Graph</em> - implementation of de Bruijn graph-based genome assembly with Eulerian walk to reconstruct DNA sequences from k-mers. Includes short-read assembly principles based on publications by Compeau et al. (2011) and Pevzner et al. (2001)
+  </p>
+  </div>
+  </div>
+<div style="text-align: center;">
+  <img src="{{ 'img/debrujin.png' | relative_url }}" style="max-width: 300px; width: 70%;">
+  <p class="mytext" style="text-align: center;font-size: 0.9em; color: #666;">Figure: De Bruijn graph.</p>
+</div>
+<p class="mytext" style="font-family: 'Cormorant Garamond', serif;">
+<a href="https://github.com/katwre/bioinformatics-projects/tree/master/genome_assembly" target="_blank">https://github.com/katwre/bioinformatics-projects/tree/master/genome_assembly</a>
+</p>
+
+<hr>
+
+<!-- Sudoku -->
+<div class="software-block">
+  <div class="software-text">
+  <p>
+    <em>Sudoku</em> - a simple Sudoku game implemented in JavaScript and JQuery. </p>
+  </div>
+  </div>
+<div style="text-align: center;">
+  <img src="{{ 'img/sudoku.png' | relative_url }}" width="400" height="300">
+</div>
+<p class="mytext" style="font-family: 'Cormorant Garamond', serif;">
+<a href="https://github.com/katwre/sudoku" target="_blank">https://github.com/katwre/sudoku</a>
+</p>
+
+<hr>
+
+<!-- Minesweeper -->
+
+<div class="software-block">
+  <div class="software-text">
+  <p>
+    <em>Minesweeper</em> - classic Minesweeper game implemented in Java using SWING and AWT libraries. </p>
+  </div>
+  </div>
+<div style="text-align: center;">
+  <img src="{{ 'img/minesweeper.png' | relative_url }}" width="200" height="230">
+</div>
+<p class="mytext" style="font-family: 'Cormorant Garamond', serif;">
+<a href="https://github.com/katwre/Minesweeper" target="_blank">https://github.com/katwre/Minesweeper</a>
+</p>
+
+<hr>
+
+<!-- Django Web-Services -->
+<p class="mytext"><strong>Django-Based Web Services</strong></p>
+<p class="mytext" style="font-family: 'Cormorant Garamond', serif;">
+Django-based server for Multiple Sequence Alignment (MSA) visualization - <a href="https://github.com/freesci/MSA-vis-project" target="_blank">https://github.com/freesci/MSA-vis-project</a>
+
+</p>
+<p class="mytext" style="font-family: 'Cormorant Garamond', serif;">
+Mobile application using Django, manifesto app, and localStorage - <a href="https://github.com/katwre/phone_application" target="_blank">https://github.com/katwre/phone_application</a>
+</p>
+
+
+<hr>
+
+<!-- Discover Career Match -->
+<p class="mytext"><strong>Discover Your Career Match</strong></p>
+<p class="mytext">
+Interactive tool that matches careers to users based on their personality profile (Big Five personality traits). Runs directly in the browser via Pyodide.
+</p>
+
+<div style="text-align: center;">
+  <img src="{{ 'img/personalities.png' | relative_url }}" alt="PCA plot of careers based on personality traits" style="max-width: 70%; max-height: 70%; border: 1px solid #ccc; box-shadow: 2px 2px 6px #ddd;">
+
+  <p class="mytext" style="text-align: center;font-size: 0.9em; color: #666;">Figure: PCA plot showing career matches based on personality profile.</p>
+</div>
+<p class="mytext" style="font-family: 'Cormorant Garamond', serif;">
+  <a href="https://github.com/katwre/Personalities" target="_blank">https://github.com/katwre/Personalities</a>
+  </p>
 

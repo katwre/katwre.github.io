@@ -181,13 +181,12 @@ ol li a:hover {
 </style>
 
 
-
-
 <!--   -->
-<!-- Research -->
+<!-- list of chapters -->
 <!--   -->
 
-<h2 id="research">Projects</h2>
+
+<h2 id="projects">Portfolio</h2>
 
 
 <div class="toc-wrapper">
@@ -203,12 +202,22 @@ ol li a:hover {
   <li><a href="#freelance">Freelance</a>
     <ol>
       <li><a href="#target">Prioritization of therapeutic targets in clinical trials</a></li>
+      <li><a href="#mltarget">Machine learning/AI for target identification</a></li>
       <li><a href="#igv">Web app feature development</a></li>
     </ol>
   </li>
   <li><a href="#sideprojects">Side projects</a></li>
 </ol>
 </div>
+
+
+
+<!--   -->
+<!-- Research -->
+<!--   -->
+
+<h2 id="research">Research</h2>
+
 
 
 <!-- Bias detection and interpretation in genomics experiment -->
@@ -404,8 +413,11 @@ ol li a:hover {
 <!-- Freelance -->
 <!--   -->
 
+<h2 id="freelance">Freelance</h2>
+
+
 <!-- Prioritization of therapeutic targets in clinical trials  -->
-<p class="mytext"><strong>Prioritization of therapeutic targets in clinical trials</strong></p>
+<p class="mytext" id="target"><strong>Prioritization of therapeutic targets in clinical trials</strong></p>
 
 <p class="mytext"><span style="color:#505050; font-weight:bold;">Visualization and survival analysis of biomarkers</span></p>
 
@@ -426,7 +438,7 @@ We focused on patients from clinical trial databases facing poor outcomes or lac
 </p>
 
 
-<p class="mytext"><span style="color:#505050; font-weight:bold;">Machine learning/AI for target identification</span></p>
+<p class="mytext" id="mltarget"><span style="color:#505050; font-weight:bold;">Machine learning/AI for target identification</span></p>
 
 <p class="mytext">
 To prioritize therapeutic targets, we applied <a href="https://cseweb.ucsd.edu/~elkan/posonly.pdf" target="_blank">Positive and Unlabeled (PU) learning</a>, ideal for cases where only confirmed targets are known. PU classifiers helped distinguish potential targets using gene expression, mutations, and therapy annotations.
@@ -441,22 +453,22 @@ Figure: PU learning principle (figure adapted from <a href="https://techblog.ing
 
 
 <p class="mytext">
-  Additionally, we used autoencoders (PyTorch) to uncover hidden patterns and prioritize key molecular features in an unsupervised way.
+  Additionally, we utilized autoencoders to uncover hidden patterns and prioritize key molecular features in an unsupervised way.
   </p>
 <p class="mytext" style="text-align:center;">
-  <img src="{{ 'img/autoencoder_TFs.png' | relative_url }}" style="max-width:110%;max-height:90%">
+  <img src="{{ 'img/variational-autoencoder.png' | relative_url }}" style="max-width:70%;max-height:90%">
 </p>
 
 
 <p class="mytext" style="text-align:center; font-size: 14px; color: #555;">
-Figure: Autoencoder workflow and latent space visualization using t-SNE.
+Figure: Schematic of a Variational Autoencoder (figure adapted from <a href="https://avandekleut.github.io/vae/" target="_blank">a blogpost</a>).
 </p>
 
 
 
 
 <!-- 5.2 Web app feature development  -->
-<p class="mytext"><strong>3.2 Web app feature development</strong></p>
+<p class="mytext" id="igv"><strong>Web app feature development</strong></p>
 
 <p class="mytext">
   I contributed to enhancing the 

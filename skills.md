@@ -221,6 +221,26 @@ ol li a:hover {
 
 
 
+<!--Soft skills:-->
+
+
+<ul>
+
+<li><span class="emphasize">Collaboration & Communication</span>: </li>
+
+<ul>
+<li>Working in an independent manner and also in cross-functional teams (wet-lab scienstists, data scientists, programmers, UX/UI designers)</li>
+<li>Gathering, evaluating and synthesizing of information into articles</li>
+<li>Project management and mentoring</li>
+<li>Good at communication and presentation skills</li>
+<li>Good at problem solving and adaptability</li>
+<li>Curious and loves to learn new things</li>
+</ul>
+
+</ul>
+
+<br>
+
 
 <!--Technical skills:-->
 
@@ -276,21 +296,4 @@ ol li a:hover {
 </ul>
 
 
-<br>
 
-
-
-<ul>
-
-<li><span class="emphasize">Collaboration & Communication</span>: </li>
-
-<ul>
-<li>Working in an independent manner and also in cross-functional teams (wet-lab scienstists, data scientists, programmers, UX/UI designers)</li>
-<li>Gathering, evaluating and synthesizing of information into articles</li>
-<li>Project management and mentoring</li>
-<li>Good at communication and presentation skills</li>
-<li>Good at problem solving and adaptability</li>
-<li>Curious and loves to learn new things</li>
-</ul>
-
-</ul>

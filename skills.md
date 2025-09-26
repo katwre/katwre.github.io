@@ -229,8 +229,9 @@ ol li a:hover {
   <li><span class="emphasize">Programming &amp; Tools</span>: 
   
   <ul>
-  <li>Python - NumPy, pandas, scikit-learn, seaborn, PyTorch, Matplotlib, Biopython</li>
+  <li>Python - NumPy, pandas, scikit-learn, seaborn, PyTorch, Matplotlib, Plotly, Biopython</li>
   <li>R - CRAN, Bioconductor</li>
+  <li>RMarkdown, Jupyter Notebooks</li>
   <li>unit testing - R/testthat, Python/unittest/pytest</li>
   <li>bash</li>
 
@@ -250,6 +251,8 @@ ol li a:hover {
     <li>Deep learning: variational autoencoders (VAEs), CNNs, transformers, retrieval-augmented generation (RAG), LLMs</li>
     <li>Federated learning</li>
   </ul>
+
+  RMarkdown, Jupyter Notebooks
   
   </li>
   

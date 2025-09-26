@@ -229,7 +229,7 @@ ol li a:hover {
 <li><span class="emphasize">Collaboration & Communication</span>: </li>
 
 <ul>
-<li>Working in an independent manner and also in cross-functional teams (wet-lab scienstists, data scientists, programmers, UX/UI designers)</li>
+<li>Working in an independent manner and also in cross-functional teams (clinicians, wet-lab scientists, data scientists, software engineers, UX/UI designers)</li>
 <li>Gathering, evaluating and synthesizing of information into articles</li>
 <li>Project management and mentoring</li>
 <li>Good at communication and presentation skills</li>

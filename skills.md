@@ -286,7 +286,7 @@ ol li a:hover {
 
   <li><span class="emphasize">Databases</span>: MySQL, SQLite, PostgreSQL</li>
   
-  <li><span class="emphasize">Version Control &amp; Software Management</span>: Linux/Unix systems, git, conda, GNU Guix</li>
+  <li><span class="emphasize">Version Control &amp; Software Management</span>: Linux/Unix systems, git, svn, conda, GNU Guix</li>
   
   <li><span class="emphasize">Web Frameworks</span>: Django, CSS, JavaScript, HTML, jQuery, PHP</li>
   

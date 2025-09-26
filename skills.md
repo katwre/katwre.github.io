@@ -245,7 +245,7 @@ ol li a:hover {
     <li>Classification: incl. random forests, XGBoost, SVM, Linear Discriminant Analysis (LDA)</li>
     <li>Clustering: K-means, EM algorithm</li>
     <li>Probabilistic models: Hidden Markov models (HMMs), linear Gaussian state-space models</li>
-    <li>Dimensionality reduction: PCA, t-SNE</li>
+    <li>Dimensionality reduction & factorization: PCA, t-SNE, MOFA, NMF</li>
     <li>Sampling &amp; optimization: replica exchange Monte Carlo</li>
     <li>Deep learning: variational autoencoders (VAEs), CNNs, transformers, retrieval-augmented generation (RAG), LLMs</li>
     <li>Federated learning</li>

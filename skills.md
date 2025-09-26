@@ -271,8 +271,6 @@ ol li a:hover {
     <li>Deep learning: variational autoencoders (VAEs), CNNs, transformers, retrieval-augmented generation (RAG), LLMs</li>
     <li>Federated learning</li>
   </ul>
-
-  RMarkdown, Jupyter Notebooks
   
   </li>
   

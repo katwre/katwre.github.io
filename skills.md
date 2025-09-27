@@ -259,7 +259,7 @@ ol li a:hover {
   
   </li>
   
-  <li><span class="emphasize">Machine Learning &amp; Statistics</span>: 
+  <li><span class="emphasize">Machine Learning</span>: 
    <ul>
     <li>Statistical tests: incl. t-tests, Wilcoxon</li>
     <li>Regression: incl. linear regression, logistic regression, Cox/survival analysis, elastic net/ridge/LASSO</li>

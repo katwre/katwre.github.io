@@ -288,9 +288,6 @@ ol li a:hover {
   
   <li><span class="emphasize">Web Frameworks</span>: Django, CSS, JavaScript, HTML, jQuery, PHP</li>
   
-
-  <li><span class="emphasize">Bioinformatic Tools</span>: samtools, BEDtools, GATK, IGV, Bowtie2, BWA, Bismark, BLAST </li> 
-  <li><span class="emphasize">Omics Databases</span>: TCGA, Roadmap Epigenomics, TEMPUS, GTEx, Ensembl, NCBI, GenomOncology</li> 
 </ul>
 
 

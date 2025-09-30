@@ -6,7 +6,7 @@ permalink: /cv/
 
 <!-- Embedded viewer (with a download fallback) -->
 <object
-  data="{{ '/CV/KWreczycka_CV_twopages.pdf | relative_url }}"
+  data="{{ '/CV/KWreczycka_CV_twopages.pdf' | relative_url }}"
   type="application/pdf"
   width="100%"
   height="900">

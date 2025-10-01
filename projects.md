@@ -540,7 +540,7 @@ I developed several survival models to predict the risk of mortality or relapse 
   <p class="mytext" style="text-align: center;font-size: 0.9em; color: #666;">Figure: Kaplan–Meier plot of the best performing model.</p>
 </div>
 
-<p class="mytext" style="text-align: center;font-family: 'Cormorant Garamond', serif;">
+<p class="mytext" style="font-family: 'Cormorant Garamond', serif;">
 <a href="https://github.com/katwre/survival_analysis/tree/main/" target="_blank">https://github.com/katwre/survival_analysis/tree/main/</a>
 </p>
 
@@ -569,7 +569,7 @@ In this project, I used CNN to classify chest X-ray images using relatively smal
 </p>
 
 
-<p class="mytext" style="text-align: center;font-family: 'Cormorant Garamond', serif;">
+<p class="mytext" style="font-family: 'Cormorant Garamond', serif;">
 <a href="https://github.com/katwre/ML-projects/blob/main/CNN_and_TransferLearning_Xray/" target="_blank">https://github.com/katwre/ML-projects/blob/main/CNN_and_TransferLearning_Xray/</a>
 </p>
 
@@ -591,7 +591,7 @@ I implemented a simple autoencoder with a custom loss function for single-cell R
 </div>
 
 
-<p class="mytext" style="text-align: center;font-family: 'Cormorant Garamond', serif;">
+<p class="mytext" style="font-family: 'Cormorant Garamond', serif;">
 <a href="https://github.com/katwre/ML-projects/tree/main/autoencoder_scRNAseq/" target="_blank">https://github.com/katwre/ML-projects/tree/main/autoencoder_scRNAseq/</a>
 </p>
 
@@ -618,7 +618,7 @@ In this project, I trained a scVI model based on variational autoencoder in a fe
 </div>
 
 
-<p class="mytext" style="text-align: center;font-family: 'Cormorant Garamond', serif;">
+<p class="mytext" style="font-family: 'Cormorant Garamond', serif;">
 <a href="https://github.com/katwre/ML-projects/tree/main/federated_learning_scRNA-seq/" target="_blank">https://github.com/katwre/ML-projects/tree/main/federated_learning_scRNA-seq/</a>
 </p>
 

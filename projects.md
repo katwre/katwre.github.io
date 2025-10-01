@@ -531,7 +531,7 @@ Figure: Schematic of a Variational Autoencoder (figure adapted from <a href="htt
 I developed several survival models to predict the risk of mortality or relapse in newly diagnosed multiple myeloma patients, using baseline clinical and/or gene expression data.
 
 <div style="text-align: center;">
-  <img src="{{ 'img/survival_classification.png' | relative_url }}" width="200" height="200">
+  <img src="{{ 'img/survival_classification.png' | relative_url }}" width="400" height="200">
   <p class="mytext" style="text-align: center;font-size: 0.9em; color: #666;">Figure: C-index comparison of multiple survival models.</p>
 </div>
 
@@ -603,17 +603,17 @@ In this project, I trained a scVI model based on variational autoencoder in a fe
 
 
 <div style="text-align: center;">
-  <img src="{{ 'img/Gene_Expression_UMAP_before_correction.png' | relative_url }}" width="200" height="400">
+  <img src="{{ 'img/Gene_Expression_UMAP_before_correction.png' | relative_url }}" width="600" height="400">
   <p class="mytext" style="text-align: center;font-size: 0.9em; color: #666;">Figure: Baseline Gene Expression UMAP.</p>
 </div>
 
 <div style="text-align: center;">
-  <img src="{{ 'img/Gene_Expression_UMAP_after_correction_centralized.png' | relative_url }}" width="400" height="200">
+  <img src="{{ 'img/Gene_Expression_UMAP_after_correction_centralized.png' | relative_url }}" width="600" height="200">
   <p class="mytext" style="text-align: center;font-size: 0.9em; color: #666;">Figure: Centralized scVI Model.</p>
 </div>
 
 <div style="text-align: center;">
-  <img src="{{ 'img/Gene_Expression_UMAP_after_correction_federated.png' | relative_url }}" width="400" height="200">
+  <img src="{{ 'img/Gene_Expression_UMAP_after_correction_federated.png' | relative_url }}" width="600" height="200">
   <p class="mytext" style="text-align: center;font-size: 0.9em; color: #666;">Figure: Federated scVI Model.</p>
 </div>
 
@@ -635,7 +635,7 @@ I applied multiple deconvolution methods to estimate cell type proportions from 
 - A lightweight Transformer model, treating CpG regions as tokens with embeddings and self-attention to capture genomic dependencies.
 
 <div style="text-align: center;">
-  <img src="{{ 'img/deconvlution_bsseq.png' | relative_url }}" width="400" height="200">
+  <img src="{{ 'img/deconvlution_bsseq.png' | relative_url }}" width="600" height="200">
   <p class="mytext" style="text-align: center;font-size: 0.9em; color: #666;">Figure: Deconvolution of the DNA methylation signal from blood DNA sequenced using Bisulfite-seq.</p>
 </div>
 

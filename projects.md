@@ -213,7 +213,7 @@ ol li a:hover {
       <li><a href="#vae_federated">Variational autoencoder (VAE) to mitigate batch effects in scRNA-seq using federated learning</a></li>
       <li><a href="#deconvolution">VAE, BERT, semi-supervised NMF and lasso/ridge/elastic net for the cell type deconvolution</a></li>
       <li><a href="#rmc">Protein Folding in the HP Model using Replica Monte Carlo</a></li>
-      <li><a href="#debrujn">Genome Assembly Using de Bruijn Graph</a></li>
+      <li><a href="#debrujn">Genome Assembly using de Bruijn Graph</a></li>
       <li><a href="#sudoku">Sudoku in Javascript/JQuery</a></li>
       <li><a href="#minesweeper">Minesweeper in Java/SWING\&AWT</a></li>
       <li><a href="#django">Django-Based Web Services (for Multiple Sequence Alignment and mobile app)</a></li>
@@ -668,7 +668,7 @@ I applied multiple deconvolution methods to estimate cell type proportions from 
 <div class="software-block">
   <div class="software-text" id="debrujn">
   <p>
-    <em>Genome Assembly Using de Bruijn Graph</em> - implementation of de Bruijn graph-based genome assembly with Eulerian walk to reconstruct DNA sequences from k-mers. Includes short-read assembly principles based on publications by Compeau et al. (2011) and Pevzner et al. (2001)
+    <em>Genome Assembly using de Bruijn Graph</em> - implementation of de Bruijn graph-based genome assembly with Eulerian walk to reconstruct DNA sequences from k-mers. Includes short-read assembly principles based on publications by Compeau et al. (2011) and Pevzner et al. (2001)
   </p>
   </div>
   </div>

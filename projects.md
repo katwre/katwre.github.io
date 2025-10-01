@@ -217,7 +217,7 @@ ol li a:hover {
       <li><a href="#sudoku">Sudoku in Javascript/JQuery</a></li>
       <li><a href="#minesweeper">Minesweeper in Java/SWING\&AWT</a></li>
       <li><a href="#django">Django-Based Web Services (for Multiple Sequence Alignment and mobile app)</a></li>
-      <li><a href="#pyodine">In-browser python code (pyodine) for a career match</a></li>
+      <li><a href="#pyodine">Discover your career match in your browser (aka pyodine)</a></li>
     </ol>
   </li>
 </ol>
@@ -531,7 +531,7 @@ Figure: Schematic of a Variational Autoencoder (figure adapted from <a href="htt
 I developed several survival models to predict the risk of mortality or relapse in newly diagnosed multiple myeloma patients, using baseline clinical and/or gene expression data.
 
 <div style="text-align: center;">
-  <img src="{{ 'img/HPmodel.png' | relative_url }}" width="200" height="200">
+  <img src="{{ 'img/survival_classification.png' | relative_url }}" width="200" height="200">
   <p class="mytext" style="text-align: center;font-size: 0.9em; color: #666;">Figure: C-index comparison of multiple survival models.</p>
 </div>
 
@@ -550,10 +550,24 @@ I developed several survival models to predict the risk of mortality or relapse 
 
 In this project, I used CNN to classify chest X-ray images using relatively small 224x224 and also 64×64 pixel inputs, aiming to explore whether lightweight models can still retain sufficient diagnostic power for image-based classification tasks. Beyond training a basic CNN from scratch, transfer learning was employed by leveraging pretrained convolutional backbones such as ResNet, to assess whether pretrained models can further enhance classification performance when applied to chest X-ray images.
 
-<div style="text-align: center;">
-  <img src="{{ 'img/xray.jpeg' | relative_url }}" width="200" height="200">
-  <p class="mytext" style="text-align: center;font-size: 0.9em; color: #666;">Figure: An example X-ray image of a healthy individual and a pneumonia patient.</p>
+<div style="display: flex; justify-content: center; gap: 20px;">
+
+  <div style="text-align: center;">
+    <img src="{{ 'img/xray.jpeg' | relative_url }}" width="200" height="200">
+    <p style="font-size: 0.9em; color: #666;">Healthy</p>
+  </div>
+
+  <div style="text-align: center;">
+    <img src="{{ 'img/xray_pneumonia.jpeg' | relative_url }}" width="200" height="200">
+    <p style="font-size: 0.9em; color: #666;">Pneumonia</p>
+  </div>
+
 </div>
+
+<p style="text-align: center; font-size: 0.9em; color: #666; margin-top: 10px;">
+  Figure: Example X-ray images of a healthy individual and a pneumonia patient.
+</p>
+
 
 <p class="mytext" style="text-align: center;font-family: 'Cormorant Garamond', serif;">
 <a href="https://github.com/katwre/ML-projects/blob/main/CNN_and_TransferLearning_Xray/" target="_blank">https://github.com/katwre/ML-projects/blob/main/CNN_and_TransferLearning_Xray/</a>
@@ -589,17 +603,17 @@ In this project, I trained a scVI model based on variational autoencoder in a fe
 
 
 <div style="text-align: center;">
-  <img src="{{ 'img/Gene_Expression_UMAP_before_correction.png' | relative_url }}" width="200" height="200">
+  <img src="{{ 'img/Gene_Expression_UMAP_before_correction.png' | relative_url }}" width="200" height="400">
   <p class="mytext" style="text-align: center;font-size: 0.9em; color: #666;">Figure: Baseline Gene Expression UMAP.</p>
 </div>
 
 <div style="text-align: center;">
-  <img src="{{ 'img/Gene_Expression_UMAP_after_correction_centralized.png' | relative_url }}" width="200" height="200">
+  <img src="{{ 'img/Gene_Expression_UMAP_after_correction_centralized.png' | relative_url }}" width="400" height="200">
   <p class="mytext" style="text-align: center;font-size: 0.9em; color: #666;">Figure: Centralized scVI Model.</p>
 </div>
 
 <div style="text-align: center;">
-  <img src="{{ 'img/Gene_Expression_UMAP_after_correction_federated.png' | relative_url }}" width="200" height="200">
+  <img src="{{ 'img/Gene_Expression_UMAP_after_correction_federated.png' | relative_url }}" width="400" height="200">
   <p class="mytext" style="text-align: center;font-size: 0.9em; color: #666;">Figure: Federated scVI Model.</p>
 </div>
 
@@ -621,7 +635,7 @@ I applied multiple deconvolution methods to estimate cell type proportions from 
 - A lightweight Transformer model, treating CpG regions as tokens with embeddings and self-attention to capture genomic dependencies.
 
 <div style="text-align: center;">
-  <img src="{{ 'img/deconvlution_bsseq.png' | relative_url }}" width="200" height="200">
+  <img src="{{ 'img/deconvlution_bsseq.png' | relative_url }}" width="400" height="200">
   <p class="mytext" style="text-align: center;font-size: 0.9em; color: #666;">Figure: Deconvolution of the DNA methylation signal from blood DNA sequenced using Bisulfite-seq.</p>
 </div>
 

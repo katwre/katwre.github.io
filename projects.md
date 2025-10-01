@@ -206,7 +206,20 @@ ol li a:hover {
       <li><a href="#igv">Web app feature development</a></li>
     </ol>
   </li>
-  <li><a href="#sideprojects">Side projects</a></li>
+  <li><a href="#sideprojects">Side projects</a>
+  <ol>
+      <li><a href="#survival">Survival analysis with clinical and gene expression data</a></li>
+      <li><a href="#ae">Autoencoder for scRNA-seq dimensionality reduction and data imputation</a></li>
+      <li><a href="#vae_federated">Variational autoencoder (VAE) to mitigate batch effects in scRNA-seq using federated learning</a></li>
+      <li><a href="#deconvolution">VAE, BERT, semi-supervised NMF and lasso/ridge/elastic net for the cell type deconvolution</a></li>
+      <li><a href="#rmc">Protein Folding in the HP Model using Replica Monte Carlo</a></li>
+      <li><a href="#debrujn">Genome Assembly Using de Bruijn Graph</a></li>
+      <li><a href="#sudoku">Sudoku in Javascript/JQuery</a></li>
+      <li><a href="#minesweeper">Minesweeper in Java/SWING\&AWT</a></li>
+      <li><a href="#django">Django-Based Web Services (for Multiple Sequence Alignment and mobile app)</a></li>
+      <li><a href="#pyodine">In-browser python code (pyodine) for a career match</a></li>
+    </ol>
+  </li>
 </ol>
 </div>
 
@@ -467,7 +480,7 @@ Figure: Schematic of a Variational Autoencoder (figure adapted from <a href="htt
 
 
 
-<!-- 5.2 Web app feature development  -->
+<!-- Web app feature development  -->
 <p class="mytext" id="igv"><strong>Web app feature development</strong></p>
 
 <p class="mytext">
@@ -508,12 +521,118 @@ Figure: Schematic of a Variational Autoencoder (figure adapted from <a href="htt
 <!-- Side projects -->
 <!--   -->
 
+
 <h2 id="sideprojects">Side projects</h2>
+
+
+<!-- survival  -->
+<p class="mytext" id="survival"><strong>Survival analysis with clinical and gene expression data</strong></p>
+
+I developed several survival models to predict the risk of mortality or relapse in newly diagnosed multiple myeloma patients, using baseline clinical and/or gene expression data.
+
+<div style="text-align: center;">
+  <img src="{{ 'img/HPmodel.png' | relative_url }}" width="200" height="200">
+  <p class="mytext" style="text-align: center;font-size: 0.9em; color: #666;">Figure: C-index comparison of multiple survival models.</p>
+</div>
+
+<div style="text-align: center;">
+  <img src="{{ 'img/surival_probability.png' | relative_url }}" width="200" height="200">
+  <p class="mytext" style="text-align: center;font-size: 0.9em; color: #666;">Figure: Kaplan–Meier plot of the best performing model.</p>
+</div>
+
+<p class="mytext" style="text-align: center;font-family: 'Cormorant Garamond', serif;">
+<a href="https://github.com/katwre/survival_analysis/tree/main/" target="_blank">https://github.com/katwre/survival_analysis/tree/main/</a>
+</p>
+
+
+<!-- cnn  -->
+<p class="mytext" id="cnn"><strong>Survival analysis with clinical and gene expression data</strong></p>
+
+In this project, I used CNN to classify chest X-ray images using relatively small 224x224 and also 64×64 pixel inputs, aiming to explore whether lightweight models can still retain sufficient diagnostic power for image-based classification tasks. Beyond training a basic CNN from scratch, transfer learning was employed by leveraging pretrained convolutional backbones such as ResNet, to assess whether pretrained models can further enhance classification performance when applied to chest X-ray images.
+
+<div style="text-align: center;">
+  <img src="{{ 'img/xray.jpeg' | relative_url }}" width="200" height="200">
+  <p class="mytext" style="text-align: center;font-size: 0.9em; color: #666;">Figure: An example X-ray image of a healthy individual and a pneumonia patient.</p>
+</div>
+
+<p class="mytext" style="text-align: center;font-family: 'Cormorant Garamond', serif;">
+<a href="https://github.com/katwre/ML-projects/blob/main/CNN_and_TransferLearning_Xray/" target="_blank">https://github.com/katwre/ML-projects/blob/main/CNN_and_TransferLearning_Xray/</a>
+</p>
+
+
+<!--  Autoencoder -->
+<p class="mytext" id="ae"><strong>Autoencoder for scRNA-seq dimensionality reduction and data imputation</strong></p>
+
+I implemented a simple autoencoder with a custom loss function for single-cell RNA-seq data imputation. This approach is inspired by Badsha et al. (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7144625/).
+
+<div style="text-align: center;">
+  <img src="{{ 'img/ae_imputed.png' | relative_url }}" width="200" height="200">
+  <p class="mytext" style="text-align: center;font-size: 0.9em; color: #666;">Figure: Imputed scRNA-seq.</p>
+</div>
+
+
+<div style="text-align: center;">
+  <img src="{{ 'img/imputed.png' | relative_url }}" width="200" height="200">
+  <p class="mytext" style="text-align: center;font-size: 0.9em; color: #666;">Figure: Model's output and the true gene expression values. Non-imputed data (blue): where the model reconstructed known values. Imputed data (orange): where the model predicted missing (masked) values.</p>
+</div>
+
+
+<p class="mytext" style="text-align: center;font-family: 'Cormorant Garamond', serif;">
+<a href="https://github.com/katwre/ML-projects/tree/main/autoencoder_scRNAseq/" target="_blank">https://github.com/katwre/ML-projects/tree/main/autoencoder_scRNAseq/</a>
+</p>
+
+
+<!--  vae_federated -->
+<p class="mytext" id="vae_federated"><strong>Variational autoencoder (VAE) to mitigate batch effects in scRNA-seq using federated learning</strong></p>
+
+In this project, I trained a scVI model based on variational autoencoder in a federated setting together with secure aggregation using Flower framework (https://flower.ai/) with the SecAgg+ secure aggregation protocol, and also train the same model in a centralized manner.
+
+
+<div style="text-align: center;">
+  <img src="{{ 'img/Gene_Expression_UMAP_before_correction.png' | relative_url }}" width="200" height="200">
+  <p class="mytext" style="text-align: center;font-size: 0.9em; color: #666;">Figure: Baseline Gene Expression UMAP.</p>
+</div>
+
+<div style="text-align: center;">
+  <img src="{{ 'img/Gene_Expression_UMAP_after_correction_centralized.png' | relative_url }}" width="200" height="200">
+  <p class="mytext" style="text-align: center;font-size: 0.9em; color: #666;">Figure: Centralized scVI Model.</p>
+</div>
+
+<div style="text-align: center;">
+  <img src="{{ 'img/Gene_Expression_UMAP_after_correction_federated.png' | relative_url }}" width="200" height="200">
+  <p class="mytext" style="text-align: center;font-size: 0.9em; color: #666;">Figure: Federated scVI Model.</p>
+</div>
+
+
+<p class="mytext" style="text-align: center;font-family: 'Cormorant Garamond', serif;">
+<a href="https://github.com/katwre/ML-projects/tree/main/federated_learning_scRNA-seq/" target="_blank">https://github.com/katwre/ML-projects/tree/main/federated_learning_scRNA-seq/</a>
+</p>
+
+
+<!--  deconvolution -->
+<p class="deconvolution" id="vae_federated"><strong>VAE, BERT, semi-supervised NMF and lasso/ridge/elastic net for the cell type deconvolution</strong></p>
+
+
+This project studies DNA fragments that circulate in the blood. These fragments come from many different cell types in the body. When tissues are damaged or diseased, they release more DNA than usual, so the mix of DNA in the blood changes.By figuring out which cell types the DNA comes from, we can get an early picture of tissue health.
+
+I applied multiple deconvolution methods to estimate cell type proportions from bulk DNA methylation data. Regression-based approaches (NNLS, Lasso, Ridge, Elastic Net) model methylation profiles as mixtures of reference cell types. In addition, I developed:
+- A variational autoencoder (VAE) that reconstructs CpG profiles while jointly predicting cell type proportions.
+- A semi-supervised NMF (ssNMF) that anchors factorization to known reference signatures.
+- A lightweight Transformer model, treating CpG regions as tokens with embeddings and self-attention to capture genomic dependencies.
+
+<div style="text-align: center;">
+  <img src="{{ 'img/deconvlution_bsseq.png' | relative_url }}" width="200" height="200">
+  <p class="mytext" style="text-align: center;font-size: 0.9em; color: #666;">Figure: Deconvolution of the DNA methylation signal from blood DNA sequenced using Bisulfite-seq.</p>
+</div>
+
+<p class="mytext" style="text-align: center;font-family: 'Cormorant Garamond', serif;">
+<a href="https://github.com/katwre/ML-projects/blob/main/VAE_NMF_Transformer_regression_cfDNA/" target="_blank">https://github.com/katwre/ML-projects/blob/main/VAE_NMF_Transformer_regression_cfDNA/</a>
+</p>
 
 
 <!-- Protein Folding -->
 <div class="software-block">
-<div class="software-text">
+<div class="software-text" id="rmc">
 <p>
   <em>Protein Folding in the HP Model</em> - implementation of simulated annealing and replica exchange Monte Carlo algorithm for protein folding in the HP model in Python and NumPy. The HP model simplifies protein folding by using hydrophobic (H) and polar (P) amino acids on a square lattice. Metropolis–Hastings algorithm enables sampling protein configurations based on the Boltzmann distribution.
 </p>
@@ -530,9 +649,10 @@ Figure: Schematic of a Variational Autoencoder (figure adapted from <a href="htt
 
 <hr>
 
+
 <!-- Genome Assembly -->
 <div class="software-block">
-  <div class="software-text">
+  <div class="software-text" id="debrujn">
   <p>
     <em>Genome Assembly Using de Bruijn Graph</em> - implementation of de Bruijn graph-based genome assembly with Eulerian walk to reconstruct DNA sequences from k-mers. Includes short-read assembly principles based on publications by Compeau et al. (2011) and Pevzner et al. (2001)
   </p>
@@ -550,7 +670,7 @@ Figure: Schematic of a Variational Autoencoder (figure adapted from <a href="htt
 
 <!-- Sudoku -->
 <div class="software-block">
-  <div class="software-text">
+  <div class="software-text" id="sudoku">
   <p>
     <em>Sudoku</em> - a simple Sudoku game implemented in JavaScript and JQuery. </p>
   </div>
@@ -567,7 +687,7 @@ Figure: Schematic of a Variational Autoencoder (figure adapted from <a href="htt
 <!-- Minesweeper -->
 
 <div class="software-block">
-  <div class="software-text">
+  <div class="software-text" id="minesweeper">
   <p>
     <em>Minesweeper</em> - classic Minesweeper game implemented in Java using SWING and AWT libraries. </p>
   </div>
@@ -582,7 +702,7 @@ Figure: Schematic of a Variational Autoencoder (figure adapted from <a href="htt
 <hr>
 
 <!-- Django Web-Services -->
-<p class="mytext"><strong>Django-Based Web Services</strong></p>
+<p class="mytext" id="django"><strong>Django-Based Web Services</strong></p>
 <p class="mytext" style="font-family: 'Cormorant Garamond', serif;">
 Django-based server for Multiple Sequence Alignment (MSA) visualization - <a href="https://github.com/freesci/MSA-vis-project" target="_blank">https://github.com/freesci/MSA-vis-project</a>
 
@@ -591,11 +711,10 @@ Django-based server for Multiple Sequence Alignment (MSA) visualization - <a hre
 Mobile application using Django, manifesto app, and localStorage - <a href="https://github.com/katwre/phone_application" target="_blank">https://github.com/katwre/phone_application</a>
 </p>
 
-
 <hr>
 
 <!-- Discover Career Match -->
-<p class="mytext"><strong>Discover Your Career Match</strong></p>
+<p class="mytext" id="pyodine"><strong>Discover Your Career Match</strong></p>
 <p class="mytext">
 Interactive tool that matches careers to users based on their personality profile (Big Five personality traits). Runs directly in the browser via Pyodide.
 </p>

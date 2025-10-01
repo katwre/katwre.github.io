@@ -211,7 +211,7 @@ ol li a:hover {
       <li><a href="#survival">Survival analysis with clinical and gene expression data</a></li>
       <li><a href="#ae">Autoencoder for scRNA-seq dimensionality reduction and data imputation</a></li>
       <li><a href="#vae_federated">Variational autoencoder (VAE) to mitigate batch effects in scRNA-seq using federated learning</a></li>
-      <li><a href="#deconvolution">VAE, BERT, semi-supervised NMF and lasso/ridge/elastic net for the cell type deconvolution</a></li>
+      <li><a href="#deconvolution">VAE, BERT, semi-supervised NMF, lasso/ridge/elastic net for cell type deconvolution</a></li>
       <li><a href="#rmc">Protein Folding in the HP Model using Replica Monte Carlo</a></li>
       <li><a href="#debrujn">Genome Assembly using de Bruijn Graph</a></li>
       <li><a href="#sudoku">Sudoku in Javascript/JQuery</a></li>

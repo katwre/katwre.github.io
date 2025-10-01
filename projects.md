@@ -580,13 +580,13 @@ In this project, I used CNN to classify chest X-ray images using relatively smal
 I implemented a simple autoencoder with a custom loss function for single-cell RNA-seq data imputation. This approach is inspired by Badsha et al. (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7144625/).
 
 <div style="text-align: center;">
-  <img src="{{ 'img/ae_imputed.png' | relative_url }}" width="200" height="200">
+  <img src="{{ 'img/ae_imputed.png' | relative_url }}" width="400" height="200">
   <p class="mytext" style="text-align: center;font-size: 0.9em; color: #666;">Figure: Imputed scRNA-seq.</p>
 </div>
 
 
 <div style="text-align: center;">
-  <img src="{{ 'img/imputed.png' | relative_url }}" width="200" height="200">
+  <img src="{{ 'img/imputed.png' | relative_url }}" width="400" height="200">
   <p class="mytext" style="text-align: center;font-size: 0.9em; color: #666;">Figure: Model's output and the true gene expression values. Non-imputed data (blue): where the model reconstructed known values. Imputed data (orange): where the model predicted missing (masked) values.</p>
 </div>
 
@@ -639,7 +639,7 @@ I applied multiple deconvolution methods to estimate cell type proportions from 
   <p class="mytext" style="text-align: center;font-size: 0.9em; color: #666;">Figure: Deconvolution of the DNA methylation signal from blood DNA sequenced using Bisulfite-seq.</p>
 </div>
 
-<p class="mytext" style="text-align: center;font-family: 'Cormorant Garamond', serif;">
+<p class="mytext" style="font-family: 'Cormorant Garamond', serif;">
 <a href="https://github.com/katwre/ML-projects/blob/main/VAE_NMF_Transformer_regression_cfDNA/" target="_blank">https://github.com/katwre/ML-projects/blob/main/VAE_NMF_Transformer_regression_cfDNA/</a>
 </p>
 

@@ -211,6 +211,7 @@ ol li a:hover {
       <li><a href="#survival">Survival analysis with clinical and gene expression data</a></li>
       <li><a href="#ae">Autoencoder for scRNA-seq dimensionality reduction and data imputation</a></li>
       <li><a href="#vae_federated">Variational autoencoder (VAE) to mitigate batch effects in scRNA-seq using federated learning</a></li>
+      <li><a href="#llm">LLM-powered SPARQL Bioinformatics Assistant</a></li>
       <li><a href="#deconvolution">VAE, BERT, semi-supervised NMF, lasso/ridge/elastic net for cell type deconvolution</a></li>
       <li><a href="#rmc">Protein Folding in the HP Model using Replica Monte Carlo</a></li>
       <li><a href="#debrujn">Genome Assembly using de Bruijn Graph</a></li>
@@ -630,6 +631,44 @@ This project explored a scVI model (variational autoencoder for single-cell data
 <p class="mytext" style="font-family: 'Cormorant Garamond', serif;">
 <a href="https://github.com/katwre/ML-projects/tree/main/federated_learning_scRNA-seq/" target="_blank">https://github.com/katwre/ML-projects/tree/main/federated_learning_scRNA-seq/</a>
 </p>
+
+
+
+
+
+
+<!--  LLM -->
+<p class="mytext" id="llm"><strong>LLM-powered SPARQL Bioinformatics Assistant</strong></p>
+
+<p class="mytext">
+This project explored an AI-powered assistant that helps researchers ask questions about biology in plain English and automatically turns them into SPARQL queries against public databases:
+<ol>
+      <li>UniProt (proteins, sequences, annotations)</li>
+      <li>OMA (orthologs / evolutionary relationships)</li>
+      <li>Bgee (gene expression in species)</li>
+<\ol>    
+
+The assistant is powered by LLMs (Mistral, Llama via Groq, Ollama) combined with retrieval-augmented generation (RAG) using Qdrant and FastEmbed. You can interact with the assistant either in the terminal/CLI or through a simple chat web app (Chainlit web UI).
+
+Key goals:
+<ol>
+      <li>Allow researchers to query complex biological knowledge bases witha nice web interface.</li>
+      <li>Validate and execute queries automatically.</li>
+      <li>Provide results summarized in plain language.</li>
+<\ol>  
+</p>
+
+<div style="text-align: center;">
+  <img src="{{ 'img/ChainlitwebUI_1.png' | relative_url }}" width="600" height="200">
+  <p class="mytext" style="text-align: center;font-size: 0.9em; color: #666;">Figure: A web UI for an LLM of choice (Mistral, Llama via Groq, Ollama).</p>
+</div>
+</p>
+
+<p class="mytext" style="font-family: 'Cormorant Garamond', serif;">
+<a href="https://github.com/katwre/ML-projects/tree/main/llm-biodata/" target="_blank">https://github.com/katwre/ML-projects/tree/main/llm-biodata/</a>
+</p>
+
+
 
 
 <!--  deconvolution -->

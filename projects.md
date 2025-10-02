@@ -647,13 +647,18 @@ This project explored a scVI model (variational autoencoder for single-cell data
 
 <p class="mytext">
 This project explored an AI-powered assistant that helps researchers ask questions about biology in plain English and automatically turns them into SPARQL queries against public databases:
+<p class="mytext">
 <ol>
       <li>UniProt (proteins, sequences, annotations)</li>
       <li>OMA (orthologs / evolutionary relationships)</li>
       <li>Bgee (gene expression in species)</li>
 </ol>    
+</p>
 
+<p class="mytext">
 The assistant is powered by LLMs (Mistral, Llama via Groq, Ollama) combined with retrieval-augmented generation (RAG) using Qdrant and FastEmbed. You can interact with the assistant either in the terminal/CLI or through a simple chat web app (Chainlit web UI).
+</p>
+<p class="mytext">
 
 Key goals:
 <ol>
@@ -677,7 +682,8 @@ Key goals:
 
 
 <!--  deconvolution -->
-<p class="text" id="deconvolution"><strong>VAE, BERT, semi-supervised NMF and lasso/ridge/elastic net for the cell type deconvolution</strong></p>
+<p class="mytext" id="deconvolution"><strong>VAE, BERT, semi-supervised NMF and lasso/ridge/elastic net for the cell type deconvolution</strong></p>
+
 
 <p class="mytext">
 This project studies DNA fragments that circulate in the blood. These fragments come from many different cell types in the body. When tissues are damaged or diseased, they release more DNA than usual, so the mix of DNA in the blood changes.By figuring out which cell types the DNA comes from, we can get an early picture of tissue health.

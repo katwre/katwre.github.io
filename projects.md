@@ -528,7 +528,10 @@ Figure: Schematic of a Variational Autoencoder (figure adapted from <a href="htt
 <!-- survival  -->
 <p class="mytext" id="survival"><strong>Survival analysis with clinical and gene expression data</strong></p>
 
+
+<p class="mytext">
 I developed several survival models to predict the risk of mortality or relapse in newly diagnosed multiple myeloma patients, using baseline clinical and/or gene expression data.
+</p>
 
 <div style="text-align: center;">
   <img src="{{ 'img/survival_classification.png' | relative_url }}" width="400" height="200">
@@ -548,7 +551,9 @@ I developed several survival models to predict the risk of mortality or relapse 
 <!-- cnn  -->
 <p class="mytext" id="cnn"><strong>Survival analysis with clinical and gene expression data</strong></p>
 
-In this project, I used CNN to classify chest X-ray images using relatively small 224x224 and also 64×64 pixel inputs, aiming to explore whether lightweight models can still retain sufficient diagnostic power for image-based classification tasks. Beyond training a basic CNN from scratch, transfer learning was employed by leveraging pretrained convolutional backbones such as ResNet, to assess whether pretrained models can further enhance classification performance when applied to chest X-ray images.
+<p class="mytext">
+I applied convolutional neural networks (CNNs) to classify chest X-ray images using both 224×224 and 64×64 pixel inputs, aiming to explore whether lightweight models can still retain sufficient diagnostic power for image-based classification tasks. Beyond training a basic CNN from scratch, transfer learning was employed by leveraging pretrained convolutional backbones such as ResNet, to assess whether pretrained models can further enhance classification performance when applied to chest X-ray images.
+</p>
 
 <div style="display: flex; justify-content: center; gap: 20px;">
 
@@ -577,7 +582,9 @@ In this project, I used CNN to classify chest X-ray images using relatively smal
 <!--  Autoencoder -->
 <p class="mytext" id="ae"><strong>Autoencoder for scRNA-seq dimensionality reduction and data imputation</strong></p>
 
-I implemented a simple autoencoder with a custom loss function for single-cell RNA-seq data imputation. This approach is inspired by Badsha et al. (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7144625/).
+<p class="mytext">
+I developed a simple autoencoder with a custom loss function for imputing missing values in single-cell RNA-seq data. The approach was inspired by the method proposed by Badsha et al. (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7144625/).
+</p>
 
 <div style="text-align: center;">
   <img src="{{ 'img/ae_imputed.png' | relative_url }}" width="400" height="200">
@@ -599,11 +606,11 @@ I implemented a simple autoencoder with a custom loss function for single-cell R
 <!--  vae_federated -->
 <p class="mytext" id="vae_federated"><strong>Variational autoencoder (VAE) to mitigate batch effects in scRNA-seq using federated learning</strong></p>
 
-In this project, I trained a scVI model based on variational autoencoder in a federated setting together with secure aggregation using Flower framework (https://flower.ai/) with the SecAgg+ secure aggregation protocol, and also train the same model in a centralized manner.
+This project explored a scVI model (variational autoencoder for single-cell data) in a federated setting with secure aggregation using the Flower framework (Flower.ai) and the SecAgg+ secure aggregation protocol. For comparison, the same model was also trained in a centralized setting.
 
 
 <div style="text-align: center;">
-  <img src="{{ 'img/Gene_Expression_UMAP_before_correction.png' | relative_url }}" width="600" height="400">
+  <img src="{{ 'img/Gene_Expression_UMAP_before_correction.png' | relative_url }}" width="600" height="200">
   <p class="mytext" style="text-align: center;font-size: 0.9em; color: #666;">Figure: Baseline Gene Expression UMAP.</p>
 </div>
 

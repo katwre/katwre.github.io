@@ -606,8 +606,10 @@ I developed a simple autoencoder with a custom loss function for imputing missin
 <!--  vae_federated -->
 <p class="mytext" id="vae_federated"><strong>Variational autoencoder (VAE) to mitigate batch effects in scRNA-seq using federated learning</strong></p>
 
-This project explored a scVI model (variational autoencoder for single-cell data) in a federated setting with secure aggregation using the Flower framework (Flower.ai) and the SecAgg+ secure aggregation protocol. For comparison, the same model was also trained in a centralized setting.
 
+<p class="mytext">
+This project explored a scVI model (variational autoencoder for single-cell data) in a federated setting with secure aggregation using the Flower framework (Flower.ai) and the SecAgg+ secure aggregation protocol. For comparison, the same model was also trained in a centralized setting.
+</p>
 
 <div style="text-align: center;">
   <img src="{{ 'img/Gene_Expression_UMAP_before_correction.png' | relative_url }}" width="600" height="200">
@@ -631,9 +633,9 @@ This project explored a scVI model (variational autoencoder for single-cell data
 
 
 <!--  deconvolution -->
-<p class="deconvolution" id="vae_federated"><strong>VAE, BERT, semi-supervised NMF and lasso/ridge/elastic net for the cell type deconvolution</strong></p>
+<p class="text" id="deconvolution"><strong>VAE, BERT, semi-supervised NMF and lasso/ridge/elastic net for the cell type deconvolution</strong></p>
 
-
+<p class="mytext">
 This project studies DNA fragments that circulate in the blood. These fragments come from many different cell types in the body. When tissues are damaged or diseased, they release more DNA than usual, so the mix of DNA in the blood changes.By figuring out which cell types the DNA comes from, we can get an early picture of tissue health.
 
 I applied multiple deconvolution methods to estimate cell type proportions from bulk DNA methylation data. Regression-based approaches (NNLS, Lasso, Ridge, Elastic Net) model methylation profiles as mixtures of reference cell types. In addition, I developed:
@@ -645,6 +647,7 @@ I applied multiple deconvolution methods to estimate cell type proportions from 
   <img src="{{ 'img/deconvlution_bsseq.png' | relative_url }}" width="600" height="200">
   <p class="mytext" style="text-align: center;font-size: 0.9em; color: #666;">Figure: Deconvolution of the DNA methylation signal from blood DNA sequenced using Bisulfite-seq.</p>
 </div>
+</p>
 
 <p class="mytext" style="font-family: 'Cormorant Garamond', serif;">
 <a href="https://github.com/katwre/ML-projects/blob/main/VAE_NMF_Transformer_regression_cfDNA/" target="_blank">https://github.com/katwre/ML-projects/blob/main/VAE_NMF_Transformer_regression_cfDNA/</a>

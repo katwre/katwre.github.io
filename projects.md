@@ -190,39 +190,44 @@ ol li a:hover {
 
 
 <div class="toc-wrapper">
-<ol class="toc-list">
-  <li>
-    <a href="#research">Research</a>
-    <ol>
-      <li><a href="#genomics">Bias interpretation in genomics</a></li>
-      <li><a href="#cfDNA">Liquid biopsy epigenetics in disease</a></li>
-    </ol>
-  </li>
-  <li><a href="#opensource">Open source software</a></li>
-  <li><a href="#freelance">Freelance</a>
-    <ol>
-      <li><a href="#target">Prioritization of therapeutic targets in clinical trials</a></li>
-      <li><a href="#mltarget">Machine learning/AI for target identification</a></li>
-      <li><a href="#igv">Web app feature development</a></li>
-    </ol>
-  </li>
-  <li><a href="#sideprojects">Side projects</a>
-  <ol>
-      <li><a href="#survival">Survival analysis with clinical and gene expression data</a></li>
-      <li><a href="#ae">Autoencoder for scRNA-seq dimensionality reduction and data imputation</a></li>
-      <li><a href="#vae_federated">Variational autoencoder (VAE) to mitigate batch effects in scRNA-seq using federated learning</a></li>
-      <li><a href="#llm">LLM-powered SPARQL Bioinformatics Assistant</a></li>
-      <li><a href="#deconvolution">VAE, BERT, semi-supervised NMF, lasso/ridge/elastic net for cell type deconvolution</a></li>
-      <li><a href="#rmc">Protein Folding in the HP Model using Replica Monte Carlo</a></li>
-      <li><a href="#debrujn">Genome Assembly using de Bruijn Graph</a></li>
-      <li><a href="#sudoku">Sudoku in Javascript/JQuery</a></li>
-      <li><a href="#minesweeper">Minesweeper in Java/SWING\&AWT</a></li>
-      <li><a href="#django">Django-Based Web Services (for Multiple Sequence Alignment and mobile app)</a></li>
-      <li><a href="#pyodine">Discover your career match in your browser (aka pyodine)</a></li>
-    </ol>
-  </li>
-</ol>
+<ul class="toc-list">
+    <li>
+      <strong><a href="#research">Research</a></strong>
+      <ul>
+        <li><a href="#genomics">Bias interpretation in genomics</a></li>
+        <li><a href="#cfDNA">Liquid biopsy epigenetics in disease</a></li>
+      </ul>
+    </li>
+    <li>
+      <strong><a href="#opensource">Open Source Software</a></strong>
+    </li>
+    <li>
+      <strong><a href="#freelance">Freelance</a></strong>
+      <ul>
+        <li><a href="#target">Therapeutic target prioritization</a></li>
+        <li><a href="#mltarget">ML/AI for target identification</a></li>
+        <li><a href="#igv">Web app feature development</a></li>
+      </ul>
+    </li>
+    <li>
+      <strong><a href="#sideprojects">Side Projects</a></strong>
+      <ul>
+        <li><a href="#survival">Survival analysis with gene expression data</a></li>
+        <li><a href="#ae">Autoencoder for scRNA-seq imputation</a></li>
+        <li><a href="#vae_federated">Federated VAE for batch effect correction</a></li>
+        <li><a href="#llm">AI assistant for SPARQL bioinformatics queries</a></li>
+        <li><a href="#deconvolution">Cell type deconvolution with VAE, NMF, BERT, regression</a></li>
+        <li><a href="#rmc">Protein folding simulation (Replica Monte Carlo)</a></li>
+        <li><a href="#debrujn">Genome assembly with de Bruijn graph</a></li>
+        <li><a href="#sudoku">Sudoku in JavaScript</a></li>
+        <li><a href="#minesweeper">Minesweeper in Java</a></li>
+        <li><a href="#django">Django-based alignment web services</a></li>
+        <li><a href="#pyodine">Career-match browser tool (Pyodine)</a></li>
+      </ul>
+    </li>
+</ul>
 </div>
+
 
 
 

@@ -222,7 +222,7 @@ ol li a:hover {
         <li><a href="#debrujn">Genome assembly with de Bruijn graph</a></li>
         <li><a href="#sudoku">Sudoku in JavaScript</a></li>
         <li><a href="#minesweeper">Minesweeper in Java</a></li>
-        <li><a href="#django">Django-based alignment web services</a></li>
+        <li><a href="#django">Django-Based Web Services (for Multiple Sequence Alignment and mobile app)</a></li>
         <li><a href="#pyodine">Career-match browser tool (Pyodine)</a></li>
       </ol>
     </li>

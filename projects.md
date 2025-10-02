@@ -213,6 +213,7 @@ ol li a:hover {
       <strong><a href="#sideprojects">Side Projects</a></strong>
       <ol>
         <li><a href="#survival">Survival analysis with gene expression data</a></li>
+        <li><a href="#cnn">CNNs and transfer learning for chest X-rays classification</a></li>
         <li><a href="#ae">Autoencoder for scRNA-seq imputation</a></li>
         <li><a href="#vae_federated">Federated VAE for batch effect correction</a></li>
         <li><a href="#llm">AI assistant for SPARQL bioinformatics queries</a></li>
@@ -554,8 +555,11 @@ I developed several survival models to predict the risk of mortality or relapse 
 </p>
 
 
+
+
+
 <!-- cnn  -->
-<p class="mytext" id="cnn"><strong>Survival analysis with clinical and gene expression data</strong></p>
+<p class="mytext" id="cnn"><strong>CNNs and transfer learning for image classification tasks based on chest X-rays</strong></p>
 
 <p class="mytext">
 I applied convolutional neural networks (CNNs) to classify chest X-ray images using both 224×224 and 64×64 pixel inputs, aiming to explore whether lightweight models can still retain sufficient diagnostic power for image-based classification tasks. Beyond training a basic CNN from scratch, transfer learning was employed by leveraging pretrained convolutional backbones such as ResNet, to assess whether pretrained models can further enhance classification performance when applied to chest X-ray images.

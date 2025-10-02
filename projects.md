@@ -190,28 +190,28 @@ ol li a:hover {
 
 
 <div class="toc-wrapper">
-<ul class="toc-list">
+<ol class="toc-list">
     <li>
       <strong><a href="#research">Research</a></strong>
-      <ul>
+      <ol>
         <li><a href="#genomics">Bias interpretation in genomics</a></li>
         <li><a href="#cfDNA">Liquid biopsy epigenetics in disease</a></li>
-      </ul>
+      </ol>
     </li>
     <li>
       <strong><a href="#opensource">Open Source Software</a></strong>
     </li>
     <li>
       <strong><a href="#freelance">Freelance</a></strong>
-      <ul>
+      <ol>
         <li><a href="#target">Therapeutic target prioritization</a></li>
         <li><a href="#mltarget">ML/AI for target identification</a></li>
         <li><a href="#igv">Web app feature development</a></li>
-      </ul>
+      </ol>
     </li>
     <li>
       <strong><a href="#sideprojects">Side Projects</a></strong>
-      <ul>
+      <ol>
         <li><a href="#survival">Survival analysis with gene expression data</a></li>
         <li><a href="#ae">Autoencoder for scRNA-seq imputation</a></li>
         <li><a href="#vae_federated">Federated VAE for batch effect correction</a></li>
@@ -223,9 +223,9 @@ ol li a:hover {
         <li><a href="#minesweeper">Minesweeper in Java</a></li>
         <li><a href="#django">Django-based alignment web services</a></li>
         <li><a href="#pyodine">Career-match browser tool (Pyodine)</a></li>
-      </ul>
+      </ol>
     </li>
-</ul>
+</ol>
 </div>
 
 
@@ -651,7 +651,7 @@ This project explored an AI-powered assistant that helps researchers ask questio
       <li>UniProt (proteins, sequences, annotations)</li>
       <li>OMA (orthologs / evolutionary relationships)</li>
       <li>Bgee (gene expression in species)</li>
-<\ol>    
+</ol>    
 
 The assistant is powered by LLMs (Mistral, Llama via Groq, Ollama) combined with retrieval-augmented generation (RAG) using Qdrant and FastEmbed. You can interact with the assistant either in the terminal/CLI or through a simple chat web app (Chainlit web UI).
 
@@ -660,14 +660,14 @@ Key goals:
       <li>Allow researchers to query complex biological knowledge bases witha nice web interface.</li>
       <li>Validate and execute queries automatically.</li>
       <li>Provide results summarized in plain language.</li>
-<\ol>  
+</ol>  
 </p>
 
 <div style="text-align: center;">
-  <img src="{{ 'img/ChainlitwebUI_1.png' | relative_url }}" width="600" height="200">
+  <img src="{{ 'img/ChainlitwebUI_1.png' | relative_url }}" width="600" height="400">
   <p class="mytext" style="text-align: center;font-size: 0.9em; color: #666;">Figure: A web UI for an LLM of choice (Mistral, Llama via Groq, Ollama).</p>
 </div>
-</p>
+
 
 <p class="mytext" style="font-family: 'Cormorant Garamond', serif;">
 <a href="https://github.com/katwre/ML-projects/tree/main/llm-biodata/" target="_blank">https://github.com/katwre/ML-projects/tree/main/llm-biodata/</a>

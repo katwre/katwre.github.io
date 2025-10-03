@@ -651,8 +651,9 @@ This project explored a scVI model (variational autoencoder for single-cell data
 
 <p class="mytext">
 This project explored an AI-powered assistant that helps researchers ask questions about biology in plain English and automatically turns them into SPARQL queries against public databases:
+</p>
 <p class="mytext">
-<ol>
+<ol class="mytext">
       <li>UniProt (proteins, sequences, annotations)</li>
       <li>OMA (orthologs / evolutionary relationships)</li>
       <li>Bgee (gene expression in species)</li>
@@ -662,10 +663,10 @@ This project explored an AI-powered assistant that helps researchers ask questio
 <p class="mytext">
 The assistant is powered by LLMs (Mistral, Llama via Groq, Ollama) combined with retrieval-augmented generation (RAG) using Qdrant and FastEmbed. You can interact with the assistant either in the terminal/CLI or through a simple chat web app (Chainlit web UI).
 </p>
-<p class="mytext">
 
+<p class="mytext">
 Key goals:
-<ol>
+<ol class="mytext">
       <li>Allow researchers to query complex biological knowledge bases witha nice web interface.</li>
       <li>Validate and execute queries automatically.</li>
       <li>Provide results summarized in plain language.</li>
@@ -709,13 +710,12 @@ I applied multiple deconvolution methods to estimate cell type proportions from 
 
 
 <!-- Protein Folding -->
-<div class="software-block">
-<div class="software-text" id="rmc">
-<p>
-  <em>Protein Folding in the HP Model</em> - implementation of simulated annealing and replica exchange Monte Carlo algorithm for protein folding in the HP model in Python and NumPy. The HP model simplifies protein folding by using hydrophobic (H) and polar (P) amino acids on a square lattice. Metropolis–Hastings algorithm enables sampling protein configurations based on the Boltzmann distribution.
+<p class="mytext" id="rmc"><strong>Protein Folding in the HP Model</strong></p>
+
+<p class="mytext">
+  Implementation of simulated annealing and replica exchange Monte Carlo algorithm for protein folding in the HP model in Python and NumPy. The HP model simplifies protein folding by using hydrophobic (H) and polar (P) amino acids on a square lattice. Metropolis–Hastings algorithm enables sampling protein configurations based on the Boltzmann distribution.
 </p>
-</div>
-</div>
+
 
 <div style="text-align: center;">
   <img src="{{ 'img/HPmodel.png' | relative_url }}" width="200" height="200">
@@ -729,13 +729,13 @@ I applied multiple deconvolution methods to estimate cell type proportions from 
 
 
 <!-- Genome Assembly -->
-<div class="software-block">
-  <div class="software-text" id="debrujn">
-  <p>
-    <em>Genome Assembly using de Bruijn Graph</em> - implementation of de Bruijn graph-based genome assembly with Eulerian walk to reconstruct DNA sequences from k-mers. Includes short-read assembly principles based on publications by Compeau et al. (2011) and Pevzner et al. (2001)
-  </p>
-  </div>
-  </div>
+<p class="mytext" id="debrujn"><strong>Genome assembly with de Bruijn graph</strong></p>
+
+<p class="mytext">
+Implementation of de Bruijn graph-based genome assembly with Eulerian walk to reconstruct DNA sequences from k-mers. Includes short-read assembly principles based on publications by Compeau et al. (2011) and Pevzner et al. (2001)
+</p>
+
+
 <div style="text-align: center;">
   <img src="{{ 'img/debrujin.png' | relative_url }}" style="max-width: 300px; width: 70%;">
   <p class="mytext" style="text-align: center;font-size: 0.9em; color: #666;">Figure: De Bruijn graph.</p>
@@ -747,29 +747,25 @@ I applied multiple deconvolution methods to estimate cell type proportions from 
 <hr>
 
 <!-- Sudoku -->
-<div class="software-block">
-  <div class="software-text" id="sudoku">
-  <p>
-    <em>Sudoku</em> - a simple Sudoku game implemented in JavaScript and JQuery. </p>
-  </div>
-  </div>
+<p class="mytext" id="sudoku"><strong>Sudoku</strong></p>
+
+<p class="mytext">A simple Sudoku game implemented in JavaScript and JQuery. </p>
+
 <div style="text-align: center;">
   <img src="{{ 'img/sudoku.png' | relative_url }}" width="400" height="300">
 </div>
 <p class="mytext" style="font-family: 'Cormorant Garamond', serif;">
 <a href="https://github.com/katwre/sudoku" target="_blank">https://github.com/katwre/sudoku</a>
-</p>
+
 
 <hr>
 
 <!-- Minesweeper -->
 
-<div class="software-block">
-  <div class="software-text" id="minesweeper">
-  <p>
-    <em>Minesweeper</em> - classic Minesweeper game implemented in Java using SWING and AWT libraries. </p>
-  </div>
-  </div>
+<p class="mytext" id="minesweeper"><strong>Minesweeper</strong></p>
+
+<p class="mytext">A classic Minesweeper game implemented in Java using SWING and AWT libraries.</p>
+
 <div style="text-align: center;">
   <img src="{{ 'img/minesweeper.png' | relative_url }}" width="200" height="230">
 </div>
@@ -781,11 +777,11 @@ I applied multiple deconvolution methods to estimate cell type proportions from 
 
 <!-- Django Web-Services -->
 <p class="mytext" id="django"><strong>Django-Based Web Services</strong></p>
-<p class="mytext" style="font-family: 'Cormorant Garamond', serif;">
+<p class="mytext">
 Django-based server for Multiple Sequence Alignment (MSA) visualization - <a href="https://github.com/freesci/MSA-vis-project" target="_blank">https://github.com/freesci/MSA-vis-project</a>
 
 </p>
-<p class="mytext" style="font-family: 'Cormorant Garamond', serif;">
+<p class="mytext">
 Mobile application using Django, manifesto app, and localStorage - <a href="https://github.com/katwre/phone_application" target="_blank">https://github.com/katwre/phone_application</a>
 </p>
 

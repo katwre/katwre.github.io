@@ -212,7 +212,7 @@ ol li a:hover {
       <strong><a href="#sideprojects">Side Projects</a></strong>
       <ol>
         <li><a href="#survival">Survival analysis using gene expression & clinical data (Cox models)</a></li>
-        <li><a href="#dlomics">Deep learning for omics (CNNs, transfer learning, VAE, NMF, BERT)</a></li>
+        <li><a href="#dlomics">Deep learning for xray images and omics (CNNs, transfer learning, VAE, NMF, BERT)</a></li>
         <li><a href="#llm">LLM-based assistant for bioinformatics queries</a></li>
         <li><a href="#algorithms">Computational biology & algorithms (Replica Monte Carlo, de Bruijn graph)</a></li>
         <li><a href="#games">Games: Sudoku (JavaScript) and Minesweeper (Java)</a></li>
@@ -558,7 +558,7 @@ I developed several survival models to predict the risk of mortality or relapse 
 <!--   -->
 
 
-<p class="mytext" id="dlomics"><strong>Deep learning for omics (CNNs, transfer learning, VAE, NMF, BERT)</strong></p>
+<p class="mytext" id="dlomics"><strong>Deep learning for xray images and omics (CNNs, transfer learning, VAE, NMF, BERT)</strong></p>
 
 
 <!-- cnn  -->

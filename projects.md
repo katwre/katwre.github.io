@@ -212,18 +212,13 @@ ol li a:hover {
     <li>
       <strong><a href="#sideprojects">Side Projects</a></strong>
       <ol>
-        <li><a href="#survival">Survival analysis with gene expression data</a></li>
-        <li><a href="#cnn">CNNs and transfer learning for chest X-rays classification</a></li>
-        <li><a href="#ae">Autoencoder for scRNA-seq imputation</a></li>
-        <li><a href="#vae_federated">Federated VAE for batch effect correction</a></li>
-        <li><a href="#llm">AI assistant for SPARQL bioinformatics queries</a></li>
-        <li><a href="#deconvolution">Cell type deconvolution with VAE, NMF, BERT, regression</a></li>
-        <li><a href="#rmc">Protein folding simulation (Replica Monte Carlo)</a></li>
-        <li><a href="#debrujn">Genome assembly with de Bruijn graph</a></li>
-        <li><a href="#sudoku">Sudoku in JavaScript</a></li>
-        <li><a href="#minesweeper">Minesweeper in Java</a></li>
-        <li><a href="#django">Django-Based Web Services (for Multiple Sequence Alignment and mobile app)</a></li>
-        <li><a href="#pyodine">Career-match browser tool (Pyodine)</a></li>
+        <li><a href="#survival">Survival analysis using gene expression & clinical data (Cox models)</a></li>
+        <li><a href="#dlomics">Deep learning for omics (CNNs, transfer learning, VAE, NMF, BERT)</a></li>
+        <li><a href="#llm">LLM-based assistant for bioinformatics queries</a></li>
+        <li><a href="#algorithms">Computational biology & algorithms (Replica Monte Carlo, de Bruijn graph)</a></li>
+        <li><a href="#games">Games: Sudoku (JavaScript) and Minesweeper (Java)</a></li>
+        <li><a href="#django">Django web services (Multiple Sequence Alignment visualization and mobile app)</a></li>
+        <li><a href="#pyodine">In-browser Python career-matching tool (Pyodine)</a></li>
       </ol>
     </li>
 </ol>
@@ -533,11 +528,12 @@ Figure: Schematic of a Variational Autoencoder (figure adapted from <a href="htt
 
 
 <!-- survival  -->
-<p class="mytext" id="survival"><strong>Survival analysis with clinical and gene expression data</strong></p>
+<p class="mytext" id="survival"><strong>Survival analysis using gene expression & clinical data (Cox models)</strong></p>
 
 
 <p class="mytext">
-I developed several survival models to predict the risk of mortality or relapse in newly diagnosed multiple myeloma patients, using baseline clinical and/or gene expression data.
+I developed several survival models to predict the risk of mortality or relapse in newly diagnosed multiple myeloma patients, using baseline clinical and/or gene expression data.The workflow involved RNA-seq preprocessing, unsupervised exploratory analysis (PCA, clustering), and multiple survival modeling strategies - Cox regression, random survival forests, LASSO-based feature selection, and pathway-informed models - evaluated using the C-index.
+
 </p>
 
 <div style="text-align: center;">
@@ -558,11 +554,19 @@ I developed several survival models to predict the risk of mortality or relapse 
 
 
 
+<!--   -->
+<!-- DL in omics  -->
+<!--   -->
+
+
+<p class="mytext" id="dlomics"><strong>Deep learning for omics (CNNs, transfer learning, VAE, NMF, BERT)</strong></p>
+
+
 <!-- cnn  -->
 <p class="mytext" id="cnn"><strong>CNNs and transfer learning for image classification tasks based on chest X-rays</strong></p>
 
 <p class="mytext">
-I applied convolutional neural networks (CNNs) to classify chest X-ray images using both 224×224 and 64×64 pixel inputs, aiming to explore whether lightweight models can still retain sufficient diagnostic power for image-based classification tasks. Beyond training a basic CNN from scratch, transfer learning was employed by leveraging pretrained convolutional backbones such as ResNet, to assess whether pretrained models can further enhance classification performance when applied to chest X-ray images.
+I applied convolutional neural networks (CNNs) to classify chest X-ray images using both 224×224 and 64×64 pixel inputs, aiming to explore whether lightweight models can retain sufficient diagnostic power for image-based classification tasks. In addition to training a baseline CNN from scratch, I employed transfer learning with pretrained convolutional backbones such as ResNet to evaluate whether pretrained models could further enhance classification performance on chest X-ray images.
 </p>
 
 <div style="display: flex; justify-content: center; gap: 20px;">
@@ -618,7 +622,7 @@ I developed a simple autoencoder with a custom loss function for imputing missin
 
 
 <p class="mytext">
-This project explored a scVI model (variational autoencoder for single-cell data) in a federated setting with secure aggregation using the Flower framework (Flower.ai) and the SecAgg+ secure aggregation protocol. For comparison, the same model was also trained in a centralized setting.
+This project explored a scVI model (variational autoencoder for single-cell data) in a federated setting using the Flower framework (Flower.ai) and the SecAgg+ secure aggregation protocol. For comparison, the same model was also trained in a centralized setting.
 </p>
 
 <div style="text-align: center;">
@@ -644,56 +648,15 @@ This project explored a scVI model (variational autoencoder for single-cell data
 
 
 
-
-
-<!--  LLM -->
-<p class="mytext" id="llm"><strong>LLM-powered SPARQL Bioinformatics Assistant</strong></p>
-
-<p class="mytext">
-This project explored an AI-powered assistant that helps researchers ask questions about biology in plain English and automatically turns them into SPARQL queries against public databases:
-</p>
-<p class="mytext">
-<ol class="mytext">
-      <li>UniProt (proteins, sequences, annotations)</li>
-      <li>OMA (orthologs / evolutionary relationships)</li>
-      <li>Bgee (gene expression in species)</li>
-</ol>    
-</p>
-
-<p class="mytext">
-The assistant is powered by LLMs (Mistral, Llama via Groq, Ollama) combined with retrieval-augmented generation (RAG) using Qdrant and FastEmbed. You can interact with the assistant either in the terminal/CLI or through a simple chat web app (Chainlit web UI).
-</p>
-
-<p class="mytext">
-Key goals:
-<ol class="mytext">
-      <li>Allow researchers to query complex biological knowledge bases witha nice web interface.</li>
-      <li>Validate and execute queries automatically.</li>
-      <li>Provide results summarized in plain language.</li>
-</ol>  
-</p>
-
-<div style="text-align: center;">
-  <img src="{{ 'img/ChainlitwebUI_1.png' | relative_url }}" width="600" height="400">
-  <p class="mytext" style="text-align: center;font-size: 0.9em; color: #666;">Figure: A web UI for an LLM of choice (Mistral, Llama via Groq, Ollama).</p>
-</div>
-
-
-<p class="mytext" style="font-family: 'Cormorant Garamond', serif;">
-<a href="https://github.com/katwre/ML-projects/tree/main/llm-biodata/" target="_blank">https://github.com/katwre/ML-projects/tree/main/llm-biodata/</a>
-</p>
-
-
-
-
 <!--  deconvolution -->
 <p class="mytext" id="deconvolution"><strong>VAE, BERT, semi-supervised NMF and lasso/ridge/elastic net for the cell type deconvolution</strong></p>
 
 
 <p class="mytext">
-This project studies DNA fragments that circulate in the blood. These fragments come from many different cell types in the body. When tissues are damaged or diseased, they release more DNA than usual, so the mix of DNA in the blood changes.By figuring out which cell types the DNA comes from, we can get an early picture of tissue health.
+This project studies cell-free DNA (cfDNA) fragments that circulate in the blood. These fragments originate from many different cell types across the body. When tissues are damaged or diseased, they release more DNA than usual, altering the overall composition of cfDNA in the bloodstream. By identifying which cell types the DNA comes from, we can gain an early view of tissue health and disease signals.
 
-I applied multiple deconvolution methods to estimate cell type proportions from bulk DNA methylation data. Regression-based approaches (NNLS, Lasso, Ridge, Elastic Net) model methylation profiles as mixtures of reference cell types. In addition, I developed:
+I applied several deconvolution methods to estimate cell type proportions from bulk DNA methylation data. Regression-based approaches (NNLS, Lasso, Ridge, Elastic Net) model methylation profiles as mixtures of reference cell types. In addition, I developed:
+
 - A variational autoencoder (VAE) that reconstructs CpG profiles while jointly predicting cell type proportions.
 - A semi-supervised NMF (ssNMF) that anchors factorization to known reference signatures.
 - A lightweight Transformer model, treating CpG regions as tokens with embeddings and self-attention to capture genomic dependencies.
@@ -709,44 +672,118 @@ I applied multiple deconvolution methods to estimate cell type proportions from 
 </p>
 
 
-<!-- Protein Folding -->
-<p class="mytext" id="rmc"><strong>Protein Folding in the HP Model</strong></p>
+
+
+<!--  LLM -->
+<p class="mytext" id="llm"><strong>LLM-based assistant for bioinformatics queries</strong></p>
 
 <p class="mytext">
-  Implementation of simulated annealing and replica exchange Monte Carlo algorithm for protein folding in the HP model in Python and NumPy. The HP model simplifies protein folding by using hydrophobic (H) and polar (P) amino acids on a square lattice. Metropolis–Hastings algorithm enables sampling protein configurations based on the Boltzmann distribution.
+This project explored an AI-powered assistant that helps researchers ask questions about biology in plain English and automatically turns them into SPARQL queries against public databases:
+
+<ul class="mytext">
+  <li>UniProt - proteins, sequences, and annotations</li>
+  <li>OMA - orthologs and evolutionary relationships</li>
+  <li>Bgee - gene expression across species</li>
+</ul>
+
+</p>
+
+
+<p class="mytext">
+The assistant is powered by LLMs (Mistral, Llama via Groq, Ollama) combined with retrieval-augmented generation (RAG) using Qdrant and FastEmbed. You can interact with the assistant either in the terminal/CLI or through a simple chat web app (Chainlit web UI).
+
+Key goals:
+<ul class="mytext">
+      <li>Allow researchers to query complex biological knowledge bases witha nice web interface.</li>
+      <li>Validate and execute queries automatically.</li>
+      <li>Provide results summarized in plain language.</li>
+</ul>  
+</p>
+
+<div style="text-align: center;">
+  <img src="{{ 'img/ChainlitwebUI_1.png' | relative_url }}" width="600" height="400">
+  <p class="mytext" style="text-align: center;font-size: 0.9em; color: #666;">Figure: A web UI for prompting an LLM of choice (Mistral, Llama via Groq, Ollama).</p>
+</div>
+
+
+<p class="mytext" style="font-family: 'Cormorant Garamond', serif;">
+<a href="https://github.com/katwre/ML-projects/tree/main/llm-biodata/" target="_blank">https://github.com/katwre/ML-projects/tree/main/llm-biodata/</a>
+</p>
+
+
+
+
+
+<!--  -->
+<!-- Computational biology & algorithms (Replica Monte Carlo, de Bruijn graph) -->
+<!--  -->
+
+<p class="mytext" id="algorithms"><strong>Computational biology & algorithms (Replica Monte Carlo, de Bruijn graph, Eulerian walk)</strong></p>
+
+
+<!-- Protein Folding -->
+<p class="mytext" id="rmc"><strong>Protein Folding in the HP Model (Replica Monte Carlo)</strong></p>
+
+<p class="mytext">
+  Implementation of simulated annealing and replica exchange Monte Carlo algorithm for protein folding in the Hydrophobic Polar (HP) model in Python and NumPy. The HP model simplifies protein folding by using hydrophobic (H) and polar (P) amino acids on a square lattice. Metropolis–Hastings algorithm enables sampling protein configurations based on the Boltzmann distribution.
 </p>
 
 
 <div style="text-align: center;">
-  <img src="{{ 'img/HPmodel.png' | relative_url }}" width="200" height="200">
-  <p class="mytext" style="text-align: center;font-size: 0.9em; color: #666;">Figure: Lattice HP model showing global energy.</p>
+  <img src="{{ 'img/HPmodel1.png' | relative_url }}" width="200" height="200">
+  <p class="mytext" style="text-align: center;font-size: 0.9em; color: #666;">Figure: Lattice 2D HP model. Filled, black circles represent hydrophobic residues while unfilled circles represent polar residues. The conformation above yields an optimal energy score in the HP model of -2. The two hydrophobic contacts contributing to the score are between residues 4 and 13 and between residues 5 and 12 (<a href="https://doi.org/10.1186/1471-2105-8-342" target="_blank">Thachuk et al. 2007</a>).</p>
 </div>
+
+
 <p class="mytext" style="text-align: center;font-family: 'Cormorant Garamond', serif;">
 <a href="https://github.com/katwre/bioinformatics-projects/tree/master/Molecular_Dynamics" target="_blank">https://github.com/katwre/bioinformatics-projects/tree/master/Molecular_Dynamics</a>
 </p>
 
-<hr>
 
 
 <!-- Genome Assembly -->
-<p class="mytext" id="debrujn"><strong>Genome assembly with de Bruijn graph</strong></p>
+<p class="mytext" id="debrujn"><strong>Genome assembly (de Bruijn graph, Eulerian walk)</strong></p>
 
 <p class="mytext">
-Implementation of de Bruijn graph-based genome assembly with Eulerian walk to reconstruct DNA sequences from k-mers. Includes short-read assembly principles based on publications by Compeau et al. (2011) and Pevzner et al. (2001)
+Implementation of de Bruijn graph-based genome assembly with Eulerian walk to reconstruct DNA sequences from k-mers. Includes short-read assembly principles based on publications by <a href="https://doi.org/10.1038/nbt.2023" target="_blank" rel="noopener">Compeau et al. (2011)</a> and <a href="https://doi.org/10.1073/pnas.171285098" target="_blank" rel="noopener">Pevzner et al. (2001)</a>
+</p>
+
+<div style="text-align: center;">
+  <img src="{{ 'img/deBruijngraph.png' | relative_url }}" style="max-width: 400px; width: 70%;">
+  <p class="mytext" style="text-align: center;font-size: 0.9em; color: #666;">Figure: a schematic example of creating a de Bruijn graph from a DNA sequence containing repeats (Compeau et al. 2011).</p>
+</div>
+
+
+<p class="mytext">
+My focus was on modern short-read assembly algorithms construct a de Bruijn graph by representing all k-mer prefixes and suffixes as nodes and then drawing edges that represent k-mers having a particular prefix and suffix. For example, the k-mer edge ATG has prefix AT and suffix TG. Finding an Eulerian cycle allows one to reconstruct the genome by forming an alignment in which each successive k-mer (from successive edges) is shifted by one position. This generates the same cyclic genome sequence without performing the computationally expensive task of finding a Hamiltonian cycle (as shown in the figure below).
 </p>
 
 
 <div style="text-align: center;">
-  <img src="{{ 'img/debrujin.png' | relative_url }}" style="max-width: 300px; width: 70%;">
-  <p class="mytext" style="text-align: center;font-size: 0.9em; color: #666;">Figure: De Bruijn graph.</p>
+  <img src="{{ 'img/Euleriancycle.png' | relative_url }}" style="max-width: 500px; width: 70%;">
+  <p class="mytext" style="text-align: center;font-size: 0.9em; color: #666;">Figure: Two strategies for genome assembly: from Hamiltonian cycles to Eulerian cycles (Pevzner et al. 2001). My focus was on the Eulerian cycle (subfigure d).</p>
 </div>
+
+
 <p class="mytext" style="font-family: 'Cormorant Garamond', serif;">
 <a href="https://github.com/katwre/bioinformatics-projects/tree/master/genome_assembly" target="_blank">https://github.com/katwre/bioinformatics-projects/tree/master/genome_assembly</a>
 </p>
 
 <hr>
 
+
+<!--  -->
+<!-- Games  -->
+<!--  -->
+
+<p class="mytext" id="games"><strong>Games: Sudoku (JavaScript) and Minesweeper (Java)</strong></p>
+
+
+
+
 <!-- Sudoku -->
+
+
 <p class="mytext" id="sudoku"><strong>Sudoku</strong></p>
 
 <p class="mytext">A simple Sudoku game implemented in JavaScript and JQuery. </p>
@@ -758,7 +795,6 @@ Implementation of de Bruijn graph-based genome assembly with Eulerian walk to re
 <a href="https://github.com/katwre/sudoku" target="_blank">https://github.com/katwre/sudoku</a>
 
 
-<hr>
 
 <!-- Minesweeper -->
 
@@ -775,6 +811,8 @@ Implementation of de Bruijn graph-based genome assembly with Eulerian walk to re
 
 <hr>
 
+
+
 <!-- Django Web-Services -->
 <p class="mytext" id="django"><strong>Django-Based Web Services</strong></p>
 <p class="mytext">
@@ -787,8 +825,9 @@ Mobile application using Django, manifesto app, and localStorage - <a href="http
 
 <hr>
 
+
 <!-- Discover Career Match -->
-<p class="mytext" id="pyodine"><strong>Discover Your Career Match</strong></p>
+<p class="mytext" id="pyodine"><strong>Discover Your Career Match (Pyodine)</strong></p>
 <p class="mytext">
 Interactive tool that matches careers to users based on their personality profile (Big Five personality traits). Runs directly in the browser via Pyodide.
 </p>

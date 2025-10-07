@@ -204,8 +204,7 @@ ol li a:hover {
     <li>
       <strong><a href="#freelance">Freelance</a></strong>
       <ol>
-        <li><a href="#target">Therapeutic target prioritization</a></li>
-        <li><a href="#mltarget">ML/AI for target identification</a></li>
+        <li><a href="#target">ML/AI prioritization of therapeutic targets in clinical trials</a></li>
         <li><a href="#igv">Web app feature development</a></li>
       </ol>
     </li>
@@ -542,7 +541,7 @@ I developed several survival models to predict the risk of mortality or relapse 
 </div>
 
 <div style="text-align: center;">
-  <img src="{{ 'img/surival_probability.png' | relative_url }}" width="200" height="200">
+  <img src="{{ 'img/surival_probability.png' | relative_url }}" width="300" height="300">
   <p class="mytext" style="text-align: center;font-size: 0.9em; color: #666;">Figure: Kaplan–Meier plot of the best performing model.</p>
 </div>
 
@@ -563,7 +562,7 @@ I developed several survival models to predict the risk of mortality or relapse 
 
 
 <!-- cnn  -->
-<p class="mytext" id="cnn"><strong>CNNs and transfer learning for image classification tasks based on chest X-rays</strong></p>
+<p class="mytext" id="cnn"><span style="color:#505050; font-weight:bold;">CNNs and transfer learning for image classification tasks based on chest X-rays</span></p>
 
 <p class="mytext">
 I applied convolutional neural networks (CNNs) to classify chest X-ray images using both 224×224 and 64×64 pixel inputs, aiming to explore whether lightweight models can retain sufficient diagnostic power for image-based classification tasks. In addition to training a baseline CNN from scratch, I employed transfer learning with pretrained convolutional backbones such as ResNet to evaluate whether pretrained models could further enhance classification performance on chest X-ray images.
@@ -594,7 +593,7 @@ I applied convolutional neural networks (CNNs) to classify chest X-ray images us
 
 
 <!--  Autoencoder -->
-<p class="mytext" id="ae"><strong>Autoencoder for scRNA-seq dimensionality reduction and data imputation</strong></p>
+<p class="mytext" id="ae"><span style="color:#505050; font-weight:bold;">Autoencoder for scRNA-seq dimensionality reduction and data imputation</span></p>
 
 <p class="mytext">
 I developed a simple autoencoder with a custom loss function for imputing missing values in single-cell RNA-seq data. The approach was inspired by the method proposed by Badsha et al. (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7144625/).
@@ -618,7 +617,7 @@ I developed a simple autoencoder with a custom loss function for imputing missin
 
 
 <!--  vae_federated -->
-<p class="mytext" id="vae_federated"><strong>Variational autoencoder (VAE) to mitigate batch effects in scRNA-seq using federated learning</strong></p>
+<p class="mytext" id="vae_federated"><span style="color:#505050; font-weight:bold;">Variational autoencoder (VAE) to mitigate batch effects in scRNA-seq using federated learning</span></p>
 
 
 <p class="mytext">
@@ -649,14 +648,14 @@ This project explored a scVI model (variational autoencoder for single-cell data
 
 
 <!--  deconvolution -->
-<p class="mytext" id="deconvolution"><strong>VAE, BERT, semi-supervised NMF and lasso/ridge/elastic net for the cell type deconvolution</strong></p>
+<p class="mytext" id="deconvolution"><span style="color:#505050; font-weight:bold;">VAE, BERT, semi-supervised NMF and lasso/ridge/elastic net for the cell type deconvolution</span></p>
 
 
 <p class="mytext">
 This project studies cell-free DNA (cfDNA) fragments that circulate in the blood. These fragments originate from many different cell types across the body. When tissues are damaged or diseased, they release more DNA than usual, altering the overall composition of cfDNA in the bloodstream. By identifying which cell types the DNA comes from, we can gain an early view of tissue health and disease signals.
 
 I applied several deconvolution methods to estimate cell type proportions from bulk DNA methylation data. Regression-based approaches (NNLS, Lasso, Ridge, Elastic Net) model methylation profiles as mixtures of reference cell types. In addition, I developed:
-<ul class="mytext">
+<ul class="mytext" style="list-style-type: disc; margin-left: 110px;">
       <li>A variational autoencoder (VAE) that reconstructs CpG profiles while jointly predicting cell type proportions.</li>
       <li>A semi-supervised NMF (ssNMF) that anchors factorization to known reference signatures.</li>
       <li>A lightweight transformer model, treating CpG regions as tokens with embeddings and self-attention to capture genomic dependencies.</li>
@@ -681,7 +680,7 @@ I applied several deconvolution methods to estimate cell type proportions from b
 <p class="mytext">
 This project explored an AI-powered assistant that helps researchers ask questions about biology in plain English and automatically turns them into SPARQL queries against public databases:
 
-<ul class="mytext">
+<ul class="mytext" style="list-style-type: disc; margin-left: 110px;">
   <li>UniProt - proteins, sequences, and annotations</li>
   <li>OMA - orthologs and evolutionary relationships</li>
   <li>Bgee - gene expression across species</li>
@@ -694,7 +693,7 @@ This project explored an AI-powered assistant that helps researchers ask questio
 The assistant is powered by LLMs (Mistral, Llama via Groq, Ollama) combined with retrieval-augmented generation (RAG) using Qdrant and FastEmbed. You can interact with the assistant either in the terminal/CLI or through a simple chat web app (Chainlit web UI).
 
 Key goals:
-<ul class="mytext">
+<ul class="mytext" style="list-style-type: disc; margin-left: 110px;">
       <li>Allow researchers to query complex biological knowledge bases witha nice web interface.</li>
       <li>Validate and execute queries automatically.</li>
       <li>Provide results summarized in plain language.</li>
@@ -723,7 +722,7 @@ Key goals:
 
 
 <!-- Protein Folding -->
-<p class="mytext" id="rmc"><strong>Protein Folding in the HP Model (Replica Monte Carlo)</strong></p>
+<p class="mytext" id="rmc"><span style="color:#505050; font-weight:bold;">Protein Folding in the HP Model (Replica Monte Carlo)</span></p>
 
 <p class="mytext">
   Implementation of simulated annealing and replica exchange Monte Carlo algorithm for protein folding in the Hydrophobic Polar (HP) model in Python and NumPy. The HP model simplifies protein folding by using hydrophobic (H) and polar (P) amino acids on a square lattice. Metropolis–Hastings algorithm enables sampling protein configurations based on the Boltzmann distribution.
@@ -743,7 +742,7 @@ Key goals:
 
 
 <!-- Genome Assembly -->
-<p class="mytext" id="debrujn"><strong>Genome assembly (de Bruijn graph, Eulerian walk)</strong></p>
+<p class="mytext" id="debrujn"><span style="color:#505050; font-weight:bold;">Genome assembly (de Bruijn graph, Eulerian walk)</span></p>
 
 <p class="mytext">
 Implementation of de Bruijn graph-based genome assembly with Eulerian walk to reconstruct DNA sequences from k-mers. Includes short-read assembly principles based on publications by <a href="https://doi.org/10.1038/nbt.2023" target="_blank" rel="noopener">Compeau et al. (2011)</a> and <a href="https://doi.org/10.1073/pnas.171285098" target="_blank" rel="noopener">Pevzner et al. (2001)</a>
@@ -785,7 +784,7 @@ My focus was on modern short-read assembly algorithms construct a de Bruijn grap
 <!-- Sudoku -->
 
 
-<p class="mytext" id="sudoku"><strong>Sudoku</strong></p>
+<p class="mytext" id="sudoku"><span style="color:#505050; font-weight:bold;">Sudoku</span></p>
 
 <p class="mytext">A simple Sudoku game implemented in JavaScript and JQuery. </p>
 
@@ -799,7 +798,7 @@ My focus was on modern short-read assembly algorithms construct a de Bruijn grap
 
 <!-- Minesweeper -->
 
-<p class="mytext" id="minesweeper"><strong>Minesweeper</strong></p>
+<p class="mytext" id="minesweeper"><span style="color:#505050; font-weight:bold;">Minesweeper</span></p>
 
 <p class="mytext">A classic Minesweeper game implemented in Java using SWING and AWT libraries.</p>
 

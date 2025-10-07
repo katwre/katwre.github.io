@@ -239,7 +239,6 @@ ol li a:hover {
 
 </ul>
 
-<br>
 
 
 <!--Technical skills:-->

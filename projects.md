@@ -537,7 +537,7 @@ I developed several survival models to predict the risk of mortality or relapse 
 </p>
 
 <div style="text-align: center;">
-  <img src="{{ 'img/survival_classification.png' | relative_url }}" width="400" height="200">
+  <img src="{{ 'img/survival_classification.png' | relative_url }}" width="550" height="300">
   <p class="mytext" style="text-align: center;font-size: 0.9em; color: #666;">Figure: C-index comparison of multiple survival models.</p>
 </div>
 
@@ -601,13 +601,13 @@ I developed a simple autoencoder with a custom loss function for imputing missin
 </p>
 
 <div style="text-align: center;">
-  <img src="{{ 'img/ae_imputed.png' | relative_url }}" width="400" height="200">
+  <img src="{{ 'img/ae_imputed.png' | relative_url }}" width="400" height="300">
   <p class="mytext" style="text-align: center;font-size: 0.9em; color: #666;">Figure: Imputed scRNA-seq.</p>
 </div>
 
 
 <div style="text-align: center;">
-  <img src="{{ 'img/imputed.png' | relative_url }}" width="400" height="200">
+  <img src="{{ 'img/imputed.png' | relative_url }}" width="400" height="250">
   <p class="mytext" style="text-align: center;font-size: 0.9em; color: #666;">Figure: Model's output and the true gene expression values. Non-imputed data (blue): where the model reconstructed known values. Imputed data (orange): where the model predicted missing (masked) values.</p>
 </div>
 
@@ -656,10 +656,11 @@ This project explored a scVI model (variational autoencoder for single-cell data
 This project studies cell-free DNA (cfDNA) fragments that circulate in the blood. These fragments originate from many different cell types across the body. When tissues are damaged or diseased, they release more DNA than usual, altering the overall composition of cfDNA in the bloodstream. By identifying which cell types the DNA comes from, we can gain an early view of tissue health and disease signals.
 
 I applied several deconvolution methods to estimate cell type proportions from bulk DNA methylation data. Regression-based approaches (NNLS, Lasso, Ridge, Elastic Net) model methylation profiles as mixtures of reference cell types. In addition, I developed:
-
-- A variational autoencoder (VAE) that reconstructs CpG profiles while jointly predicting cell type proportions.
-- A semi-supervised NMF (ssNMF) that anchors factorization to known reference signatures.
-- A lightweight Transformer model, treating CpG regions as tokens with embeddings and self-attention to capture genomic dependencies.
+<ul class="mytext">
+      <li>A variational autoencoder (VAE) that reconstructs CpG profiles while jointly predicting cell type proportions.</li>
+      <li>A semi-supervised NMF (ssNMF) that anchors factorization to known reference signatures.</li>
+      <li>A lightweight transformer model, treating CpG regions as tokens with embeddings and self-attention to capture genomic dependencies.</li>
+</ul>  
 
 <div style="text-align: center;">
   <img src="{{ 'img/deconvlution_bsseq.png' | relative_url }}" width="600" height="200">
@@ -730,8 +731,8 @@ Key goals:
 
 
 <div style="text-align: center;">
-  <img src="{{ 'img/HPmodel1.png' | relative_url }}" width="200" height="200">
-  <p class="mytext" style="text-align: center;font-size: 0.9em; color: #666;">Figure: Lattice 2D HP model. Filled, black circles represent hydrophobic residues while unfilled circles represent polar residues. The conformation above yields an optimal energy score in the HP model of -2. The two hydrophobic contacts contributing to the score are between residues 4 and 13 and between residues 5 and 12 (<a href="https://doi.org/10.1186/1471-2105-8-342" target="_blank">Thachuk et al. 2007</a>).</p>
+  <img src="{{ 'img/HPmodel1.png' | relative_url }}" width="300" height="200">
+  <p class="mytext" style="text-align: center;font-size: 0.9em; color: #666;">Figure: HP model protein folding schematic in 2D lattice. Filled, black circles represent hydrophobic residues while unfilled circles represent polar residues. The conformation above yields an optimal energy score in the HP model of -2. The two hydrophobic contacts contributing to the score are between residues 4 and 13 and between residues 5 and 12 (<a href="https://doi.org/10.1186/1471-2105-8-342" target="_blank">Thachuk et al. 2007</a>).</p>
 </div>
 
 

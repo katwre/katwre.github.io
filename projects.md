@@ -214,7 +214,13 @@ ol li a:hover {
         <li><a href="#survival">Survival analysis using gene expression & clinical data (Cox models)</a></li>
         <li><a href="#dlomics">Deep learning for xray images and omics (CNNs, transfer learning, VAE, NMF, BERT)</a></li>
         <li><a href="#llm">LLM-based assistant for bioinformatics queries</a></li>
-        <li><a href="#algorithms">Computational biology & algorithms (Replica Monte Carlo, de Bruijn graph)</a></li>
+        <li><a href="#algorithms">Computational biology & algorithms</a></li>
+        <ol>
+        <li><a href="#rmc">Protein folding - Monte Carlo</a></li>
+        <li><a href="#debrujn">Genome assembly - de Bruijn graph, euler walk</a></li>
+        <li><a href="#felnni">Evolutionary tree estimation - Felsenstein & NNI</a></li>
+        <li><a href="#binomial">Regulatory DNA discovery - MSA & binomial enrichment</a></li>
+        </ol> 
         <li><a href="#games">Games: Sudoku (JavaScript) and Minesweeper (Java)</a></li>
         <li><a href="#django">Django web services (Multiple Sequence Alignment visualization and mobile app)</a></li>
         <li><a href="#pyodine">In-browser Python career-matching tool (Pyodine)</a></li>
@@ -768,6 +774,40 @@ My focus was on modern short-read assembly algorithms construct a de Bruijn grap
 <p class="mytext" style="font-family: 'Cormorant Garamond', serif;">
 <a href="https://github.com/katwre/bioinformatics-projects/tree/master/genome_assembly" target="_blank">https://github.com/katwre/bioinformatics-projects/tree/master/genome_assembly</a>
 </p>
+
+<!-- Evolutionary tree estimation - Felsenstein & NNI -->
+<p class="mytext" id="felnni"><span style="color:#505050; font-weight:bold;">Evolutionary tree estimation - Felsenstein & NNI</span></p>
+
+<p class="mytext">
+Implementation of the Felsenstein's tree-pruning and the Nearest-Neighbor Interchange (NNI) algorithms. The Felsenstein's tree-pruning is a heuristic algorithm for computing the likelihood of an evolutionary tree from nucleic acid sequence data. It is devoted to searching for an optimal tree structure. NNI is great for rooted binary phylogenetic trees and using Jukes and Cantor substitution model. It is one of the simplest tree-rearrangement methods.
+</p>
+
+<div style="text-align: center;">
+  <img src="{{ 'img/nni.png' | relative_url }}" style="max-width: 500px; width: 70%;">
+  <p class="mytext" style="text-align: center;font-size: 0.9em; color: #666;">Figure: An example of applying an NNI to a subsplit directed acyclic graph (sDAG) <a href="https://almob.biomedcentral.com/articles/10.1186/s13015-025-00273-x" target="_blank">(Jennings-Shaffer et al. 2025)</a>.</p>
+</div>
+
+<p class="mytext" style="font-family: 'Cormorant Garamond', serif;">
+<a href="https://github.com/katwre/bioinformatics-projects/tree/master/comparative_genomics" target="_blank">https://github.com/katwre/bioinformatics-projects/tree/master/comparative_genomics</a>
+</p>
+
+
+<!-- Regulatory DNA discovery - MSA & binomial enrichment -->
+<p class="mytext" id="binomial"><span style="color:#505050; font-weight:bold;">Regulatory DNA discovery - MSA & binomial enrichment</span></p>
+
+<p class="mytext">
+Bio Motif Ensembl is a Python tool for discovering potential regulatory DNA regions across related mammalian genomes using Ensembl’s public MySQL databases. It retrieves orthologous gene sequences (e.g., human, mouse, rat), aligns their upstream regions, and detects conserved non-coding segments. These conserved blocks are then analyzed with motif discovery algorithms such as MEME and AlignACE, and tested for statistical overrepresentation using a binomial model. The framework integrates comparative genomics, multiple sequence alignment, and motif enrichment to identify functionally significant regulatory elements.
+</p>
+
+<div style="text-align: center;">
+  <img src="{{ 'img/overreprmotifs.png' | relative_url }}" style="max-width: 500px; width: 70%;">
+  <p class="mytext" style="text-align: center;font-size: 0.9em; color: #666;">Figure: It's a similar concept to the approach published by <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.0020036" target="_blank">MacIsaac et al. 2025</a>.</p>
+</div>
+
+<p class="mytext" style="font-family: 'Cormorant Garamond', serif;">
+<a href="https://github.com/katwre/bioinformatics-projects/tree/master/bio_motif_ensembl" target="_blank">https://github.com/katwre/bioinformatics-projects/tree/master/bio_motif_ensembl</a>
+</p>
+
 
 <hr>
 

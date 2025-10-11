@@ -724,7 +724,7 @@ Key goals:
 <!-- Computational biology & algorithms (Replica Monte Carlo, de Bruijn graph) -->
 <!--  -->
 
-<p class="mytext" id="algorithms"><strong>Computational biology & algorithms (Replica Monte Carlo, de Bruijn graph, Eulerian walk)</strong></p>
+<p class="mytext" id="algorithms"><strong>Computational biology & algorithms</strong></p>
 
 
 <!-- Protein Folding -->

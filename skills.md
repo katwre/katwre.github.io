@@ -250,8 +250,8 @@ ol li a:hover {
   <ul>
   <li>Python - NumPy, pandas, scikit-learn, seaborn, PyTorch, Matplotlib, Plotly, Biopython</li>
   <li>R - CRAN, Bioconductor</li>
-  <li>RMarkdown, Jupyter Notebooks</li>
-  <li>unit testing - R/testthat, Python/unittest/pytest</li>
+  <!--<li>RMarkdown, Jupyter Notebooks</li>-->
+  <li>unit testing - R (testthat), Python (unittest, pytest)</li>
   <li>bash</li>
 
   </ul>
@@ -260,16 +260,18 @@ ol li a:hover {
   
   <li><span class="emphasize">Machine Learning</span>: 
    <ul>
-    <li>Statistical tests: incl. t-tests, Wilcoxon</li>
-    <li>Regression: incl. linear regression, logistic regression, Cox/survival analysis, elastic net/ridge/LASSO</li>
-    <li>Classification: incl. random forests, XGBoost, SVM, Linear Discriminant Analysis (LDA)</li>
+    <li>Statistical tests: incl. t-tests, Wilcoxon, ANOVA</li>
+    <li>Regression: incl. linear regression, logistic regression, survival models (Cox proportional hazards, Kaplan-Meier estimation), ridge, LASSO, and elastic net regularization</li>
+    <li>Classification: incl. ensemble (random forests, XGBoost), kernel (SVM), and linear/probabilistic (LDA, logistic regression, Naïve Bayes), distance-based (k-nearest neighbors) models</li>
     <li>Clustering: K-means, EM algorithm</li>
     <li>Probabilistic models: Hidden Markov models (HMMs), linear Gaussian state-space models</li>
     <li>Dimensionality reduction & factorization: PCA, t-SNE, MOFA, NMF</li>
-    <li>Sampling &amp; optimization: replica exchange Monte Carlo</li>
-    <li>Deep learning: variational autoencoders (VAEs), CNNs, transformers, retrieval-augmented generation (RAG), LLMs</li>
+    <li>Sampling &amp; optimization: MCMC, replica exchange Monte Carlo, simulated annealing</li>
+    <li>Deep learning: variational autoencoders (VAEs), CNNs, transfer learning, transformers, retrieval-augmented generation (RAG), NLP, LLM toolchains (LangChain, Mistral, Llama, Groq, Ollama, Chainlit, Qdrant, FastEmbed, SPARQL)</li>
     <li>Federated learning</li>
   </ul>
+  
+
   
   </li>
   
@@ -278,7 +280,7 @@ ol li a:hover {
   <li>Workflow languages - Nextflow, Snakemake</li>
   <li>Docker, Singularity</li>
   <li>SLURM, Grid Engine, Kubernetes</li>
-  <li>AWS, DigitalOcean</li>  </ul>
+  <li>AWS (S3, EC2, AWS Batch, Sagemaker), DigitalOcean</li>  </ul>
   </li>
 
   <li><span class="emphasize">Databases</span>: MySQL, SQLite, PostgreSQL</li>

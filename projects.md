@@ -683,7 +683,7 @@ I applied several deconvolution methods to estimate cell type proportions from b
 
 
 <p class="mytext">
-This project my aim was to demonstrate how GNNs can capture spatially coherent patterns in gene expression and to compare these learned embeddings to traditional PCA and k-nn-based clustering.
+This project my aim was to demonstrate how GNNs can capture spatially coherent patterns in gene expression and to compare these learned embeddings to traditional PCA and k-means-based clustering.
 </p>
 
 <p class="mytext">

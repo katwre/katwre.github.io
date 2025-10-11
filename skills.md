@@ -262,7 +262,7 @@ ol li a:hover {
    <ul>
     <li>Statistical tests: incl. t-tests, Wilcoxon, ANOVA</li>
     <li>Regression: incl. linear regression, logistic regression, survival models (Cox proportional hazards, Kaplan-Meier estimation), ridge, LASSO, and elastic net regularization</li>
-    <li>Classification: incl. ensemble (random forests, XGBoost), kernel (SVM), and linear/probabilistic (LDA, logistic regression, Naïve Bayes), distance-based (k-nearest neighbors) models</li>
+    <li>Classification: incl. ensemble (random forests, XGBoost), kernel (SVM), and linear/probabilistic (LDA, logistic regression), distance-based (k-nearest neighbors) models</li>
     <li>Clustering: K-means, EM algorithm</li>
     <li>Probabilistic models: Hidden Markov models (HMMs), linear Gaussian state-space models</li>
     <li>Dimensionality reduction & factorization: PCA, t-SNE, MOFA, NMF</li>

@@ -212,7 +212,7 @@ ol li a:hover {
       <strong><a href="#sideprojects">Side Projects</a></strong>
       <ol>
         <li><a href="#survival">Survival analysis using gene expression & clinical data (Cox models)</a></li>
-        <li><a href="#dlomics">Deep learning for xray images and omics (CNNs, transfer learning, VAE, NMF, BERT)</a></li>
+        <li><a href="#dlomics">Deep learning for xray images and omics (CNNs, transfer learning, VAE, NMF, BERT, GNN)</a></li>
         <li><a href="#llm">LLM-based assistant for bioinformatics queries</a></li>
         <li><a href="#algorithms">Computational biology & algorithms</a></li>
         <ol>
@@ -564,7 +564,7 @@ I developed several survival models to predict the risk of mortality or relapse 
 <!--   -->
 
 
-<p class="mytext" id="dlomics"><strong>Deep learning for xray images and omics (CNNs, transfer learning, VAE, NMF, BERT)</strong></p>
+<p class="mytext" id="dlomics"><strong>Deep learning for xray images and omics (CNNs, transfer learning, VAE, NMF, BERT, GNN)</strong></p>
 
 
 <!-- cnn  -->
@@ -677,6 +677,39 @@ I applied several deconvolution methods to estimate cell type proportions from b
 <a href="https://github.com/katwre/ML-projects/blob/main/VAE_NMF_Transformer_regression_cfDNA/" target="_blank">https://github.com/katwre/ML-projects/blob/main/VAE_NMF_Transformer_regression_cfDNA/</a>
 </p>
 
+
+<!--  gnnspatial -->
+<p class="mytext" id="gnnspatial"><span style="color:#505050; font-weight:bold;">GNN for spatial transcriptomics</span></p>
+
+
+<p class="mytext">
+This project my aim was to demonstrate how GNNs can capture spatially coherent patterns in gene expression and to compare these learned embeddings to traditional PCA and k-nn-based clustering.
+</p>
+
+<p class="mytext">
+Spatial transcriptomics captures gene expression while preserving tissue architecture, enabling the study of cellular organization and microenvironments. However, identifying coherent spatial domains, regions of similar expression patterns and spatial context, remains challenging.
+
+
+Graph Neural Networks (GNNs) are great for this type of data because they can model both gene expression features and spatial neighborhood relationships. In this project, I implemented a mini Graph Autoencoder (GAE) from scratch in PyTorch to learn unsupervised spatial embeddings of tissue spots from a toy Visium H&E dataset provided by Squidpy (a 10x Genomics Visium H&E mouse brain section (~2,700 spots, ~33k genes)).
+</p>
+
+<div style="display: flex; justify-content: center; gap: 20px;">
+
+  <div style="text-align: center;">
+    <img src="{{ 'img/gnn_spatial_baseline.png' | relative_url }}" width="300" height="300">
+    <p class="mytext" style="font-size: 0.9em; color: #666;">Figure: Baseline PCA + KMeans.</p>
+  </div>
+
+  <div style="text-align: center;">
+    <img src="{{ 'img/gnn_spatial.png' | relative_url }}" width="300" height="300">
+    <p class="mytext" style="font-size: 0.9em; color: #666;">Figure: GNN-based clustering.</p>
+  </div>
+
+</div>
+
+<p class="mytext" style="font-family: 'Cormorant Garamond', serif;">
+<a href="https://github.com/katwre/ML-projects/tree/main/GNN_spatialomics" target="_blank">https://github.com/katwre/ML-projects/tree/main/GNN_spatialomics/</a>
+</p>
 
 
 

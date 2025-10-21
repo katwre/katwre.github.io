@@ -205,8 +205,8 @@ ol li a:hover {
       <strong><a href="#freelance">Freelance</a></strong>
       <ol>
         <li><a href="#target">ML/AI prioritization of therapeutic targets in clinical trials</a></li>
-        <li><a href="#igv">Web app feature development</a></li>       
         <li><a href="#alzheimer">Multi-omics and AI (Enformer) for an Alzheimer's disease biomarker</a></li>
+        <li><a href="#igv">Web app feature development</a></li>       
       </ol>
     </li>
     <li>

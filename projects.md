@@ -205,7 +205,8 @@ ol li a:hover {
       <strong><a href="#freelance">Freelance</a></strong>
       <ol>
         <li><a href="#target">ML/AI prioritization of therapeutic targets in clinical trials</a></li>
-        <li><a href="#igv">Web app feature development</a></li>
+        <li><a href="#igv">Web app feature development</a></li>       
+        <li><a href="#alzheimer">Multi-omics and AI (Enformer) for an Alzheimer's disease biomarker</a></li>
       </ol>
     </li>
     <li>
@@ -485,6 +486,76 @@ Figure: Schematic of a Variational Autoencoder (figure adapted from <a href="htt
 </p>
 
 
+
+<!-- Multiomics for Alzheimers  -->
+<p class="mytext" id="alzheimer"><strong>Multi-omics and AI (Enformer) for an Alzheimer's disease biomarker</strong></p>
+
+
+<p class="mytext">
+
+In this project, I investigated glial-to-neuron reprogramming through activation of a specific transcription factor (TF) in Alzheimer’s disease.
+
+I integrated multi-omics data - including RNA-seq, ATAC-seq, and H3K4me2/H3K27me3 ChIP-seq - to identify differentially expressed genes and gene pathways (GO, GSEA), their association with Alzheimer’s disease risk variants (GWAS), regulatory enhancers, DNA motifs and TF binding sites linked to neuronal differentiation and Alzheimer’s risk (GWAS).
+
+Large-scale analyses were executed via <a href="https://www.nextflow.io/" target="_blank">Nextflow</a> pipelines on Kubernetes and AWS, ensuring scalable and reproducible processing of NGS datasets.
+</p>
+
+
+<div style="text-align: center;">
+
+  <div style="margin-bottom: 20px;">
+    <img src="{{ 'img/alzheimers_DL/rnaseq.png' | relative_url }}" style="width: 60%; height: auto; border-radius: 8px;">
+    <div style="font-size: 14px; color: #555;">Figure: Example RNA-seq analysis.</div>
+  </div>
+
+  <div style="margin-bottom: 20px;">
+    <img src="{{ 'img/alzheimers_DL/motifactivity.png' | relative_url }}" style="width: 60%; height: 70%; border-radius: 8px;">
+    <div style="font-size: 14px; color: #555;">Figure: Example DNA motif activity in enhancers defined by ATAC-seq, H3K4me2 and H3K27me3 peaks.</div>
+  </div>
+
+  <div style="margin-bottom: 20px;">
+    <img src="{{ 'img/alzheimers_DL/chipseqpeaks.png' | relative_url }}" style="width: 60%; height: auto; border-radius: 8px;">
+    <div style="font-size: 14px; color: #555;">Figure: Example ChIP-seq peaks around the target TF gene in the IGV browser.</div>
+  </div>
+
+</div>
+<br>
+
+<p class="mytext">
+Using <a href="https://www.nature.com/articles/s41592-021-01252-x/" target="_blank">DeepMind’s Enformer model by Avsec et al.</a>, I mapped the regulatory landscape around the target TF to uncover and confirm DNA regions predicted to most strongly influence its expression in neurons and glia. Enformer predicts regulatory activity directly from DNA sequence and uses gradient-based attribution to reveal regions with the strongest impact on gene expression. I analyzed a ~400 kb region around the transcription factor, applying cell-type–specific masks and signal smoothing to identify candidate enhancers.
+</p>
+
+
+<div style="text-align: center;">
+
+  <div style="margin-bottom: 30px;">
+    <img src="{{ 'img/alzheimers_DL/enformer.png' | relative_url }}" 
+         style="max-width: 70%; height: auto; border-radius: 8px;">
+    <div style="font-size: 14px; color: #555;">
+      Figure: Enformer’s architecture by 
+      <a href="https://www.nature.com/articles/s41592-021-01252-x/" target="_blank">Avsec et al.</a>
+    </div>
+  </div>
+
+  <div style="margin-bottom: 30px;">
+    <img src="{{ 'img/alzheimers_DL/enformer_output.png' | relative_url }}" 
+         style="max-width: 70%; height: auto; border-radius: 8px;">
+    <div style="font-size: 14px; color: #555;">
+      Figure: Selected tracks corresponding to neurons or glia with Enformer's scores.
+    </div>
+  </div>
+
+  <div>
+    <img src="{{ 'img/alzheimers_DL/enformer_output_enhancers.png' | relative_url }}" 
+         style="max-width: 70%; height: auto; border-radius: 8px;">
+    <div style="font-size: 14px; color: #555;">
+      Figure: Selected Enformer's score peaks as potiential enhancers and highlighted regions of interest.
+    </div>
+  </div>
+
+</div>
+
+<br>
 
 
 <!-- Web app feature development  -->

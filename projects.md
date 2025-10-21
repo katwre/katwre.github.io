@@ -495,7 +495,7 @@ Figure: Schematic of a Variational Autoencoder (figure adapted from <a href="htt
 
 In this project, I investigated glial-to-neuron reprogramming through activation of a specific transcription factor (TF) in Alzheimer’s disease.
 
-I integrated multi-omics data - including RNA-seq, ATAC-seq, and H3K4me2/H3K27me3 ChIP-seq - to identify differentially expressed genes and gene pathways (GO, GSEA), their association with Alzheimer’s disease risk variants (GWAS), regulatory enhancers, DNA motifs and TF binding sites linked to neuronal differentiation and Alzheimer’s risk (GWAS).
+I integrated multi-omics data - including RNA-seq, ATAC-seq, and H3K4me2/H3K27me3 ChIP-seq - to identify differentially expressed genes and gene pathways (GO, GSEA), their association with Alzheimer’s disease risk variants (GWAS), regulatory enhancers, DNA motifs and TF binding sites linked to neuronal differentiation.
 
 Large-scale analyses were executed via <a href="https://www.nextflow.io/" target="_blank">Nextflow</a> pipelines on Kubernetes and AWS, ensuring scalable and reproducible processing of NGS datasets.
 </p>

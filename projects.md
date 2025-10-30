@@ -530,10 +530,10 @@ Using <a href="https://www.nature.com/articles/s41592-021-01252-x/" target="_bla
 
   <div style="margin-bottom: 30px;">
     <img src="{{ 'img/alzheimers_DL/enformer.png' | relative_url }}" 
-         style="max-width: 70%; height: auto; border-radius: 8px;">
+         style="max-width: 50%; height: auto; border-radius: 8px;">
     <div style="font-size: 14px; color: #555;">
       Figure: Enformer’s architecture by 
-      <a href="https://www.nature.com/articles/s41592-021-01252-x/" target="_blank">Avsec et al.</a>
+      <a href="https://www.nature.com/articles/s41592-021-01252-x/" target="_blank">Avsec et al.</a> copied from <a href="https://deepmind.google/discover/blog/predicting-gene-expression-with-ai/" target="_blank">the blog post</a>.
     </div>
   </div>
 

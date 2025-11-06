@@ -215,13 +215,13 @@ ol li a:hover {
         <li><a href="#survival">Survival analysis using gene expression & clinical data (Cox models)</a></li>
         <li><a href="#dlomics">Deep learning for xray images and omics (CNNs, transfer learning, VAE, NMF, BERT, GNN)</a></li>
         <li><a href="#llm">LLM-based assistant for bioinformatics queries</a></li>
-        <li><a href="#algorithms">Computational biology & algorithms (protein folding&Monte Carlo, genome assembly&de Bruijn graph with euler walk, volutionary tree estimation&Felsenstein with NNI, regulatory DNA discovery&MSA with motif binomial enrichment)</a></li>
- <!--       <ol>
+        <li><a href="#algorithms">Computational biology & algorithms</a></li>
+        <ol>
         <li><a href="#rmc">Protein folding - Monte Carlo</a></li>
         <li><a href="#debrujn">Genome assembly - de Bruijn graph, euler walk</a></li>
         <li><a href="#felnni">Evolutionary tree estimation - Felsenstein & NNI</a></li>
         <li><a href="#binomial">Regulatory DNA discovery - MSA & binomial enrichment</a></li>
-        </ol> -->
+        </ol> 
         <li><a href="#games">Games: Sudoku (JavaScript) and Minesweeper (Java)</a></li>
         <li><a href="#django">Django web services (Multiple Sequence Alignment visualization and mobile app)</a></li>
         <li><a href="#pyodine">In-browser Python career-matching tool (Pyodine)</a></li>

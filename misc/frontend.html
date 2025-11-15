@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Immune Cell Classifier</title>
+</head>
+<body>
+  <h1>Immune Cell Classifier</h1>
+
+  <form id="form">
+    <label>
+      Image URL:
+      <input
+        id="imageUrl"
+        type="text"
+        size="80"
+        value="https://raw.githubusercontent.com/katwre/Immune-cell-classifier-api/main/images/erythroblast_example.png"
+        required
+      />
+    </label>
+    <button type="submit">Classify</button>
+  </form>
+
+  <pre id="output"></pre>
+
+  <script>
+    const LAMBDA_URL = "https://n52ns6pv5ifcgefr76a4zm5m2u0xayxf.lambda-url.eu-west-1.on.aws/";
+  
+    const form = document.getElementById("form");
+    const output = document.getElementById("output");
+  
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      output.textContent = "Classifying…";
+  
+      const imageUrl = document.getElementById("imageUrl").value.trim();
+  
+      try {
+        const res = await fetch(LAMBDA_URL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ url: imageUrl })
+        });
+  
+        const text = await res.text();
+  
+        if (!res.ok) {
+          throw new Error(`HTTP ${res.status}: ${text}`);
+        }
+  
+        const data = JSON.parse(text);
+        output.textContent = JSON.stringify(data, null, 2);
+      } catch (err) {
+        output.textContent = "Error: " + err.message;
+        console.error(err);
+      }
+    });
+  </script>
+  
+</body>
+</html>

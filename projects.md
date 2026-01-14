@@ -43,7 +43,7 @@ h2::after {
   color: #2c2c2c;
   line-height: 1.8;
   text-align: justify;
-  max-width: 700px;
+  max-width: 1400px;
   margin: 0 auto 20px auto;
   padding: 0 20px;
 }
@@ -61,7 +61,7 @@ h2::after {
 
 /* Project Cards */
 .project-card {
-  max-width: 800px;
+  max-width: 1500px;
   margin: 40px auto;
   padding: 30px;
   background: #ffffff;
@@ -96,7 +96,7 @@ h2::after {
 
 /* Table of Contents */
 .toc-wrapper {
-  max-width: 700px;
+  max-width: 1400px;
   margin: 40px auto;
   padding: 30px;
   background: linear-gradient(135deg, #fafafa 0%, #ffffff 100%);
@@ -148,7 +148,7 @@ h2::after {
 .software-block {
   display: flex;
   align-items: center;
-  max-width: 750px;
+  max-width: 1450px;
   margin: 30px auto;
   padding: 25px;
   background: #fafafa;
@@ -188,7 +188,7 @@ h2::after {
 /* Figure Styling */
 figure {
   text-align: center;
-  max-width: 750px;
+  max-width: 1450px;
   margin: 30px auto;
   padding: 20px;
   background: #fafafa;
@@ -215,7 +215,7 @@ figcaption {
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
-  max-width: 800px;
+  max-width: 1500px;
   margin: 30px auto;
 }
 
@@ -248,7 +248,7 @@ figcaption {
 
 /* Section Dividers */
 hr {
-  max-width: 600px;
+  max-width: 1300px;
   margin: 60px auto;
   border: none;
   border-top: 2px solid #e8e8e8;
@@ -318,12 +318,21 @@ hr {
       <ol>
         <li><a href="#target">ML/AI prioritization of therapeutic targets in clinical trials</a></li>
         <li><a href="#alzheimer">Multi-omics and AI (Enformer) for an Alzheimer's disease biomarker</a></li>
-        <li><a href="#igv">Web app feature development</a></li>       
+        <li><a href="#igv">IGV web app feature development</a></li>       
       </ol>
     </li>
     <li>
-      <strong><a href="#sideprojects">Side Projects</a></strong>
+      <strong><a href="#sideprojects">Projects</a></strong>
       <ol>
+
+    <li><a href="#mldlapi">Machine and deep learning end-to-end projects with APIs</a>
+    <ol>
+        <li><a href=""> Gene type prediction from DNA sequence using a Transformer encoder - ONNX Runtime inference, FastAPI + BentoML serving, Docker compose, deployed on AWS EKS (Kubernetes)</a></li>
+        <li><a href="#debrujn">Predicting Molecular Solubility in Water via a Flask API deployed on AWS Elastic Beanstalk</a></li>
+        <li><a href="">Immune cell classifier trained on H&E-stained images using Xception + MLP, exported to TFLite and deployed via Docker and AWS Lambda</a></li>
+        <li><a href="">Diffusion-based generative modeling and inpainting of H&E-stained blood cell images, deployed via Streamlit and AWS Batch</a></li>
+        </ol> 
+    </li>
         <li><a href="#survival">Survival analysis using gene expression & clinical data (Cox models)</a></li>
         <li><a href="#dlomics">Deep learning for xray images and scRNAseq (CNNs, transfer learning, VAE, NMF, BERT)</a></li>
         <li><a href="#gnnspatial">GNN for spatial transcriptomics</a></li>
@@ -336,8 +345,7 @@ hr {
         <li><a href="#binomial">Regulatory DNA discovery - MSA & binomial enrichment</a></li>
         </ol> 
         <li><a href="#games">Games: Sudoku (JavaScript) and Minesweeper (Java)</a></li>
-        <li><a href="#django">Django web services (Multiple Sequence Alignment visualization and mobile app)</a></li>
-        <li><a href="#pyodine">In-browser Python career-matching tool (Pyodine)</a></li>
+        <li><a href="#django">Django web services (Django-based Multiple Sequence Alignment visualization, Django-based mobile app, Pyodine-based in-browser Python career-matching tool)</a></li>
       </ol>
     </li>
 </ol>
@@ -577,6 +585,8 @@ hr {
 
 
 <!-- Multiomics for Alzheimers  -->
+<div class="project-card" id="alzheimer">
+
 <p class="mytext" id="alzheimer"><strong>Multi-omics and AI (Enformer) for an Alzheimer's disease biomarker</strong></p>
 
 
@@ -638,13 +648,14 @@ Using <a href="https://www.nature.com/articles/s41592-021-01252-x/" target="_bla
   </div>
 
 </div>
+</div>
 
 <br>
 
 
 <!-- Web app feature development  -->
 <div class="project-card" id="igv">
-  <div class="project-title">Web app feature development</div>
+  <div class="project-title">IGV web app feature development</div>
 
   <p class="mytext">
     I contributed to enhancing the 
@@ -682,7 +693,77 @@ Using <a href="https://www.nature.com/articles/s41592-021-01252-x/" target="_bla
 <!--   -->
 
 
-<h2 id="sideprojects">Side projects</h2>
+<h2 id="sideprojects">Projects</h2>
+
+
+<!-- ML/DL with APIs  -->
+<div class="project-card" id="mldlapi">
+  <div class="project-title">Machine and deep learning end-to-end projects with APIs</div>
+
+  <div class="project-subtitle">Gene type prediction from DNA sequence using a Transformer encoder - ONNX Runtime inference, FastAPI + BentoML serving, Docker compose, deployed on AWS EKS (Kubernetes)</div>
+  
+  <p class="mytext">
+    The aim of this project was to predict gene type directly from a raw DNA sequence using classical machine learning models, convolutional neural networks, and a custom nucleotide-level Transformer, while also exploring practical deployment of machine learning services with Docker compose, Kubernetes (locally with Kind) and cloud infrastructure (AWS Kubernetes EKS)
+  </p>
+
+  <figure>
+    <img src="{{ 'img/sequence_transformer.png' | relative_url }}" style="width: 60%; max-width: 300px;">
+    <figcaption>Figure. An example of a gene and its nucleotide sequence.</figcaption>
+  </figure>
+
+    <p class="mytext text-center">
+    <a href="https://github.com/katwre/Genetype-classifier-api" target="_blank">🔗 GitHub Repository</a>
+  </p>
+
+  <div class="project-subtitle">Predicting Molecular Solubility in Water via a Flask API deployed on AWS Elastic Beanstalk</div>
+  
+  <p class="mytext">
+    The goal of this project was simple: Given a set of molecular descriptors, predict whether a compound will dissolve in water. We provide the model with numeric features that describe the molecule (size, polarity, solvation energy, charge distribution, etc.) and ask: "Will this molecule dissolve, or will it stay stubbornly solid?". I experimented with several regression models — Partial Least Squares (baseline linear model), Elastic Net (linear model with feature selection), Random Forest, and XGBoost (gradient-boosted trees) - to predict whether a molecule will dissolve in water based on its descriptors.
+  </p>
+
+  <figure>
+    <img src="{{ 'img/solubility.png' | relative_url }}" style="width: 60%; max-width: 400px;">
+    <figcaption>Figure. Conceptual view of solubility prediction.</figcaption>
+  </figure>
+
+  
+  <p class="mytext text-center">
+    <a href="https://github.com/katwre/Solubility-api" target="_blank">🔗 GitHub Repository</a>
+  </p>
+
+
+  <div class="project-subtitle">Immune cell classifier using Xception + MLP deployed via Docker and AWS Lambda</div>
+  
+  <p class="mytext">
+    The aim of this project was to evaluate transfer learning-based convolutional neural networks for classifying immune cell types from H&E-stained blood microscopy images. I applied transfer learning with a pretrained Xception model as a fixed feature extractor and trained a small custom MLP classification head on top of it. I additionally extracted Xception embeddings and trained classical machine learning models such as logistic regression and XGBoost to provide an interpretable baseline. Hyperparameters such as learning rate and dropout rate were tuned, and the model using the MLP head achieved strong accuracy on the test set.
+  </p>
+
+  <figure>
+    <img src="{{ 'img/immunecells.png' | relative_url }}" style="width: 60%; max-width: 400px;">
+    <figcaption>Figure. Examples of blood cell types: an erythroblast, a monocyte and a platelet. </figcaption>
+  </figure>
+
+   <p class="mytext text-center">
+    <a href="https://github.com/katwre/Immune-cell-classifier-api" target="_blank">🔗 GitHub Repository</a>
+  </p>
+
+
+  <div class="project-subtitle">Diffusion-based generative modeling and inpainting of H&E-stained blood cell images, deployed via Streamlit and AWS Batch</div>
+  
+  <p class="mytext">
+    The aim of this project was to explore the ability of diffusion models to generate missing regions in images. It restores corrupted areas in H&E cell images using a compact diffusion model and a simple Streamlit UI.
+  </p>
+
+  <figure>
+    <img src="{{ 'img/diffusion_immune.png' | relative_url }}" style="width: 60%; max-width: 400px;">
+    <figcaption>Figure. Diffusion-based inpainting results. The model reconstructs masked regions while preserving the observed context.</figcaption>
+  </figure>
+
+  <p class="mytext text-center">
+    <a href="https://github.com/katwre/Diffusion-models-for-cell-images-api" target="_blank">🔗 GitHub Repository</a>
+  </p>
+
+</div>
 
 
 <!-- survival  -->
@@ -978,9 +1059,10 @@ Bio Motif Ensembl is a Python tool for discovering potential regulatory DNA regi
   <p class="mytext" style="text-align: center;font-size: 0.9em; color: #666;">Figure: It's a similar concept to the approach published by <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.0020036" target="_blank">MacIsaac et al. 2025</a>.</p>
 </div>
 
-<p class="mytext" style="font-family: 'Cormorant Garamond', serif;">
-<a href="https://github.com/katwre/bioinformatics-projects/tree/master/bio_motif_ensembl" target="_blank">https://github.com/katwre/bioinformatics-projects/tree/master/bio_motif_ensembl</a>
-</p>
+  <p class="mytext text-center">
+    <a href="https://github.com/katwre/bioinformatics-projects/tree/master/bio_motif_ensembl" target="_blank">🔗 GitHub Repository</a>
+  </p>
+
 
 
 <hr>
@@ -1032,12 +1114,9 @@ Bio Motif Ensembl is a Python tool for discovering potential regulatory DNA regi
     Mobile application using Django, manifesto app, and localStorage - 
     <a href="https://github.com/katwre/phone_application" target="_blank">🔗 GitHub Repository</a>
   </p>
-</div>
 
-<hr>
 
 <!-- Discover Career Match -->
-<div class="project-card" id="pyodine">
   <div class="project-title">Discover Your Career Match (Pyodine)</div>
   
   <p class="mytext">

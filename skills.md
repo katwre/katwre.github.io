@@ -249,7 +249,7 @@ ol li a:hover {
   
   <ul>
   <li>Python - NumPy, pandas, scikit-learn, seaborn, PyTorch, Matplotlib, Plotly, Biopython</li>
-  <li>R - CRAN, Bioconductor</li>
+  <li>R - CRAN, Bioconductor (incl. caret, tidyverse)</li>
   <!--<li>RMarkdown, Jupyter Notebooks</li>-->
   <li>unit testing - R (testthat), Python (unittest, pytest)</li>
   <li>bash</li>
@@ -285,9 +285,25 @@ ol li a:hover {
 
   <li><span class="emphasize">Databases</span>: MySQL, SQLite, PostgreSQL</li>
   
-  <li><span class="emphasize">Version Control &amp; Software Management</span>: Linux/Unix systems, git, svn, conda, GNU Guix</li>
-  
-  <li><span class="emphasize">Web Frameworks</span>: Django, CSS, JavaScript, HTML, jQuery, PHP</li>
+   <li><span class="emphasize">Version Control &amp; Software Management</span>: 
+  <ul>
+  <li>Linux/Unix systems</li>
+  <li>git</li>
+  <li>conda</li>
+  <li>CI/CD</li>
+  <li>virtualenv, pipenv, uv</li>
+   </ul>
+  </li>
+
+
+  <li><span class="emphasize">Web Frameworks</span>: 
+  <ul>
+  <li>Django, FastAPI, Flask</li>
+  <li>Javascript, HTML/CSS, JQuery</li>
+  <li>R Shiny</li>
+   </ul>
+  </li>
+
   
 </ul>
 

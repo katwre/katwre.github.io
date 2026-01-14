@@ -327,10 +327,10 @@ hr {
 
     <li><a href="#mldlapi">Machine and deep learning end-to-end projects with APIs</a>
     <ol>
-        <li><a href=""> Gene type prediction from DNA sequence using a Transformer encoder - ONNX Runtime inference, FastAPI + BentoML serving, Docker compose, deployed on AWS EKS (Kubernetes)</a></li>
-        <li><a href="#debrujn">Predicting Molecular Solubility in Water via a Flask API deployed on AWS Elastic Beanstalk</a></li>
-        <li><a href="">Immune cell classifier trained on H&E-stained images using Xception + MLP, exported to TFLite and deployed via Docker and AWS Lambda</a></li>
-        <li><a href="">Diffusion-based generative modeling and inpainting of H&E-stained blood cell images, deployed via Streamlit and AWS Batch</a></li>
+        <li><a href="#genetransformer"> Gene type prediction from DNA sequence using a Transformer encoder - ONNX Runtime inference, FastAPI + BentoML serving, Docker compose, deployed on AWS EKS (Kubernetes)</a></li>
+        <li><a href="#solubility">Predicting Molecular Solubility in Water via a Flask API deployed on AWS Elastic Beanstalk</a></li>
+        <li><a href="#immuneclassifier">Immune cell classifier trained on H&E-stained images using Xception + MLP, exported to TFLite and deployed via Docker and AWS Lambda</a></li>
+        <li><a href="#diffusioninpainting">Diffusion-based generative modeling and inpainting of H&E-stained blood cell images, deployed via Streamlit and AWS Batch</a></li>
         </ol> 
     </li>
         <li><a href="#survival">Survival analysis using gene expression & clinical data (Cox models)</a></li>
@@ -700,7 +700,7 @@ Using <a href="https://www.nature.com/articles/s41592-021-01252-x/" target="_bla
 <div class="project-card" id="mldlapi">
   <div class="project-title">Machine and deep learning end-to-end projects with APIs</div>
 
-  <div class="project-subtitle">Gene type prediction from DNA sequence using a Transformer encoder - ONNX Runtime inference, FastAPI + BentoML serving, Docker compose, deployed on AWS EKS (Kubernetes)</div>
+  <div class="project-subtitle" id="genetransformer">Gene type prediction from DNA sequence using a Transformer encoder - ONNX Runtime inference, FastAPI + BentoML serving, Docker compose, deployed on AWS EKS (Kubernetes)</div>
   
   <p class="mytext">
     The aim of this project was to predict gene type directly from a raw DNA sequence using classical machine learning models, convolutional neural networks, and a custom nucleotide-level Transformer, while also exploring practical deployment of machine learning services with Docker compose, Kubernetes (locally with Kind) and cloud infrastructure (AWS Kubernetes EKS)
@@ -715,7 +715,7 @@ Using <a href="https://www.nature.com/articles/s41592-021-01252-x/" target="_bla
     <a href="https://github.com/katwre/Genetype-classifier-api" target="_blank">🔗 GitHub Repository</a>
   </p>
 
-  <div class="project-subtitle">Predicting Molecular Solubility in Water via a Flask API deployed on AWS Elastic Beanstalk</div>
+  <div class="project-subtitle" id="solubility">Predicting Molecular Solubility in Water via a Flask API deployed on AWS Elastic Beanstalk</div>
   
   <p class="mytext">
     The goal of this project was simple: Given a set of molecular descriptors, predict whether a compound will dissolve in water. We provide the model with numeric features that describe the molecule (size, polarity, solvation energy, charge distribution, etc.) and ask: "Will this molecule dissolve, or will it stay stubbornly solid?". I experimented with several regression models — Partial Least Squares (baseline linear model), Elastic Net (linear model with feature selection), Random Forest, and XGBoost (gradient-boosted trees) - to predict whether a molecule will dissolve in water based on its descriptors.
@@ -732,7 +732,7 @@ Using <a href="https://www.nature.com/articles/s41592-021-01252-x/" target="_bla
   </p>
 
 
-  <div class="project-subtitle">Immune cell classifier using Xception + MLP deployed via Docker and AWS Lambda</div>
+  <div class="project-subtitle" id="immuneclassifier">Immune cell classifier using Xception + MLP deployed via Docker and AWS Lambda</div>
   
   <p class="mytext">
     The aim of this project was to evaluate transfer learning-based convolutional neural networks for classifying immune cell types from H&E-stained blood microscopy images. I applied transfer learning with a pretrained Xception model as a fixed feature extractor and trained a small custom MLP classification head on top of it. I additionally extracted Xception embeddings and trained classical machine learning models such as logistic regression and XGBoost to provide an interpretable baseline. Hyperparameters such as learning rate and dropout rate were tuned, and the model using the MLP head achieved strong accuracy on the test set.
@@ -748,7 +748,7 @@ Using <a href="https://www.nature.com/articles/s41592-021-01252-x/" target="_bla
   </p>
 
 
-  <div class="project-subtitle">Diffusion-based generative modeling and inpainting of H&E-stained blood cell images, deployed via Streamlit and AWS Batch</div>
+  <div class="project-subtitle" id="diffusioninpainting">Diffusion-based generative modeling and inpainting of H&E-stained blood cell images, deployed via Streamlit and AWS Batch</div>
   
   <p class="mytext">
     The aim of this project was to explore the ability of diffusion models to generate missing regions in images. It restores corrupted areas in H&E cell images using a compact diffusion model and a simple Streamlit UI.

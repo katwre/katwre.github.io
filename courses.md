@@ -158,7 +158,7 @@ h2 {
   </div>
   <div class="course-org">Data talks</div>
   <div class="course-footer">
-    <div class="course-skills"><strong>Skills:</strong> AI assistants · agents · MCP · DevOps integration · GitHub Copilot · Cursor · Django, FastAPI · n8n  · React</div>
+    <div class="course-skills"><strong>Skills:</strong> AI assistants · agents · MCP · DevOps integration · GitHub Copilot · Cursor · Django, FastAPI · n8n · React · Google Cloud Run</div>
     <a href="#" class="credential-button">Show credential (still ongoing)</a>
   </div>
 </div>

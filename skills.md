@@ -234,7 +234,7 @@ ol li a:hover {
 <li>Project management and mentoring</li>
 <li>Good at communication and presentation skills</li>
 <li>Good at problem solving and adaptability</li>
-<li>Curious and loves to learn new things</li>
+<li>Curious and loves to learn new things!</li>
 </ul>
 
 </ul>

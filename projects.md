@@ -322,19 +322,28 @@ hr {
       </ol>
     </li>
     <li>
-      <strong><a href="#sideprojects">Projects</a></strong>
+      <strong><a href="#sideprojects">Independent machine learning & AI projects</a></strong>
       <ol>
 
-    <li><a href="#mldlapi">Machine and deep learning end-to-end projects with APIs</a>
+    <li><a href="#mldlapi">Machine learning & AI APIs in production</a>
+    
     <ol>
-        <li><a href="#genetransformer"> Gene type prediction from DNA sequence using a Transformer encoder - ONNX Runtime inference, FastAPI + BentoML serving, Docker compose, deployed on AWS EKS (Kubernetes)</a></li>
-        <li><a href="#solubility">Predicting Molecular Solubility in Water via a Flask API deployed on AWS Elastic Beanstalk</a></li>
-        <li><a href="#immuneclassifier">Immune cell classifier trained on H&E-stained images using Xception + MLP, exported to TFLite and deployed via Docker and AWS Lambda</a></li>
-        <li><a href="#diffusioninpainting">Diffusion-based generative modeling and inpainting of H&E-stained blood cell images, deployed via Streamlit and AWS Batch</a></li>
-        </ol> 
+<li><a href="#genetransformer">Gene type prediction with transformer-encoder (AWS EKS)</a></li>
+<li><a href="#solubility">Molecular solubility prediction (AWS Elastic Beanstalk)</a></li>
+<li><a href="#immuneclassifier">Immune cell classifier with transfer learning (AWS Lambda)</a></li>
+<li><a href="#diffusioninpainting">Diffusion-based image inpainting (AWS Batch)</a></li>
+    </ol> 
+     
     </li>
         <li><a href="#survival">Survival analysis using gene expression & clinical data (Cox models)</a></li>
-        <li><a href="#dlomics">Deep learning for xray images and scRNAseq (CNNs, transfer learning, VAE, NMF, BERT)</a></li>
+        <li><a href="#dlomics">Deep learning for xray images and scRNAseq (CNNs, transfer learning, VAE, NMF, BERT)</a>
+        <ol>
+        <li><a href="#cnn">Chest X-rays classification with CNNs+transfer learning</a></li>
+        <li><a href="#ae">Autoencoder for scRNA-seq imputation</a></li>
+        <li><a href="#vae_federated">scRNA-seq batch correction with federated VAE</a></li>
+        <li><a href="#deconvolution">Cell type deconvolution with VAE, BERT, semi-supervised NMF and lasso/ridge/elastic net</a></li>
+        </ol>
+        </li>
         <li><a href="#gnnspatial">GNN for spatial transcriptomics</a></li>
         <li><a href="#llm">LLM-based assistant for bioinformatics queries</a></li>
         <li><a href="#algorithms">Computational biology & algorithms</a></li>
@@ -801,7 +810,7 @@ Using <a href="https://www.nature.com/articles/s41592-021-01252-x/" target="_bla
 
 <div class="project-card" id="dlomics">
 
-  <div class="project-title">Deep learning for xray images and omics (CNNs, transfer learning, VAE, NMF, BERT, GNN)</div>
+  <div class="project-title">Deep learning for xray images and scRNAseq (CNNs, transfer learning, VAE, NMF, BERT, GNN)</div>
 
   <div class="project-subtitle" id="cnn">CNNs and transfer learning for image classification tasks based on chest X-rays</div>
 
@@ -881,7 +890,6 @@ Using <a href="https://www.nature.com/articles/s41592-021-01252-x/" target="_bla
 
 
 <!--  <div class="project-card" id="deconvolution"> -->
-
 
   <div class="project-subtitle" id="deconvolution">VAE, BERT, semi-supervised NMF and lasso/ridge/elastic net for cell type deconvolution</div>
 

@@ -336,7 +336,7 @@ hr {
      
     </li>
         <li><a href="#survival">Survival analysis using gene expression & clinical data (Cox models)</a></li>
-        <li><a href="#dlomics">Deep learning for xray images and scRNAseq (CNNs, transfer learning, VAE, NMF, BERT)</a>
+        <li><a href="#dlomics">Deep learning for X-ray images and scRNAseq</a>
         <ol>
         <li><a href="#cnn">Chest X-rays classification with CNNs+transfer learning</a></li>
         <li><a href="#ae">Autoencoder for scRNA-seq imputation</a></li>

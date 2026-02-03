@@ -161,7 +161,7 @@ h2 {
   <div class="course-footer">
     <div class="course-skills"><strong>Skills:</strong> Docker · Postgres · SQL · BigQuery · dbt · Apache Spark · Apache Kafka · Google Cloud Run · pipelines · warehouses · orchestration · batch & streaming
     </div>
-    <a href="https://github.com/katwre/katwre" class="credential-button">Projects</a>
+    <a href="https://github.com/katwre/katwre/tree/main?tab=readme-ov-file#data-engineering" class="credential-button">Projects</a>
     <a href="#" class="credential-button">Show credential (still ongoing)</a>
   </div>
 </div>
@@ -177,7 +177,7 @@ h2 {
   <div class="course-org">Data talks</div>
   <div class="course-footer">
     <div class="course-skills"><strong>Skills:</strong> AI assistants · agents · MCP · DevOps integration · GitHub Copilot · Cursor · Django · FastAPI · n8n · React · Google Cloud Run</div>
-    <a href="https://github.com/katwre/katwre" class="credential-button">Projects</a>
+    <a href="https://github.com/katwre/katwre/tree/main?tab=readme-ov-file#ai-dev-tools--workflows" class="credential-button">Projects</a>
     <a href="#" class="credential-button">Show credential (still ongoing)</a>
   </div>
 </div>
@@ -193,7 +193,7 @@ h2 {
   <div class="course-org">Data talks</div>
   <div class="course-footer">
     <div class="course-skills"><strong>Skills:</strong> AWS EC2 · AWS Elastic Beanstalk · AWS Kubernetes · AWS Batch · AWS Lambda · Docker compose · BentoML · ONNX · TFLite|Tensorflow · PyTorch · FastAPI · Streamlit · Linear Regression and Feature Engineering · Classification with Logistic Regression · Decision Trees and Ensemble Methods · CNNs · Transfer learning</div>
-    <a href="https://katwre.github.io/projects/#mldlapi" class="credential-button">Projects</a>
+    <a href="https://github.com/katwre/katwre/tree/main?tab=readme-ov-file#production-mlai-projects" class="credential-button">Projects</a>
     <a href="#" class="credential-button">Show credential (still ongoing)</a>
   </div>
 </div>

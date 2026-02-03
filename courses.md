@@ -151,6 +151,24 @@ h2 {
 
 <div class="year-header">2026</div>
 
+
+<div class="course-card">
+  <div class="course-header">
+    <div class="course-title">Data Engineering Zoomcamp</div>
+    <div class="course-date">Jan 2026 - April 2026</div>
+  </div>
+  <div class="course-org">Data talks</div>
+  <div class="course-footer">
+    <div class="course-skills"><strong>Skills:</strong> Docker · Postgres · SQL · BigQuery · dbt · Apache Spark · Apache Kafka · Google Cloud Run · pipelines · warehouses · orchestration · batch & streaming
+    </div>
+    <a href="https://github.com/katwre/katwre" class="credential-button">Projects</a>
+    <a href="#" class="credential-button">Show credential (still ongoing)</a>
+  </div>
+</div>
+
+
+
+
 <div class="course-card">
   <div class="course-header">
     <div class="course-title">AI Dev Tools Zoomcamp</div>
@@ -159,6 +177,7 @@ h2 {
   <div class="course-org">Data talks</div>
   <div class="course-footer">
     <div class="course-skills"><strong>Skills:</strong> AI assistants · agents · MCP · DevOps integration · GitHub Copilot · Cursor · Django · FastAPI · n8n · React · Google Cloud Run</div>
+    <a href="https://github.com/katwre/katwre" class="credential-button">Projects</a>
     <a href="#" class="credential-button">Show credential (still ongoing)</a>
   </div>
 </div>
@@ -174,6 +193,7 @@ h2 {
   <div class="course-org">Data talks</div>
   <div class="course-footer">
     <div class="course-skills"><strong>Skills:</strong> AWS EC2 · AWS Elastic Beanstalk · AWS Kubernetes · AWS Batch · AWS Lambda · Docker compose · BentoML · ONNX · TFLite|Tensorflow · PyTorch · FastAPI · Streamlit · Linear Regression and Feature Engineering · Classification with Logistic Regression · Decision Trees and Ensemble Methods · CNNs · Transfer learning</div>
+    <a href="https://katwre.github.io/projects/#mldlapi" class="credential-button">Projects</a>
     <a href="#" class="credential-button">Show credential (still ongoing)</a>
   </div>
 </div>
@@ -190,6 +210,7 @@ h2 {
   <div class="course-org">SIB Swiss Institute of Bioinformatics</div>
   <div class="course-footer">
     <div class="course-skills"><strong>Skills:</strong> XGBoost · SHAP</div>
+    <a href="https://github.com/katwre/XGBoost_Bayesian_Optimization" class="credential-button">Notes</a>
     <a href="https://katwre.github.io/certificates/certificate-of-attendance-sib-course-ensuring-more-accurate-generalisable-and-interpretable-machine-learning-models-for-bioinformatics-starting-on-17-november-2025.pdf" class="credential-button">Show credential</a>
   </div>
 </div>
@@ -205,6 +226,7 @@ h2 {
   <div class="course-org">SIB Swiss Institute of Bioinformatics</div>
   <div class="course-footer">
     <div class="course-skills"><strong>Skills:</strong> Large Language Models (LLM) · Retrieval-Augmented Generation (RAG) · SPARQL · Qdrant · Chainlit · LangChain · Mistral · Ollama · Groq</div>
+    <a href="https://github.com/katwre/ML-projects/tree/main/llm-biodata" class="credential-button">Projects</a>
   </div>
 </div>
 
@@ -220,6 +242,9 @@ h2 {
   </div>
 </div>
 
+
+
+
 <div class="course-card">
   <div class="course-header">
     <div class="course-title">Federated Learning in Bioinformatics</div>
@@ -228,6 +253,7 @@ h2 {
   <div class="course-org">SIB Swiss Institute of Bioinformatics</div>
   <div class="course-footer">
     <div class="course-skills"><strong>Skills:</strong> Federated Learning</div>
+        <a href="https://github.com/katwre/ML-projects/tree/main/federated_learning_scRNA-seq" class="credential-button">Projects</a>
     <a href="https://katwre.github.io/certificates/certificate-of-attendance-sib-course-federated-learning-in-bioinformatics-starting-on-29-august-2025-lugano.pdf" class="credential-button">Show credential</a>
   </div>
 </div>

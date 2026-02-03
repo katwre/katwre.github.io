@@ -267,7 +267,8 @@ ol li a:hover {
     <li>Probabilistic models: Hidden Markov models (HMMs), linear Gaussian state-space models</li>
     <li>Dimensionality reduction & factorization: PCA, t-SNE, MOFA, NMF</li>
     <li>Sampling &amp; optimization: MCMC, replica exchange Monte Carlo, simulated annealing</li>
-    <li>Deep learning: variational autoencoders (VAEs), CNNs, transfer learning, transformers, retrieval-augmented generation (RAG), NLP, LLM toolchains (LangChain, Mistral, Llama, Groq, Ollama, Chainlit, Qdrant, FastEmbed, SPARQL)</li>
+    <li>Deep learning: CNNs, transfer learning, variational autoencoders (VAEs), graph neural networks (GAE), transformer-encoder</li>
+    <li>NLP: retrieval-augmented generation (RAG), LLM toolchains (LangChain, Mistral, Llama, Groq, Ollama, Chainlit, Qdrant, FastEmbed, SPARQL)</li>
     <li>Federated learning</li>
   </ul>
   

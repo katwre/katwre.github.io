@@ -99,6 +99,15 @@ ol li a {
 ol li a:hover {
     text-decoration: underline;
 }
+
+ul li a {
+    color: #80002a;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
 /* Main ToC block */
 .toc-wrapper {
     max-width: 600px;
@@ -187,6 +196,32 @@ ol li a:hover {
     max-width: 600px;              /* Restrict paragraph width */
     margin: 0 auto 40px auto;      /* Center the block itself */
     padding: 0 20px;               /* Optional: adds side padding for extra visual balance */
+}
+
+.appointment-section {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.appointment-link {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  color: #80002a;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.appointment-link:hover {
+  color: #555555;
+  text-decoration: underline;
+}
+
+.appointment-link i {
+  margin-right: 6px;
+  font-size: 18px;
 }
 
 </style>
@@ -412,7 +447,15 @@ ol li a:hover {
 <br>
 </p>
 
-<p class="mytext">For collaboration inquiries, please contact me at katwre [at] gmail.com.</p>
+<p class="mytext">For collaboration inquiries, reach out via email at katwre [at] gmail.com or schedule a call below.
+</p>
+
+<div class="appointment-section">
+  <a href="https://calendly.com/katwre/30min" target="_blank" class="appointment-link">
+    <i class="fas fa-calendar-alt"></i>
+    Schedule a video call
+  </a>
+</div>
 
 
 

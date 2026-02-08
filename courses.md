@@ -194,7 +194,7 @@ h2 {
   <div class="course-footer">
     <div class="course-skills"><strong>Skills:</strong> AWS EC2 · AWS Elastic Beanstalk · AWS Kubernetes · AWS Batch · AWS Lambda · Docker compose · BentoML · ONNX · TFLite|Tensorflow · PyTorch · FastAPI · Streamlit · Linear Regression and Feature Engineering · Classification with Logistic Regression · Decision Trees and Ensemble Methods · CNNs · Transfer learning</div>
     <a href="https://github.com/katwre/katwre/tree/main?tab=readme-ov-file#production-mlai-projects" class="credential-button">Projects</a>
-    <a href="#" class="credential-button">Show credential (still ongoing)</a>
+    <a href="https://katwre.github.io/certificates/datatalks_ml_zoomcamp_certificate2026.pdf" class="credential-button">Show credential</a>
   </div>
 </div>
 

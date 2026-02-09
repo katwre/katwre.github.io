@@ -178,7 +178,7 @@ h2 {
   <div class="course-footer">
     <div class="course-skills"><strong>Skills:</strong> AI assistants · agents · MCP · DevOps integration · GitHub Copilot · Cursor · Django · FastAPI · n8n · React · Google Cloud Run</div>
     <a href="https://github.com/katwre/katwre/tree/main?tab=readme-ov-file#ai-dev-tools--workflows" class="credential-button">Projects</a>
-    <a href="#" class="credential-button">Show credential (still ongoing)</a>
+    <a href="https://katwre.github.io/certificates/datatalks_AIdevtools_zoomcamp_certificate2026.pdf" class="credential-button">Show credential</a>
   </div>
 </div>
 

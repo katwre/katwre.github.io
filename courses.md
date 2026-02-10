@@ -171,7 +171,7 @@ Advanced Deep Learning (UCL x DeepMind) — VAEs, flows, generative models -->
   <div class="course-footer">
     <div class="course-skills"><strong>Skills:</strong> GPU programming · CUDA · OpenMP
     </div>
-    <a href="https://github.com/katwre/katwre/tree/main?tab=readme-ov-file#data-engineering" class="credential-button">Projects</a>
+    <a href="https://github.com/katwre/katwre?tab=readme-ov-file#research--prototyping" class="credential-button">Projects</a>
     <a href="#" class="credential-button">Show credential (still ongoing)</a>
   </div>
 </div>

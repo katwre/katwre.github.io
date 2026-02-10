@@ -152,6 +152,33 @@ h2 {
 <div class="year-header">2026</div>
 
 
+<!-- Transformers (Stanford CS25) — implemented attention, ViT, scaling experiments
+Machine Learning with Graphs (Stanford CS224W) — GNNs, graph transformers
+Advanced Deep Learning (UCL x DeepMind) — VAEs, flows, generative models -->
+
+
+
+
+
+
+
+<div class="course-card">
+  <div class="course-header">
+    <div class="course-title">Introduction to GPU Programming for Life Sciences</div>
+    <div class="course-date">Jan 2026</div>
+  </div>
+  <div class="course-org">SIB Swiss Institute of Bioinformatics</div>
+  <div class="course-footer">
+    <div class="course-skills"><strong>Skills:</strong> GPU programming · CUDA · OpenMP
+    </div>
+    <a href="https://github.com/katwre/katwre/tree/main?tab=readme-ov-file#data-engineering" class="credential-button">Projects</a>
+    <a href="#" class="credential-button">Show credential (still ongoing)</a>
+  </div>
+</div>
+
+
+
+
 <div class="course-card">
   <div class="course-header">
     <div class="course-title">Data Engineering Zoomcamp</div>

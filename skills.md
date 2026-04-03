@@ -277,7 +277,7 @@ ol li a:hover {
   <li><span class="emphasize">Infrastructure</span>: 
   <ul>
   <li>SLURM, Grid Engine</li>
-  <li>AWS (S3, EC2, AWS Batch, Lambda, Sagemaker), DigitalOcean</li>  
+  <li>AWS (S3, EC2, Lambda, Sagemaker, Elastic Beanstalk, Batch), DigitalOcean</li>  
     <li>Kubernetes</li>
   </ul>
   </li>
@@ -287,7 +287,7 @@ ol li a:hover {
   <li><span class="emphasize">MLOps</span>: 
   <ul>
   <li>Workflow languages - Nextflow, Snakemake</li>
-  <li>Docker, Singularity
+  <li>Docker, Singularity</li>
   </ul>
   </li>
 

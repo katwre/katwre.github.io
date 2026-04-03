@@ -248,7 +248,7 @@ ol li a:hover {
   <li><span class="emphasize">Programming &amp; Tools</span>: 
   
   <ul>
-  <li>Python - NumPy, pandas, scikit-learn, seaborn, PyTorch, Matplotlib, Plotly, Biopython</li>
+  <li>Python - NumPy, pandas, scikit-learn, seaborn, PyTorch, Matplotlib, Plotly</li>
   <li>R - CRAN, Bioconductor (incl. caret, tidyverse)</li>
   <!--<li>RMarkdown, Jupyter Notebooks</li>-->
   <li>unit testing - R (testthat), Python (unittest, pytest)</li>
@@ -267,21 +267,28 @@ ol li a:hover {
     <li>Probabilistic models: Hidden Markov models (HMMs), linear Gaussian state-space models</li>
     <li>Dimensionality reduction & factorization: PCA, t-SNE, MOFA, NMF</li>
     <li>Sampling &amp; optimization: MCMC, replica exchange Monte Carlo, simulated annealing</li>
-    <li>Deep learning: CNNs, transfer learning, variational autoencoders (VAEs), graph neural networks (GAE), transformer-encoder</li>
+    <li>Deep learning: CNNs, transfer learning, variational autoencoders (VAEs), transformer-encoder, diffusion models (U-Net-based DDPM)</li>
     <li>NLP: retrieval-augmented generation (RAG), LLM toolchains (LangChain, Mistral, Llama, Groq, Ollama, Chainlit, Qdrant, FastEmbed, SPARQL)</li>
     <li>Federated learning</li>
   </ul>
-  
-
-  
   </li>
+
+
+  <li><span class="emphasize">Infrastructure</span>: 
+  <ul>
+  <li>SLURM, Grid Engine</li>
+  <li>AWS (S3, EC2, AWS Batch, Lambda, Sagemaker), DigitalOcean</li>  
+    <li>Kubernetes</li>
+  </ul>
+  </li>
+
+
   
   <li><span class="emphasize">MLOps</span>: 
   <ul>
   <li>Workflow languages - Nextflow, Snakemake</li>
-  <li>Docker, Singularity</li>
-  <li>SLURM, Grid Engine, Kubernetes</li>
-  <li>AWS (S3, EC2, AWS Batch, Sagemaker), DigitalOcean</li>  </ul>
+  <li>Docker, Singularity
+  </ul>
   </li>
 
   <li><span class="emphasize">Databases</span>: MySQL, SQLite, PostgreSQL</li>
@@ -289,11 +296,20 @@ ol li a:hover {
    <li><span class="emphasize">Version Control &amp; Software Management</span>: 
   <ul>
   <li>Linux/Unix systems</li>
-  <li>git</li>
+  <li>Git</li>
   <li>conda</li>
   <li>CI/CD</li>
   <li>virtualenv, pipenv, uv</li>
    </ul>
+  </li>
+
+
+  <li><span class="emphasize">Data engineering</span>: 
+  <ul>
+  <li>Kafka</li>
+  <li>DuckDB</li>
+  <li>Polars</li>
+    </ul>
   </li>
 
 

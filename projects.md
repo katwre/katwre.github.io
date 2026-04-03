@@ -475,7 +475,7 @@ hr {
 <div class="software-block mytext">
   <img src="{{ '/img/genomation.png' | relative_url }}" alt="Genomation logo" class="software-logo">
   <div class="software-text">
-    <p><em>genomation</em> – a Bioconductor R package designed to simplify genomic feature and interval analysis. It includes functions for reading BED/GFF files as GRanges, summarizing features over regions, creating enrichment plots or heatmaps, and annotating regions with exons, introns, or promoters.</p>
+    <p><em>genomation</em> – a Bioconductor R package designed to simplify genomic feature and interval analysis. It includes functions for reading BED/GFF files as GRanges, summarizing features over regions, creating enrichment plots or heatmaps, and annotating regions with exons, introns, or promoters. I was a co-developer and maintainer.</p>
   </div>
 </div>
 
@@ -493,7 +493,7 @@ hr {
     <img src="{{ '/img/pigx.png' | relative_url }}" alt="pigx logo" class="software-logo">
 
   <div class="software-text">
-    <p><em>PiGx</em> – a collection of genomics pipelines implemented using Snakemake, Python, and R. Each pipeline is easily configured with a sample sheet and a simple settings file. PiGx generates comprehensive, interactive HTML reports that summarize key findings from your samples.</p>
+    <p><em>PiGx</em> – a collection of genomics pipelines implemented using Snakemake, Python, and R. Each pipeline is easily configured with a sample sheet and a simple settings file. PiGx generates comprehensive, interactive HTML reports that summarize key findings from your samples. My contribution was co-implementing PigX BS-seq.</p>
   </div>
 </div>
 

@@ -304,15 +304,6 @@ ol li a:hover {
   </li>
 
 
-  <li><span class="emphasize">Data engineering</span>: 
-  <ul>
-  <li>Kafka</li>
-  <li>DuckDB</li>
-  <li>Polars</li>
-    </ul>
-  </li>
-
-
   <li><span class="emphasize">Web Frameworks</span>: 
   <ul>
   <li>Django, FastAPI, Flask</li>
@@ -322,6 +313,16 @@ ol li a:hover {
   </li>
 
   
+  <li><span class="emphasize">Data engineering</span>: 
+  <ul>
+  <li>Kafka</li>
+  <li>DuckDB</li>
+  <li>Polars</li>
+    </ul>
+  </li>
+
+
+
 </ul>
 
 

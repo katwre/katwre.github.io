@@ -403,7 +403,7 @@ hr {
   </figure>
 
   <p class="mytext">
-    <a href="https://doi.org/10.1093/nar/gkv681" target="_blank">
+    <a href="https://doi.org/10.1093/nar/gkz460" target="_blank">
       📄 Publication: Wreczycka K et al, Nucleic Acids Research, 2019
     </a>
   </p>

@@ -367,7 +367,7 @@ hr {
     <ol>
     <li><a href="#spatial_explorer_api">Spatial transcriptomics platform that visualizes gene expression, includes a chatbox, AI-powered gene summaries, and SpaGCN-based analysis via an MCP server</a></li>
       <li><a href="#games">Games: Sudoku (JavaScript) and Minesweeper (Java)</a></li>
-      <li><a href="#django">Django web services (Django-based Multiple Sequence Alignment visualization, Django-based mobile app, Pyodine-based in-browser Python career-matching tool)</a></li>
+      <li><a href="#django">Django web services (Django-based Multiple Sequence Alignment visualization, Django-based mobile app)</a></li>
     </ol>
   </li>
 </ol>
@@ -608,7 +608,7 @@ hr {
 <!-- Multiomics for Alzheimers  -->
 <div class="project-card" id="alzheimer">
 
-<p class="mytext" id="alzheimer"><strong>Multi-omics and AI (Enformer) for an Alzheimer's disease biomarker</strong></p>
+<p class="mytext"><strong>Multi-omics and AI (Enformer) for an Alzheimer's disease biomarker</strong></p>
 
 
 <p class="mytext">
@@ -932,7 +932,7 @@ Using <a href="https://www.nature.com/articles/s41592-021-01252-x/" target="_bla
 
 <div class="project-card" id="gnnspatial">
 
-  <div class="project-subtitle" id="gnnspatial">GNN for spatial transcriptomics</div>
+  <div class="project-subtitle">GNN for spatial transcriptomics</div>
 
   <p class="mytext">
     This project's aim was to demonstrate how GNNs can capture spatially coherent patterns in gene expression and to compare these learned embeddings to traditional PCA and k-means-based clustering.
@@ -1192,7 +1192,7 @@ Bio Motif Ensembl is a Python tool for discovering potential regulatory DNA regi
 
 <!-- Django Web-Services -->
 
-  <div class="project-subtitle" id="sudoku">Django-Based Web Services</div>
+  <div class="project-subtitle" id="django">Django-Based Web Services</div>
 
 
   
@@ -1210,7 +1210,7 @@ Bio Motif Ensembl is a Python tool for discovering potential regulatory DNA regi
 
 <!-- Discover Career Match -->
 
-  <div class="project-subtitle" id="sudoku">Discover Your Career Match (Pyodine)</div>
+  <div class="project-subtitle" >Discover Your Career Match (Pyodine)</div>
   
   <p class="mytext">
     Interactive tool that matches careers to users based on their personality profile (Big Five personality traits). Runs directly in the browser via Pyodide.

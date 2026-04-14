@@ -365,13 +365,13 @@ hr {
   <li>
     <strong><a href="#sideprojects_web">Independent web-related projects</a></strong>
     <ol>
+    <li><a href="#spatial_explorer_api">Spatial transcriptomics platform that visualizes gene expression, includes a chatbox, AI-powered gene summaries, and SpaGCN-based analysis via an MCP server</a></li>
       <li><a href="#games">Games: Sudoku (JavaScript) and Minesweeper (Java)</a></li>
       <li><a href="#django">Django web services (Django-based Multiple Sequence Alignment visualization, Django-based mobile app, Pyodine-based in-browser Python career-matching tool)</a></li>
     </ol>
   </li>
 </ol>
 </div>
-
 
 
 
@@ -1103,7 +1103,7 @@ Bio Motif Ensembl is a Python tool for discovering potential regulatory DNA regi
 
 
 
-  <div class="project-subtitle" id="spatial_explorer_api">Streaming analytics for urban bike-sharing systems using Kafka, dbt, and Streamlit, deployed to AWS with Terraform CI/CD</div>
+  <div class="project-subtitle" id="bike">Streaming analytics for urban bike-sharing systems using Kafka, dbt, and Streamlit, deployed to AWS with Terraform CI/CD</div>
 
   <p class="mytext">
   This project ingests GBFS bike station data every minute using Kestra, writes raw events to MinIO and Kafka, loads curated records into PostgreSQL, transforms them with dbt, and serves a two-tile Streamlit dashboard (dockerized with docker compose). Deployed to AWS with Terraform CI/CD.
@@ -1156,18 +1156,6 @@ Bio Motif Ensembl is a Python tool for discovering potential regulatory DNA regi
     <a href="https://github.com/katwre/Spatial_explorer_api" target="_blank">🔗 GitHub Repository</a>
   </p>
 
-  <div class="project-subtitle" id="minesweeper">Minesweeper</div>
-
-  <p class="mytext">A classic Minesweeper game implemented in Java using SWING and AWT libraries.</p>
-
-  <figure>
-    <img src="{{ 'img/minesweeper.png' | relative_url }}" style="width: 50%; max-width: 200px;">
-  </figure>
-  
-  <p class="mytext text-center">
-    <a href="https://github.com/katwre/Minesweeper" target="_blank">🔗 GitHub Repository</a>
-  </p>
-
 
 <hr>
 
@@ -1175,7 +1163,7 @@ Bio Motif Ensembl is a Python tool for discovering potential regulatory DNA regi
 
 
 
-  <div class="project-subtitle" id="sudoku">Sudoku</div>
+  <div class="project-subtitle" id="games">Sudoku</div>
 
   <p class="mytext">A simple Sudoku game implemented in JavaScript and JQuery.</p>
 

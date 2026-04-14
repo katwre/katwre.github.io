@@ -303,60 +303,72 @@ hr {
 
 <div class="toc-wrapper">
 <ol class="toc-list">
-    <li>
-      <strong><a href="#research">Research</a></strong>
-      <ol>
-        <li><a href="#genomics">Bias interpretation in genomics</a></li>
-        <li><a href="#cfDNA">Liquid biopsy epigenetics in disease</a></li>
-      </ol>
-    </li>
-    <li>
-      <strong><a href="#opensource">Open Source Software</a></strong>
-    </li>
-    <li>
-      <strong><a href="#freelance">Freelance</a></strong>
-      <ol>
-        <li><a href="#target">ML/AI prioritization of therapeutic targets in clinical trials</a></li>
-        <li><a href="#alzheimer">Multi-omics and AI (Enformer) for an Alzheimer's disease biomarker</a></li>
-        <li><a href="#igv">IGV web app feature development</a></li>       
-      </ol>
-    </li>
-    <li>
-      <strong><a href="#sideprojects">Independent machine learning & AI projects</a></strong>
-      <ol>
-
-    <li><a href="#mldlapi">Machine learning & AI APIs in production</a>
-    
+  <li>
+    <strong><a href="#research">Research</a></strong>
     <ol>
-<li><a href="#genetransformer">Gene type prediction with transformer-encoder (AWS EKS)</a></li>
-<li><a href="#solubility">Molecular solubility prediction (AWS Elastic Beanstalk)</a></li>
-<li><a href="#immuneclassifier">Immune cell classifier with transfer learning (AWS Lambda)</a></li>
-<li><a href="#diffusioninpainting">Diffusion-based image inpainting (AWS Batch)</a></li>
-    </ol> 
-     
-    </li>
-        <li><a href="#survival">Survival analysis using gene expression & clinical data (Cox models)</a></li>
-        <li><a href="#dlomics">Deep learning for X-ray images and scRNAseq</a>
+      <li><a href="#genomics">Bias interpretation in genomics</a></li>
+      <li><a href="#cfDNA">Liquid biopsy epigenetics in disease</a></li>
+    </ol>
+  </li>
+  <li>
+    <strong><a href="#opensource">Open Source Software</a></strong>
+  </li>
+  <li>
+    <strong><a href="#freelance">Freelance</a></strong>
+    <ol>
+      <li><a href="#target">ML/AI prioritization of therapeutic targets in clinical trials</a></li>
+      <li><a href="#alzheimer">Multi-omics and AI (Enformer) for an Alzheimer's disease biomarker</a></li>
+      <li><a href="#igv">IGV web app feature development</a></li>
+    </ol>
+  </li>
+  <li>
+    <strong><a href="#sideprojects_ml">Independent machine learning & AI projects</a></strong>
+    <ol>
+      <li>
+        <a href="#mldlapi">Machine learning & AI APIs in production</a>
         <ol>
-        <li><a href="#cnn">Chest X-rays classification with CNNs+transfer learning</a></li>
-        <li><a href="#ae">Autoencoder for scRNA-seq imputation</a></li>
-        <li><a href="#vae_federated">scRNA-seq batch correction with federated VAE</a></li>
-        <li><a href="#deconvolution">Cell type deconvolution with VAE, BERT, semi-supervised NMF and lasso/ridge/elastic net</a></li>
+          <li><a href="#genetransformer">Gene type prediction with transformer-encoder (AWS EKS)</a></li>
+          <li><a href="#solubility">Molecular solubility prediction (AWS Elastic Beanstalk)</a></li>
+          <li><a href="#immuneclassifier">Immune cell classifier with transfer learning (AWS Lambda)</a></li>
+          <li><a href="#diffusioninpainting">Diffusion-based image inpainting (AWS Batch)</a></li>
         </ol>
-        </li>
-        <li><a href="#gnnspatial">GNN for spatial transcriptomics</a></li>
-        <li><a href="#llm">LLM-based assistant for bioinformatics queries</a></li>
-        <li><a href="#algorithms">Computational biology & algorithms</a></li>
+      </li>
+      <li><a href="#survival">Survival analysis using gene expression & clinical data (Cox models)</a></li>
+      <li>
+        <a href="#dlomics">Deep learning for X-ray images and scRNAseq</a>
         <ol>
-        <li><a href="#rmc">Protein folding - Monte Carlo</a></li>
-        <li><a href="#debrujn">Genome assembly - de Bruijn graph, euler walk</a></li>
-        <li><a href="#felnni">Evolutionary tree estimation - Felsenstein & NNI</a></li>
-        <li><a href="#binomial">Regulatory DNA discovery - MSA & binomial enrichment</a></li>
-        </ol> 
-        <li><a href="#games">Games: Sudoku (JavaScript) and Minesweeper (Java)</a></li>
-        <li><a href="#django">Django web services (Django-based Multiple Sequence Alignment visualization, Django-based mobile app, Pyodine-based in-browser Python career-matching tool)</a></li>
-      </ol>
-    </li>
+          <li><a href="#cnn">Chest X-rays classification with CNNs+transfer learning</a></li>
+          <li><a href="#ae">Autoencoder for scRNA-seq imputation</a></li>
+          <li><a href="#vae_federated">scRNA-seq batch correction with federated VAE</a></li>
+          <li><a href="#deconvolution">Cell type deconvolution with VAE, BERT, semi-supervised NMF and lasso/ridge/elastic net</a></li>
+        </ol>
+      </li>
+      <li><a href="#gnnspatial">GNN for spatial transcriptomics</a></li>
+      <li><a href="#llm">LLM-based assistant for bioinformatics queries</a></li>
+      <li>
+        <a href="#algorithms">Computational biology & algorithms</a>
+        <ol>
+          <li><a href="#rmc">Protein folding - Monte Carlo</a></li>
+          <li><a href="#debrujn">Genome assembly - de Bruijn graph, euler walk</a></li>
+          <li><a href="#felnni">Evolutionary tree estimation - Felsenstein & NNI</a></li>
+          <li><a href="#binomial">Regulatory DNA discovery - MSA & binomial enrichment</a></li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <strong><a href="#sideprojects_dataeng">Independent data engineering projects</a></strong>
+    <ol>
+      <li><a href="#bike">Streaming analytics for urban bike-sharing using Kafka, dbt, and Streamlit, deployed to AWS with Terraform CI/CD </a></li>
+    </ol>
+  </li>
+  <li>
+    <strong><a href="#sideprojects_web">Independent web-related projects</a></strong>
+    <ol>
+      <li><a href="#games">Games: Sudoku (JavaScript) and Minesweeper (Java)</a></li>
+      <li><a href="#django">Django web services (Django-based Multiple Sequence Alignment visualization, Django-based mobile app, Pyodine-based in-browser Python career-matching tool)</a></li>
+    </ol>
+  </li>
 </ol>
 </div>
 
@@ -707,7 +719,7 @@ Using <a href="https://www.nature.com/articles/s41592-021-01252-x/" target="_bla
 
 <!-- ML/DL with APIs  -->
 <div class="project-card" id="mldlapi">
-  <div class="project-title">Machine and deep learning end-to-end projects with APIs</div>
+  <div class="project-title" id="sideprojects_ml">Machine and deep learning end-to-end projects with APIs</div>
 
   <div class="project-subtitle" id="genetransformer">Gene type prediction from DNA sequence using a Transformer encoder - ONNX Runtime inference, FastAPI + BentoML serving, Docker compose, deployed on AWS EKS (Kubernetes)</div>
   
@@ -1073,14 +1085,95 @@ Bio Motif Ensembl is a Python tool for discovering potential regulatory DNA regi
 
 
 
+</div>
+
+
+
+
+<!--  -->
+<!-- Independent data engineering projects  -->
+<!--  -->
+
+
+
+<div class="project-card" id="sideprojects_dataeng">
+
+
+<div class="project-title">Independent data engineering projects</div>
+
+
+
+  <div class="project-subtitle" id="spatial_explorer_api">Streaming analytics for urban bike-sharing systems using Kafka, dbt, and Streamlit, deployed to AWS with Terraform CI/CD</div>
+
+  <p class="mytext">
+  This project ingests GBFS bike station data every minute using Kestra, writes raw events to MinIO and Kafka, loads curated records into PostgreSQL, transforms them with dbt, and serves a two-tile Streamlit dashboard (dockerized with docker compose). Deployed to AWS with Terraform CI/CD.
+
+  </p>
+
+
+<figure>
+  <img src="https://raw.githubusercontent.com/katwre/gbfs-bike-monitoring/refs/heads/main/img/dashboard.gif" alt="Logo" style="max-width: 100%; height: auto;">
+  <figcaption align="center"><b>Figure.</b> Dashboard running on AWS EC2 provisioned with Terraform.</figcaption>
+</figure>
+  
+  <p class="mytext text-center">
+    <a href="https://github.com/katwre/gbfs-bike-monitoring" target="_blank">🔗 GitHub Repository</a>
+  </p>
+
+
+</div>
+
+
+<!--  -->
+<!-- Independent web-related projects  -->
+<!--  -->
+
+
+<div class="project-card" id="sideprojects_web">
+
+
+<div class="project-title">Independent web-related projects</div>
+
+
+
+  <div class="project-subtitle" id="spatial_explorer_api">Spatial transcriptomics app</div>
+
+  <p class="mytext">An interactive web-based spatial transcriptomics platform that visualizes gene expression, includes a chatbox, AI-powered gene summaries, and SpaGCN-based analysis via an MCP server.</p>
+
+  <p class="mytext">AI integration:</p>
+  <ul class="mytext">
+    <li>Gene summary: powered by Ollama (Mistral 7B by default).</li>
+    <li>Chatbox: same LLM backend as gene summary.</li>
+    <li>Spatial domains: <a href="https://cafferyang.com/ChatSpatial/" target="_blank">ChatSpatial MCP</a> with SpaGCN when available, plus a Scanpy fallback.</li>
+  </ul>
+
+<figure>
+  <img src="https://raw.githubusercontent.com/katwre/Spatial_explorer_api/main/img/preview2.gif" alt="Logo" style="max-width: 100%; height: auto;">
+  <figcaption align="center"><b>Figure.</b> The app enables exploration of precomputed 10x Genomics Visium datasets directly in tissue context, without running computationally heavy pipelines online. It is designed for fast, intuitive gene- and region-level exploration.</figcaption>
+</figure>
+  
+  <p class="mytext text-center">
+    <a href="https://github.com/katwre/Spatial_explorer_api" target="_blank">🔗 GitHub Repository</a>
+  </p>
+
+  <div class="project-subtitle" id="minesweeper">Minesweeper</div>
+
+  <p class="mytext">A classic Minesweeper game implemented in Java using SWING and AWT libraries.</p>
+
+  <figure>
+    <img src="{{ 'img/minesweeper.png' | relative_url }}" style="width: 50%; max-width: 200px;">
+  </figure>
+  
+  <p class="mytext text-center">
+    <a href="https://github.com/katwre/Minesweeper" target="_blank">🔗 GitHub Repository</a>
+  </p>
+
+
 <hr>
 
-<!--  -->
-<!-- Games  -->
-<!--  -->
 
-<div class="project-card" id="games">
-  <div class="project-title">Games: Sudoku (JavaScript) and Minesweeper (Java)</div>
+
+
 
   <div class="project-subtitle" id="sudoku">Sudoku</div>
 
@@ -1105,13 +1198,15 @@ Bio Motif Ensembl is a Python tool for discovering potential regulatory DNA regi
   <p class="mytext text-center">
     <a href="https://github.com/katwre/Minesweeper" target="_blank">🔗 GitHub Repository</a>
   </p>
-</div>
+
 
 <hr>
 
 <!-- Django Web-Services -->
-<div class="project-card" id="django">
-  <div class="project-title">Django-Based Web Services</div>
+
+  <div class="project-subtitle" id="sudoku">Django-Based Web Services</div>
+
+
   
   <p class="mytext">
     Django-based server for Multiple Sequence Alignment (MSA) visualization - 
@@ -1123,9 +1218,11 @@ Bio Motif Ensembl is a Python tool for discovering potential regulatory DNA regi
     <a href="https://github.com/katwre/phone_application" target="_blank">🔗 GitHub Repository</a>
   </p>
 
+<hr>
 
 <!-- Discover Career Match -->
-  <div class="project-title">Discover Your Career Match (Pyodine)</div>
+
+  <div class="project-subtitle" id="sudoku">Discover Your Career Match (Pyodine)</div>
   
   <p class="mytext">
     Interactive tool that matches careers to users based on their personality profile (Big Five personality traits). Runs directly in the browser via Pyodide.

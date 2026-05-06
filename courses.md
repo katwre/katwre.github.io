@@ -188,8 +188,8 @@ Advanced Deep Learning (UCL x DeepMind) — VAEs, flows, generative models -->
   <div class="course-footer">
     <div class="course-skills"><strong>Skills:</strong> Docker · Postgres · SQL · BigQuery · dbt · Apache Spark · Apache Kafka · Google Cloud Run · pipelines · warehouses · orchestration · batch & streaming
     </div>
-    <a href="https://katwre.github.io/certificates/data_engineering_data_talks_zoomcap_certificate2026.pdf" class="credential-button">Projects</a>
-    <a href="#" class="credential-button">Show credential</a>
+    <a href="https://github.com/katwre/katwre/tree/main?tab=readme-ov-file#data-engineering" class="credential-button">Projects</a>
+    <a href="https://katwre.github.io/certificates/data_engineering_data_talks_zoomcap_certificate2026.pdf" class="credential-button">Show credential (still ongoing)</a>
   </div>
 </div>
 

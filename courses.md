@@ -164,7 +164,7 @@ Advanced Deep Learning (UCL x DeepMind) — VAEs, flows, generative models -->
 
 <div class="course-card">
   <div class="course-header">
-    <div class="course-title">Introduction to GPU Programming for Life Sciences</div>
+    <div class="course-title">Parallelisation with OpenMP</div>
     <div class="course-date">Jan 2026</div>
   </div>
   <div class="course-org">SIB Swiss Institute of Bioinformatics</div>

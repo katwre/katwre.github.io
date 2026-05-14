@@ -169,7 +169,7 @@ Advanced Deep Learning (UCL x DeepMind) — VAEs, flows, generative models -->
   </div>
   <div class="course-org">SIB Swiss Institute of Bioinformatics</div>
   <div class="course-footer">
-    <div class="course-skills"><strong>Skills:</strong> GPU programming · CUDA · OpenMP
+    <div class="course-skills"><strong>Skills:</strong> OpenMP · Python/Numba · Fortran/C++
     </div>
     <a href="https://github.com/katwre/katwre?tab=readme-ov-file#research--prototyping" class="credential-button">Projects</a>
     <a href="#" class="credential-button">Show credential (still ongoing)</a>

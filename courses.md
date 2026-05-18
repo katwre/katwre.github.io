@@ -172,7 +172,7 @@ Advanced Deep Learning (UCL x DeepMind) — VAEs, flows, generative models -->
     <div class="course-skills"><strong>Skills:</strong> OpenMP · Python/Numba · Fortran
     </div>
     <a href="https://github.com/katwre/GPU-computing-projects/tree/main/openmp" class="credential-button">Projects</a>
-    <a href="#" class="credential-button">Show credential (still ongoing)</a>
+    <a href="https://katwre.github.io/certificates/certificate-of-attendance-sib-course-first-steps-in-parallelization-with-openmp-starting-on-11-may-2026-streamed.pdf" class="credential-button">Show credential</a>
   </div>
 </div>
 

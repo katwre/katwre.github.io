@@ -319,6 +319,7 @@ hr {
       <li><a href="#target">ML/AI prioritization of therapeutic targets in clinical trials</a></li>
       <li><a href="#alzheimer">Multi-omics and AI (Enformer) for an Alzheimer's disease biomarker</a></li>
       <li><a href="#igv">IGV web app feature development</a></li>
+      <li><a href="#endometriosis">Endometriosis prediction at single-cell level</a></li>
     </ol>
   </li>
   <li>
@@ -706,6 +707,35 @@ Using <a href="https://www.nature.com/articles/s41592-021-01252-x/" target="_bla
   </figure>
 </div>
 
+
+
+<!-- Endometriosis  -->
+<div class="project-card" id="endometriosis">
+  <div class="project-title">Endometriosis prediction at single-cell level</div>
+
+  <p class="mytext">
+
+I built an scRNA-seq pipeline on menstrual effluent samples to detect endometriosis by 
+<a href="https://www.nature.com/articles/s41588-024-01873-w" target="_blank">endometrium atlas-based</a> cell mapping and composition profiling. The method identifies disease-associated shifts in stromal and immune cell populations and outputs a sample-level endometriosis similarity score for prediction.
+
+  </p>
+  
+  <ul class="mytext">
+    <li>Processed menstrual effluent scRNA-seq data with the <a href="https://nf-co.re/scrnaseq" target="_blank">nf-core/scrnaseq</a> pipeline for standardized QC, alignment, and count matrix generation.</li>
+    <li>Used AWS compute resources to scale preprocessing, reference mapping, and downstream modeling.</li>
+    <li>Mapped donor cells to an endometrium reference atlas using <em>scArches</em> transfer learning built on <em>scvi-tools</em> and <em>PyTorch</em>.</li>
+    <li>Built analyses in Python with <em>anndata</em>, <em>scanpy</em>, <em>scvi-tools</em>, <em>scArches</em>, <em>numpy</em>, <em>pandas</em>, <em>matplotlib</em>, <em>seaborn</em>.</li>
+    <li>Derived a sample-level endometriosis similarity score from cell composition shifts to classify donors as control-like or endometriosis-like.</li>
+  </ul>
+  
+  
+  <figure>
+    <img src="{{ 'img/endometriosis.png' | relative_url }}" style="max-width: 70%; height: auto;">
+    <figcaption>Figure: Menstrual effluent scRNA-seq profiles were mapped to an 
+    <a href="https://www.nature.com/articles/s41588-024-01873-w" target="_blank">endometrium reference atlas</a>
+     to define cell-type composition shifts and generate a sample-level score that distinguishes endometriosis from control donors.</figcaption>
+  </figure>
+</div>
 
 
 

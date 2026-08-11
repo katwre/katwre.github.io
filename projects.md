@@ -593,7 +593,7 @@ I built an scRNA-seq pipeline on menstrual effluent samples to detect endometrio
 
   <p class="mytext">
 
-I developed a deep learning model to identify transient chemical spikes for water‑safety monitoring. Training and testing used a two‑year sensor record from a waste water treatment plant, sampled every two minutes.
+ I developed a deep learning model to identify transient chemical spikes for water‑safety monitoring. Training and testing used a two‑year sensor record from a patented sensor, with measurements every two minutes.
 
   </p>
   

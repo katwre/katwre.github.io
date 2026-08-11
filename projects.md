@@ -316,10 +316,12 @@ hr {
   <li>
     <strong><a href="#freelance">Freelance</a></strong>
     <ol>
-      <li><a href="#target">ML/AI prioritization of therapeutic targets in clinical trials</a></li>
+      <li><a href="#endometriosis">Endometriosis prediction at single-cell level</a></li>
+      <li><a href="#wastewater">AI-based detection and forecasting of chemical spikes in wastewater - VAE+LSTM</a></li>
+      <li><a href="#target">ML/AI prioritization off therapeutic targets in clinical trials</a></li>
       <li><a href="#alzheimer">Multi-omics and AI (Enformer) for an Alzheimer's disease biomarker</a></li>
       <li><a href="#igv">IGV web app feature development</a></li>
-      <li><a href="#endometriosis">Endometriosis prediction at single-cell level</a></li>
+
     </ol>
   </li>
   <li>
@@ -338,10 +340,10 @@ hr {
       <li>
         <a href="#dlomics">Deep learning for X-ray images and scRNAseq</a>
         <ol>
-          <li><a href="#cnn">Chest X-rays classification with CNNs+transfer learning</a></li>
-          <li><a href="#ae">Autoencoder for scRNA-seq imputation</a></li>
-          <li><a href="#vae_federated">scRNA-seq batch correction with federated VAE</a></li>
-          <li><a href="#deconvolution">Cell type deconvolution with VAE, BERT, semi-supervised NMF and lasso/ridge/elastic net</a></li>
+          <li><a href="#cnn">Chest X-rays classification - CNNs+transfer learning</a></li>
+          <li><a href="#ae">scRNA-seq imputation - autoencoder</a></li>
+          <li><a href="#vae_federated">scRNA-seq batch correction - federated VAE</a></li>
+          <li><a href="#deconvolution">Cell type deconvolution - VAE, BERT, semi-supervised NMF and lasso/ridge/elastic net</a></li>
         </ol>
       </li>
       <li><a href="#gnnspatial">GNN for spatial transcriptomics</a></li>
@@ -553,6 +555,69 @@ hr {
 <h2 id="freelance">Freelance</h2>
 
 
+
+
+<!-- Endometriosis  -->
+<div class="project-card" id="endometriosis">
+  <div class="project-title">Endometriosis prediction at single-cell level</div>
+
+  <p class="mytext">
+
+I built an scRNA-seq pipeline on menstrual effluent samples to detect endometriosis by 
+<a href="https://www.nature.com/articles/s41588-024-01873-w" target="_blank">endometrium atlas-based</a> cell mapping and composition profiling. The method identifies disease-associated shifts in stromal and immune cell populations and outputs a sample-level endometriosis similarity score for prediction.
+
+  </p>
+  
+  <ul class="mytext">
+    <li>Processed menstrual effluent scRNA-seq data with the <a href="https://nf-co.re/scrnaseq" target="_blank">nf-core/scrnaseq</a> pipeline for standardized QC, alignment, and count matrix generation.</li>
+    <li>Used AWS compute resources to scale preprocessing, reference mapping, and downstream modeling.</li>
+    <li>Mapped donor cells to an endometrium reference atlas using <em>scArches</em> transfer learning built on <em>scvi-tools</em> and <em>PyTorch</em>.</li>
+    <li>Built analyses in Python with <em>anndata</em>, <em>scanpy</em>, <em>scvi-tools</em>, <em>scArches</em>, <em>numpy</em>, <em>pandas</em>, <em>matplotlib</em>, <em>seaborn</em>.</li>
+    <li>Derived a sample-level endometriosis similarity score from cell composition shifts to classify donors as control-like or endometriosis-like.</li>
+  </ul>
+  
+  
+  <figure>
+    <img src="{{ 'img/endometriosis.png' | relative_url }}" style="max-width: 70%; height: auto;">
+    <figcaption>Figure: Menstrual effluent scRNA-seq profiles were mapped to an 
+    <a href="https://www.nature.com/articles/s41588-024-01873-w" target="_blank">endometrium reference atlas</a>
+     to define cell-type composition shifts and generate a sample-level score that distinguishes endometriosis from control donors.</figcaption>
+  </figure>
+</div>
+
+
+
+<!-- Waste water -->
+<div class="project-card" id="wastewater">
+  <div class="project-title">AI-based detection and forecasting of chemical spikes in waste water - VAE+LSTM</div>
+
+  <p class="mytext">
+
+I developed a deep learning model to identify transient chemical spikes for water‑safety monitoring. Training and testing used a two‑year sensor record from a waste water treatment plant, sampled every two minutes.
+
+  </p>
+  
+  <ul class="mytext">
+    <li>Implemented a sequence VAE with a recurrent encoder and decoder (LSTM), conditioned on time and exogenous features for time-series windows.</li>
+    <li>Imputed missing intervals in sensor time series.</li>
+    <li>Flagged anomalies.</li>
+    <li>Forecast next measurements.</li>
+    <li>Used AWS compute resources for training and analysis.</li>
+  </ul>
+  
+  
+  <figure>
+    <img src="{{ 'img/wastewater.png' | relative_url }}" style="max-width: 100%; height: auto;">
+    <figcaption>Figure: Sequence VAE and LSTM for wastewater monitoring.</figcaption>
+  </figure>
+</div>
+
+
+
+
+
+
+
 <!-- Prioritization of therapeutic targets in clinical trials  -->
 <div class="project-card" id="target">
   <div class="project-title">Prioritization of therapeutic targets in clinical trials</div>
@@ -708,34 +773,6 @@ Using <a href="https://www.nature.com/articles/s41592-021-01252-x/" target="_bla
 </div>
 
 
-
-<!-- Endometriosis  -->
-<div class="project-card" id="endometriosis">
-  <div class="project-title">Endometriosis prediction at single-cell level</div>
-
-  <p class="mytext">
-
-I built an scRNA-seq pipeline on menstrual effluent samples to detect endometriosis by 
-<a href="https://www.nature.com/articles/s41588-024-01873-w" target="_blank">endometrium atlas-based</a> cell mapping and composition profiling. The method identifies disease-associated shifts in stromal and immune cell populations and outputs a sample-level endometriosis similarity score for prediction.
-
-  </p>
-  
-  <ul class="mytext">
-    <li>Processed menstrual effluent scRNA-seq data with the <a href="https://nf-co.re/scrnaseq" target="_blank">nf-core/scrnaseq</a> pipeline for standardized QC, alignment, and count matrix generation.</li>
-    <li>Used AWS compute resources to scale preprocessing, reference mapping, and downstream modeling.</li>
-    <li>Mapped donor cells to an endometrium reference atlas using <em>scArches</em> transfer learning built on <em>scvi-tools</em> and <em>PyTorch</em>.</li>
-    <li>Built analyses in Python with <em>anndata</em>, <em>scanpy</em>, <em>scvi-tools</em>, <em>scArches</em>, <em>numpy</em>, <em>pandas</em>, <em>matplotlib</em>, <em>seaborn</em>.</li>
-    <li>Derived a sample-level endometriosis similarity score from cell composition shifts to classify donors as control-like or endometriosis-like.</li>
-  </ul>
-  
-  
-  <figure>
-    <img src="{{ 'img/endometriosis.png' | relative_url }}" style="max-width: 70%; height: auto;">
-    <figcaption>Figure: Menstrual effluent scRNA-seq profiles were mapped to an 
-    <a href="https://www.nature.com/articles/s41588-024-01873-w" target="_blank">endometrium reference atlas</a>
-     to define cell-type composition shifts and generate a sample-level score that distinguishes endometriosis from control donors.</figcaption>
-  </figure>
-</div>
 
 
 

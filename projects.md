@@ -317,7 +317,9 @@ hr {
     <strong><a href="#freelance">Freelance</a></strong>
     <ol>
       <li><a href="#endometriosis">Endometriosis prediction at single-cell level</a></li>
+      <!--
       <li><a href="#wastewater">AI-based detection and forecasting of chemical spikes in wastewater - VAE+LSTM</a></li>
+      -->
       <li><a href="#target">ML/AI prioritization off therapeutic targets in clinical trials</a></li>
       <li><a href="#alzheimer">Multi-omics and AI (Enformer) for an Alzheimer's disease biomarker</a></li>
       <li><a href="#igv">IGV web app feature development</a></li>
@@ -588,6 +590,7 @@ I built an scRNA-seq pipeline on menstrual effluent samples to detect endometrio
 
 
 <!-- Waste water -->
+<!--
 <div class="project-card" id="wastewater">
   <div class="project-title">AI-based detection and forecasting of chemical spikes in waste water - VAE+LSTM</div>
 
@@ -612,7 +615,7 @@ I built an scRNA-seq pipeline on menstrual effluent samples to detect endometrio
   </figure>
 </div>
 
-
+-->
 
 
 

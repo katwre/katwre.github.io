@@ -1,31 +1,12 @@
 ---
-layout: page
-title: ""
+layout: archive
+title: "Courses"
 permalink: /courses/
+author_profile: true
 
 ---
 
 <style>
-
-/* Base Typography */
-h1, .page-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 36px;
-  font-weight: bold;
-  color: #1a1a1a;
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-h2 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 42px;
-  color: #1a1a1a;
-  text-align: center;
-  margin: 60px auto 30px auto;
-  padding: 20px;
-  position: relative;
-}
 
 .courses-container {
   max-width: 900px;
@@ -142,8 +123,6 @@ h2 {
 
 
 
-## Courses
-
 <div class="courses-container">
 
 <div class="year-section">
@@ -227,6 +206,7 @@ Advanced Deep Learning (UCL x DeepMind) — VAEs, flows, generative models -->
 
 </div>
 
+<div class="year-section">
 <div class="year-header">2025</div>
 
 <div class="course-card">
@@ -394,6 +374,8 @@ Advanced Deep Learning (UCL x DeepMind) — VAEs, flows, generative models -->
 </div>
 
 
+
+</div>
 
 </div>
 

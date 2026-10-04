@@ -335,18 +335,20 @@ hr {
           <li><a href="#genetransformer">Gene type prediction with transformer-encoder (AWS EKS)</a></li>
           <li><a href="#solubility">Molecular solubility prediction (AWS Elastic Beanstalk)</a></li>
           <li><a href="#immuneclassifier">Immune cell classifier with transfer learning (AWS Lambda)</a></li>
-          <li><a href="#diffusioninpainting">Diffusion-based image inpainting (AWS Batch)</a></li>
+          <li><a href="#diffusioninpainting">Diffusion-based image inpainting (AWS EC2)</a></li>
         </ol>
       </li>
       <li><a href="#survival">Survival analysis using gene expression & clinical data (Cox models)</a></li>
       <li>
         <a href="#dlomics">Deep learning for X-ray images and scRNAseq</a>
+        <!--
         <ol>
           <li><a href="#cnn">Chest X-rays classification - CNNs+transfer learning</a></li>
           <li><a href="#ae">scRNA-seq imputation - autoencoder</a></li>
           <li><a href="#vae_federated">scRNA-seq batch correction - federated VAE</a></li>
           <li><a href="#deconvolution">Cell type deconvolution - VAE, BERT, semi-supervised NMF and lasso/ridge/elastic net</a></li>
         </ol>
+        -->
       </li>
       <li><a href="#gnnspatial">GNN for spatial transcriptomics</a></li>
       <li><a href="#llm">LLM-based assistant for bioinformatics queries</a></li>
@@ -368,13 +370,16 @@ hr {
     </ol>
   </li>
   <li>
-    <strong><a href="#sideprojects_web">Independent web-related projects</a></strong>
+    <strong><a href="#sideprojects_web">Independent web-related projects (Django, 10x Visium with ChatSpatial MCP with SpaGCN)</a></strong>
+    <!--
     <ol>
     <li><a href="#spatial_explorer_api">Spatial transcriptomics platform that visualizes gene expression, includes a chatbox, AI-powered gene summaries, and SpaGCN-based analysis via an MCP server</a></li>
       <li><a href="#games">Games: Sudoku (JavaScript) and Minesweeper (Java)</a></li>
       <li><a href="#django">Django web services (Django-based Multiple Sequence Alignment visualization, Django-based mobile app)</a></li>
     </ol>
+    -->
   </li>
+
 </ol>
 </div>
 
@@ -839,7 +844,7 @@ Using <a href="https://www.nature.com/articles/s41592-021-01252-x/" target="_bla
   </p>
 
 
-  <div class="project-subtitle" id="diffusioninpainting">Diffusion-based generative modeling and inpainting of H&E-stained blood cell images, deployed via Streamlit and AWS Batch</div>
+  <div class="project-subtitle" id="diffusioninpainting">Diffusion-based generative modeling and inpainting of H&E-stained blood cell images, deployed via Streamlit and AWS EC2</div>
   
   <p class="mytext">
     The aim of this project was to explore the ability of diffusion models to generate missing regions in images. It restores corrupted areas in H&E cell images using a compact diffusion model and a simple Streamlit UI.

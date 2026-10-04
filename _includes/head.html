@@ -16,13 +16,13 @@
   (function () {
     try {
       var savedTheme = localStorage.getItem("theme");
-      var useDarkTheme = savedTheme !== "light" &&
-        (savedTheme !== "system" || window.matchMedia("(prefers-color-scheme: dark)").matches);
+      var useDarkTheme = savedTheme === "dark" ||
+        (savedTheme === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches);
       if (useDarkTheme) {
         document.documentElement.setAttribute("data-theme", "dark");
       }
     } catch (error) {
-      document.documentElement.setAttribute("data-theme", "dark");
+      // Leave the site in its default light theme if storage is unavailable.
     }
   })();
 </script>

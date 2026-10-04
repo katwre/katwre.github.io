@@ -29,7 +29,7 @@ description: Machine learning, software and bioinformatics enthusiast
 navbar-links:
   Home: ""
   Projects: "projects/"
-  Skills: "skills/"
+#  Skills: "skills/"
   Courses: "courses/"
 #  CV: "cv"
 #  About Me: "aboutme"
@@ -101,6 +101,7 @@ exclude:
   - CNAME
   - LICENSE
   - README.md
+  - skills.md
   - node_modules
   - gulpfile.js
 

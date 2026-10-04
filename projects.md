@@ -340,7 +340,7 @@ hr {
       </li>
       <li><a href="#survival">Survival analysis using gene expression & clinical data (Cox models)</a></li>
       <li>
-        <a href="#dlomics">Deep learning for X-ray images and scRNAseq</a>
+        <a href="#dlomics">Deep learning (VAE, GNNs, CNNs, transfer learning) for X-ray images, scRNAseq, spatial trascriptomics</a>
         <!--
         <ol>
           <li><a href="#cnn">Chest X-rays classification - CNNs+transfer learning</a></li>
@@ -350,8 +350,11 @@ hr {
         </ol>
         -->
       </li>
+      <!--
       <li><a href="#gnnspatial">GNN for spatial transcriptomics</a></li>
       <li><a href="#llm">LLM-based assistant for bioinformatics queries</a></li>
+      -->
+      <!--
       <li>
         <a href="#algorithms">Computational biology & algorithms</a>
         <ol>
@@ -361,6 +364,7 @@ hr {
           <li><a href="#binomial">Regulatory DNA discovery - MSA & binomial enrichment</a></li>
         </ol>
       </li>
+      -->
     </ol>
   </li>
   <li>
@@ -370,7 +374,10 @@ hr {
     </ol>
   </li>
   <li>
-    <strong><a href="#sideprojects_web">Independent web-related projects (Django, 10x Visium with ChatSpatial MCP with SpaGCN)</a></strong>
+    <strong><a href="#sideprojects_web">Independent web-related projects</a></strong>
+    <ol>
+    <li><a href="#spatial_explorer_api">Spatial transcriptomics platform that visualizes gene expression, includes a chatbox, AI-powered gene summaries, and SpaGCN-based analysis via an MCP server</a></li>
+    </ol>
     <!--
     <ol>
     <li><a href="#spatial_explorer_api">Spatial transcriptomics platform that visualizes gene expression, includes a chatbox, AI-powered gene summaries, and SpaGCN-based analysis via an MCP server</a></li>

@@ -150,12 +150,12 @@
           
             
             <li class="masthead__menu-item ">
-              <a href="http://localhost:4000/courses/">Courses</a>
+              <a href="http://localhost:4000/cv/">CV</a>
             </li>
           
             
             <li class="masthead__menu-item ">
-              <a href="http://localhost:4000/cv/">CV</a>
+              <a href="http://localhost:4000/courses/">Courses & Training</a>
             </li>
           
           <li id="theme-toggle" class="masthead__menu-item persist tail">
@@ -377,6 +377,40 @@
 		max-width: 85%;
 	}
 
+	.portfolio-page #alzheimer figure.compact-figure img {
+		width: 65%;
+		max-width: 65%;
+	}
+
+	@media (max-width: 600px) {
+		.portfolio-page #alzheimer figure.compact-figure img {
+			width: 80%;
+			max-width: 80%;
+		}
+	}
+
+	.portfolio-page #ibd figure img {
+		width: 45%;
+		max-width: 45%;
+	}
+
+	.portfolio-page #igv figure img {
+		width: 70%;
+		max-width: 70%;
+	}
+
+	@media (max-width: 600px) {
+		.portfolio-page #ibd figure img {
+			width: 80%;
+			max-width: 80%;
+		}
+
+		.portfolio-page #igv figure img {
+			width: 100%;
+			max-width: 100%;
+		}
+	}
+
 	.portfolio-page figcaption {
 		margin-top: 0.5em;
 		color: var(--global-text-color);
@@ -407,7 +441,7 @@
 		<ul>
 			<li><a href="#research">Research</a></li>
 			<li><a href="#opensource">Open-source software</a></li>
-			<li><a href="#freelance">Freelance projects</a></li>
+			<li><a href="#freelance">Freelance &amp; industry projects</a></li>
 			<li><a href="#ml-ai">Machine-learning and AI projects</a></li>
 			<li><a href="#algorithms">Computational biology and algorithms</a></li>
 			<li><a href="#data-engineering">Data engineering</a></li>
@@ -506,9 +540,9 @@
 		<p>I integrated multi-omics data—including RNA-seq, ATAC-seq, and H3K4me2/H3K27me3 ChIP-seq—to identify differentially expressed genes and pathways (GO, GSEA), and examine their association with Alzheimer’s disease risk variants (GWAS), regulatory enhancers, DNA motifs, and TF binding sites linked to neuronal differentiation.</p>
 		<p>Large-scale analyses were executed via <a href="https://www.nextflow.io/" target="_blank" rel="noopener">Nextflow</a> pipelines on Kubernetes and AWS, ensuring scalable and reproducible processing of NGS datasets.</p>
 		<p>Using <a href="https://www.nature.com/articles/s41592-021-01252-x/" target="_blank" rel="noopener">Enformer</a>, I mapped the regulatory landscape around the target transcription factor and identified sequence regions predicted to influence its expression in neurons and glia. Enformer predicts regulatory activity from DNA sequence; gradient-based attribution highlights regions with strong effects on gene expression. I analyzed an approximately 400 kb region, applying cell-type-specific masks and signal smoothing to identify candidate enhancers.</p>
-		<figure><img src="/assets/images/portfolio/alzheimers_DL/rnaseq.png" alt="Example RNA-seq analysis"><figcaption>Example RNA-seq analysis.</figcaption></figure>
-		<figure><img src="/assets/images/portfolio/alzheimers_DL/motifactivity.png" alt="Motif activity in candidate enhancers"><figcaption>Example DNA motif activity in enhancer regions defined by ATAC-seq and histone-mark ChIP-seq.</figcaption></figure>
-		<figure><img src="/assets/images/portfolio/alzheimers_DL/chipseqpeaks.png" alt="ChIP-seq peaks around the target transcription-factor gene"><figcaption>Example ChIP-seq peaks around the target transcription-factor gene.</figcaption></figure>
+		<figure class="compact-figure"><img src="/assets/images/portfolio/alzheimers_DL/rnaseq.png" alt="Example RNA-seq analysis"><figcaption>Example RNA-seq analysis.</figcaption></figure>
+		<figure class="compact-figure"><img src="/assets/images/portfolio/alzheimers_DL/motifactivity.png" alt="Motif activity in candidate enhancers"><figcaption>Example DNA motif activity in enhancer regions defined by ATAC-seq and histone-mark ChIP-seq.</figcaption></figure>
+		<figure class="compact-figure"><img src="/assets/images/portfolio/alzheimers_DL/chipseqpeaks.png" alt="ChIP-seq peaks around the target transcription-factor gene"><figcaption>Example ChIP-seq peaks around the target transcription-factor gene.</figcaption></figure>
 		<figure><img src="/assets/images/portfolio/alzheimers_DL/enformer.png" alt="Enformer model architecture" style="max-width: 520px;"><figcaption>Enformer’s architecture by <a href="https://www.nature.com/articles/s41592-021-01252-x/" target="_blank" rel="noopener">Avsec et al.</a>, copied from <a href="https://deepmind.google/discover/blog/predicting-gene-expression-with-ai/" target="_blank" rel="noopener">the blog post</a>.</figcaption></figure>
 		<figure><img src="/assets/images/portfolio/alzheimers_DL/enformer_output.png" alt="Enformer output tracks for neurons and glia"><figcaption>Example Enformer tracks for neurons and glia.</figcaption></figure>
 		<figure><img src="/assets/images/portfolio/alzheimers_DL/enformer_output_enhancers.png" alt="Candidate enhancer regions identified with Enformer"><figcaption>Candidate enhancer peaks and regions of interest.</figcaption></figure>
@@ -526,6 +560,25 @@
 		</ul>
 		<figure><img src="/assets/images/portfolio/igv_original.png" alt="IGV web application showing genomic data tracks"><figcaption>Example IGV web-app view with genomic data tracks.</figcaption></figure>
 	</section>
+
+
+	<section class="project" id="ibd">
+		<h3>Proteomic signatures for Crohn’s disease</h3>
+		<p>In this project, I worked with biobank data from <a href="https://www.crohnscolitisfoundation.org/research/plexus" target="_blank" rel="noopener">Crohn's & Colitis Foundation IBD Plexus</a>, a resource of the <a href="https://www.crohnscolitisfoundation.org/" target="_blank" rel="noopener">Crohn’s &amp; Colitis Foundation</a>, to explore machine-learning approaches for identifying proteomic signatures to support blood-based testing for Crohn’s disease. I also developed AWS infrastructure to support the associated data workflows.</p>
+		<figure class="caption-below">
+			<img src="https://docs.aws.amazon.com/vpc/latest/userguide/images/vpc-example-private-subnets.png" alt="AWS VPC example with public and private subnets, NAT gateways, and application servers">
+			<figcaption>Reference diagram of a VPC with public and private subnets and NAT gateways. Source: <a href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-example-private-subnets-nat.html" target="_blank" rel="noopener">Amazon VPC documentation</a>.</figcaption>
+		</figure>
+		<figure class="caption-below">
+			<img src="https://www.researchgate.net/publication/337115869/figure/fig1/AS:872316355477506@1584987834410/ROC-curves-of-the-EHI-and-FC-for-distinguishing-active-disease-vs-endoscopic-remission-in.png" alt="ROC curves for the Endoscopic Healing Index and fecal calprotectin distinguishing active Crohn’s disease from endoscopic remission">
+			<figcaption>ROC curves for the Endoscopic Healing Index (EHI) and fecal calprotectin (FC) for distinguishing active disease from endoscopic remission. Figure from <a href="https://pubmed.ncbi.nlm.nih.gov/31711925/" target="_blank" rel="noopener">D’Haens et al., “Development and Validation of a Test to Monitor Endoscopic Activity in Patients With Crohn’s Disease Based on Serum Levels of Proteins,” Gastroenterology (2020)</a>.</figcaption>
+		</figure>
+	</section>
+
+
+
+  	<h1 id="ml-ai">Independent Projects</h2>
+
 
 	<h2 id="ml-ai">Independent machine-learning and AI projects</h2>
 

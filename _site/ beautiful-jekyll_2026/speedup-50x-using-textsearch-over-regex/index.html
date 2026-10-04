@@ -1,0 +1,43 @@
+<p><a href="https://github.com/kootenpv/contractions">Contractions</a> is a library that normalized language like <code class="language-plaintext highlighter-rouge">"he's"</code> to <code class="language-plaintext highlighter-rouge">"he is"</code>, and <code class="language-plaintext highlighter-rouge">"I'm"</code> to <code class="language-plaintext highlighter-rouge">"I am"</code>.</p>
+
+<p>It was basically a bunch of regex. The slowdown becomes unbearable once you use multiple regexes; since it will be making multiple passes over the same text.</p>
+
+<p>It’s great to use libraries which solve exactly the problem you are facing.</p>
+
+<p>In the case of <code class="language-plaintext highlighter-rouge">contractions</code>, I was able to simplify the code of my library from 120 lines to 90 by relying on <a href="/2019-06-16-textsearch-an-NLP-library-for-fast-configurable-search">TextSearch</a>.
+Even more, it became possible to write an additional method that wasn’t possible before with no effort.</p>
+
+<p>Most impressively, it allowed a speed up of 50x.</p>
+
+<h3 id="benchmarks">Benchmarks</h3>
+
+<p>This is loading some example data (easily available when you use scikit-learn):</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">fetch_20newsgroups</span>
+
+<span class="n">categories</span> <span class="o">=</span> <span class="p">[</span><span class="s">"alt.atheism"</span><span class="p">,</span> <span class="s">"talk.religion.misc"</span><span class="p">,</span> <span class="s">"comp.graphics"</span><span class="p">,</span> <span class="s">"sci.space"</span><span class="p">]</span>
+
+<span class="n">newsgroups</span> <span class="o">=</span> <span class="n">fetch_20newsgroups</span><span class="p">(</span>
+    <span class="n">subset</span><span class="o">=</span><span class="s">"train"</span><span class="p">,</span> <span class="n">remove</span><span class="o">=</span><span class="p">(</span><span class="s">"headers"</span><span class="p">,</span> <span class="s">"footers"</span><span class="p">,</span> <span class="s">"quotes"</span><span class="p">),</span> <span class="n">categories</span><span class="o">=</span><span class="n">categories</span>
+<span class="p">)</span>
+</code></pre></div></div>
+
+<p>Using <code class="language-plaintext highlighter-rouge">contractions==0.0.18</code>, the timing is:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">contractions</span> <span class="kn">import</span> <span class="n">fix</span>
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">newsgroups</span><span class="p">.</span><span class="n">data</span><span class="p">:</span>
+    <span class="n">fix</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+<span class="c1"># Wall time: 5.04s
+</span></code></pre></div></div>
+
+<p>exactly the same code, but using <code class="language-plaintext highlighter-rouge">contractions&gt;0.0.18</code> doing it 50 times in the same time:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">contractions</span> <span class="kn">import</span> <span class="n">fix</span>
+
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">50</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">newsgroups</span><span class="p">.</span><span class="n">data</span><span class="p">:</span>
+        <span class="n">fix</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+<span class="c1"># Wall time: 5.01s
+</span></code></pre></div></div>
+
+<p>I promise… no caching ¯\<em>(ツ)</em>/¯</p>

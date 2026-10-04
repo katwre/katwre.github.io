@@ -1,0 +1,135 @@
+<p>I will give two simple examples that would answer 90% of the questions asked on stackoverflow w.r.t. “python send email” <a href="#note1">**</a>.
+Most of the time people are struggling with just simply sending ANY email (using smtplib). And then there are 3 other cases which come up often: sending (rich) <em>HTML</em>, sending <em>attachments</em>, and using some kind of <em>templating</em>.</p>
+
+<p>I will show how easy it can be to send very nice emails using <a href="https://github.com/kootenpv/yagmail">yagmail</a>, without requiring knowledge of SMTP, MIME, manually adding headers and other email specifics. If you don’t know what they all mean: I hope to keep it that way.</p>
+
+<h2 id="setup">Setup</h2>
+
+<p>First yagmail should  be installed; use <code class="language-plaintext highlighter-rouge">pip install yagmail[all]</code> to get your copy. It has been confirmed to work for Python versions 2.7+.</p>
+
+<p>Next, it is possible to save username/password in the keyring locally (and safely), avoiding the need to write username/password in a script.
+See further instructions <a href="https://github.com/kootenpv/yagmail#username-and-password">here</a>.
+If you do not want to set it up for now, you can initiate yagmail like <code class="language-plaintext highlighter-rouge">yagmail.SMTP("username", "password")</code> in all occurences below instead of <code class="language-plaintext highlighter-rouge">yagmail.SMTP()</code>.</p>
+
+<p>Now onto some code examples.</p>
+
+<h2 id="simple-email">Simple email</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">yagmail</span>
+
+<span class="c1"># create server object; can be reused
+</span><span class="n">yag</span> <span class="o">=</span> <span class="n">yagmail</span><span class="p">.</span><span class="n">SMTP</span><span class="p">()</span>
+
+<span class="c1"># use yag.send to actually send messages
+</span><span class="n">yag</span><span class="p">.</span><span class="n">send</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>Note that all parameters have sensible default values.
+<code class="language-plaintext highlighter-rouge">yag.send()</code> is equal to using <code class="language-plaintext highlighter-rouge">yag.send(to='same as "FROM" address', subject="", contents="")</code>. Note the explicit lack of a “from” address: this is set while creating the SMTP object.</p>
+
+<p>Off topic: it is a fun fact that you could technically fake sending-as-someone-else (called “spoofing”) using your own email login info, while it seems the email comes from someone else. Many email providers do not allow this though in these days, so the message may never reach the target or have an exclamation point next to the address. You would possible be marked a spammer as well.</p>
+
+<p>Back on topic: this is why in yagmail you do not provide the from address while sending (though technically you can still do it, but that’s out of scope).</p>
+
+<h2 id="html-and-attachments">HTML and attachments</h2>
+
+<p>Have a look at the code below:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">yagmail</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="n">yag</span> <span class="o">=</span> <span class="n">yagmail</span><span class="p">.</span><span class="n">SMTP</span><span class="p">()</span>
+
+<span class="n">csv_file_names</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">os</span><span class="p">.</span><span class="n">listdir</span><span class="p">(</span><span class="s">"."</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span><span class="p">.</span><span class="n">endswith</span><span class="p">(</span><span class="s">".csv"</span><span class="p">)]</span>
+<span class="n">contents</span> <span class="o">=</span> <span class="s">"&lt;h1&gt;An HTML Title&lt;/h1&gt; Please find files attached"</span>
+<span class="n">yag</span><span class="p">.</span><span class="n">send</span><span class="p">(</span><span class="s">"my@friend.com"</span><span class="p">,</span> <span class="s">"The subject"</span><span class="p">,</span> <span class="n">contents</span><span class="p">,</span> <span class="n">attachments</span><span class="o">=</span><span class="n">csv_file_names</span><span class="p">)</span></code></pre></figure>
+
+<p>That code will send:</p>
+
+<ul>
+  <li>an HTML email (with a big title) and some text</li>
+  <li>attached all the files in the current working directory ending with <code class="language-plaintext highlighter-rouge">.csv</code></li>
+</ul>
+
+<p>Furthermore, it can be seen that it is very easy to combine several types of contents, and we do not have to manually play around with any headers. Headers of any kind have been abstracted away!</p>
+
+<p>All of this would be very difficult to accomplish as someone new to sending emails. It is actually quite sad to see many 50-100 lines scripts online for sending emails, written by people not familiar with a layer on top of the standard <code class="language-plaintext highlighter-rouge">smtplib</code>.</p>
+
+<p>Don’t forget: we’re writing Python, not Java.</p>
+
+<h2 id="marketing-templating-example">(Marketing) Templating example</h2>
+
+<p>Sending to multiple users <em>tailored</em> emails is where it gets interesting though!</p>
+
+<p>Goal: add two inline images uploaded from the current directory, and plug in variables.</p>
+
+<p>The contents of a file <code class="language-plaintext highlighter-rouge">email_template.txt</code> looks like:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Dear {name},
+
+I noticed your profile at {social_network}, and it's amazing etc. (standard recruitment).
+
+Take care,
+Me
+</code></pre></div></div>
+
+<p>An accompanying python script could look like:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">yagmail</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">"email_template.txt"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">email_template</span> <span class="o">=</span> <span class="n">f</span><span class="p">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="n">template_data</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="s">"test1@gmail.com"</span><span class="p">,</span> <span class="s">"G. Hub"</span><span class="p">,</span> <span class="s">"GitHub"</span><span class="p">),</span>
+    <span class="p">(</span><span class="s">"test2@gmail.com"</span><span class="p">,</span> <span class="s">"L. Inkedin"</span><span class="p">,</span> <span class="s">"LinkedIn"</span><span class="p">),</span>
+    <span class="p">(</span><span class="s">"test3@gmail.com"</span><span class="p">,</span> <span class="s">"R. Editor"</span><span class="p">,</span> <span class="s">"Reddit"</span><span class="p">)</span>
+<span class="p">]</span>
+
+<span class="n">yag</span> <span class="o">=</span> <span class="n">yagmail</span><span class="p">.</span><span class="n">SMTP</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">to_email</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">social_network</span> <span class="ow">in</span> <span class="n">template_data</span><span class="p">:</span>
+    <span class="n">txt</span> <span class="o">=</span> <span class="n">email_template</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">social_network</span><span class="o">=</span><span class="n">social_network</span><span class="p">)</span>
+    <span class="c1"># contents, attachments, to, cc, bcc -- all can be a list (plural) or a string (singular)
+</span>    <span class="n">contents</span> <span class="o">=</span> <span class="p">[</span><span class="n">txt</span><span class="p">,</span> <span class="s">'brand1.png'</span><span class="p">,</span> <span class="s">'logo2.png'</span><span class="p">]</span>
+    <span class="n">yag</span><span class="p">.</span><span class="n">send</span><span class="p">(</span><span class="n">to_email</span><span class="p">,</span> <span class="s">"Hi!"</span><span class="p">,</span> <span class="n">contents</span><span class="p">)</span></code></pre></figure>
+
+<p>In case your imagination fails you, the result would look something like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Dear G. Hub,
+
+I noticed your profile at GitHub, and it's amazing etc. (standard recruitment).
+
+Take care,
+Me
+</code></pre></div></div>
+
+<p>I’ll leave it “as an excercise to the reader” to combine everything into one email: it should not cost many more lines, and by now it should not be difficult.</p>
+
+<p>For all functionality, have a look at the <a href="https://github.com/kootenpv/yagmail">github page</a>. Most questions should be answered there, and you’ll find some other tricks.</p>
+
+<h3 id="feedback--easter-egg">Feedback / easter egg</h3>
+
+<p>Please, feel free to leave a comment or send me feedback through email directly using:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">with</span> <span class="n">yagmail</span><span class="p">.</span><span class="n">SMTP</span><span class="p">()</span> <span class="k">as</span> <span class="n">yag</span><span class="p">:</span>
+    <span class="n">yag</span><span class="p">.</span><span class="n">feedback</span><span class="p">(</span><span class="s">"Awesome features! You made my day! How can I contribute?"</span><span class="p">)</span></code></pre></figure>
+
+<p>Bonus: note the context manager <code class="language-plaintext highlighter-rouge">with</code>; it will close the SMTP object after use.</p>
+
+<h3 id="contributions">Contributions</h3>
+
+<p>See <a href="https://github.com/kootenpv/yagmail/pulls?q=is%3Apr+is%3Aclosed">here</a> for the wonderful contributions made by others!</p>
+
+<p>Open issue: <a href="https://github.com/kootenpv/yagmail/issues/36">Looking for contributor who could add OAuth2 to yagmail </a></p>
+
+<p>Related, there are <em>2</em> packages using yagmail currently:</p>
+
+<ul>
+  <li><a href="https://github.com/anoved/OctoPrint-EmailNotifier">anoved/OctoPrint-EmailNotifier</a></li>
+  <li><a href="https://github.com/jrkerns/pylinac">jrkerns/pylinac</a></li>
+</ul>
+
+<p>And here you can see what <a href="https://github.com/search?q=yagmail&amp;ref=searchresults&amp;type=Code&amp;utf8=%E2%9C%93">other people on GitHub</a> did with it so far.</p>
+
+<hr />
+<p><a name="note1"></a> ** Note that you can actually track tags on StackOverflow using <a href="https://ifttt.com/">IfThisThenThat</a>.</p>

@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title></title>
+
+  <meta name="author" content="Katarzyna Wreczycka" />
+
+  
+
+  <link rel="alternate" type="application/rss+xml" title=" - Machine learning, software and bioinformatics enthusiast" href="/feed.xml" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css">
+  
+ <!-- everything has to be repeated twice because on 2016-02-01 GitHub pages migrated to jekyll 3; see bug https://github.com/jekyll/jekyll/issues/4439 -->
+
+  
+  
+    
+      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+    
+  
+
+  
+  
+    
+      <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    
+      <link rel="stylesheet" href="/css/main.css" />
+    
+  
+
+  
+  
+    
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+    
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+    
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  <!-- Facebook OpenGraph tags -->
+  <meta property="og:title" content="" />
+  <meta property="og:type" content="website" />
+
+  
+  <meta property="og:url" content="http://localhost:4001/" />
+  
+
+  
+  <meta property="og:image" content="" />
+  
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" /> 
+
+
+</head>
+
+
+  <body>
+  
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://localhost:4001"></a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+	    
+        <li>
+		  <a href="/">Home</a>
+		</li>
+		
+        <li>
+		  <a href="/projects/">Projects</a>
+		</li>
+		
+        <li>
+		  <a href="/courses/">Courses</a>
+		</li>
+		
+      </ul>
+    </div>
+	
+	
+	
+  </div>
+</nav>  
+
+    <div role="main" class="container main-content">
+      
+
+<div class="row">
+  <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+    <!-- To test it run it in your console: 
+  jekyll serve --livereload  -->
+
+
+<style>
+
+h1, .page-title {
+  font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    margin-bottom: 10px;
+}
+h2 {
+  font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    color: black;
+    line-height: 1.6;
+    text-align: justify;           /* Justify the text itself */
+    max-width: 600px;              /* Restrict paragraph width */
+    margin: 0 auto 40px auto;      /* Center the block itself */
+    padding: 0 20px;               /* Optional: adds side padding for extra visual balance */
+}
+
+.degrees {
+  font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    color: black;
+    margin-bottom: 30px;
+}
+
+.intro-bio {
+  font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: black;
+    line-height: 1.6;
+    text-align: justify;           /* Justify the text itself */
+    max-width: 600px;              /* Restrict paragraph width */
+    margin: 0 auto 40px auto;      /* Center the block itself */
+    padding: 0 20px;               /* Optional: adds side padding for extra visual balance */
+}
+
+
+.social-icons {
+    text-align: center;
+    margin: 15px 0 25px 0;
+}
+
+.social-icons a {
+    display: inline-block;
+    font-size: 28px; /* adjust icon size */
+    color: #990033;    /* or gray if preferred */
+    margin: 0 10px;  /* space between icons */
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #555555;
+}
+
+.mytext {
+  font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: black;
+    line-height: 1.6;
+    text-align: justify;           /* Justify the text itself */
+    max-width: 600px;              /* Restrict paragraph width */
+    margin: 0 auto 40px auto;      /* Center the block itself */
+    padding: 0 20px;               /* Optional: adds side padding for extra visual balance */
+
+}
+
+ol {
+  font-family: 'Georgia', serif;
+    font-size: 16px;
+    
+}
+.main-content ol {
+  font-family: 'Georgia', serif;
+  font-size: 16px;
+  margin-left: 20px;
+}
+
+ol li a {
+    color: #80002a; /* your accent color */
+    text-decoration: none;
+}
+
+ol li a:hover {
+    text-decoration: underline;
+}
+
+ul li a {
+    color: #80002a;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+/* Main ToC block */
+.toc-wrapper {
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+    padding: 0 20px;
+    text-align: left;
+}
+
+.toc-list {
+    list-style: none;
+    counter-reset: item;
+    font-family: 'Georgia', serif;
+    font-size: 16px;
+    padding-left: 0;
+}
+
+/* List items and numbering */
+.toc-list li {
+    display: block;
+    margin: 5px 0;
+    counter-increment: item;
+}
+
+.toc-list li:before {
+    content: counters(item, ".") " ";
+    margin-right: 5px;
+    font-weight: normal;
+}
+
+/* Nested list handling */
+.toc-list ol {
+    counter-reset: item;
+    list-style: none;
+    padding-left: 20px;
+    margin: 5px 0;
+}
+
+/* Links inside the ToC */
+.toc-list a {
+    text-decoration: underline;
+    color: #80002a;
+}
+
+.toc-list a:hover {
+    color: black;
+}
+
+.software-block {
+  display: flex;
+  align-items: center;
+  max-width: 600px;
+    margin: 0 auto 40px auto;
+    padding: 0 20px;
+    text-align: left;
+}
+
+.software-logo {
+  width: 110px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.software-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  color: black;
+  line-height: 1.5;
+}
+
+.software-text a {
+  color: #80002a;
+  text-decoration: none;
+}
+
+.software-text a:hover {
+  text-decoration: underline;
+}
+
+.emphasize {
+  font-weight: 500; /* medium weight for softer emphasis */
+  font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #80002a;
+    line-height: 1.6;
+    text-align: justify;           /* Justify the text itself */
+    max-width: 600px;              /* Restrict paragraph width */
+    margin: 0 auto 40px auto;      /* Center the block itself */
+    padding: 0 20px;               /* Optional: adds side padding for extra visual balance */
+}
+
+.appointment-section {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.appointment-link {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  color: #80002a;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.appointment-link:hover {
+  color: #555555;
+  text-decoration: underline;
+}
+
+.appointment-link i {
+  margin-right: 6px;
+  font-size: 18px;
+}
+
+.visitor-globe {
+  max-width: 600px;
+  margin: 20px auto 40px auto;
+  text-align: center;
+}
+
+.visitor-globe > * {
+  transform: scale(0.7);
+  transform-origin: top center;
+  display: inline-block;
+}
+
+</style>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<div class="intro-block">
+  <h1>Katarzyna Wreczycka</h1>
+  <p class="degrees">
+    B.Sc. & M.Sc. in Computer Science & Bioinformatics <a href="https://mimuw.edu.pl/en/">@MIMUW</a><br>
+    Ph.D. in Computational Biology <a href="https://www.mdc-berlin.de/bioinformatics">@MDC-BIMSB</a>
+  </p>
+
+  <div class="social-icons">
+    <a href="https://github.com/katwre" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://linkedin.com/in/katwre" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="mailto:katwre@gmail.com"><i class="fas fa-envelope"></i></a>
+    <a href="https://scholar.google.com/citations?user=wQUP28oAAAAJ&hl=en" target="_blank">
+      <i class="ai ai-google-scholar"></i>
+    </a>
+  </div>
+
+  <!-- 
+  Data scientist with 9+ years of experience in machine learning, software development, data engineering, and computational molecular biology.
+-->
+
+
+  <p class="intro-bio">
+
+    Data scientist with 9+ years of experience in machine learning, software development, and biomedical research.
+    
+    Here, I share insights from my research and industry projects in data analysis, tool development and disease (epi)genomics. This is my personal website.
+
+  </p>
+</div>
+
+
+<!--   -->
+<!-- Projects -->
+<!--   -->
+
+<p class="intro-bio">
+  Explore my <a href="/projects">project portfolio</a> and selected <a href="https://github.com/katwre">code samples</a>.
+<!--  Feel free to check out my <a href="/CV/KWreczycka_CV_bioinf_short.pdf">CV</a>. -->
+</p>
+
+
+
+<!--   -->
+<!-- Experience-->
+<!--   -->
+
+<h2  style="font-family: 'Cormorant Garamond', serif;">
+  Experience
+</h2>
+
+
+<div class="mytext" style="margin-top: 30px;">
+
+  <p><strong>Consultancy for Pharmaceutical Companies, Start-ups, and Consulting Firms</strong><br>
+  Freelance in Bioinformatics and Data Science<br>
+  <em>February 2023 – Now</em></p>
+
+  <p><strong>ETH Zürich & Functional Genomics Center Zürich</strong><br>
+  Bioinformatician | Scientific Assistant II<br>
+  <em>April 2025 – July 2025</em></p>
+
+  <p><strong>Bioinformatics and Omics Data Science Platform at MDC-BIMSB</strong><br>
+  PhD Student (<a href="https://katwre.github.io/dissertations/KWreczycka_PhDthesis.pdf">PhD thesis, PDF</a>)<br>
+  <em>September 2015 – November 2021</em></p>
+
+  <p><strong>Institute of Computer Science, Polish Academy of Sciences & MDC BIMSB</strong><br>
+  Visiting Predoctoral Researcher<br>
+  <em>March 2015 - August 2015</em></p>
+
+</div>
+
+<!--   -->
+<!-- Skills -->
+<!--   -->
+
+
+
+
+
+<!--   -->
+<!-- Publications -->
+<!--   -->
+
+<h2  style="font-family: 'Cormorant Garamond', serif;">
+  Selected publications
+</h2>
+
+<p class="mytext"><a href="https://scholar.google.com/citations?user=wQUP28oAAAAJ&hl=en" target="_blank">
+  <i class="ai ai-google-scholar">Peer-reviewed articles</i></a> (380+ citations):</p>
+
+<ul class="mytext" style="list-style-type: disc; margin-left: 110px;">
+
+  <li>
+    Strategies for analyzing bisulfite sequencing data. 
+    <a href="https://www.sciencedirect.com/science/article/pii/S0168165617315936?via%3Dihub" target="_blank">
+      Journal of Biotechnology, 261, 105-115, 2017
+    </a>
+  </li>
+
+  <li>
+    PiGx: reproducible genomics analysis pipelines with GNU Guix.
+    <a href="https://doi.org/10.1093/gigascience/giy123" target="_blank">
+      GigaScience, 7(12), giy123, 2018
+    </a>
+  </li>
+
+  <li>
+    HOT or not: Examining the basis of high-occupancy target regions.
+    <a href="https://doi.org/10.1093/nar/gkz460" target="_blank">
+      Nucleic Acids Research, 47(11), 5735–5745, 2019
+    </a>
+  </li>
+
+  <li>
+    Cardiovascular disease biomarkers derived from circulating cell-free DNA methylation.
+    <a href="https://doi.org/10.1093/nargab/lqad061" target="_blank">
+      NAR Genomics and Bioinformatics, 5(2), lqad061, 2023
+    </a>
+  </li>
+
+</ul>
+
+
+
+
+<!--   -->
+<!-- Freelance -->
+<!--   -->
+
+
+<h2 id="freelance">Freelance</h2>
+<p class="mytext">I have been freelancing as a bioinformatician and data scientist since 2023. Some of my high profile clients include:</p>
+
+<p class="mytext" style="text-align: center;">
+<br>
+<img src="img/clients.png" style="text-align: center; width: 80%; height: 80%;">
+<br>
+</p>
+
+
+<p class="mytext">For collaboration inquiries, reach out via email at katwre [at] gmail.com.
+</p>
+
+<!--   
+<p class="mytext">For collaboration inquiries, reach out via email at katwre [at] gmail.com or 
+  schedule <a href="https://calendly.com/katwre/30min">a video call <i class="fas fa-calendar-alt"></i></a>.
+</p>
+
+-->
+
+
+
+
+
+
+
+
+	
+  </div>
+</div>
+
+    </div>
+
+    <footer>
+  <div class="container beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+		  
+		  
+		  
+		  
+		  		  
+        </ul>
+        <p class="copyright text-muted">
+		  Katarzyna Wreczycka
+		  &nbsp;&bull;&nbsp;
+		  2026
+		  
+		  
+	    </p>
+		<p class="theme-by text-muted">
+		  Theme by
+		  <a href="https://github.com/daattali/beautiful-jekyll">beautiful-jekyll</a>
+		</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  
+    <!-- everything has to be repeated twice because on 2016-02-01 GitHub pages migrated to jekyll 3; see bug https://github.com/jekyll/jekyll/issues/4439 -->
+
+
+
+
+
+
+
+
+
+
+
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+      <script>
+        if (typeof jQuery == 'undefined') {
+          document.write('<script src="/js/jquery-1.11.2.min.js"></scr' + 'ipt>');
+        }
+      </script>
+    
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+    <script src="/js/bootstrap.min.js"></script>
+    
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+    <script src="/js/main.js"></script>
+    
+  
+
+
+
+
+
+  
+  </body>
+</html>

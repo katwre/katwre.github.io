@@ -1,0 +1,186 @@
+<p><strong>STATUS: PRE-ALPHA</strong> – did not check for bugs yet</p>
+
+<p><img src="http://localhost:4000/assets/emacs.png" width="10%" />
+<img src="http://localhost:4000/assets/python.png" width="10%" /></p>
+
+<p><a href="https://github.com/kootenpv/emp">emp</a>’s goal is to be a full environment for everything Python. It builds on top of <a href="https://github.com/jorgenschaefer/elpy">elpy</a>, and provides even more bindings.
+It is a <em>real</em> attempt at convincing people to work with an Emacs environment for Python.
+Most importantly, once you have started working with Emacs on one language, you can easily switch to another language and be perfectly comfortable (rather than having to learn a new IDE which will most likely disappoint you).</p>
+
+<p>For people it takes too long to setup their own Emacs environment for Python, which is why they’ll try and give up.</p>
+
+<p>The goal of emp is to take all the best development components available for Python, and combine it conveniently under Emacs.</p>
+
+<p>Often someone in the Emacs community finds out a new feature (himself or from another IDE), and implements it in Emacs for free. When it prooves useful and it is the best-of-their-kind, <code class="language-plaintext highlighter-rouge">emp</code> will want to integrate it.</p>
+
+<p>Feel free to <a href="https://github.com/kootenpv/emp/issues">make feature suggestions</a>!</p>
+
+<p>Of course, as expected of Emacs, everything can be customized, so if you do not like a component you can exclude it.</p>
+
+<p>Note that everything in Emacs is a bit different than you might be used to, so you’ll have to watch some videos to get up to speed if this is your first time using Emacs:</p>
+
+<ul>
+  <li>
+    <p><a href="https://www.youtube.com/watch?v=B6jfrrwR10k">Emacs Introduction and Demonstration by Howard Abrams</a></p>
+  </li>
+  <li>
+    <p><a href="https://www.youtube.com/watch?v=K3_SFerNIeI">Emacs in 10 minutes!</a></p>
+  </li>
+  <li>
+    <p>Text: <a href="http://mally.stanford.edu/~sr/computing/emacs.html">http://mally.stanford.edu/~sr/computing/emacs.html</a></p>
+  </li>
+  <li>
+    <p>Bonus: <a href="https://www.youtube.com/watch?v=8SkdfdXWYaI">Using Python to code by Voice (uses Emacs)</a></p>
+  </li>
+</ul>
+
+<p>Note that since <code class="language-plaintext highlighter-rouge">emp</code> is in an early stage, everything might be changed, but everything will be made easier, and explained better, eventually :-)</p>
+
+<h3 id="screenshot">Screenshot</h3>
+
+<p><img src="http://localhost:4000/assets/python-screenshot.png" width="50%" /></p>
+
+<h3 id="installation">Installation</h3>
+
+<p>Depending on whether you already have Python and/or Emacs installed, this might vary.</p>
+
+<p>I have provided some specific example instructions for clean installs:</p>
+
+<ul>
+  <li><a href="https://github.com/kootenpv/emp/blob/master/ubuntu_install.md">Ubuntu 15.10</a></li>
+  <li><a href="https://github.com/kootenpv/emp/blob/master/fedora_install.md">Fedora 23.10</a></li>
+</ul>
+
+<p>A general installation, however, goes as follows:</p>
+
+<ul>
+  <li>Install Python (preferably 3, yes I’m a Python 3 fan)</li>
+  <li>Install Emacs</li>
+  <li>Run:</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># Clone emp</span>
+git clone https://github.com/kootenpv/emp/
+
+<span class="c"># Make backup of previous `.emacs` config if it exists, otherwise ignore error</span>
+<span class="nb">mv</span> ~/.emacs ~/.emacs_before_emp
+
+<span class="c"># Tell .emacs where to find the emp emacs files</span>
+<span class="nb">echo</span> <span class="s1">'(setq user-emacs-directory "/home/&lt;YOURUSERNAME&gt;/emp/")'</span> <span class="o">&gt;</span> ~/.emacs
+<span class="nb">echo</span> <span class="s1">'(load (concat user-emacs-directory ".emacs.d/init.el"))'</span> <span class="o">&gt;&gt;</span> ~/.emacs</code></pre></figure>
+
+<p>Now whenever you will open Emacs, it will be fully charged (after downloading packages)!</p>
+
+<p>Below a list of features.</p>
+
+<h4 id="general-features-i-will-expand-these-sections">General features (I will expand these sections)</h4>
+
+<ul>
+  <li>
+    <p>Easy to add packages (just add them in the list in “emp/init/emp-external-packages.el”)</p>
+  </li>
+  <li>
+    <p>Nice standard theme, easy to take another theme by using <code class="language-plaintext highlighter-rouge">M-x load-theme RET &lt;theme-name&gt;</code>, e.g.</p>
+
+    <ul>
+      <li><a href="http://wikemacs.org/wiki/File:Zenburn-theme.png">zenburn</a>, <a href="http://wikemacs.org/wiki/File:Solarized-dark-theme.png">solarized-dark</a> or <a href="https://github.com/rocher/ubuntu-theme">ubuntu</a> themes</li>
+    </ul>
+  </li>
+  <li>
+    <p>Nice separation of functionality for init</p>
+  </li>
+  <li>
+    <p>All Emacs benefits, among:</p>
+
+    <ul>
+      <li>
+        <p>Great version control support by <a href="https://github.com/magit/magit">magit</a> (emacs layer on top of git/svn etc)</p>
+      </li>
+      <li>
+        <p>Great local backups for file changes</p>
+      </li>
+      <li>
+        <p>electric-pair-mode: awareness for pairs of <code class="language-plaintext highlighter-rouge">()</code>, <code class="language-plaintext highlighter-rouge">''</code>, <code class="language-plaintext highlighter-rouge">""</code>, <code class="language-plaintext highlighter-rouge">[]</code> etc</p>
+      </li>
+      <li>
+        <p><a href="http://www.dr-qubit.org/emacs.php">Undo tree</a> using <code class="language-plaintext highlighter-rouge">undo-tree-visualize</code> rather than linear undos</p>
+      </li>
+      <li>
+        <p>Modes for everything; <code class="language-plaintext highlighter-rouge">markdown-mode</code>, <code class="language-plaintext highlighter-rouge">dockerfile-mode</code> and so on</p>
+      </li>
+      <li>
+        <p>Recently opened files using <code class="language-plaintext highlighter-rouge">C-c r</code></p>
+      </li>
+      <li>
+        <p>Find file with autocomplete using <code class="language-plaintext highlighter-rouge">C-x C-f</code></p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="python-features">Python features</h4>
+
+<ul>
+  <li>
+    <p>Python optimized for Interactive (REPL)</p>
+
+    <ul>
+      <li>
+        <p>Uses IPython</p>
+      </li>
+      <li>
+        <p>Timing after each execution</p>
+      </li>
+      <li>
+        <p><code class="language-plaintext highlighter-rouge">C-0 C-&lt;Return&gt;</code> –&gt; Set focus to an IPython instance and run code</p>
+      </li>
+      <li>
+        <p><code class="language-plaintext highlighter-rouge">C-2 C-&lt;Return&gt;</code> –&gt; Set focus to an IPython 2 instance and run code</p>
+      </li>
+      <li>
+        <p><code class="language-plaintext highlighter-rouge">C-3 C-&lt;Return&gt;</code> –&gt; Set focus to an IPython 3 instance and run code</p>
+      </li>
+      <li>
+        <p><code class="language-plaintext highlighter-rouge">C-9 C-&lt;Return&gt;</code> –&gt; Set focus to an IPyPy instance and run code</p>
+      </li>
+      <li>
+        <p><code class="language-plaintext highlighter-rouge">C-&lt;Return&gt;</code> –&gt; Run code in the focused instance</p>
+      </li>
+      <li>
+        <p><code class="language-plaintext highlighter-rouge">C-&lt;Return&gt;</code> is smart; it runs either paragraphs, functions or classes (all with <code class="language-plaintext highlighter-rouge">C-&lt;Return&gt;</code>)</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">elpy</code> batteries included:</p>
+
+    <ul>
+      <li>
+        <p>Optimized testing</p>
+      </li>
+      <li>
+        <p>Easy adding of imports using <code class="language-plaintext highlighter-rouge">C-c &lt;Return&gt;</code></p>
+      </li>
+      <li>
+        <p>auto-completion from <code class="language-plaintext highlighter-rouge">jedi</code> (or <code class="language-plaintext highlighter-rouge">company</code>), result is dynamic completion</p>
+      </li>
+      <li>
+        <p><em>No need to check for correctness of <code class="language-plaintext highlighter-rouge">PEP8</code></em>; autopep8 / yapf for automatic formatting, on file-save</p>
+      </li>
+      <li>
+        <p>Imports ordered on save</p>
+      </li>
+      <li>
+        <p>Jump to definition of functions</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Best error reporting on the sideline, flymake &amp; pylint + showing symbollic names for easy disabling</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">git-gutter</code> to see recent modifications in git repos</p>
+  </li>
+</ul>
+
+<p>Feel free to leave a comment!</p>

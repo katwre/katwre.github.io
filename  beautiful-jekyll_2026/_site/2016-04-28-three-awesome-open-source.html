@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Three awesome Open-Source projects discovered</title>
+
+  <meta name="author" content="Katarzyna Wreczycka" />
+
+  
+
+  <link rel="alternate" type="application/rss+xml" title=" - Machine learning, software and bioinformatics enthusiast" href="/feed.xml" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css">
+  
+ <!-- everything has to be repeated twice because on 2016-02-01 GitHub pages migrated to jekyll 3; see bug https://github.com/jekyll/jekyll/issues/4439 -->
+
+  
+  
+    
+      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+    
+  
+
+  
+  
+    
+      <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    
+      <link rel="stylesheet" href="/css/main.css" />
+    
+  
+
+  
+  
+    
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+    
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+    
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  <!-- Facebook OpenGraph tags -->
+  <meta property="og:title" content="Three awesome Open-Source projects discovered" />
+  <meta property="og:type" content="website" />
+
+  
+  <meta property="og:url" content="http://localhost:4001/2016-04-28-three-awesome-open-source/" />
+  
+
+  
+  <meta property="og:image" content="" />
+  
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" /> 
+
+
+</head>
+
+
+  <body>
+  
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://localhost:4001"></a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+	    
+        <li>
+		  <a href="/">Home</a>
+		</li>
+		
+        <li>
+		  <a href="/projects/">Projects</a>
+		</li>
+		
+        <li>
+		  <a href="/courses/">Courses</a>
+		</li>
+		
+      </ul>
+    </div>
+	
+	
+	
+  </div>
+</nav>  
+
+    <div role="main" class="container main-content">
+      <header class="header-post">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <div class="post-heading">
+        <h1>Three awesome Open-Source projects discovered</h1>
+        
+        <span class="post-meta">Posted on April 28, 2016</span>
+      </div>
+     </div>
+  </div>
+</header>
+
+<article>
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+	  <p>I’ve realised today that the following Open-Source Generic Command-Line tools (developed in Python) are great “lifehacks”. Without further ado:</p>
+
+<h3 id="never-lose-a-command-bashhub">Never lose a command: <code class="language-plaintext highlighter-rouge">bashhub</code></h3>
+
+<p>The idea is that bashhub will store all the commands you use on any connected device, and you can use <code class="language-plaintext highlighter-rouge">bh &lt;keyword&gt;</code> to find back how you were <em>exactly</em> supposed to use that <a href="https://xkcd.com/1168/">exotic tar command</a>. Now, without using google, you can obtain a valid tar command within 10 seconds. Use <code class="language-plaintext highlighter-rouge">bh tar</code> to find commands previously including <code class="language-plaintext highlighter-rouge">tar</code>.</p>
+
+<p>Register to get an account and set it up from <a href="https://bashhub.com/">bashhub.com</a>. Also have a look at the <a href="https://github.com/rcaloras/bashhub-client">github repo</a> (created by Ryan Caloras)</p>
+
+<p>After installation, you will have <code class="language-plaintext highlighter-rouge">bashhub</code> as command available to handle bashhub itself, while <code class="language-plaintext highlighter-rouge">bh</code> can be used to query.</p>
+
+<p>My <code class="language-plaintext highlighter-rouge">bashhub status</code> prints:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Total Commands: 15838
+Total Sessions: 859
+</code></pre></div></div>
+
+<p>I also love the builtin update capability <code class="language-plaintext highlighter-rouge">bashhub update</code> which updates to the latest version.</p>
+
+<p>Other than query for tar, you can ironically also use <code class="language-plaintext highlighter-rouge">bh</code> on itself (<code class="language-plaintext highlighter-rouge">bh bh</code>). This is an example of my last searches using bashhub:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bh new
+bh solc
+bh geth
+bh /electron
+bh bup
+bh yagmail
+bh restore
+bh ssh
+</code></pre></div></div>
+
+<p>This is <code class="language-plaintext highlighter-rouge">Control-r</code> (reverse-search) on steroids!</p>
+
+<h3 id="smarter-password-manager-visionary">Smarter password manager: <code class="language-plaintext highlighter-rouge">visionary</code></h3>
+
+<p>Recently I started making more complex passwords, resulting in having to restore my passwords more and more often. Counter-productive. It was time for a password manager, but I do not like external password managers. I do not like any organisation to hold all my passwords.</p>
+
+<p>We do want our passwords to be strong, recoverable and easily available. <a href="https://github.com/libeclipse/visionary">visionary</a> is building towards that (API will be coming for “easily available” password generation).</p>
+
+<p><code class="language-plaintext highlighter-rouge">visionary</code> deterministically generates the same password for the same source by utilizing the Scrypt algorithm. The password depends only on the strength of the algorithm (can be chosen), the master password and a keyword.
+For example, to generate a password for facebook, you might use the keyword “facebook.com”. If the keyword would be difficult (facebook123catsname), it’d be just like having to enter another password; beating the purpose. Since most people would use a similar keyword flavor, we cannot really see this keyword as an extra sense of security. However, it serves very well against brute force cross-domain password attacks. Using only a single character different between keywords create completely different 32 character passwords. Thus, when someone would obtain your password on one website, it cannot be related to a password on another website. So, in the end, we’re left with a password manager that actually solely depends on the master password, and I’m fine with that. The only way people are going to get my strong master password is when my PC has been locally compromised. Even in the wrong hands, since this is not a big password manager yet, “obscurity” is another layer of defense :-)</p>
+
+<p>Some of <code class="language-plaintext highlighter-rouge">visionary</code>’s code for illustrative purpose:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">generate</span><span class="p">(</span><span class="n">master_password</span><span class="p">,</span> <span class="n">keyword</span><span class="p">,</span> <span class="n">cost</span><span class="o">=</span><span class="mi">2048</span><span class="p">,</span> <span class="n">oLen</span><span class="o">=</span><span class="mi">32</span><span class="p">):</span>
+    <span class="n">hashed</span> <span class="o">=</span> <span class="n">pyscrypt</span><span class="p">.</span><span class="nf">hash </span><span class="p">(</span>
+        <span class="n">password</span> <span class="o">=</span> <span class="n">master_password</span><span class="p">.</span><span class="nf">encode</span><span class="p">(</span><span class="sh">'</span><span class="s">utf-8</span><span class="sh">'</span><span class="p">),</span>
+        <span class="n">salt</span> <span class="o">=</span> <span class="n">keyword</span><span class="p">.</span><span class="nf">encode</span><span class="p">(</span><span class="sh">'</span><span class="s">utf-8</span><span class="sh">'</span><span class="p">),</span>
+        <span class="n">N</span> <span class="o">=</span> <span class="n">cost</span><span class="p">,</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="n">dkLen</span> <span class="o">=</span> <span class="mi">32</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">codecs</span><span class="p">.</span><span class="nf">encode</span><span class="p">(</span><span class="n">hashed</span><span class="p">,</span> <span class="sh">'</span><span class="s">hex</span><span class="sh">'</span><span class="p">).</span><span class="nf">decode</span><span class="p">(</span><span class="sh">'</span><span class="s">utf-8</span><span class="sh">'</span><span class="p">)[</span><span class="mi">0</span><span class="p">:</span><span class="n">oLen</span><span class="p">]</span>
+</code></pre></div></div>
+
+<p>Anyway, for more info and usage, you should read the <a href="(https://github.com/libeclipse/visionary)">README on the github page</a>. To get the basic idea:</p>
+
+<p>Run <code class="language-plaintext highlighter-rouge">pip install visionarypm</code> for setup. Then run <code class="language-plaintext highlighter-rouge">vpm</code> to start. First choose Scrypt’s strength. Then enter a master password and a key. The next time we have to get the password we just run the <code class="language-plaintext highlighter-rouge">vpm</code>, enter a master pasword and keyword, and end up with the same result as before.</p>
+
+<h3 id="highlevel-backup-bup">Highlevel backup: <code class="language-plaintext highlighter-rouge">bup</code></h3>
+
+<p>Even though most my projects run through Git, I still feel much safer when my precious scripts / projects <em>not</em> on git are still recoverable / accessible.
+Luckily, I work simply from a single project folder (<code class="language-plaintext highlighter-rouge">~/projects</code>). Everything outside of that is not so interesting to me, though when Arch Linux becomes my main OS, I would consider using it for the <code class="language-plaintext highlighter-rouge">/etc/</code> (config) folder. It is easy to include multiple paths regardless.
+Earlier on I’ve used both Dropbox and GDrive, but they lack an “ignore” file, or are too much focused on a single folder. I cringe whenever I see GDrive upload endlessly after I did another <code class="language-plaintext highlighter-rouge">npm install</code>, or when it’s uploading some sklearn pickle.
+After considering Dropbox, GDrive, Syncthing and BTSync, I’m glad to have stumbled upon <code class="language-plaintext highlighter-rouge">bup</code>.</p>
+
+<p><code class="language-plaintext highlighter-rouge">bup</code> is very efficient at using the good parts of git. It also handles binary data and large files by splitting them up. So, it does incremental updates really well, and we get versioning added in! For a complete talk by Zoran Zaric (the creator), <a href="https://www.youtube.com/watch?v=N5qj94B3WkE">watch this video</a>.</p>
+
+<p>I have a script that I will run with cron every hour in the evening. I find the <code class="language-plaintext highlighter-rouge">bup</code> documentation lacking, but bits and pieces are certainly available on the internet. A great example script is available here for backing up to <a href="https://debian-administration.org/users/kumanna/weblog/16">External Disk and/or Raspberry Pi</a>.
+You could of course also just backup to another PC in the network, or to some cloud storage. The example below intends to backup through SSH.</p>
+
+<p>Note that you have to install <code class="language-plaintext highlighter-rouge">bup</code> on both machines, and have run <code class="language-plaintext highlighter-rouge">bup init</code> on both machines.
+Specifically, I used:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>BUP_DIR=/home/pascal/MACBACKUP bup init
+</code></pre></div></div>
+
+<p>to initialize the <code class="language-plaintext highlighter-rouge">bup</code> directory in <code class="language-plaintext highlighter-rouge">MACBACKUP</code> – the place where I will want to backup my Mac’s files on the remote machine.</p>
+
+<p>Locally, I just used <code class="language-plaintext highlighter-rouge">bup init</code> (defaulting to creating .bup in <code class="language-plaintext highlighter-rouge">~/.bup</code>).</p>
+
+<p>Afterwards, it is then possible to start backing up. Here are the commands I use in my cron script:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/usr/local/bin/bup index ~/projects <span class="nt">--exclude-rx</span> <span class="se">\.</span>git <span class="nt">--exclude-rx</span> node_modules <span class="nt">--exclude-rx</span> <span class="se">\.</span>hg <span class="nt">--exclude-rx</span> <span class="se">\.</span>tox
+/usr/local/bin/bup save <span class="nt">-r</span> archlan:MACBACKUP <span class="nt">-n</span> macbackup ~/projects
+</code></pre></div></div>
+
+<p>Note <code class="language-plaintext highlighter-rouge">bup</code> is prefixed by <code class="language-plaintext highlighter-rouge">/usr/local/bin/</code> since otherwise <code class="language-plaintext highlighter-rouge">bup</code> would not be found for the cron user.</p>
+
+<p>Further explanation:</p>
+
+<p><code class="language-plaintext highlighter-rouge">bup index</code> will index the differences, where:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>~/projects             # contains all the files to be included
+--exclude-rx ...       # will exlude any files where the regex matches
+</code></pre></div></div>
+
+<p>and <code class="language-plaintext highlighter-rouge">bup save</code> will then actually transfer the data:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-r                     # signifying using remote through ssh
+    archlan            # archlan is my ssh config, which expands to pascal@192.168.2.228
+           :           # used in the ssh syntax: &lt;username&gt;@&lt;remote-ip&gt;:&lt;folder-path&gt;
+            MACBACKUP  # the folder /home/pascal/MACBACKUP on my secondary machine
+</code></pre></div></div>
+
+<p>It also does great compression.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Including git/node_modules: 24G
+Excluded: 19G
+Compressed into 7G
+</code></pre></div></div>
+
+<p>So now I have a great backup, which can be stored where we want, versioning, and efficient updates. Oh yea, you will want to restore. Use:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bup restore -C ~/destination_folder macbackup/latest/
+</code></pre></div></div>
+
+<hr />
+
+<p>Hopefully you found these tools as useful as I have. Feel free to leave a comment below.</p>
+
+	</div>
+  </div>
+</article>
+
+<div class="row">
+  <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+    <ul class="pager blog-pager">
+      
+      <li class="previous">
+        <a href="/2016-04-24-yagmail" data-toggle="tooltip" data-placement="top" title="Sending Advanced Emails Made Simple in Python">&larr; Previous Post</a>
+      </li>
+      
+      
+      <li class="next">
+        <a href="/2016-09-07-ai-challenge-in-78-lines" data-toggle="tooltip" data-placement="top" title="AI challenge in 78 lines (top 5%)">Next Post &rarr;</a>
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+
+<div class="row disqus-comments">
+  <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+    
+<div class="comments">
+	<div id="disqus_thread"></div>
+	<script type="text/javascript">
+	    var disqus_shortname = 'katwregithubio';
+	    // ensure that pages with query string get the same discussion
+            var url_parts = window.location.href.split("?");
+            var disqus_url = url_parts[0];	    
+	    (function() {
+	        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+	        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	    })();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+
+  </div>
+</div>
+
+
+    </div>
+
+    <footer>
+  <div class="container beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+		  
+		  
+		  
+		  
+		  		  
+        </ul>
+        <p class="copyright text-muted">
+		  Katarzyna Wreczycka
+		  &nbsp;&bull;&nbsp;
+		  2026
+		  
+		  
+	    </p>
+		<p class="theme-by text-muted">
+		  Theme by
+		  <a href="https://github.com/daattali/beautiful-jekyll">beautiful-jekyll</a>
+		</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  
+    <!-- everything has to be repeated twice because on 2016-02-01 GitHub pages migrated to jekyll 3; see bug https://github.com/jekyll/jekyll/issues/4439 -->
+
+
+
+
+
+
+
+
+
+
+
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+      <script>
+        if (typeof jQuery == 'undefined') {
+          document.write('<script src="/js/jquery-1.11.2.min.js"></scr' + 'ipt>');
+        }
+      </script>
+    
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+    <script src="/js/bootstrap.min.js"></script>
+    
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+    <script src="/js/main.js"></script>
+    
+  
+
+
+
+
+
+  
+  </body>
+</html>

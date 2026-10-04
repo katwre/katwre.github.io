@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Pylint and Flymake Anno 2016</title>
+
+  <meta name="author" content="Katarzyna Wreczycka" />
+
+  
+  <meta name="description" content="No need for PEP8 checking / PyFlakes / PyChecker / Flake8">
+  
+
+  <link rel="alternate" type="application/rss+xml" title=" - Machine learning, software and bioinformatics enthusiast" href="/feed.xml" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css">
+  
+ <!-- everything has to be repeated twice because on 2016-02-01 GitHub pages migrated to jekyll 3; see bug https://github.com/jekyll/jekyll/issues/4439 -->
+
+  
+  
+    
+      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+    
+  
+
+  
+  
+    
+      <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    
+      <link rel="stylesheet" href="/css/main.css" />
+    
+  
+
+  
+  
+    
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+    
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+    
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  <!-- Facebook OpenGraph tags -->
+  <meta property="og:title" content="Pylint and Flymake Anno 2016" />
+  <meta property="og:type" content="website" />
+
+  
+  <meta property="og:url" content="http://localhost:4001/2015-12-28-pylint-flymake-anno-2016/" />
+  
+
+  
+  <meta property="og:image" content="" />
+  
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" /> 
+
+
+</head>
+
+
+  <body>
+  
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://localhost:4001"></a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+	    
+        <li>
+		  <a href="/">Home</a>
+		</li>
+		
+        <li>
+		  <a href="/projects/">Projects</a>
+		</li>
+		
+        <li>
+		  <a href="/courses/">Courses</a>
+		</li>
+		
+      </ul>
+    </div>
+	
+	
+	
+  </div>
+</nav>  
+
+    <div role="main" class="container main-content">
+      <header class="header-post">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <div class="post-heading">
+        <h1>Pylint and Flymake Anno 2016</h1>
+        
+        <h2 class="post-subheading">No need for PEP8 checking / PyFlakes / PyChecker / Flake8</h2>
+        
+        <span class="post-meta">Posted on December 28, 2015</span>
+      </div>
+     </div>
+  </div>
+</header>
+
+<article>
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+	  <p>I noticed that pylint and flymake do not play so nicely in current Emacs.</p>
+
+<p>I was fooled many times by thinking that I did get proper output that was workable for <code class="language-plaintext highlighter-rouge">flymake</code>, this turned out not to be <code class="language-plaintext highlighter-rouge">True</code>.</p>
+
+<p>As I was trying to make the “squiggly” line look better for my <a href="https://github.com/kootenpv/emacs-kooten-theme">emacs-kooten-theme</a>, I noticed <strong>all I was reporting were errors</strong>; no warnings.
+This is because flymake is certainly not expecting recent PyLint output.
+Add onto this that when configuring flymake, it expects a single script (without commandline arguments).</p>
+
+<p>Since I want an awesome Emacs environment, and also because I want to make <a href="https://github.com/kootenpv/emp">the EMacs Python environment “EMP”</a> happen, I went on to solve the situation.</p>
+
+<p>Shoutout to <a href="https://github.com/jorgenschaefer/elpy">elpy</a> since elpy is just such a driving force for me to make this happen!</p>
+
+<h4 id="result">Result</h4>
+
+<p>After it was done, no more squiggly lines, distinguishable colors, and nice textual output:</p>
+
+<p><a href="/assets/pylint_flymake.png"></a></p>
+
+<p>but that’s getting ahead of things.</p>
+
+<h3 id="the-process">The process</h3>
+
+<p>Here I describe the process of what came a long the way.</p>
+
+<h4 id="nicely-readable-output">Nicely readable output</h4>
+
+<p>I started with an ideal format:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[ERROR/WARNING/etc]: The problem description (symbollic-name)
+</code></pre></div></div>
+
+<p>Ideal because for me:</p>
+
+<ul>
+  <li>Clear whether it is error/warning/etc</li>
+  <li>Message should be near start, not floating somewhere after filename/linenumber</li>
+  <li>No need for linenumber/filename; I already know the filename and linenumber</li>
+  <li>I want the <code class="language-plaintext highlighter-rouge">symbollic-name</code> in case I want to disable it (and not some error-code)</li>
+</ul>
+
+<p>I was determined to get this, but after a long time discovered that we need to give the filename and <code class="language-plaintext highlighter-rouge">line_number</code> to <code class="language-plaintext highlighter-rouge">flymake-mode</code>, since otherwise it is not possible to use <code class="language-plaintext highlighter-rouge">flymake-next-error</code>.</p>
+
+<p>But I certainly did not want filename and linenumber to occur at the start.</p>
+
+<p>In the end I settled with</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[ERROR/WARNING/etc] The problem description (symbollic-name) | filename:linenumber
+</code></pre></div></div>
+
+<p>that is:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[CONVENTION] Missing function docstring (missing-docstring. | pyflymake.py:208
+</code></pre></div></div>
+
+<h3 id="flymake-mode">flymake-mode</h3>
+
+<p>For those interested in my struggle, it took me a long time to understand why it is such a difficult problem with <code class="language-plaintext highlighter-rouge">flymake</code>.</p>
+
+<p>It goes like this:</p>
+
+<ol>
+  <li>
+    <p>Lines come out from pyflymake.py or another executable</p>
+  </li>
+  <li>
+    <p>Line is matched against emacs <code class="language-plaintext highlighter-rouge">flymake-err-line-patterns</code></p>
+  </li>
+  <li>
+    <p>If any of the regexps match the line</p>
+  </li>
+  <li>
+    <p>Then it uses <code class="language-plaintext highlighter-rouge">flymake-warning-predicate</code> regexp search to determine whether an <code class="language-plaintext highlighter-rouge">error</code> or a <code class="language-plaintext highlighter-rouge">warning</code> was found.</p>
+  </li>
+</ol>
+
+<p>It is very unclear which rules are existing in <code class="language-plaintext highlighter-rouge">flymake-err-line-patterns</code>, they are just regexps without names!</p>
+
+<p>The reason a regexp usually hits in the current state, is because out of many, one is defined with a very simple format:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[^:]+:[0-9]+:.+
+</code></pre></div></div>
+
+<p>that is:</p>
+
+<figure class="highlight"><pre><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="nv">[^:]+</span>  <span class="nb">-</span> <span class="nv">matching</span> <span class="nv">non</span> <span class="o">'</span><span class="err">:</span><span class="ss">',</span> <span class="nv">--&gt;</span> <span class="nv">filename</span>
+<span class="err">:</span>
+<span class="nv">[0-9]+</span> <span class="nb">-</span> <span class="nv">matching</span> <span class="nv">numbers,</span> <span class="nv">--&gt;</span> <span class="nv">linenumber</span>
+<span class="err">:</span>
+<span class="o">.</span><span class="nb">+</span>     <span class="nb">-</span> <span class="nv">matching</span> <span class="nv">anything,</span> <span class="nv">--&gt;</span> <span class="nv">problem_description</span></code></pre></figure>
+
+<p>Any characters not matching <code class="language-plaintext highlighter-rouge">:</code>, a <code class="language-plaintext highlighter-rouge">:</code>, <code class="language-plaintext highlighter-rouge">numbers 0-9</code> and then anything goes <code class="language-plaintext highlighter-rouge">.+</code>.</p>
+
+<p>However, very crucial: it does not correctly determine error/warning. <code class="language-plaintext highlighter-rouge">flymake-warning-predicate</code> defined in <code class="language-plaintext highlighter-rouge">elpy-mode</code> is:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"^[wW]arning"
+</code></pre></div></div>
+
+<p>I actually have not found any code in the python modes that have description messages starting with “warning” or “Warning”, so yea…</p>
+
+<p>And I not only wanted better output, but also need to conform to filename/linenumber.</p>
+
+<p>So I added my own regexp to the situation, and my own “error category” checking:</p>
+
+<figure class="highlight"><pre><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="c1">;; Pylint pattern catcher</span>
+<span class="p">(</span><span class="nv">add-to-list</span> <span class="ss">'flymake-err-line-patterns</span>
+             <span class="o">'</span><span class="p">(</span><span class="s">"\\([^|]+\\)| \\([^:]+\\):\\([0-9]+\\)$"</span>
+               <span class="mi">2</span> <span class="mi">3</span> <span class="no">nil</span> <span class="mi">1</span><span class="p">))</span>
+<span class="c1">;; Warning checker: if not Error/Fatal</span>
+<span class="p">(</span><span class="k">setq</span> <span class="nv">flymake-warning-predicate</span> <span class="s">"^.[^EF]"</span><span class="p">)</span></code></pre></figure>
+
+<p>Note that the <code class="language-plaintext highlighter-rouge">2 3 nil 1</code> refer to indices for a pattern in <code class="language-plaintext highlighter-rouge">flymake-err-line-patterns</code>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>           2       3         nil                1
+regexp file-idx line-idx col-idx (optional) text-idx(optional)
+</code></pre></div></div>
+
+<p>I could test this stuff by using this snippet:</p>
+
+<figure class="highlight"><pre><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nv">flymake-parse-line</span>
+ <span class="s">"[CONVENTION] Missing function docstring (missing-docstring) |
+  pyflymake.py:208"</span><span class="p">)</span></code></pre></figure>
+
+<h3 id="other-typecheckers">Other typecheckers</h3>
+
+<p>Also very interesting is that there are more checkers defined in <code class="language-plaintext highlighter-rouge">pyflymake.py</code>, which are well known. When you will be using <code class="language-plaintext highlighter-rouge">EMP</code>, only pylint will be neccessary.</p>
+
+<p>The others are either going to run your actual script and be slow about it (PyChecker), or fast but not catch anything (PyFlakes), or an aggregation of subpar ones (Flake8).</p>
+
+<p>Note that the title mentions no <code class="language-plaintext highlighter-rouge">PEP8</code> checking; rather, use yapf or autopep to guard <code class="language-plaintext highlighter-rouge">PEP8</code> for you bundled in EMP / elpy :)</p>
+
+<h3 id="for-you">For you</h3>
+
+<p>I supposed the following code could be a fix for when you want to use <code class="language-plaintext highlighter-rouge">pylint</code>.</p>
+
+<ul>
+  <li>Grab <code class="language-plaintext highlighter-rouge">pyflymake.py</code> from <a href="https://github.com/kootenpv/emp">https://github.com/kootenpv/emp</a></li>
+  <li>Add the following code to your python part in <code class="language-plaintext highlighter-rouge">.emacs</code>:</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nv">add-hook</span> <span class="ss">'elpy-mode-hook</span>
+ <span class="o">'</span><span class="p">(</span><span class="k">lambda</span> <span class="p">()</span>
+   <span class="p">(</span><span class="k">progn</span>
+    <span class="p">(</span><span class="nv">add-to-list</span> <span class="ss">'flymake-err-line-patterns</span> <span class="o">'</span><span class="p">(</span><span class="s">"\\([^|]+\\)| \\([^:]+\\):\\([0-9]+\\)$"</span>
+                                              <span class="mi">2</span> <span class="mi">3</span> <span class="no">nil</span> <span class="mi">1</span><span class="p">))</span>
+    <span class="p">(</span><span class="nb">set</span> <span class="p">(</span><span class="nv">make-local-variable</span> <span class="ss">'flymake-warning-predicate</span><span class="p">)</span> <span class="s">"^.[^EF]"</span><span class="p">))))</span></code></pre></figure>
+
+
+	</div>
+  </div>
+</article>
+
+<div class="row">
+  <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+    <ul class="pager blog-pager">
+      
+      <li class="previous">
+        <a href="/2015-10-19-art-style" data-toggle="tooltip" data-placement="top" title="Parsimonious Art">&larr; Previous Post</a>
+      </li>
+      
+      
+      <li class="next">
+        <a href="/2016-01-01-emacs-python" data-toggle="tooltip" data-placement="top" title="Alpha Preview of EMacs Python (EMP)">Next Post &rarr;</a>
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+
+<div class="row disqus-comments">
+  <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+    
+<div class="comments">
+	<div id="disqus_thread"></div>
+	<script type="text/javascript">
+	    var disqus_shortname = 'katwregithubio';
+	    // ensure that pages with query string get the same discussion
+            var url_parts = window.location.href.split("?");
+            var disqus_url = url_parts[0];	    
+	    (function() {
+	        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+	        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	    })();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+
+  </div>
+</div>
+
+
+    </div>
+
+    <footer>
+  <div class="container beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+		  
+		  
+		  
+		  
+		  		  
+        </ul>
+        <p class="copyright text-muted">
+		  Katarzyna Wreczycka
+		  &nbsp;&bull;&nbsp;
+		  2026
+		  
+		  
+	    </p>
+		<p class="theme-by text-muted">
+		  Theme by
+		  <a href="https://github.com/daattali/beautiful-jekyll">beautiful-jekyll</a>
+		</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  
+    <!-- everything has to be repeated twice because on 2016-02-01 GitHub pages migrated to jekyll 3; see bug https://github.com/jekyll/jekyll/issues/4439 -->
+
+
+
+
+
+
+
+
+
+
+
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+      <script>
+        if (typeof jQuery == 'undefined') {
+          document.write('<script src="/js/jquery-1.11.2.min.js"></scr' + 'ipt>');
+        }
+      </script>
+    
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+    <script src="/js/bootstrap.min.js"></script>
+    
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+    <script src="/js/main.js"></script>
+    
+  
+
+
+
+
+
+  
+  </body>
+</html>

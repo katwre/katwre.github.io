@@ -1,0 +1,146 @@
+<p>I noticed that pylint and flymake do not play so nicely in current Emacs.</p>
+
+<p>I was fooled many times by thinking that I did get proper output that was workable for <code class="language-plaintext highlighter-rouge">flymake</code>, this turned out not to be <code class="language-plaintext highlighter-rouge">True</code>.</p>
+
+<p>As I was trying to make the “squiggly” line look better for my <a href="https://github.com/kootenpv/emacs-kooten-theme">emacs-kooten-theme</a>, I noticed <strong>all I was reporting were errors</strong>; no warnings.
+This is because flymake is certainly not expecting recent PyLint output.
+Add onto this that when configuring flymake, it expects a single script (without commandline arguments).</p>
+
+<p>Since I want an awesome Emacs environment, and also because I want to make <a href="https://github.com/kootenpv/emp">the EMacs Python environment “EMP”</a> happen, I went on to solve the situation.</p>
+
+<p>Shoutout to <a href="https://github.com/jorgenschaefer/elpy">elpy</a> since elpy is just such a driving force for me to make this happen!</p>
+
+<h4 id="result">Result</h4>
+
+<p>After it was done, no more squiggly lines, distinguishable colors, and nice textual output:</p>
+
+<p><a href="/assets/pylint_flymake.png"></a></p>
+
+<p>but that’s getting ahead of things.</p>
+
+<h3 id="the-process">The process</h3>
+
+<p>Here I describe the process of what came a long the way.</p>
+
+<h4 id="nicely-readable-output">Nicely readable output</h4>
+
+<p>I started with an ideal format:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[ERROR/WARNING/etc]: The problem description (symbollic-name)
+</code></pre></div></div>
+
+<p>Ideal because for me:</p>
+
+<ul>
+  <li>Clear whether it is error/warning/etc</li>
+  <li>Message should be near start, not floating somewhere after filename/linenumber</li>
+  <li>No need for linenumber/filename; I already know the filename and linenumber</li>
+  <li>I want the <code class="language-plaintext highlighter-rouge">symbollic-name</code> in case I want to disable it (and not some error-code)</li>
+</ul>
+
+<p>I was determined to get this, but after a long time discovered that we need to give the filename and <code class="language-plaintext highlighter-rouge">line_number</code> to <code class="language-plaintext highlighter-rouge">flymake-mode</code>, since otherwise it is not possible to use <code class="language-plaintext highlighter-rouge">flymake-next-error</code>.</p>
+
+<p>But I certainly did not want filename and linenumber to occur at the start.</p>
+
+<p>In the end I settled with</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[ERROR/WARNING/etc] The problem description (symbollic-name) | filename:linenumber
+</code></pre></div></div>
+
+<p>that is:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[CONVENTION] Missing function docstring (missing-docstring. | pyflymake.py:208
+</code></pre></div></div>
+
+<h3 id="flymake-mode">flymake-mode</h3>
+
+<p>For those interested in my struggle, it took me a long time to understand why it is such a difficult problem with <code class="language-plaintext highlighter-rouge">flymake</code>.</p>
+
+<p>It goes like this:</p>
+
+<ol>
+  <li>
+    <p>Lines come out from pyflymake.py or another executable</p>
+  </li>
+  <li>
+    <p>Line is matched against emacs <code class="language-plaintext highlighter-rouge">flymake-err-line-patterns</code></p>
+  </li>
+  <li>
+    <p>If any of the regexps match the line</p>
+  </li>
+  <li>
+    <p>Then it uses <code class="language-plaintext highlighter-rouge">flymake-warning-predicate</code> regexp search to determine whether an <code class="language-plaintext highlighter-rouge">error</code> or a <code class="language-plaintext highlighter-rouge">warning</code> was found.</p>
+  </li>
+</ol>
+
+<p>It is very unclear which rules are existing in <code class="language-plaintext highlighter-rouge">flymake-err-line-patterns</code>, they are just regexps without names!</p>
+
+<p>The reason a regexp usually hits in the current state, is because out of many, one is defined with a very simple format:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[^:]+:[0-9]+:.+
+</code></pre></div></div>
+
+<p>that is:</p>
+
+<figure class="highlight"><pre><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="nv">[^:]+</span>  <span class="nb">-</span> <span class="nv">matching</span> <span class="nv">non</span> <span class="o">'</span><span class="err">:</span><span class="ss">',</span> <span class="nv">--&gt;</span> <span class="nv">filename</span>
+<span class="err">:</span>
+<span class="nv">[0-9]+</span> <span class="nb">-</span> <span class="nv">matching</span> <span class="nv">numbers,</span> <span class="nv">--&gt;</span> <span class="nv">linenumber</span>
+<span class="err">:</span>
+<span class="o">.</span><span class="nb">+</span>     <span class="nb">-</span> <span class="nv">matching</span> <span class="nv">anything,</span> <span class="nv">--&gt;</span> <span class="nv">problem_description</span></code></pre></figure>
+
+<p>Any characters not matching <code class="language-plaintext highlighter-rouge">:</code>, a <code class="language-plaintext highlighter-rouge">:</code>, <code class="language-plaintext highlighter-rouge">numbers 0-9</code> and then anything goes <code class="language-plaintext highlighter-rouge">.+</code>.</p>
+
+<p>However, very crucial: it does not correctly determine error/warning. <code class="language-plaintext highlighter-rouge">flymake-warning-predicate</code> defined in <code class="language-plaintext highlighter-rouge">elpy-mode</code> is:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"^[wW]arning"
+</code></pre></div></div>
+
+<p>I actually have not found any code in the python modes that have description messages starting with “warning” or “Warning”, so yea…</p>
+
+<p>And I not only wanted better output, but also need to conform to filename/linenumber.</p>
+
+<p>So I added my own regexp to the situation, and my own “error category” checking:</p>
+
+<figure class="highlight"><pre><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="c1">;; Pylint pattern catcher</span>
+<span class="p">(</span><span class="nv">add-to-list</span> <span class="ss">'flymake-err-line-patterns</span>
+             <span class="o">'</span><span class="p">(</span><span class="s">"\\([^|]+\\)| \\([^:]+\\):\\([0-9]+\\)$"</span>
+               <span class="mi">2</span> <span class="mi">3</span> <span class="no">nil</span> <span class="mi">1</span><span class="p">))</span>
+<span class="c1">;; Warning checker: if not Error/Fatal</span>
+<span class="p">(</span><span class="k">setq</span> <span class="nv">flymake-warning-predicate</span> <span class="s">"^.[^EF]"</span><span class="p">)</span></code></pre></figure>
+
+<p>Note that the <code class="language-plaintext highlighter-rouge">2 3 nil 1</code> refer to indices for a pattern in <code class="language-plaintext highlighter-rouge">flymake-err-line-patterns</code>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>           2       3         nil                1
+regexp file-idx line-idx col-idx (optional) text-idx(optional)
+</code></pre></div></div>
+
+<p>I could test this stuff by using this snippet:</p>
+
+<figure class="highlight"><pre><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nv">flymake-parse-line</span>
+ <span class="s">"[CONVENTION] Missing function docstring (missing-docstring) |
+  pyflymake.py:208"</span><span class="p">)</span></code></pre></figure>
+
+<h3 id="other-typecheckers">Other typecheckers</h3>
+
+<p>Also very interesting is that there are more checkers defined in <code class="language-plaintext highlighter-rouge">pyflymake.py</code>, which are well known. When you will be using <code class="language-plaintext highlighter-rouge">EMP</code>, only pylint will be neccessary.</p>
+
+<p>The others are either going to run your actual script and be slow about it (PyChecker), or fast but not catch anything (PyFlakes), or an aggregation of subpar ones (Flake8).</p>
+
+<p>Note that the title mentions no <code class="language-plaintext highlighter-rouge">PEP8</code> checking; rather, use yapf or autopep to guard <code class="language-plaintext highlighter-rouge">PEP8</code> for you bundled in EMP / elpy :)</p>
+
+<h3 id="for-you">For you</h3>
+
+<p>I supposed the following code could be a fix for when you want to use <code class="language-plaintext highlighter-rouge">pylint</code>.</p>
+
+<ul>
+  <li>Grab <code class="language-plaintext highlighter-rouge">pyflymake.py</code> from <a href="https://github.com/kootenpv/emp">https://github.com/kootenpv/emp</a></li>
+  <li>Add the following code to your python part in <code class="language-plaintext highlighter-rouge">.emacs</code>:</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nv">add-hook</span> <span class="ss">'elpy-mode-hook</span>
+ <span class="o">'</span><span class="p">(</span><span class="k">lambda</span> <span class="p">()</span>
+   <span class="p">(</span><span class="k">progn</span>
+    <span class="p">(</span><span class="nv">add-to-list</span> <span class="ss">'flymake-err-line-patterns</span> <span class="o">'</span><span class="p">(</span><span class="s">"\\([^|]+\\)| \\([^:]+\\):\\([0-9]+\\)$"</span>
+                                              <span class="mi">2</span> <span class="mi">3</span> <span class="no">nil</span> <span class="mi">1</span><span class="p">))</span>
+    <span class="p">(</span><span class="nb">set</span> <span class="p">(</span><span class="nv">make-local-variable</span> <span class="ss">'flymake-warning-predicate</span><span class="p">)</span> <span class="s">"^.[^EF]"</span><span class="p">))))</span></code></pre></figure>
+

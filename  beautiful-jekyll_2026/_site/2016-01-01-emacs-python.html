@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Alpha Preview of EMacs Python (EMP)</title>
+
+  <meta name="author" content="Katarzyna Wreczycka" />
+
+  
+
+  <link rel="alternate" type="application/rss+xml" title=" - Machine learning, software and bioinformatics enthusiast" href="/feed.xml" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css">
+  
+ <!-- everything has to be repeated twice because on 2016-02-01 GitHub pages migrated to jekyll 3; see bug https://github.com/jekyll/jekyll/issues/4439 -->
+
+  
+  
+    
+      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+    
+  
+
+  
+  
+    
+      <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    
+      <link rel="stylesheet" href="/css/main.css" />
+    
+  
+
+  
+  
+    
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+    
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+    
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  <!-- Facebook OpenGraph tags -->
+  <meta property="og:title" content="Alpha Preview of EMacs Python (EMP)" />
+  <meta property="og:type" content="website" />
+
+  
+  <meta property="og:url" content="http://localhost:4001/2016-01-01-emacs-python/" />
+  
+
+  
+  <meta property="og:image" content="" />
+  
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" /> 
+
+
+</head>
+
+
+  <body>
+  
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://localhost:4001"></a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+	    
+        <li>
+		  <a href="/">Home</a>
+		</li>
+		
+        <li>
+		  <a href="/projects/">Projects</a>
+		</li>
+		
+        <li>
+		  <a href="/courses/">Courses</a>
+		</li>
+		
+      </ul>
+    </div>
+	
+	
+	
+  </div>
+</nav>  
+
+    <div role="main" class="container main-content">
+      <header class="header-post">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <div class="post-heading">
+        <h1>Alpha Preview of EMacs Python (EMP)</h1>
+        
+        <span class="post-meta">Posted on January 1, 2016</span>
+      </div>
+     </div>
+  </div>
+</header>
+
+<article>
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+	  <p><strong>STATUS: PRE-ALPHA</strong> – did not check for bugs yet</p>
+
+<p><img src="http://localhost:4001/assets/emacs.png" width="10%" />
+<img src="http://localhost:4001/assets/python.png" width="10%" /></p>
+
+<p><a href="https://github.com/kootenpv/emp">emp</a>’s goal is to be a full environment for everything Python. It builds on top of <a href="https://github.com/jorgenschaefer/elpy">elpy</a>, and provides even more bindings.
+It is a <em>real</em> attempt at convincing people to work with an Emacs environment for Python.
+Most importantly, once you have started working with Emacs on one language, you can easily switch to another language and be perfectly comfortable (rather than having to learn a new IDE which will most likely disappoint you).</p>
+
+<p>For people it takes too long to setup their own Emacs environment for Python, which is why they’ll try and give up.</p>
+
+<p>The goal of emp is to take all the best development components available for Python, and combine it conveniently under Emacs.</p>
+
+<p>Often someone in the Emacs community finds out a new feature (himself or from another IDE), and implements it in Emacs for free. When it prooves useful and it is the best-of-their-kind, <code class="language-plaintext highlighter-rouge">emp</code> will want to integrate it.</p>
+
+<p>Feel free to <a href="https://github.com/kootenpv/emp/issues">make feature suggestions</a>!</p>
+
+<p>Of course, as expected of Emacs, everything can be customized, so if you do not like a component you can exclude it.</p>
+
+<p>Note that everything in Emacs is a bit different than you might be used to, so you’ll have to watch some videos to get up to speed if this is your first time using Emacs:</p>
+
+<ul>
+  <li>
+    <p><a href="https://www.youtube.com/watch?v=B6jfrrwR10k">Emacs Introduction and Demonstration by Howard Abrams</a></p>
+  </li>
+  <li>
+    <p><a href="https://www.youtube.com/watch?v=K3_SFerNIeI">Emacs in 10 minutes!</a></p>
+  </li>
+  <li>
+    <p>Text: <a href="http://mally.stanford.edu/~sr/computing/emacs.html">http://mally.stanford.edu/~sr/computing/emacs.html</a></p>
+  </li>
+  <li>
+    <p>Bonus: <a href="https://www.youtube.com/watch?v=8SkdfdXWYaI">Using Python to code by Voice (uses Emacs)</a></p>
+  </li>
+</ul>
+
+<p>Note that since <code class="language-plaintext highlighter-rouge">emp</code> is in an early stage, everything might be changed, but everything will be made easier, and explained better, eventually :-)</p>
+
+<h3 id="screenshot">Screenshot</h3>
+
+<p><img src="http://localhost:4001/assets/python-screenshot.png" width="50%" /></p>
+
+<h3 id="installation">Installation</h3>
+
+<p>Depending on whether you already have Python and/or Emacs installed, this might vary.</p>
+
+<p>I have provided some specific example instructions for clean installs:</p>
+
+<ul>
+  <li><a href="https://github.com/kootenpv/emp/blob/master/ubuntu_install.md">Ubuntu 15.10</a></li>
+  <li><a href="https://github.com/kootenpv/emp/blob/master/fedora_install.md">Fedora 23.10</a></li>
+</ul>
+
+<p>A general installation, however, goes as follows:</p>
+
+<ul>
+  <li>Install Python (preferably 3, yes I’m a Python 3 fan)</li>
+  <li>Install Emacs</li>
+  <li>Run:</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># Clone emp</span>
+git clone https://github.com/kootenpv/emp/
+
+<span class="c"># Make backup of previous `.emacs` config if it exists, otherwise ignore error</span>
+<span class="nb">mv</span> ~/.emacs ~/.emacs_before_emp
+
+<span class="c"># Tell .emacs where to find the emp emacs files</span>
+<span class="nb">echo</span> <span class="s1">'(setq user-emacs-directory "/home/&lt;YOURUSERNAME&gt;/emp/")'</span> <span class="o">&gt;</span> ~/.emacs
+<span class="nb">echo</span> <span class="s1">'(load (concat user-emacs-directory ".emacs.d/init.el"))'</span> <span class="o">&gt;&gt;</span> ~/.emacs</code></pre></figure>
+
+<p>Now whenever you will open Emacs, it will be fully charged (after downloading packages)!</p>
+
+<p>Below a list of features.</p>
+
+<h4 id="general-features-i-will-expand-these-sections">General features (I will expand these sections)</h4>
+
+<ul>
+  <li>
+    <p>Easy to add packages (just add them in the list in “emp/init/emp-external-packages.el”)</p>
+  </li>
+  <li>
+    <p>Nice standard theme, easy to take another theme by using <code class="language-plaintext highlighter-rouge">M-x load-theme RET &lt;theme-name&gt;</code>, e.g.</p>
+
+    <ul>
+      <li><a href="http://wikemacs.org/wiki/File:Zenburn-theme.png">zenburn</a>, <a href="http://wikemacs.org/wiki/File:Solarized-dark-theme.png">solarized-dark</a> or <a href="https://github.com/rocher/ubuntu-theme">ubuntu</a> themes</li>
+    </ul>
+  </li>
+  <li>
+    <p>Nice separation of functionality for init</p>
+  </li>
+  <li>
+    <p>All Emacs benefits, among:</p>
+
+    <ul>
+      <li>
+        <p>Great version control support by <a href="https://github.com/magit/magit">magit</a> (emacs layer on top of git/svn etc)</p>
+      </li>
+      <li>
+        <p>Great local backups for file changes</p>
+      </li>
+      <li>
+        <p>electric-pair-mode: awareness for pairs of <code class="language-plaintext highlighter-rouge">()</code>, <code class="language-plaintext highlighter-rouge">''</code>, <code class="language-plaintext highlighter-rouge">""</code>, <code class="language-plaintext highlighter-rouge">[]</code> etc</p>
+      </li>
+      <li>
+        <p><a href="http://www.dr-qubit.org/emacs.php">Undo tree</a> using <code class="language-plaintext highlighter-rouge">undo-tree-visualize</code> rather than linear undos</p>
+      </li>
+      <li>
+        <p>Modes for everything; <code class="language-plaintext highlighter-rouge">markdown-mode</code>, <code class="language-plaintext highlighter-rouge">dockerfile-mode</code> and so on</p>
+      </li>
+      <li>
+        <p>Recently opened files using <code class="language-plaintext highlighter-rouge">C-c r</code></p>
+      </li>
+      <li>
+        <p>Find file with autocomplete using <code class="language-plaintext highlighter-rouge">C-x C-f</code></p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="python-features">Python features</h4>
+
+<ul>
+  <li>
+    <p>Python optimized for Interactive (REPL)</p>
+
+    <ul>
+      <li>
+        <p>Uses IPython</p>
+      </li>
+      <li>
+        <p>Timing after each execution</p>
+      </li>
+      <li>
+        <p><code class="language-plaintext highlighter-rouge">C-0 C-&lt;Return&gt;</code> –&gt; Set focus to an IPython instance and run code</p>
+      </li>
+      <li>
+        <p><code class="language-plaintext highlighter-rouge">C-2 C-&lt;Return&gt;</code> –&gt; Set focus to an IPython 2 instance and run code</p>
+      </li>
+      <li>
+        <p><code class="language-plaintext highlighter-rouge">C-3 C-&lt;Return&gt;</code> –&gt; Set focus to an IPython 3 instance and run code</p>
+      </li>
+      <li>
+        <p><code class="language-plaintext highlighter-rouge">C-9 C-&lt;Return&gt;</code> –&gt; Set focus to an IPyPy instance and run code</p>
+      </li>
+      <li>
+        <p><code class="language-plaintext highlighter-rouge">C-&lt;Return&gt;</code> –&gt; Run code in the focused instance</p>
+      </li>
+      <li>
+        <p><code class="language-plaintext highlighter-rouge">C-&lt;Return&gt;</code> is smart; it runs either paragraphs, functions or classes (all with <code class="language-plaintext highlighter-rouge">C-&lt;Return&gt;</code>)</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">elpy</code> batteries included:</p>
+
+    <ul>
+      <li>
+        <p>Optimized testing</p>
+      </li>
+      <li>
+        <p>Easy adding of imports using <code class="language-plaintext highlighter-rouge">C-c &lt;Return&gt;</code></p>
+      </li>
+      <li>
+        <p>auto-completion from <code class="language-plaintext highlighter-rouge">jedi</code> (or <code class="language-plaintext highlighter-rouge">company</code>), result is dynamic completion</p>
+      </li>
+      <li>
+        <p><em>No need to check for correctness of <code class="language-plaintext highlighter-rouge">PEP8</code></em>; autopep8 / yapf for automatic formatting, on file-save</p>
+      </li>
+      <li>
+        <p>Imports ordered on save</p>
+      </li>
+      <li>
+        <p>Jump to definition of functions</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Best error reporting on the sideline, flymake &amp; pylint + showing symbollic names for easy disabling</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">git-gutter</code> to see recent modifications in git repos</p>
+  </li>
+</ul>
+
+<p>Feel free to leave a comment!</p>
+
+	</div>
+  </div>
+</article>
+
+<div class="row">
+  <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+    <ul class="pager blog-pager">
+      
+      <li class="previous">
+        <a href="/2015-12-28-pylint-flymake-anno-2016" data-toggle="tooltip" data-placement="top" title="Pylint and Flymake Anno 2016">&larr; Previous Post</a>
+      </li>
+      
+      
+      <li class="next">
+        <a href="/2016-04-24-yagmail" data-toggle="tooltip" data-placement="top" title="Sending Advanced Emails Made Simple in Python">Next Post &rarr;</a>
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+
+<div class="row disqus-comments">
+  <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+    
+<div class="comments">
+	<div id="disqus_thread"></div>
+	<script type="text/javascript">
+	    var disqus_shortname = 'katwregithubio';
+	    // ensure that pages with query string get the same discussion
+            var url_parts = window.location.href.split("?");
+            var disqus_url = url_parts[0];	    
+	    (function() {
+	        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+	        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	    })();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+
+  </div>
+</div>
+
+
+    </div>
+
+    <footer>
+  <div class="container beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+		  
+		  
+		  
+		  
+		  		  
+        </ul>
+        <p class="copyright text-muted">
+		  Katarzyna Wreczycka
+		  &nbsp;&bull;&nbsp;
+		  2026
+		  
+		  
+	    </p>
+		<p class="theme-by text-muted">
+		  Theme by
+		  <a href="https://github.com/daattali/beautiful-jekyll">beautiful-jekyll</a>
+		</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  
+    <!-- everything has to be repeated twice because on 2016-02-01 GitHub pages migrated to jekyll 3; see bug https://github.com/jekyll/jekyll/issues/4439 -->
+
+
+
+
+
+
+
+
+
+
+
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+      <script>
+        if (typeof jQuery == 'undefined') {
+          document.write('<script src="/js/jquery-1.11.2.min.js"></scr' + 'ipt>');
+        }
+      </script>
+    
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+    <script src="/js/bootstrap.min.js"></script>
+    
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+    <script src="/js/main.js"></script>
+    
+  
+
+
+
+
+
+  
+  </body>
+</html>

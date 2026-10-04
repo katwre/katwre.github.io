@@ -1,0 +1,430 @@
+---
+layout: archive
+title: "Portfolio"
+permalink: /portfolio/
+author_profile: true
+---
+
+<style>
+	.portfolio-page {
+		max-width: 850px;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 15px;
+		line-height: 1.6;
+	}
+
+	.portfolio-page h2 {
+		margin: 2.2em 0 0.8em;
+		padding-bottom: 0.35em;
+		border-bottom: 1px solid var(--global-border-color);
+	}
+
+	.portfolio-page h3 {
+		margin: 1.6em 0 0.5em;
+		font-size: 1.1em;
+	}
+
+	.portfolio-page h4 {
+		margin: 1.3em 0 0.4em;
+		font-size: 1em;
+	}
+
+	.portfolio-page .portfolio-toc {
+		margin: 1.5em 0 2.5em;
+		padding: 1em 1.4em;
+		background: var(--global-border-color);
+		border-radius: 4px;
+	}
+
+	.portfolio-page .project {
+		margin: 1.5em 0 2.25em;
+	}
+
+	.portfolio-page .project-logo {
+		display: block;
+		width: 150px;
+		max-height: 100px;
+		margin: 0 auto 1em;
+		object-fit: contain;
+		object-position: center;
+	}
+
+	.portfolio-page figure {
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		margin: 1.2em 0;
+		text-align: center;
+	}
+
+	.portfolio-page figure.caption-below {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.portfolio-page .project-figure-row {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 1rem;
+		align-items: start;
+		margin: 1.2em 0;
+	}
+
+	.portfolio-page .project-figure-row > img {
+		width: 100%;
+		max-width: 100%;
+		height: auto;
+		border-radius: 4px;
+	}
+
+	.portfolio-page .project-figure-row > figure {
+		min-width: 0;
+		margin: 0;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.portfolio-page .project-figure-row > figure img {
+		width: 100%;
+	}
+
+	.portfolio-page .project-figure-row figcaption {
+		grid-column: 1 / -1;
+		text-align: center;
+	}
+
+	@media (max-width: 600px) {
+		.portfolio-page .project-figure-row {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	.portfolio-page figure img {
+		max-width: 100%;
+		height: auto;
+		border-radius: 4px;
+	}
+
+	.portfolio-page #alzheimer figure img {
+		width: 85%;
+		max-width: 85%;
+	}
+
+	.portfolio-page figcaption {
+		margin-top: 0.5em;
+		color: var(--global-text-color);
+		font-size: 0.88em;
+		text-align: center;
+	}
+
+	.portfolio-page figcaption::before {
+		content: "Figure: ";
+		font-weight: 600;
+	}
+
+	.portfolio-page .project-links {
+		margin: 0.75em 0;
+	}
+
+	.portfolio-page .project-links a {
+		margin-right: 1em;
+	}
+</style>
+
+<div class="portfolio-page">
+  <!--
+	<p>A selection of research, open-source, freelance, machine-learning, data-engineering, and web projects.</p>
+--> 
+	<nav class="portfolio-toc" aria-label="Portfolio sections">
+		<strong>On this page</strong>
+		<ul>
+			<li><a href="#research">Research</a></li>
+			<li><a href="#opensource">Open-source software</a></li>
+			<li><a href="#freelance">Freelance projects</a></li>
+			<li><a href="#ml-ai">Machine-learning and AI projects</a></li>
+			<li><a href="#algorithms">Computational biology and algorithms</a></li>
+			<li><a href="#data-engineering">Data engineering</a></li>
+			<li><a href="#web-projects">Web projects</a></li>
+		</ul>
+	</nav>
+
+	<h2 id="research">Research</h2>
+
+	<section class="project" id="genomics">
+		<h3>Interpreting bias in genomics: high-occupancy target regions</h3>
+		<p>We used machine-learning models - elastic-net regression and principal component analysis (PCA)—to investigate genomic regions known as high-occupancy target (HOT) regions. These regions attract unusually high numbers of proteins and are likely <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4538825/" target="_blank" rel="noopener">technical artifacts</a> of chromatin immunoprecipitation followed by sequencing (<a href="https://www.nature.com/articles/nrg2641" target="_blank" rel="noopener">ChIP-seq</a>) experiments.</p>
+		<p>While antibody quality and chromatin interactions are known to affect ChIP-seq reliability, our study found that GC- and CpG-rich sequences, <a href="https://www.nature.com/articles/npp2012112" target="_blank" rel="noopener">DNA methylation</a>, and RNA:DNA hybrids (<a href="https://www.nature.com/articles/s41580-022-00474-x" target="_blank" rel="noopener">R-loops</a>) also contribute to these artifacts across species. This work shows how machine learning can uncover hidden biases in genomic data and improve experimental interpretation.</p>
+		<figure>
+			<img src="/%20beautiful-jekyll_2026/img/hot.png" style="max-width: 70%;" alt="HOT-region ChIP-seq signal comparison">
+			<figcaption>Unexpected ChIP-seq signals appear in HOT regions even without the target protein (KO ChIP-seq). The barplot shows how often these regions are detected as bound. HOT regions correspond to the top 1% of genomic regions with the highest protein-binding signals (99th percentile).</figcaption>
+		</figure>
+		<p class="project-links"><a href="https://doi.org/10.1093/nar/gkz460" target="_blank" rel="noopener">Publication: Wreczycka et al., Nucleic Acids Research, 2019</a></p>
+	</section>
+
+	<section class="project" id="cfdna-acs">
+		<h3>Liquid-biopsy epigenetics in disease</h3>
+		<h4>DNA methylation biomarkers in acute coronary syndrome</h4>
+		<p>We investigated circulating cell-free DNA (cfDNA) methylation as a non-invasive biomarker for acute coronary syndrome (ACS), based on the principle that damaged tissues release DNA into the bloodstream. Methylation profiles distinguished ACS subtypes and identified cell-type-specific markers that can help trace the tissue origin of cfDNA. Hundreds of markers linked to cardiovascular conditions and inflammation were validated in an independent cohort.</p>
+		<figure class="caption-below">
+			<img src="/%20beautiful-jekyll_2026/img/cfndaacs.png" alt="PCA of differentially methylated regions associated with ACS severity" style="max-width: 50%;">
+			<figcaption>PCA of 254 differentially methylated regions linked to ACS severity using linear models.</figcaption>
+		</figure>
+		<p class="project-links"><a href="https://doi.org/10.1093/nargab/lqad061" target="_blank" rel="noopener">Publication: Cuadrat et al., NAR Genomics and Bioinformatics, 2023</a></p>
+
+		<h4>DNA methylation profiling in neuroblastoma</h4>
+		<p>In collaboration with Charité Hospital in Berlin, we analyzed primary neuroblastoma tumors and urine-derived cfDNA using bisulfite sequencing and RNA-seq. We identified methylation patterns that distinguish high- and low-risk tumors and linked MYCN-driven methylation changes to disrupted transcription-factor networks, highlighting potential therapeutic targets.</p>
+		<figure>
+			<img src="/%20beautiful-jekyll_2026/img/neuroblastoma_clustering.png" alt="Methylation-based clustering of neuroblastoma patients" style="max-width: 620px;">
+			<figcaption>Figure: Methylation-based clustering of neuroblastoma patients using differentially methylated CpGs.</figcaption>
+		</figure>
+	</section>
+
+	<h2 id="opensource">Open-source software</h2>
+
+	<section class="project">
+		<img class="project-logo" src="/%20beautiful-jekyll_2026/img/genomation.png" alt="genomation logo">
+		<h3>genomation</h3>
+		<p><em>genomation</em> is a Bioconductor R package for genomic feature and interval analysis. It provides tools to read BED/GFF files as GRanges, summarize genomic features across regions, create enrichment plots and heatmaps, and annotate regions with exons, introns, or promoters. I was a co-developer and maintainer.</p>
+		<p class="project-links"><a href="https://github.com/BIMSBbioinfo/genomation" target="_blank" rel="noopener">GitHub repository</a> · Developed with the <a href="https://www.mdc-berlin.de/bioinformatics" target="_blank" rel="noopener">MDC-BIMSB Bioinformatics and Omics Data Science Platform</a></p>
+	</section>
+
+	<section class="project">
+		<img class="project-logo" src="/%20beautiful-jekyll_2026/img/pigx.png" alt="PiGx logo">
+		<h3>PiGx</h3>
+		<p><em>PiGx</em> is a collection of genomics pipelines implemented with Snakemake, Python, and R. Pipelines are configured with a sample sheet and settings file, then generate interactive HTML reports summarizing results. My contribution included co-implementing the PiGx BS-seq pipeline.</p>
+		<p class="project-links"><a href="https://github.com/BIMSBbioinfo/pigx" target="_blank" rel="noopener">GitHub repository</a> · Developed with the <a href="https://www.mdc-berlin.de/bioinformatics" target="_blank" rel="noopener">MDC-BIMSB Bioinformatics and Omics Data Science Platform</a></p>
+	</section>
+
+	<section class="project">
+		<img class="project-logo" src="/%20beautiful-jekyll_2026/img/motifActivity.png" alt="motifActivity logo">
+		<h3>motifActivity</h3>
+		<p><em>motifActivity</em> is an R package for identifying transcription factors that may explain changes in gene expression or epigenetic marks. It predicts transcription-factor activity from RNA-seq, BS-seq, ChIP-seq, ATAC-seq, and related data, together with DNA motif collections.</p>
+		<p class="project-links"><a href="https://github.com/katwre/motifActivity" target="_blank" rel="noopener">GitHub repository</a> · Developed with the <a href="https://www.mdc-berlin.de/bioinformatics" target="_blank" rel="noopener">MDC-BIMSB Bioinformatics and Omics Data Science Platform</a></p>
+	</section>
+
+	<h2 id="freelance">Freelance projects</h2>
+
+	<section class="project" id="endometriosis">
+		<h3>Endometriosis prediction from single-cell data</h3>
+		<p>I built an scRNA-seq workflow using menstrual-effluent samples to detect endometriosis through <a href="https://www.nature.com/articles/s41588-024-01873-w" target="_blank" rel="noopener">endometrium-atlas-based</a> cell mapping and composition profiling. It identifies disease-associated shifts in stromal and immune populations and derives a sample-level similarity score.</p>
+		<ul>
+			<li>Processed data with <a href="https://nf-co.re/scrnaseq" target="_blank" rel="noopener">nf-core/scrnaseq</a> for standardized quality control, alignment, and count-matrix generation.</li>
+			<li>Used AWS resources to scale preprocessing, reference mapping, and downstream modeling.</li>
+			<li>Mapped donor cells to an endometrium reference atlas using scArches transfer learning, scvi-tools, and PyTorch.</li>
+			<li>Performed analysis in Python with AnnData, Scanpy, scvi-tools, NumPy, pandas, Matplotlib, and seaborn.</li>
+			<li>Derived a sample-level score to classify donors as control-like or endometriosis-like.</li>
+		</ul>
+		<figure class="caption-below"><img src="/%20beautiful-jekyll_2026/img/endometriosis.png" alt="Menstrual-effluent single-cell profiles mapped to an endometrium atlas" width="60%"><figcaption>Menstrual effluent scRNA-seq profiles were mapped to an <a href="https://www.nature.com/articles/s41588-024-01873-w" target="_blank" rel="noopener">endometrium reference atlas</a> to define cell-type composition shifts and generate a sample-level score that distinguishes endometriosis from control donors.</figcaption></figure>
+	</section>
+
+	<section class="project" id="target-prioritization">
+		<h3>Prioritizing therapeutic targets in clinical trials</h3>
+		<h4>Biomarker visualization and survival analysis</h4>
+		<p>We developed interactive visualizations, including oncoprints, to highlight biomarkers in patients with limited treatment options. These summaries reveal genomic alterations and support the identification of potential therapeutic targets. Survival analyses helped assess the clinical relevance of nominated targets in patient cohorts with poor outcomes or few effective therapies.</p>
+		<div class="project-figure-row">
+			<img src="/%20beautiful-jekyll_2026/img/oncoprint_modified.png" alt="Example biomarker oncoprint">
+			<img src="/%20beautiful-jekyll_2026/img/survival_analysis.png" alt="Survival analysis of clinical biomarkers">
+			<figcaption>Example of biomarker visualization and survival analysis.</figcaption>
+		</div>
+
+		<h4>Machine learning for target identification</h4>
+		<p>To prioritize therapeutic targets, we applied <a href="https://cseweb.ucsd.edu/~elkan/posonly.pdf" target="_blank" rel="noopener">positive-unlabeled (PU) learning</a>, which is useful when only confirmed targets are labeled. PU classifiers combined gene expression, mutation, and therapy annotations to identify potential targets. We also used autoencoders to uncover hidden patterns and prioritize molecular features without labels.</p>
+		<figure class="caption-below"><img src="/%20beautiful-jekyll_2026/img/PUlearning.png" style="max-width: 80%;" alt="Positive-unlabeled learning concept"><figcaption>PU learning principle (figure adapted from <a href="https://techblog.ing.pl/blog/podstawy-positive-unlabeled-learning" target="_blank" rel="noopener">a blogpost</a>).</figcaption></figure>
+		<figure class="caption-below"><img src="/%20beautiful-jekyll_2026/img/variational-autoencoder.png" alt="Variational autoencoder schematic" style="max-width: 50%;"><figcaption>Schematic of a Variational Autoencoder (figure adapted from <a href="https://avandekleut.github.io/vae/" target="_blank" rel="noopener">a blogpost</a>).</figcaption></figure>
+	</section>
+
+	<section class="project" id="alzheimer">
+		<h3>Multi-omics and Enformer for an Alzheimer’s disease biomarker</h3>
+		<p>In this project, I investigated glial-to-neuron reprogramming through activation of a specific transcription factor (TF) in Alzheimer’s disease.</p>
+		<p>I integrated multi-omics data—including RNA-seq, ATAC-seq, and H3K4me2/H3K27me3 ChIP-seq—to identify differentially expressed genes and pathways (GO, GSEA), and examine their association with Alzheimer’s disease risk variants (GWAS), regulatory enhancers, DNA motifs, and TF binding sites linked to neuronal differentiation.</p>
+		<p>Large-scale analyses were executed via <a href="https://www.nextflow.io/" target="_blank" rel="noopener">Nextflow</a> pipelines on Kubernetes and AWS, ensuring scalable and reproducible processing of NGS datasets.</p>
+		<p>Using <a href="https://www.nature.com/articles/s41592-021-01252-x/" target="_blank" rel="noopener">Enformer</a>, I mapped the regulatory landscape around the target transcription factor and identified sequence regions predicted to influence its expression in neurons and glia. Enformer predicts regulatory activity from DNA sequence; gradient-based attribution highlights regions with strong effects on gene expression. I analyzed an approximately 400 kb region, applying cell-type-specific masks and signal smoothing to identify candidate enhancers.</p>
+		<figure><img src="/%20beautiful-jekyll_2026/img/alzheimers_DL/rnaseq.png" alt="Example RNA-seq analysis"><figcaption>Example RNA-seq analysis.</figcaption></figure>
+		<figure><img src="/%20beautiful-jekyll_2026/img/alzheimers_DL/motifactivity.png" alt="Motif activity in candidate enhancers"><figcaption>Example DNA motif activity in enhancer regions defined by ATAC-seq and histone-mark ChIP-seq.</figcaption></figure>
+		<figure><img src="/%20beautiful-jekyll_2026/img/alzheimers_DL/chipseqpeaks.png" alt="ChIP-seq peaks around the target transcription-factor gene"><figcaption>Example ChIP-seq peaks around the target transcription-factor gene.</figcaption></figure>
+		<figure><img src="/%20beautiful-jekyll_2026/img/alzheimers_DL/enformer.png" alt="Enformer model architecture" style="max-width: 520px;"><figcaption>Enformer’s architecture by <a href="https://www.nature.com/articles/s41592-021-01252-x/" target="_blank" rel="noopener">Avsec et al.</a>, copied from <a href="https://deepmind.google/discover/blog/predicting-gene-expression-with-ai/" target="_blank" rel="noopener">the blog post</a>.</figcaption></figure>
+		<figure><img src="/%20beautiful-jekyll_2026/img/alzheimers_DL/enformer_output.png" alt="Enformer output tracks for neurons and glia"><figcaption>Example Enformer tracks for neurons and glia.</figcaption></figure>
+		<figure><img src="/%20beautiful-jekyll_2026/img/alzheimers_DL/enformer_output_enhancers.png" alt="Candidate enhancer regions identified with Enformer"><figcaption>Candidate enhancer peaks and regions of interest.</figcaption></figure>
+	</section>
+
+	<section class="project" id="igv">
+		<h3>IGV web-app feature development</h3>
+		<p>I contributed to the <a href="https://igv.org/app/" target="_blank" rel="noopener">IGV web application</a>, an interactive tool for exploring genomic data (<a href="https://github.com/igvteam/igv-webapp" target="_blank" rel="noopener">source code</a>). The work used JavaScript and Python and enabled visualization of public and in-house datasets.</p>
+		<ul>
+			<li>Enabled dynamic visualization of new in-house genomic datasets.</li>
+			<li>Added highlighting of genomic regions of interest, including variants.</li>
+			<li>Added RefSeq and GENCODE transcript controls to collapse or expand isoforms, extend selected gene isoforms, and adjust track widths.</li>
+			<li>Linked visualized tracks to their source databases.</li>
+			<li>Implemented a command-line tool to generate snapshots of specified genes or regions.</li>
+		</ul>
+		<figure><img src="/%20beautiful-jekyll_2026/img/igv_original.png" alt="IGV web application showing genomic data tracks"><figcaption>Example IGV web-app view with genomic data tracks.</figcaption></figure>
+	</section>
+
+	<h2 id="ml-ai">Independent machine-learning and AI projects</h2>
+
+	<section class="project" id="ml-api-projects">
+		<h3>End-to-end machine-learning APIs</h3>
+		<h4 id="gene-transformer">Gene-type prediction from DNA sequence</h4>
+		<p>Built classical machine-learning models, convolutional networks, and a custom nucleotide-level Transformer to predict gene type from raw DNA sequence. The deployment work explored ONNX Runtime inference, FastAPI and BentoML serving, Docker Compose, Kubernetes with Kind, and AWS EKS.</p>
+		<figure><img src="/%20beautiful-jekyll_2026/img/sequence_transformer.png" alt="Gene and nucleotide sequence example" style="max-width: 360px;"><figcaption>Example gene and its nucleotide sequence.</figcaption></figure>
+		<p class="project-links"><a href="https://github.com/katwre/Genetype-classifier-api" target="_blank" rel="noopener">GitHub repository</a></p>
+
+		<h4 id="solubility">Molecular solubility prediction</h4>
+		<p>Built a Flask API to predict whether a compound dissolves in water from molecular descriptors such as size, polarity, solvation energy, and charge distribution. I compared Partial Least Squares, Elastic Net, Random Forest, and XGBoost models and deployed the service to AWS Elastic Beanstalk.</p>
+		<figure><img src="/%20beautiful-jekyll_2026/img/solubility.png" alt="Conceptual illustration of molecular solubility prediction" style="max-width: 460px;"><figcaption>Conceptual view of molecular solubility prediction.</figcaption></figure>
+		<p class="project-links"><a href="https://github.com/katwre/Solubility-api" target="_blank" rel="noopener">GitHub repository</a></p>
+
+		<h4 id="immune-classifier">Immune-cell image classifier</h4>
+		<p>Evaluated transfer learning for classifying immune-cell types in H&amp;E-stained blood microscopy images. A pretrained Xception model served as a fixed feature extractor with a custom MLP classification head. I also trained logistic regression and XGBoost on Xception embeddings as interpretable baselines, tuning learning rate and dropout; the MLP-based model performed strongly on held-out data. The API was deployed with Docker and AWS Lambda.</p>
+		<figure><img src="/%20beautiful-jekyll_2026/img/immunecells.png" alt="Examples of blood-cell types" style="max-width: 460px;"><figcaption>Examples of blood-cell types: erythroblast, monocyte, and platelet.</figcaption></figure>
+		<p class="project-links"><a href="https://github.com/katwre/Immune-cell-classifier-api" target="_blank" rel="noopener">GitHub repository</a></p>
+
+		<h4 id="diffusion-inpainting">Diffusion-based image inpainting</h4>
+		<p>Explored diffusion models for reconstructing missing regions in H&amp;E-stained blood-cell images. The compact diffusion model restores masked areas while preserving observed context and is presented through a simple Streamlit interface, with AWS Batch used for deployment.</p>
+		<figure><img src="/%20beautiful-jekyll_2026/img/diffusion_immune.png" alt="Diffusion-based inpainting results" style="max-width: 460px;"><figcaption>Inpainting results: reconstructing masked regions while retaining surrounding image context.</figcaption></figure>
+		<p class="project-links"><a href="https://github.com/katwre/Diffusion-models-for-cell-images-api" target="_blank" rel="noopener">GitHub repository</a></p>
+	</section>
+
+	<section class="project" id="survival">
+		<h3>Survival analysis using gene expression &amp; clinical data (Cox models)</h3>
+		<p>Developed models to predict mortality or relapse risk in newly diagnosed multiple-myeloma patients using baseline clinical and gene-expression data. The workflow included RNA-seq preprocessing, PCA and clustering, Cox regression, random survival forests, LASSO-based feature selection, and pathway-informed models, evaluated using the concordance index (C-index).</p>
+		<div class="project-figure-row">
+			<img src="/%20beautiful-jekyll_2026/img/survival_classification.png" alt="Comparison of survival models by C-index">
+			<img src="/%20beautiful-jekyll_2026/img/surival_probability.png" alt="Kaplan–Meier plot for the best-performing survival model">
+			<figcaption>C-index comparison of multiple survival models (left) and Kaplan–Meier plot of the best-performing model (right).</figcaption>
+		</div>
+		<p class="project-links"><a href="https://github.com/katwre/survival_analysis/tree/main/" target="_blank" rel="noopener">GitHub repository</a></p>
+	</section>
+
+	<section class="project" id="omics-deep-learning">
+		<h3>Deep learning for imaging and omics</h3>
+		<h4>CNNs and transfer learning for chest X-ray classification</h4>
+		<p>I applied convolutional neural networks (CNNs) to classify chest X-ray images using both 224×224 and 64×64 pixel inputs, exploring whether lightweight models can retain diagnostic performance. Alongside a baseline CNN trained from scratch, I used transfer learning with pretrained convolutional backbones such as ResNet to assess whether pretraining could improve classification.</p>
+		<div class="project-figure-row">
+			<figure class="caption-below"><img src="/%20beautiful-jekyll_2026/img/xray.jpeg" alt="Example healthy chest X-ray" style="max-width: 240px;"><figcaption>Healthy example.</figcaption></figure>
+			<figure class="caption-below"><img src="/%20beautiful-jekyll_2026/img/xray_pneumonia.jpeg" alt="Example chest X-ray showing pneumonia" style="max-width: 240px;"><figcaption>Pneumonia example.</figcaption></figure>
+		</div>
+		<p class="project-links"><a href="https://github.com/katwre/ML-projects/tree/main/CNN_and_TransferLearning_Xray/" target="_blank" rel="noopener">GitHub repository</a></p>
+
+		<h4>Autoencoder for scRNA-seq dimensionality reduction and data imputation</h4>
+		<p>I developed a simple autoencoder with a custom loss function for imputing missing values in single-cell RNA-seq data. The approach was inspired by the method proposed by <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7144625/" target="_blank" rel="noopener">Badsha et al.</a></p>
+		<figure class="caption-below"><img src="/%20beautiful-jekyll_2026/img/ae_imputed.png" alt="Imputed single-cell RNA-seq data" style="max-width: 460px;"><figcaption>Imputed scRNA-seq data.</figcaption></figure>
+		<figure class="caption-below"><img src="/%20beautiful-jekyll_2026/img/imputed.png" alt="Observed and imputed gene expression values" style="max-width: 460px;"><figcaption>Model output compared with true gene-expression values. Non-imputed data (blue) show reconstructed known values; imputed data (orange) show predictions for missing (masked) values.</figcaption></figure>
+		<p class="project-links"><a href="https://github.com/katwre/ML-projects/tree/main/autoencoder_scRNAseq/" target="_blank" rel="noopener">GitHub repository</a></p>
+
+		<h4>Federated VAE for scRNA-seq batch correction</h4>
+		<p>Explored federated training of a scVI model using the Flower framework and SecAgg+ secure aggregation, and compared it with centralized training to study mitigation of batch effects in single-cell RNA-seq.</p>
+		<figure class="caption-below"><img src="/%20beautiful-jekyll_2026/img/Gene_Expression_UMAP_before_correction.png" alt="Baseline gene-expression UMAP" style="max-width: 580px;"><figcaption>Baseline gene-expression UMAP.</figcaption></figure>
+		<figure class="caption-below"><img src="/%20beautiful-jekyll_2026/img/Gene_Expression_UMAP_after_correction_centralized.png" alt="UMAP after centralized scVI batch correction" style="max-width: 580px;"><figcaption>Centralized scVI model.</figcaption></figure>
+		<figure class="caption-below"><img src="/%20beautiful-jekyll_2026/img/Gene_Expression_UMAP_after_correction_federated.png" alt="UMAP after federated scVI batch correction" style="max-width: 580px;"><figcaption>Federated scVI model.</figcaption></figure>
+		<p class="project-links"><a href="https://github.com/katwre/ML-projects/tree/main/federated_learning_scRNA-seq/" target="_blank" rel="noopener">GitHub repository</a></p>
+
+		<h4>cfDNA cell-type deconvolution</h4>
+		<p>Studied cfDNA fragments released by tissues into the blood as a potential source of early disease signals. Applied regression-based methods (NNLS, Lasso, Ridge, Elastic Net) to estimate cell-type proportions from bulk DNA methylation data, and developed:</p>
+		<ul>
+			<li>A variational autoencoder (VAE) that reconstructs CpG profiles while jointly predicting cell-type proportions.</li>
+			<li>A semi-supervised NMF model anchored to known reference signatures.</li>
+			<li>A lightweight transformer that treats CpG regions as tokens and uses embeddings and self-attention to capture genomic dependencies.</li>
+		</ul>
+		<figure><img src="/%20beautiful-jekyll_2026/img/deconvlution_bsseq.png" alt="Cell-type deconvolution of blood DNA methylation data" style="max-width: 580px;"><figcaption>Deconvolution of blood DNA methylation measured by bisulfite sequencing.</figcaption></figure>
+		<p class="project-links"><a href="https://github.com/katwre/ML-projects/tree/main/VAE_NMF_Transformer_regression_cfDNA/" target="_blank" rel="noopener">GitHub repository</a></p>
+	</section>
+
+	<section class="project" id="spatial-gnn">
+		<h3>GNN for spatial transcriptomics</h3>
+		<p>This project demonstrates how graph neural networks (GNNs) can capture spatially coherent patterns in gene expression, comparing their learned embeddings with traditional PCA and k-means clustering.</p>
+		<p>Spatial transcriptomics measures gene expression while preserving tissue architecture, enabling the study of cellular organization and microenvironments. Identifying spatial domains—regions with similar expression and spatial context—remains challenging.</p>
+		<p>Because GNNs model both gene-expression features and spatial neighborhood relationships, I implemented a mini graph autoencoder (GAE) from scratch in PyTorch to learn unsupervised embeddings of tissue spots. The project uses Squidpy’s toy 10x Genomics Visium H&amp;E mouse-brain dataset (about 2,700 spots and 33,000 genes).</p>
+		<div class="project-figure-row">
+			<figure><img src="/%20beautiful-jekyll_2026/img/gnn_spatial_baseline.png" alt="Baseline PCA and k-means spatial clustering"><figcaption>Baseline PCA + KMeans.</figcaption></figure>
+			<figure><img src="/%20beautiful-jekyll_2026/img/gnn_spatial.png" alt="GNN-based spatial clustering"><figcaption>GNN-based clustering.</figcaption></figure>
+		</div>
+		<p class="project-links"><a href="https://github.com/katwre/ML-projects/tree/main/GNN_spatialomics" target="_blank" rel="noopener">GitHub repository</a></p>
+	</section>
+
+	<section class="project" id="bioinformatics-assistant">
+		<h3>LLM assistant for bioinformatics queries</h3>
+		<p>Developed an AI assistant that translates plain-English biology questions into SPARQL queries against UniProt (proteins and annotations), OMA (orthology), and Bgee (gene expression). The assistant combines Mistral or Llama models, available through Groq or Ollama, with retrieval-augmented generation using Qdrant and FastEmbed. Researchers can use a command-line interface or a Chainlit web app to validate and run queries and receive plain-language summaries.</p>
+		<figure><img src="/%20beautiful-jekyll_2026/img/ChainlitwebUI_1.png" alt="Chainlit web interface for the bioinformatics assistant" style="max-width: 600px;"><figcaption>Web UI supporting Mistral, Llama, and Ollama.</figcaption></figure>
+		<p class="project-links"><a href="https://github.com/katwre/ML-projects/tree/main/llm-biodata/" target="_blank" rel="noopener">GitHub repository</a></p>
+	</section>
+
+	<h2 id="algorithms">Computational biology and algorithms</h2>
+
+	<section class="project">
+		<h3>Protein folding with the HP model and replica Monte Carlo</h3>
+		<p>Implemented simulated annealing and replica-exchange Monte Carlo in Python and NumPy for protein folding in the hydrophobic-polar (HP) lattice model. The model represents amino acids as hydrophobic (H) or polar (P) residues on a square lattice; Metropolis–Hastings sampling explores conformations according to the Boltzmann distribution.</p>
+		<figure><img src="/%20beautiful-jekyll_2026/img/HPmodel1.png" alt="Two-dimensional HP model protein-folding schematic" style="max-width: 380px;"><figcaption>Example HP-model conformation with optimal energy −2; the two hydrophobic contacts are between residues 4 and 13, and 5 and 12 (Thachuk et al., 2007).</figcaption></figure>
+		<p class="project-links"><a href="https://github.com/katwre/bioinformatics-projects/tree/master/Molecular_Dynamics" target="_blank" rel="noopener">GitHub repository</a></p>
+
+		<h3>Genome assembly with de Bruijn graphs</h3>
+		<p>Implemented de Bruijn graph-based genome assembly using an Eulerian walk to reconstruct DNA sequences from k-mers. Nodes represent k-mer prefixes and suffixes; edges represent the k-mers. Finding an Eulerian cycle reconstructs a genome by joining successive k-mers with a one-base shift, avoiding the cost of searching for a Hamiltonian cycle.</p>
+		<figure><img src="/%20beautiful-jekyll_2026/img/deBruijngraph.png" alt="De Bruijn graph built from a sequence containing repeats" style="max-width: 520px;"><figcaption>Example de Bruijn graph from a sequence with repeats (Compeau et al., 2011).</figcaption></figure>
+		<figure><img src="/%20beautiful-jekyll_2026/img/Euleriancycle.png" alt="Comparison of Hamiltonian and Eulerian genome-assembly strategies" style="max-width: 560px;"><figcaption>Genome assembly strategies, from Hamiltonian to Eulerian cycles (Pevzner et al., 2001); focus on the Eulerian-cycle approach.</figcaption></figure>
+		<p class="project-links"><a href="https://github.com/katwre/bioinformatics-projects/tree/master/genome_assembly" target="_blank" rel="noopener">GitHub repository</a></p>
+
+		<h3>Phylogenetic tree estimation with Felsenstein pruning and NNI</h3>
+		<p>Implemented Felsenstein’s tree-pruning algorithm for evaluating evolutionary-tree likelihoods from nucleic-acid sequences, together with nearest-neighbor interchange (NNI) for rearranging rooted binary phylogenetic trees under the Jukes–Cantor substitution model.</p>
+		<figure><img src="/%20beautiful-jekyll_2026/img/nni.png" alt="Nearest-neighbor interchange on a subsplit directed acyclic graph" style="max-width: 560px;"><figcaption>Example NNI on a subsplit directed acyclic graph.</figcaption></figure>
+		<p class="project-links"><a href="https://github.com/katwre/bioinformatics-projects/tree/master/comparative_genomics" target="_blank" rel="noopener">GitHub repository</a></p>
+
+		<h3>Regulatory DNA discovery with comparative genomics</h3>
+		<p>Bio Motif Ensembl is a Python tool for discovering candidate regulatory DNA regions across related mammalian genomes using Ensembl’s public MySQL databases. It retrieves orthologous sequences (for example, human, mouse, and rat), aligns upstream regions, detects conserved non-coding segments, and analyzes them with motif-discovery tools such as MEME and AlignACE. A binomial model tests motif over-representation to identify potentially functional regulatory elements.</p>
+		<figure><img src="/%20beautiful-jekyll_2026/img/overreprmotifs.png" alt="Over-represented motif discovery concept" style="max-width: 520px;"><figcaption>Concept related to comparative regulatory-motif discovery.</figcaption></figure>
+		<p class="project-links"><a href="https://github.com/katwre/bioinformatics-projects/tree/master/bio_motif_ensembl" target="_blank" rel="noopener">GitHub repository</a></p>
+	</section>
+
+	<h2 id="data-engineering">Independent data-engineering projects</h2>
+
+	<section class="project" id="bike-sharing">
+		<h3>Streaming analytics for urban bike sharing</h3>
+		<p>This project ingests GBFS bike-station data every minute using Kestra, writes raw events to MinIO and Kafka, loads curated records into PostgreSQL, transforms them with dbt, and serves a two-tile Streamlit dashboard in Docker Compose. AWS infrastructure and CI/CD are provisioned with Terraform.</p>
+		<figure><img src="https://raw.githubusercontent.com/katwre/gbfs-bike-monitoring/refs/heads/main/img/dashboard.gif" alt="Bike-sharing analytics dashboard"><figcaption>Dashboard running on an AWS EC2 instance provisioned with Terraform.</figcaption></figure>
+		<p class="project-links"><a href="https://github.com/katwre/gbfs-bike-monitoring" target="_blank" rel="noopener">GitHub repository</a></p>
+	</section>
+
+	<h2 id="web-projects">Independent web projects</h2>
+
+	<section class="project" id="spatial-explorer">
+		<h3>Spatial transcriptomics explorer</h3>
+		<p>An interactive platform for exploring gene expression in tissue context. It includes a chat interface, AI-powered gene summaries, and spatial-domain analysis through an MCP server.</p>
+		<ul>
+			<li>Gene summaries use Ollama, with Mistral 7B as the default model.</li>
+			<li>The chatbox uses the same LLM backend.</li>
+			<li>Spatial-domain analysis uses <a href="https://cafferyang.com/ChatSpatial/" target="_blank" rel="noopener">ChatSpatial MCP</a> with SpaGCN when available, and falls back to Scanpy.</li>
+		</ul>
+		<figure><img src="https://raw.githubusercontent.com/katwre/Spatial_explorer_api/main/img/preview2.gif" alt="Spatial transcriptomics app preview"><figcaption>Explore precomputed 10x Genomics Visium datasets directly in tissue context, without running computationally intensive pipelines online.</figcaption></figure>
+		<p class="project-links"><a href="https://github.com/katwre/Spatial_explorer_api" target="_blank" rel="noopener">GitHub repository</a></p>
+	</section>
+
+	<section class="project" id="games">
+		<h3>Sudoku</h3>
+		<p>A simple Sudoku game implemented in JavaScript and jQuery.</p>
+		<figure><img src="/%20beautiful-jekyll_2026/img/sudoku.png" alt="Sudoku game screenshot" style="max-width: 420px;"></figure>
+		<p class="project-links"><a href="https://github.com/katwre/sudoku" target="_blank" rel="noopener">GitHub repository</a></p>
+
+		<h3>Minesweeper</h3>
+		<p>A classic Minesweeper game implemented in Java using Swing and AWT.</p>
+		<figure><img src="/%20beautiful-jekyll_2026/img/minesweeper.png" alt="Minesweeper game screenshot" style="max-width: 260px;"></figure>
+		<p class="project-links"><a href="https://github.com/katwre/Minesweeper" target="_blank" rel="noopener">GitHub repository</a></p>
+	</section>
+
+	<section class="project" id="django-services">
+		<h3>Django web services</h3>
+		<p>Django-based server for visualizing multiple sequence alignments.</p>
+		<p class="project-links"><a href="https://github.com/freesci/MSA-vis-project" target="_blank" rel="noopener">MSA visualization project on GitHub</a></p>
+		<p>Mobile application built with Django, a manifesto app, and localStorage.</p>
+		<p class="project-links"><a href="https://github.com/katwre/phone_application" target="_blank" rel="noopener">Mobile app project on GitHub</a></p>
+	</section>
+
+  <!--
+	<section class="project" id="career-match">
+		<h3>Discover Your Career Match (Pyodide)</h3>
+		<p>An interactive browser-based tool that matches careers to a user’s Big Five personality profile. It runs Python directly in the browser using Pyodide.</p>
+		<figure><img src="/%20beautiful-jekyll_2026/img/personalities.png" alt="PCA plot of careers by personality traits" style="max-width: 620px;"><figcaption>PCA plot showing career matches by personality profile.</figcaption></figure>
+		<p class="project-links"><a href="https://github.com/katwre/Personalities" target="_blank" rel="noopener">GitHub repository</a></p>
+	</section>
+-->
+  
+</div>
+

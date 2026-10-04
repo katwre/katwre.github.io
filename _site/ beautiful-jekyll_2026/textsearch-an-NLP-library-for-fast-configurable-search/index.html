@@ -1,0 +1,47 @@
+<p>Speed and accuracy is everything in Natural Language Processing (NLP).
+Some decide to go a “pure” Deep Learning route, but even when going in that direction, there are many situations in which you need a fast text searcher.
+Sometimes you just are looking for, say, 10000 words in [bm]illions of texts (the more, the higher the relative gain compared to regex).</p>
+
+<p>One of the libraries existing for that is <a href="https://github.com/vi3k6i5/flashtext">flashtext</a>. I suggest you read the article written by my friend <a href="https://github.com/vi3k6i5">Vikash Singh</a> called “<a href="https://www.freecodecamp.org/news/regex-was-taking-5-days-flashtext-does-it-in-15-minutes-55f04411025f/">Regex was taking 5 days to run. So I built a tool that did it in 15 minutes</a>”.
+I’m proud to have raised issues to his library, and he was very patient and he kept making it the awesome package that it is.</p>
+
+<p>That said, I wanted to take the lessons learned there, and make a library having more options.
+At the same time, I realized that he adapted the popular aho-corasick algorithm (historically what <code class="language-plaintext highlighter-rouge">grep</code> was built on!).
+Instead, I found out someone had written an aho-corasick implementation in C with a python wrapper on top (called <a href="https://github.com/WojciechMula/pyahocorasick">pyahocorasick</a>) - I went from there.</p>
+
+<p><a href="https://github.com/kootenpv/textsearch">textsearch</a> was born.</p>
+
+<h3 id="introducing-textsearch">Introducing <code class="language-plaintext highlighter-rouge">textsearch</code></h3>
+
+<p>The goal of <a href="https://github.com/kootenpv/textsearch">textsearch</a> is to be the fastest when you need to quickly search and find multiple strings (and sometimes still some regex).
+The trick to these algorithms is that regardless of how many words you are looking for, you only loop once over the text you are searching. This is what makes it efficient.
+In case you’re interested, read about trie data structures and the aho-corasick algorithm in particular.</p>
+
+<p>Currently I am in the process of rewriting many packages to use this instead of regex (all having roughly a 30x speedup over the current code that’s regex based):</p>
+
+<ul>
+  <li><a href="https://github.com/kootenpv/contractions">contractions</a>: Fixes contractions such as <code class="language-plaintext highlighter-rouge">you're</code> to you <code class="language-plaintext highlighter-rouge">are</code></li>
+  <li><a href="https://pypi.org/project/metadate">metadate</a>: Finding dates in natural text</li>
+  <li><a href="https://github.com/kootenpv/natura">natura</a>: Find currencies / money in natural text as python objects</li>
+  <li><a href="https://github.com/kootenpv/rebrand">rebrand</a>: Refactor software using smart-cased string replacement</li>
+</ul>
+
+<p>I am also writing a tokenizer - one that is at least 20x faster than any tokenizer I’ve seen in Python (nltk, spacy, segtok) and is much more configurable in a straight-forward manner!</p>
+
+<p>I hope you will find it as fun to create modules / apps on top of this! If you want you can let me know and I will make sure to list your package here https://github.com/kootenpv/textsearch#showcase</p>
+
+<h3 id="basic-usage-example">Basic usage example</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">textsearch</span> <span class="kn">import</span> <span class="n">TextSearch</span>
+<span class="n">ts</span> <span class="o">=</span> <span class="n">TextSearch</span><span class="p">(</span><span class="n">case</span><span class="o">=</span><span class="s">"ignore"</span><span class="p">,</span> <span class="n">returns</span><span class="o">=</span><span class="s">"match"</span><span class="p">)</span>
+<span class="n">words</span> <span class="o">=</span> <span class="p">[</span><span class="s">"hi"</span><span class="p">,</span> <span class="s">"bye"</span><span class="p">]</span>
+<span class="n">ts</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>
+<span class="n">ts</span><span class="p">.</span><span class="n">findall</span><span class="p">(</span><span class="s">"hi Pascal, bye"</span><span class="p">)</span>
+<span class="c1"># ["hi", "bye"]
+</span></code></pre></div></div>
+
+<p>For more, please have a look (perhaps even check out ;-)) the github repository <a href="https://github.com/kootenpv/textsearch">kootenpv/textsearch</a>.</p>
+
+<p>I’ll be posting benchmarks eventually, but in running benchmarks of a similar implementation in Go, textsearch had a comparable speed, and at the same time was more configurable.
+It’s also way faster (once you add the fancier options) than the equivalent in Java.
+Compared to flashtext it changed from being 30% to 300% faster.</p>

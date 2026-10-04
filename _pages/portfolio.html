@@ -115,10 +115,30 @@ author_profile: true
 		max-width: 65%;
 	}
 
+	.portfolio-page #alzheimer figure.enformer-figure img {
+		width: 65%;
+		max-width: 65%;
+	}
+
+	.portfolio-page #alzheimer figure.enformer-output-figure img {
+		width: 75%;
+		max-width: 75%;
+	}
+
 	@media (max-width: 600px) {
 		.portfolio-page #alzheimer figure.compact-figure img {
 			width: 80%;
 			max-width: 80%;
+		}
+
+		.portfolio-page #alzheimer figure.enformer-figure img {
+			width: 80%;
+			max-width: 80%;
+		}
+
+		.portfolio-page #alzheimer figure.enformer-output-figure img {
+			width: 90%;
+			max-width: 90%;
 		}
 	}
 
@@ -175,10 +195,17 @@ author_profile: true
 			<li><a href="#research">Research</a></li>
 			<li><a href="#opensource">Open-source software</a></li>
 			<li><a href="#freelance">Freelance &amp; industry projects</a></li>
-			<li><a href="#ml-ai">Machine-learning and AI projects</a></li>
-			<li><a href="#algorithms">Computational biology and algorithms</a></li>
-			<li><a href="#data-engineering">Data engineering</a></li>
-			<li><a href="#web-projects">Web projects</a></li>
+			<li>
+				<a href="#independent-projects">Independent projects</a>
+          <!--
+				<ul>
+					<li><a href="#ml-ai">Machine learning and AI</a></li>
+					<li><a href="#algorithms">Computational biology and algorithms</a></li>
+					<li><a href="#data-engineering">Data engineering</a></li>
+					<li><a href="#web-projects">Web projects</a></li>
+				</ul>
+        --> 
+			</li>
 		</ul>
 	</nav>
 
@@ -276,9 +303,9 @@ author_profile: true
 		<figure class="compact-figure"><img src="/assets/images/portfolio/alzheimers_DL/rnaseq.png" alt="Example RNA-seq analysis"><figcaption>Example RNA-seq analysis.</figcaption></figure>
 		<figure class="compact-figure"><img src="/assets/images/portfolio/alzheimers_DL/motifactivity.png" alt="Motif activity in candidate enhancers"><figcaption>Example DNA motif activity in enhancer regions defined by ATAC-seq and histone-mark ChIP-seq.</figcaption></figure>
 		<figure class="compact-figure"><img src="/assets/images/portfolio/alzheimers_DL/chipseqpeaks.png" alt="ChIP-seq peaks around the target transcription-factor gene"><figcaption>Example ChIP-seq peaks around the target transcription-factor gene.</figcaption></figure>
-		<figure><img src="/assets/images/portfolio/alzheimers_DL/enformer.png" alt="Enformer model architecture" style="max-width: 520px;"><figcaption>Enformer’s architecture by <a href="https://www.nature.com/articles/s41592-021-01252-x/" target="_blank" rel="noopener">Avsec et al.</a>, copied from <a href="https://deepmind.google/discover/blog/predicting-gene-expression-with-ai/" target="_blank" rel="noopener">the blog post</a>.</figcaption></figure>
-		<figure><img src="/assets/images/portfolio/alzheimers_DL/enformer_output.png" alt="Enformer output tracks for neurons and glia"><figcaption>Example Enformer tracks for neurons and glia.</figcaption></figure>
-		<figure><img src="/assets/images/portfolio/alzheimers_DL/enformer_output_enhancers.png" alt="Candidate enhancer regions identified with Enformer"><figcaption>Candidate enhancer peaks and regions of interest.</figcaption></figure>
+		<figure class="enformer-figure"><img src="/assets/images/portfolio/alzheimers_DL/enformer.png" alt="Enformer model architecture"><figcaption>Enformer’s architecture by <a href="https://www.nature.com/articles/s41592-021-01252-x/" target="_blank" rel="noopener">Avsec et al.</a>, copied from <a href="https://deepmind.google/discover/blog/predicting-gene-expression-with-ai/" target="_blank" rel="noopener">the blog post</a>.</figcaption></figure>
+		<figure class="enformer-figure enformer-output-figure"><img src="/assets/images/portfolio/alzheimers_DL/enformer_output.png" alt="Enformer output tracks for neurons and glia"><figcaption>Example Enformer tracks for neurons and glia.</figcaption></figure>
+		<figure class="enformer-figure enformer-output-figure"><img src="/assets/images/portfolio/alzheimers_DL/enformer_output_enhancers.png" alt="Candidate enhancer regions identified with Enformer"><figcaption>Candidate enhancer peaks and regions of interest.</figcaption></figure>
 	</section>
 
 	<section class="project" id="igv">
@@ -312,7 +339,8 @@ author_profile: true
 
 
 
-	<h2 id="ml-ai">Independent machine-learning and AI projects</h2>
+	<h2 id="independent-projects">Independent projects</h2>
+	<h3 id="ml-ai">Machine learning and AI</h3>
 
 	<section class="project" id="ml-api-projects">
 		<h3>End-to-end machine-learning APIs</h3>
@@ -401,7 +429,7 @@ author_profile: true
 		<p class="project-links"><a href="https://github.com/katwre/ML-projects/tree/main/llm-biodata/" target="_blank" rel="noopener">GitHub repository</a></p>
 	</section>
 
-	<h2 id="algorithms">Computational biology and algorithms</h2>
+	<h3 id="algorithms">Computational biology and algorithms</h3>
 
 	<section class="project">
 		<h3>Protein folding with the HP model and replica Monte Carlo</h3>
@@ -426,7 +454,7 @@ author_profile: true
 		<p class="project-links"><a href="https://github.com/katwre/bioinformatics-projects/tree/master/bio_motif_ensembl" target="_blank" rel="noopener">GitHub repository</a></p>
 	</section>
 
-	<h2 id="data-engineering">Independent data-engineering projects</h2>
+	<h3 id="data-engineering">Data engineering</h3>
 
 	<section class="project" id="bike-sharing">
 		<h3>Streaming analytics for urban bike sharing</h3>
@@ -435,7 +463,7 @@ author_profile: true
 		<p class="project-links"><a href="https://github.com/katwre/gbfs-bike-monitoring" target="_blank" rel="noopener">GitHub repository</a></p>
 	</section>
 
-	<h2 id="web-projects">Independent web projects</h2>
+	<h3 id="web-projects">Web projects</h3>
 
 	<section class="project" id="spatial-explorer">
 		<h3>Spatial transcriptomics explorer</h3>

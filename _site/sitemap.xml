@@ -95,6 +95,9 @@
 <loc>http://localhost:4000/markdown/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/misc/</loc>
+</url>
+<url>
 <loc>http://localhost:4000/non-menu-page/</loc>
 </url>
 <url>
@@ -150,6 +153,10 @@
 <url>
 <loc>http://localhost:4000/certificates/datatalks_ml_zoomcamp_certificate2026.pdf</loc>
 <lastmod>2026-10-04T17:44:30+00:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/files/KatarzynaWreczycka_CV.pdf</loc>
+<lastmod>2026-10-05T18:28:47+00:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/files/paper1.pdf</loc>

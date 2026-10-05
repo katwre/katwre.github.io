@@ -7,7 +7,11 @@ redirect_from:
   - /resume
 ---
 
-{% include base_path %}
+<!--
+## Curriculum Vitae
+
+-->
+
 <!--   -->
 <!-- Experience-->
 <!--   -->
@@ -35,4 +39,29 @@ redirect_from:
   Visiting Predoctoral Researcher<br>
   <em>March 2015 - August 2015</em></p>
 
+</div>
+
+
+{% include base_path %}
+<style>
+  .cv-pdf-button {
+    background-color: #13315c;
+  }
+
+  .cv-pdf-button:hover {
+    background-color: #13315c;
+  }
+</style>
+<div style="margin: 1.5em 0;">
+<!--
+  <iframe
+    src="{{ base_path }}/files/KatarzynaWreczycka_CV.pdf#view=FitH"
+    title="Curriculum Vitae PDF"
+    width="100%"
+    height="900"
+    style="border: 1px solid var(--global-border-color);"
+    loading="lazy">
+  </iframe>
+  -->
+  <p><a href="{{ base_path }}/files/KatarzynaWreczycka_CV.pdf" class="btn cv-pdf-button">View CV (PDF)</a></p>
 </div>

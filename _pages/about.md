@@ -33,9 +33,11 @@ In industry and freelance collaborations, I have applied machine learning and de
   <img src="/assets/images/portfolio/clients.png" alt="Organizations and teams I have collaborated with" style="max-width: 50%; height: auto;">
 </figure>
 
+
+<!--
 **Research interests**
 
 Rapid advances in molecular profiling create new opportunities to study disease through genomics, epigenomics, and transcriptomics - including bulk, single-cell, and spatially resolved approaches - as well as imaging and proteomics. I integrate these data using machine learning and deep learning to address biological and clinical questions. I am committed to advancing machine learning research in biomedicine to improve clinical decision-making.
-
+-->
 
 I'm open for collaborations. Feel free to contact me: katwre (at) gmail.com.

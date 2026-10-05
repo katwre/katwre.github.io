@@ -17,7 +17,7 @@ redirect_from:
 <!--   -->
 
 <h2  style="font-family: 'Cormorant Garamond', serif;">
-  Experience
+  Education & Experience
 </h2>
 
 
@@ -36,8 +36,12 @@ redirect_from:
   <em>September 2015 – November 2021</em></p>
 
   <p><strong>Institute of Computer Science, Polish Academy of Sciences & MDC BIMSB</strong><br>
-  Visiting Predoctoral Researcher<br>
+  Visiting Predoctoral Researcher (scholarship recipient)<br>
   <em>March 2015 - August 2015</em></p>
+
+  <p><strong>University of Warsaw, Department of Mathematics, Informatics and Mechanics</strong><br>
+  BSc, MSc<br>
+  <em>Oct 2009 - Jun 2014</em></p>
 
 </div>
 

@@ -46,6 +46,7 @@ redirect_from:
 </div>
 
 
+
 {% include base_path %}
 <style>
   .cv-pdf-button {

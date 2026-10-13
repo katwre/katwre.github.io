@@ -175,25 +175,32 @@ author_profile: true
 
   <section class="project" id="ml-api-projects">
     <h3>End-to-end machine-learning API projects</h3>
-    <h4 id="gene-transformer">Gene-type prediction from DNA sequence</h4>
-    <p>Built classical machine-learning models, convolutional networks, and a custom nucleotide-level transformer to predict gene type from raw DNA sequence. The deployment work explored ONNX Runtime inference, FastAPI and BentoML serving, Docker Compose, Kubernetes with Kind, and AWS EKS.</p>
-    <figure><img src="/assets/images/portfolio/sequence_transformer.png" alt="Gene and nucleotide sequence example" style="max-width: 360px;"><figcaption>Example gene and its nucleotide sequence.</figcaption></figure>
-    <p class="project-links"><a href="https://github.com/katwre/Genetype-classifier-api" target="_blank" rel="noopener">GitHub repository</a></p>
 
-    <h4 id="solubility">Molecular solubility prediction</h4>
-    <p>Built a Flask API to predict whether a compound dissolves in water from molecular descriptors such as size, polarity, solvation energy, and charge distribution. I compared Partial Least Squares, Elastic Net, Random Forest, and XGBoost models and deployed the service to AWS Elastic Beanstalk.</p>
-    <figure><img src="/assets/images/portfolio/solubility.png" alt="Conceptual illustration of molecular solubility prediction" style="max-width: 460px;"><figcaption>Conceptual view of molecular solubility prediction.</figcaption></figure>
-    <p class="project-links"><a href="https://github.com/katwre/Solubility-api" target="_blank" rel="noopener">GitHub repository</a></p>
+
+        <h4 id="diffusion-inpainting">Diffusion-based image inpainting</h4>
+    <p>Explored diffusion models for reconstructing missing regions in H&amp;E-stained blood-cell images. The compact diffusion model restores masked areas while preserving observed context and is presented through a simple Streamlit interface, with AWS Batch used for deployment.</p>
+    <figure><img src="/assets/images/portfolio/diffusion_immune.png?v=2" alt="Original, masked, and inpainted blood-cell image alongside a U-Net architecture diagram" style="max-width: 460px;"><figcaption>A time-conditioned U-Net predicts noise during DDPM sampling to fill the masked region while preserving visible pixels. The U-Net architecture diagram is from <a href="https://nn.labml.ai/diffusion/ddpm/unet.html" target="_blank" rel="noopener">LabML’s DDPM tutorial</a>.</figcaption></figure>
+    <p class="project-links"><a href="https://github.com/katwre/Diffusion-models-for-cell-images-api" target="_blank" rel="noopener">GitHub repository</a></p>
+ 
+
+
+    <h4 id="gene-transformer">Gene-type prediction from DNA sequence</h4>
+    <p>Built classical machine-learning models, convolutional networks, and 
+      a custom nucleotide-level transformer to predict gene type from 
+      raw DNA sequence. The deployment work explored ONNX Runtime inference, FastAPI and BentoML serving, Docker Compose, Kubernetes with Kind, and AWS EKS.</p>
+    <figure><img src="/assets/images/portfolio/sequence_transformer.png" alt="Gene sequence input and Transformer encoder architecture" style="max-width: 360px;"><figcaption>Transformer encoder to read DNA one nucleotide at a time and predict the gene type. The encoder schematic is from <a href="https://arxiv.org/abs/1706.03762" target="_blank" rel="noopener">Vaswani et al., "Attention Is All You Need."</a></figcaption></figure>
+    <p class="project-links"><a href="https://github.com/katwre/Genetype-classifier-api" target="_blank" rel="noopener">GitHub repository</a></p>
 
     <h4 id="immune-classifier">Immune-cell image classifier</h4>
     <p>Evaluated transfer learning for classifying immune-cell types in H&amp;E-stained blood microscopy images. A pretrained Xception model served as a fixed feature extractor with a custom MLP classification head. I also trained logistic regression and XGBoost on Xception embeddings as interpretable baselines, tuning learning rate and dropout; the MLP-based model performed strongly on held-out data. The API was deployed with Docker and AWS Lambda.</p>
-    <figure><img src="/assets/images/portfolio/immunecells.png" alt="Examples of blood-cell types" style="max-width: 460px;"><figcaption>Examples of blood-cell types: erythroblast, monocyte, and platelet.</figcaption></figure>
+    <figure><img src="/assets/images/portfolio/immunecells.png?v=2" alt="Blood-cell images alongside a frozen, ImageNet-pretrained Xception and trainable MLP classifier" style="max-width: 460px;"><figcaption>Blood-cell examples and the classifier pipeline: a frozen, ImageNet-pretrained Xception backbone feeds a trainable MLP head. A schema of the transfer learning approach adapted from <a href="https://www.researchgate.net/publication/397303152_FusionNet-ViT_Hybrid_Deep_Learning_Model_for_Lung_Cancer_Classification" target="_blank" rel="noopener">Singh et al.</a>.</figcaption></figure>
     <p class="project-links"><a href="https://github.com/katwre/Immune-cell-classifier-api" target="_blank" rel="noopener">GitHub repository</a></p>
 
-    <h4 id="diffusion-inpainting">Diffusion-based image inpainting</h4>
-    <p>Explored diffusion models for reconstructing missing regions in H&amp;E-stained blood-cell images. The compact diffusion model restores masked areas while preserving observed context and is presented through a simple Streamlit interface, with AWS Batch used for deployment.</p>
-    <figure><img src="/assets/images/portfolio/diffusion_immune.png" alt="Diffusion-based inpainting results" style="max-width: 460px;"><figcaption>Inpainting results: reconstructing masked regions while retaining surrounding image context.</figcaption></figure>
-    <p class="project-links"><a href="https://github.com/katwre/Diffusion-models-for-cell-images-api" target="_blank" rel="noopener">GitHub repository</a></p>
+    <h4 id="solubility">Molecular solubility prediction</h4>
+    <p>Built a Flask API to predict whether a compound dissolves in water from molecular descriptors such as size, polarity, solvation energy, and charge distribution. I compared Partial Least Squares, Elastic Net, Random Forest, and XGBoost models and deployed the service to AWS Elastic Beanstalk.</p>
+    <figure><img src="/assets/images/portfolio/solubility.png?v=2" alt="Conceptual illustration of molecular solubility prediction" style="max-width: 460px;"><figcaption>Conceptual view of molecular solubility prediction. The diagram illustrates the tree-boosting approach used by XGBoost and is adapted from <a href="https://www.sciencedirect.com/science/article/abs/pii/S0308016122000473" target="_blank" rel="noopener">the source paper</a>.</figcaption></figure>
+    <p class="project-links"><a href="https://github.com/katwre/Solubility-api" target="_blank" rel="noopener">GitHub repository</a></p>
+
   </section>
 
   <section class="project" id="survival">

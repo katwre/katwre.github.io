@@ -23,6 +23,10 @@ redirect_from:
 
 <div class="mytext" style="margin-top: 30px;">
 
+  <p><strong>Polaroid Therapeutics</strong><br>
+  Computational Discovery Scientist<br>
+  <em>June 2026 – Now</em></p>
+
   <p><strong>Consultancy for Pharmaceutical Companies, Start-ups, and Consulting Firms</strong><br>
   Freelance in Bioinformatics and Data Science<br>
   <em>February 2023 – Now</em></p>

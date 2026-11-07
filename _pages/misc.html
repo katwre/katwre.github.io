@@ -174,37 +174,47 @@ author_profile: true
   <h2 id="ml-ai">Machine learning and AI</h2>
 
   <section class="project" id="ml-api-projects">
-    <h3>End-to-end machine-learning API projects</h3>
+    <h3>End-to-end machine-learning API projects (2025)</h3>
 
 
         <h4 id="diffusion-inpainting">Diffusion-based image inpainting</h4>
-    <p>Explored diffusion models for reconstructing missing regions in H&amp;E-stained blood-cell images. The compact diffusion model restores masked areas while preserving observed context and is presented through a simple Streamlit interface, with AWS Batch used for deployment.</p>
-    <figure><img src="/assets/images/portfolio/diffusion_immune.png?v=2" alt="Original, masked, and inpainted blood-cell image alongside a U-Net architecture diagram" style="max-width: 460px;"><figcaption>A time-conditioned U-Net predicts noise during DDPM sampling to fill the masked region while preserving visible pixels. The U-Net architecture diagram is from <a href="https://nn.labml.ai/diffusion/ddpm/unet.html" target="_blank" rel="noopener">LabML’s DDPM tutorial</a>.</figcaption></figure>
-    <p class="project-links"><a href="https://github.com/katwre/Diffusion-models-for-cell-images-api" target="_blank" rel="noopener">GitHub repository</a></p>
+    <p>Explored diffusion models for reconstructing missing regions in H&amp;E-stained 
+      blood-cell images. 
+      A timestep-conditioned U-Net trained on 17,092 single-cell H&E images 
+      from the PBC dataset (<a href="https://doi.org/10.1016/j.cmpb.2019.105020" target="_blank" rel="noopener">Acevedo et al., 2019</a>), first to generate 
+      cells from noise, then to fill in masked regions of a real cell.
+      It's presented through a 
+      simple Streamlit interface, with AWS EC2 used for deployment.</p>
+<figure><img src="/assets/images/portfolio/diffusion_immune/diffusion_immune2.png?v=3" alt="Original, masked and inpainted blood-cell image alongside the UNetSmall architecture" style="max-width: 720px;"><figcaption>Original, masked and inpainted blood-cell image (left) and the time-conditioned U-Net used for DDPM inpainting (right). The U-Net predicts the added noise from the noisy image, the masked image and the mask; clamping the known pixels at every sampling step keeps the visible regions unchanged.</figcaption></figure>    <p class="project-links"><a href="https://github.com/katwre/Diffusion-models-for-cell-images-api" target="_blank" rel="noopener">GitHub repository</a></p>
  
-
 
     <h4 id="gene-transformer">Gene-type prediction from DNA sequence</h4>
     <p>Built classical machine-learning models, convolutional networks, and 
       a custom nucleotide-level transformer to predict gene type from 
       raw DNA sequence. The deployment work explored ONNX Runtime inference, FastAPI and BentoML serving, Docker Compose, Kubernetes with Kind, and AWS EKS.</p>
-    <figure><img src="/assets/images/portfolio/sequence_transformer.png" alt="Gene sequence input and Transformer encoder architecture" style="max-width: 360px;"><figcaption>Transformer encoder to read DNA one nucleotide at a time and predict the gene type. The encoder schematic is from <a href="https://arxiv.org/abs/1706.03762" target="_blank" rel="noopener">Vaswani et al., "Attention Is All You Need."</a></figcaption></figure>
-    <p class="project-links"><a href="https://github.com/katwre/Genetype-classifier-api" target="_blank" rel="noopener">GitHub repository</a></p>
+<figure><img src="/assets/images/portfolio/sequence_transformer/sequence_transformer.png?v=2" alt="DNA sequence illustration alongside the nucleotide-level Transformer classifier architecture" style="max-width: 720px;"><figcaption>A lightweight encoder-only Transformer, trained from scratch, reads DNA one nucleotide at a time. The [CLS] embedding, combined with gene length, predicts one of 7 gene types (test accuracy 0.76, macro-F1 0.68).</figcaption></figure>    <p class="project-links"><a href="https://github.com/katwre/Genetype-classifier-api" target="_blank" rel="noopener">GitHub repository</a></p>
+
+
+
+
 
     <h4 id="immune-classifier">Immune-cell image classifier</h4>
-    <p>Evaluated transfer learning for classifying immune-cell types in H&amp;E-stained blood microscopy images. A pretrained Xception model served as a fixed feature extractor with a custom MLP classification head. I also trained logistic regression and XGBoost on Xception embeddings as interpretable baselines, tuning learning rate and dropout; the MLP-based model performed strongly on held-out data. The API was deployed with Docker and AWS Lambda.</p>
-    <figure><img src="/assets/images/portfolio/immunecells.png?v=2" alt="Blood-cell images alongside a frozen, ImageNet-pretrained Xception and trainable MLP classifier" style="max-width: 460px;"><figcaption>Blood-cell examples and the classifier pipeline: a frozen, ImageNet-pretrained Xception backbone feeds a trainable MLP head. A schema of the transfer learning approach adapted from <a href="https://www.researchgate.net/publication/397303152_FusionNet-ViT_Hybrid_Deep_Learning_Model_for_Lung_Cancer_Classification" target="_blank" rel="noopener">Singh et al.</a>.</figcaption></figure>
-    <p class="project-links"><a href="https://github.com/katwre/Immune-cell-classifier-api" target="_blank" rel="noopener">GitHub repository</a></p>
+<p>Classified eight blood-cell types in peripheral blood smear images with transfer learning. A frozen, ImageNet-pretrained Xception served as a feature extractor, topped by a trained MLP head; I grid-searched learning rate and dropout and reached 93% test accuracy (macro-F1 0.93). As baselines, logistic regression and XGBoost trained on the 2048-d Xception embeddings reached 90% and 83%. The model was converted to TF-Lite and served as a Docker-based API on AWS Lambda.</p>
+<figure><img src="/assets/images/portfolio/immunecells_transferlearning/immunecells.png?v=3" alt="Blood-cell images above a frozen Xception backbone with a trained MLP head and classical ML baselines" style="max-width: 560px;"><figcaption>Example cells from the PBC dataset (Acevedo et al., 2020) and the classification pipeline: a frozen Xception backbone produces a 2048-d embedding, classified either by a trained MLP head (best model, 93% test accuracy) or by logistic regression and XGBoost baselines.</figcaption></figure>    <p class="project-links"><a href="https://github.com/katwre/Immune-cell-classifier-api" target="_blank" rel="noopener">GitHub repository</a></p>
+
 
     <h4 id="solubility">Molecular solubility prediction</h4>
-    <p>Built a Flask API to predict whether a compound dissolves in water from molecular descriptors such as size, polarity, solvation energy, and charge distribution. I compared Partial Least Squares, Elastic Net, Random Forest, and XGBoost models and deployed the service to AWS Elastic Beanstalk.</p>
-    <figure><img src="/assets/images/portfolio/solubility.png?v=2" alt="Conceptual illustration of molecular solubility prediction" style="max-width: 460px;"><figcaption>Conceptual view of molecular solubility prediction. The diagram illustrates the tree-boosting approach used by XGBoost and is adapted from <a href="https://www.sciencedirect.com/science/article/abs/pii/S0308016122000473" target="_blank" rel="noopener">the source paper</a>.</figcaption></figure>
+<p>Predicted aqueous solubility (LogS) of 560 organic molecules from 44 computed descriptors capturing size, shape, solvation energy, electronic structure, and charge distribution. I compared linear models (Partial Least Squares, Elastic Net) with tree ensembles (Random Forest, XGBoost); XGBoost performed best (test R² 0.72 vs 0.58 for the linear models), showing that nonlinear interactions matter. Feature importance agreed across models, and a top-20 descriptor model kept the same accuracy with half the inputs. The best model is served through a Flask API deployed on AWS Elastic Beanstalk.</p>
+    <figure><img src="/assets/images/portfolio/solubility/solubility.png?v=2" alt="Conceptual illustration of molecular solubility prediction" style="max-width: 460px;">
+<figcaption>Left: solubility as a balance of solute–solute, solvent–solvent and solute–solvent interactions, from <a href="https://doi.org/10.1038/s41467-020-19594-z" target="_blank" rel="noopener">Boobier et al., Nature Communications 2020</a> (CC BY 4.0), whose dataset was used here. Right: the four regression models compared, with test R²; tree ensembles (Random Forest, XGBoost) outperform the linear models (PLS, Elastic Net).</figcaption>    </figure>
     <p class="project-links"><a href="https://github.com/katwre/Solubility-api" target="_blank" rel="noopener">GitHub repository</a></p>
+
 
   </section>
 
+
   <section class="project" id="survival">
-    <h3>Survival analysis using gene expression &amp; clinical data (Cox models)</h3>
+    <h3>Survival analysis using gene expression &amp; clinical data (Cox models) (2022)</h3>
     <p>Developed models to predict mortality or relapse risk in newly diagnosed multiple-myeloma patients using baseline clinical and gene-expression data. The workflow included RNA-seq preprocessing, PCA and clustering, Cox regression, random survival forests, LASSO-based feature selection, and pathway-informed models, evaluated using the concordance index (C-index).</p>
     <div class="project-figure-row">
       <img src="/assets/images/portfolio/survival_classification.png" alt="Comparison of survival models by C-index">
@@ -215,7 +225,7 @@ author_profile: true
   </section>
 
   <section class="project" id="omics-deep-learning">
-    <h3>Deep learning for imaging and omics</h3>
+    <h3>Deep learning for imaging and omics (2025)</h3>
     <h4>CNNs and transfer learning for chest X-ray classification</h4>
     <p>I applied convolutional neural networks (CNNs) to classify chest X-ray images using both 224×224 and 64×64 pixel inputs, exploring whether lightweight models can retain diagnostic performance. Alongside a baseline CNN trained from scratch, I used transfer learning with pretrained convolutional backbones such as ResNet to assess whether pretraining could improve classification.</p>
     <div class="project-figure-row">
@@ -248,7 +258,7 @@ author_profile: true
     <p class="project-links"><a href="https://github.com/katwre/ML-projects/tree/main/VAE_NMF_Transformer_regression_cfDNA/" target="_blank" rel="noopener">GitHub repository</a></p>
   </section>
 
-  <h2 id="algorithms">Computational biology and algorithms</h2>
+  <h2 id="algorithms">Computational biology and algorithms (2015)</h2>
 
   <section class="project">
     <h3>Protein folding with the HP model and replica Monte Carlo</h3>
@@ -276,7 +286,7 @@ author_profile: true
   <h2 id="data-engineering">Data engineering</h2>
 
   <section class="project" id="bike-sharing">
-    <h3>Streaming analytics for urban bike sharing</h3>
+    <h3>Streaming analytics for urban bike sharing (2025)</h3>
     <p>This project ingests GBFS bike-station data every minute using Kestra, writes raw events to MinIO and Kafka, loads curated records into PostgreSQL, transforms them with dbt, and serves a two-tile Streamlit dashboard in Docker Compose. AWS infrastructure and CI/CD are provisioned with Terraform.</p>
     <figure><img src="https://raw.githubusercontent.com/katwre/gbfs-bike-monitoring/refs/heads/main/img/dashboard.gif" alt="Bike-sharing analytics dashboard"><figcaption>Dashboard running on an AWS EC2 instance provisioned with Terraform.</figcaption></figure>
     <p class="project-links"><a href="https://github.com/katwre/gbfs-bike-monitoring" target="_blank" rel="noopener">GitHub repository</a></p>
@@ -285,7 +295,7 @@ author_profile: true
   <h2 id="web-projects">Web projects</h2>
 
   <section class="project" id="spatial-explorer">
-    <h3>Spatial transcriptomics explorer</h3>
+    <h3>Spatial transcriptomics explorer (2025)</h3>
     <p>An interactive platform for exploring gene expression in tissue context. It includes a chat interface, AI-powered gene summaries, and spatial-domain analysis through an MCP server.</p>
     <ul>
       <li>Gene summaries use Ollama, with Mistral 7B as the default model.</li>
@@ -297,19 +307,22 @@ author_profile: true
   </section>
 
   <section class="project" id="games">
-    <h3>Sudoku</h3>
-    <p>A simple Sudoku game implemented in JavaScript and jQuery.</p>
-    <figure><img src="/assets/images/portfolio/sudoku.png" alt="Sudoku game screenshot" style="max-width: 420px;"></figure>
-    <p class="project-links"><a href="https://github.com/katwre/sudoku" target="_blank" rel="noopener">GitHub repository</a></p>
 
-    <h3>Minesweeper</h3>
+    <h3>Minesweeper (2014)</h3>
     <p>A classic Minesweeper game implemented in Java using Swing and AWT.</p>
     <figure><img src="/assets/images/portfolio/minesweeper.png" alt="Minesweeper game screenshot" style="max-width: 260px;"></figure>
     <p class="project-links"><a href="https://github.com/katwre/Minesweeper" target="_blank" rel="noopener">GitHub repository</a></p>
+ 
+
+    <h3>Sudoku (2013)</h3>
+    <p>A simple Sudoku game implemented in JavaScript and jQuery.</p>
+    <figure><img src="/assets/images/portfolio/sudoku.png" alt="Sudoku game screenshot" style="max-width: 420px;"></figure>
+    <p class="project-links"><a href="https://github.com/katwre/sudoku" target="_blank" rel="noopener">GitHub repository</a></p>
+ 
   </section>
 
   <section class="project" id="django-services">
-    <h3>Django web services</h3>
+    <h3>Django web services (2010)</h3>
     <p>Django-based server for visualizing multiple sequence alignments.</p>
     <p class="project-links"><a href="https://github.com/freesci/MSA-vis-project" target="_blank" rel="noopener">MSA visualization project on GitHub</a></p>
     <p>Mobile application built with Django, a manifesto app, and localStorage.</p>

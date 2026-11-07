@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="250" viewBox="0 0 760 250" font-family="DejaVu Sans, Arial, sans-serif">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M1 1L9 5L1 9z" fill="#55555f"/></marker></defs>
+<rect width="760" height="250" fill="#fff"/>
+<g text-anchor="middle">
+  <rect x="10" y="62" width="110" height="60" rx="8" fill="#fdf1e0" stroke="#c9781c"/>
+  <text x="65" y="87" font-size="13" font-weight="bold" fill="#8a4f0e">Cell image</text>
+  <text x="65" y="106" font-size="11" fill="#5e5e68">150 × 150 × 3</text>
+
+  <rect x="140" y="62" width="145" height="60" rx="8" fill="#efeef2" stroke="#7a7684"/>
+  <text x="212" y="87" font-size="13" font-weight="bold" fill="#3c3946">Xception</text>
+  <text x="212" y="106" font-size="11" fill="#5e5e68">ImageNet, frozen</text>
+
+  <rect x="305" y="62" width="135" height="60" rx="8" fill="#efeef2" stroke="#7a7684"/>
+  <text x="372" y="87" font-size="13" font-weight="bold" fill="#3c3946">Global avg pool</text>
+  <text x="372" y="106" font-size="11" fill="#5e5e68">2048-d embedding</text>
+
+  <rect x="475" y="10" width="200" height="72" rx="8" fill="#e3f4ef" stroke="#1f8a70"/>
+  <text x="575" y="31" font-size="13" font-weight="bold" fill="#13604d">MLP head (trained)</text>
+  <text x="575" y="49" font-size="11" fill="#5e5e68">Dense 100 ReLU → dropout → 8</text>
+  <text x="575" y="70" font-size="11" font-weight="bold" fill="#13604d">test accuracy 0.93</text>
+
+  <rect x="475" y="104" width="200" height="72" rx="8" fill="#f6f5f8" stroke="#aaa6b0"/>
+  <text x="575" y="125" font-size="13" font-weight="bold" fill="#3c3946">Classical ML baselines</text>
+  <text x="575" y="143" font-size="11" fill="#5e5e68">logistic regression, XGBoost</text>
+  <text x="575" y="164" font-size="11" font-weight="bold" fill="#3c3946">test accuracy 0.90 / 0.83</text>
+</g>
+<g stroke="#55555f" stroke-width="1.4" fill="none">
+  <line x1="120" y1="92" x2="137" y2="92" marker-end="url(#ah)"/>
+  <line x1="285" y1="92" x2="302" y2="92" marker-end="url(#ah)"/>
+  <path d="M440 92 H455 V46 H472" marker-end="url(#ah)"/>
+  <path d="M455 92 V140 H472" marker-end="url(#ah)"/>
+</g>
+<rect x="60" y="196" width="640" height="40" rx="8" fill="#fdf1e0" stroke="#c9781c"/>
+<text x="380" y="214" font-size="12" font-weight="bold" fill="#8a4f0e" text-anchor="middle">8 cell types</text>
+<text x="380" y="229" font-size="11" fill="#5e5e68" text-anchor="middle">basophil · eosinophil · erythroblast · immature granulocyte · lymphocyte · monocyte · neutrophil · platelet</text>
+<path d="M675 46 H692 V193" stroke="#55555f" stroke-width="1.4" fill="none" marker-end="url(#ah)"/>
+<path d="M675 140 H692" stroke="#55555f" stroke-width="1.4" fill="none"/>
+</svg>

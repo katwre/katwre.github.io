@@ -23,18 +23,24 @@ redirect_from:
 
 I'm a Zurich-based computational biologist working at the intersection of machine learning and multi-omics.
 
-My research interests lie in developing machine-learning methods for bulk, single-cell, spatial transcriptomics and imaging data. I am especially interested in generative and multimodal deep learning to uncover disease-associated cell states. I aim to build robust, interpretable models that can inform both biology and clinical decisions.
+
+My research interests lie in developing machine-learning methods for bulk, single-cell, spatial transcriptomics and imaging data, with focus on generative and multimodal deep learning to uncover disease-associated cell states. My goal is robust, interpretable models that inform both biology and clinical decisions.
 
 
-After training in computer science and bioinformatics at [MIMUW](https://www.mimuw.edu.pl/en/), I did my Ph.D. with Prof. Altuna Akalin at [MDC-BIMSB](https://www.mdc-berlin.de/bioinformatics), combining machine learning and omics to study how epigenetic signals are measured and change in disease. As first author, I showed that [HOT regions](https://doi.org/10.1093/nar/gkz460), sites that appear bound by dozens of transcription factors, are likely ChIP-seq artifacts linked to R-loops, and used sequence-based classifiers to identify GC/CpG-rich features they share across species. I also contributed to DNA-methylation biomarker discovery in [cardiovascular disease](https://doi.org/10.1093/nargab/lqad061), co-first-authored a [review](https://doi.org/10.1016/j.jbiotec.2017.08.007) of statistical methods for bisulfite sequencing, and co-developed the Bioconductor package [genomation](https://github.com/BIMSBbioinfo/genomation) and the [PiGx BS-seq](https://github.com/BIMSBbioinfo/pigx) pipeline. I have also worked with experimental groups at ETH Zurich (incl. [Laboratory of Nutrition and Metabolic Epigenetics](https://epigenetics.ethz.ch/)) and the [Functional Genomics Center Zurich](https://fgcz.ch/the-center/people/rehrauer.html).
+After training in computer science and bioinformatics at [MIMUW](https://www.mimuw.edu.pl/en/), I did my Ph.D. with Prof. Altuna Akalin at [MDC-BIMSB](https://www.mdc-berlin.de/bioinformatics), combining machine learning and omics to study how epigenetic signals are measured and change in disease. As first author, I showed that [HOT regions](https://doi.org/10.1093/nar/gkz460), sites that appear bound by dozens of transcription factors, are likely ChIP-seq artifacts linked to R-loops, using sequence-based classifiers to identify GC/CpG-rich features they share across species. I also co-first-authored a [review](https://doi.org/10.1016/j.jbiotec.2017.08.007) of statistical methods for bisulfite sequencing, contributed to cell-free DNA DNA-methylation biomarker discovery in [cardiovascular disease](https://doi.org/10.1093/nargab/lqad061), and co-developed the Bioconductor package [genomation](https://github.com/BIMSBbioinfo/genomation) and the [PiGx BS-seq](https://github.com/BIMSBbioinfo/pigx) snakemake pipeline. 
+I have also worked with experimental groups at ETH Zurich (incl. the [Laboratory of Nutrition and Metabolic Epigenetics](https://epigenetics.ethz.ch/)) and the [Functional Genomics Center Zurich](https://fgcz.ch/the-center/people/rehrauer.html).
 
-In my industry projects, I applied deep learning to biomedical and sensor data. My work includes a LSTM-VAE (PyTorch) for water-safety monitoring, a VAE (scVI) with transfer learning (scArches) to classify endometriosis from menstrual-blood single-cell data, therapeutic-target prioritization in oncology (survival analysis, classification, AE), and multi-omics and [Enformer](https://www.nature.com/articles/s41592-021-01252-x/)-based enhancer analysis in Alzheimer’s disease. I've collaborated with research, clinical, and data science teams. Explore more of my deep-learning projects on [the Independent Projects page](/misc/). 
+In industry, I have applied deep learning to biomedical and sensor data: an LSTM-VAE (PyTorch) for water-safety monitoring, scVI with scArches transfer learning to classify endometriosis from menstrual-blood single-cell data, therapeutic-target prioritization in oncology (survival analysis, classification, autoencoders), and multi-omics and [Enformer](https://www.nature.com/articles/s41592-021-01252-x/)-based enhancer analysis in Alzheimer's disease. 
+
+Outside of work, I build end-to-end deep-learning projects, from a diffusion model that inpaints blood-cell images to a nucleotide-level DNA transformer-encoder, all deployed as APIs. See my [Independent Projects page](/misc/). 
+
 I've collaborated with teams at:
 <figure>
   <img src="/assets/images/portfolio/clients.png" alt="Organizations and teams I have collaborated with" style="max-width: 50%; height: auto;">
 </figure>
 
-Feel free to reach out at katwre (at) gmail.com.
+
+I'm open to research collaborations and to research positions in computational biology and machine learning. Feel free to reach out at katwre (at) gmail.com.
 
 
 <!--

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="550" viewBox="0 0 480 550" font-family="DejaVu Sans, Arial, sans-serif">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M1 1L9 5L1 9z" fill="#55555f"/></marker></defs>
+<rect width="480" height="550" fill="#fff"/>
+<g text-anchor="middle">
+  <rect x="50" y="14" width="380" height="72" rx="8" fill="#fdf1e0" stroke="#c9781c"/>
+  <text x="240" y="35" font-size="14" font-weight="bold" fill="#8a4f0e">Input tokens, one per nucleotide (≤ 1024)</text>
+  <g font-size="11" font-family="DejaVu Sans Mono, monospace">
+    <rect x="66" y="48" width="44" height="24" rx="4" fill="#fff" stroke="#c9781c"/><text x="88" y="64" fill="#8a4f0e">CLS</text>
+    <rect x="116" y="48" width="24" height="24" rx="4" fill="#fff" stroke="#3fa257"/><text x="128" y="64" fill="#2d7a40">A</text>
+    <rect x="146" y="48" width="24" height="24" rx="4" fill="#fff" stroke="#d9433f"/><text x="158" y="64" fill="#a92f2b">T</text>
+    <rect x="176" y="48" width="24" height="24" rx="4" fill="#fff" stroke="#2b2b33"/><text x="188" y="64" fill="#2b2b33">G</text>
+    <rect x="206" y="48" width="24" height="24" rx="4" fill="#fff" stroke="#3fa257"/><text x="218" y="64" fill="#2d7a40">A</text>
+    <rect x="236" y="48" width="24" height="24" rx="4" fill="#fff" stroke="#3a8fd6"/><text x="248" y="64" fill="#2669a8">C</text>
+    <rect x="266" y="48" width="24" height="24" rx="4" fill="#fff" stroke="#2b2b33"/><text x="278" y="64" fill="#2b2b33">G</text>
+    <text x="308" y="64" fill="#55555f">…</text>
+    <rect x="324" y="48" width="44" height="24" rx="4" fill="#f3f1f4" stroke="#aaa6b0"/><text x="346" y="64" fill="#77737d">PAD</text>
+    <rect x="374" y="48" width="44" height="24" rx="4" fill="#f3f1f4" stroke="#aaa6b0"/><text x="396" y="64" fill="#77737d">PAD</text>
+  </g>
+
+  <rect x="50" y="106" width="380" height="52" rx="8" fill="#e3f4ef" stroke="#1f8a70"/>
+  <text x="240" y="127" font-size="14" font-weight="bold" fill="#13604d">Token embedding (192-d)</text>
+  <text x="240" y="146" font-size="12" fill="#5e5e68">+ sinusoidal positional encoding</text>
+
+  <rect x="40" y="178" width="400" height="152" rx="10" fill="none" stroke="#1f8a70" stroke-dasharray="5 4"/>
+  <text x="240" y="198" font-size="13" font-weight="bold" fill="#13604d">Transformer encoder × 3</text>
+  <rect x="70" y="208" width="340" height="50" rx="8" fill="#e3f4ef" stroke="#1f8a70"/>
+  <text x="240" y="228" font-size="14" font-weight="bold" fill="#13604d">Multi-head self-attention</text>
+  <text x="240" y="247" font-size="12" fill="#5e5e68">6 heads, padding positions masked</text>
+  <rect x="70" y="270" width="340" height="50" rx="8" fill="#e3f4ef" stroke="#1f8a70"/>
+  <text x="240" y="290" font-size="14" font-weight="bold" fill="#13604d">Feed-forward (512)</text>
+  <text x="240" y="309" font-size="12" fill="#5e5e68">residual + LayerNorm, dropout 0.3</text>
+
+  <rect x="50" y="350" width="380" height="52" rx="8" fill="#e3f4ef" stroke="#1f8a70"/>
+  <text x="240" y="371" font-size="14" font-weight="bold" fill="#13604d">[CLS] embedding ⊕ gene length</text>
+  <text x="240" y="390" font-size="12" fill="#5e5e68">192 + 1 = 193 features</text>
+
+  <rect x="50" y="422" width="380" height="52" rx="8" fill="#e3f4ef" stroke="#1f8a70"/>
+  <text x="240" y="443" font-size="14" font-weight="bold" fill="#13604d">MLP classifier head</text>
+  <text x="240" y="462" font-size="12" fill="#5e5e68">193 → 256 → ReLU → dropout → 7</text>
+
+  <rect x="50" y="492" width="380" height="50" rx="8" fill="#fdf1e0" stroke="#c9781c"/>
+  <text x="240" y="512" font-size="14" font-weight="bold" fill="#8a4f0e">Gene type (7 classes)</text>
+  <text x="240" y="530" font-size="11" fill="#5e5e68">protein-coding · pseudogene · ncRNA · snoRNA · tRNA · …</text>
+</g>
+<g stroke="#55555f" stroke-width="1.4">
+  <line x1="240" y1="86" x2="240" y2="103" marker-end="url(#ah)"/>
+  <line x1="240" y1="158" x2="240" y2="175" marker-end="url(#ah)"/>
+  <line x1="240" y1="258" x2="240" y2="267" marker-end="url(#ah)"/>
+  <line x1="240" y1="330" x2="240" y2="347" marker-end="url(#ah)"/>
+  <line x1="240" y1="402" x2="240" y2="419" marker-end="url(#ah)"/>
+  <line x1="240" y1="474" x2="240" y2="489" marker-end="url(#ah)"/>
+</g>
+</svg>

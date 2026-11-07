@@ -177,16 +177,11 @@ author_profile: true
     <h3>End-to-end machine-learning API projects (2025)</h3>
 
 
-        <h4 id="diffusion-inpainting">Diffusion-based image inpainting</h4>
-    <p>Explored diffusion models for reconstructing missing regions in H&amp;E-stained 
-      blood-cell images. 
-      A timestep-conditioned U-Net trained on 17,092 single-cell H&E images 
-      from the PBC dataset (<a href="https://doi.org/10.1016/j.cmpb.2019.105020" target="_blank" rel="noopener">Acevedo et al., 2019</a>), first to generate 
-      cells from noise, then to fill in masked regions of a real cell.
-      It's presented through a 
-      simple Streamlit interface, with AWS EC2 used for deployment.</p>
-<figure><img src="/assets/images/portfolio/diffusion_immune/diffusion_immune2.png?v=3" alt="Original, masked and inpainted blood-cell image alongside the UNetSmall architecture" style="max-width: 720px;"><figcaption>Original, masked and inpainted blood-cell image (left) and the time-conditioned U-Net used for DDPM inpainting (right). The U-Net predicts the added noise from the noisy image, the masked image and the mask; clamping the known pixels at every sampling step keeps the visible regions unchanged.</figcaption></figure>    <p class="project-links"><a href="https://github.com/katwre/Diffusion-models-for-cell-images-api" target="_blank" rel="noopener">GitHub repository</a></p>
- 
+<h4 id="diffusion-inpainting">Diffusion-based image inpainting</h4>
+<p>Built a diffusion model (DDPM) from scratch in PyTorch that generates blood-cell images and fills in masked regions of real ones, trained on 17,092 single-cell peripheral blood smear images from the PBC dataset (<a href="https://doi.org/10.1016/j.dib.2020.105474" target="_blank" rel="noopener">Acevedo et al., 2020</a>). The U-Net is conditioned on the mask and trained with a mask-weighted loss, and known pixels are clamped during sampling so only the missing region is generated. Deployed as an interactive Streamlit app on AWS EC2.</p>
+<figure><img src="/assets/images/portfolio/diffusion_immune/diffusion_immune_light.png?v=4" alt="Four-panel figure: inpainting example, training step, clamped sampling, and U-Net architecture" style="max-width: 620px;"><figcaption>(a) Original, masked and inpainted image; the model generates a plausible fill rather than recovering the hidden pixels. (b) Training: the U-Net predicts the added noise from the noisy image, masked image and mask. (c) Sampling: known pixels are clamped at every reverse step. (d) U-Net architecture.</figcaption></figure>
+<p class="project-links"><a href="https://github.com/katwre/Diffusion-models-for-cell-images-api" target="_blank" rel="noopener">GitHub repository</a></p>
+
 
     <h4 id="gene-transformer">Gene-type prediction from DNA sequence</h4>
     <p>Built classical machine-learning models, convolutional networks, and 

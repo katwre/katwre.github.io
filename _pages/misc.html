@@ -205,7 +205,7 @@ author_profile: true
 
     <h4 id="solubility">Molecular solubility prediction</h4>
 <p>Predicted aqueous solubility (LogS) of 560 organic molecules from 44 computed descriptors capturing size, shape, solvation energy, electronic structure, and charge distribution. I compared linear models (Partial Least Squares, Elastic Net) with tree ensembles (Random Forest, XGBoost); XGBoost performed best (test R² 0.72 vs 0.58 for the linear models), showing that nonlinear interactions matter. Feature importance agreed across models, and a top-20 descriptor model kept the same accuracy with half the inputs. The best model is served through a Flask API deployed on AWS Elastic Beanstalk.</p>
-    <figure><img src="/assets/images/portfolio/solubility/solubility.png?v=2" alt="Conceptual illustration of molecular solubility prediction" style="max-width: 460px;">
+    <figure><img src="/assets/images/portfolio/solubility/solubility.png?v=2" alt="Conceptual illustration of molecular solubility prediction" style="max-width: 760px;">
 <figcaption>Left: solubility as a balance of solute–solute, solvent–solvent and solute–solvent interactions, from <a href="https://doi.org/10.1038/s41467-020-19594-z" target="_blank" rel="noopener">Boobier et al., Nature Communications 2020</a> (CC BY 4.0), whose dataset was used here. Right: the four regression models compared, with test R²; tree ensembles (Random Forest, XGBoost) outperform the linear models (PLS, Elastic Net).</figcaption>    </figure>
     <p class="project-links"><a href="https://github.com/katwre/Solubility-api" target="_blank" rel="noopener">GitHub repository</a></p>
 
